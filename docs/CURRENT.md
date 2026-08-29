@@ -30,6 +30,14 @@ Issue #1 owns acceptance of the durable marketing-site control plane. M05 #10 ow
 - Visual philosophy: familiar high-trust structure; restrained complexity; believable Product UI as primary proof; motion subordinate to comprehension.
 - Technical direction: Astro static-first + targeted React/Motion islands + Tailwind CSS 4; Cloudflare Workers Static Assets, re-checked at implementation time.
 
+## Current M05 validation authority
+
+- `docs/VISITOR-JOURNEY.md` — first-visit mental-model and page-order contract.
+- `docs/FIRST-IMPRESSION-VALIDATION.md` — exact directional qualitative protocol, evidence binding, unaided-before-aided question order, temporal/trust/lower-page probes, and M10 eligibility boundary.
+- `docs/HERO-CONCEPTS-M05.md` — materially different A/B/C/D Hero concept hypotheses. None is visual authority.
+
+M05 is intentionally **not** a small-sample statistical A/B test. The current plan is iterative qualitative rounds with actual/plausible users, stable artifact binding, neutral first questions, and separation of clean first-impression evidence from later aided/comparative discussion.
+
 ## Rejected visual candidate
 
 The first generated dark/cinematic candidate is explicitly **rejected as M10 visual authority**.
@@ -88,6 +96,7 @@ Supporting research/control-plane tasks:
 ## Execution notes
 
 - #3 must consume #10 directional comprehension evidence; visually attractive wrong-mental-model candidates cannot win.
+- #10 must distinguish unaided first impressions from aided comparative feedback and must evaluate the lower-page journey as well as the Hero.
 - #4 must not start before ACP G7 PASS. G8 concurrency is not required.
 - The first production-code task should be run through the accepted Agent Control Plane rather than a parallel manual Codex workflow.
 - #5 and #6 may proceed in parallel only after #4 and the frozen visual direction, provided serialized dependency/config assets are coordinated.
@@ -114,10 +123,11 @@ Issue #2 was an accidental placeholder and is closed `not_planned`; it has no au
 ## Next actions
 
 1. Full-audit Issue #1 contracts for internal consistency and Product-authority boundaries.
-2. Produce materially different low/mid-fidelity Hero concepts for #10; do not make another high-fidelity AI-SaaS poster first.
-3. Run directional ~10-second first-impression comprehension tests against those concepts.
-4. Feed #10 findings into #3 and only then freeze desktop/mobile visual oracles.
-5. Continue `miki-labs/agent-control-plane` toward G7 independently.
-6. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path.
+2. Turn M05 Concepts A/B/C into materially different low/mid-fidelity desktop Hero artifacts; do not make another high-fidelity AI-SaaS poster first.
+3. Prepare the complete lower-page low/mid-fidelity narrative so M05 can test the whole visitor journey after unaided Hero evidence is captured.
+4. Run the first directional M05 round using `docs/FIRST-IMPRESSION-VALIDATION.md`.
+5. Feed #10 findings into #3 and only then freeze desktop/mobile visual oracles.
+6. Continue `miki-labs/agent-control-plane` toward G7 independently.
+7. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path.
 
 Codex prompts should remain short: point to the current Issue and repository contracts rather than restating them.
