@@ -12,6 +12,8 @@ Lunowaの公式マーケティングサイト用リポジトリです。
 - `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md`
 - `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md`
 - `docs/M10-TOKEN-CONTRACT.md`
+- `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md`
+- `docs/M05-P-E-STIMULUS-CONTRACT.md`
 - `docs/FIRST-IMPRESSION-VALIDATION.md`
 - `docs/HERO-CONCEPTS-M05.md`
 - `docs/M05-WIREFRAMES.md`
@@ -22,4 +24,4 @@ Lunowaの公式マーケティングサイト用リポジトリです。
 - `docs/VERIFICATION.md`
 - `docs/RESEARCH-2026-08-29.md`
 
-Product本体のcanonical truthは `miki-thecat/lunowa` が所有します。現在の作業状況・M05 validation順序・reuse-first primitive order・semantic-token authority・ACP G7実装gateは `docs/CURRENT.md` を参照してください。
+Product本体のcanonical truthは `miki-thecat/lunowa` が所有します。現在の作業状況・common-shell decision・M05 P/E stimulus construction・reuse-first primitive order・semantic-token authority・ACP G7実装gateは `docs/CURRENT.md` を参照してください。
