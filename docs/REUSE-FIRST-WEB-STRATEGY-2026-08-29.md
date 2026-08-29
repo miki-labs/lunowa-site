@@ -2,6 +2,8 @@
 
 Status: dated architecture/design decision support. This document does not supersede Product truth or the visual/comprehension contracts. It constrains how we avoid unnecessary reinvention when selecting design/build primitives.
 
+Read `docs/REUSE-STACK-AUDIT-2026-08-29.md` for the latest evidence and corrections.
+
 ## 1. Decision thesis
 
 Do not design or implement ordinary marketing-site structure from first principles when a mature, accessible, customizable existing primitive is available.
@@ -35,200 +37,159 @@ No evidence supports one secret tool used by all high-end sites. Convergence is 
 
 1. mature web conventions and prototypicality reduce orientation cost;
 2. design systems/component libraries standardize spacing, typography, layout and responsive behavior;
-3. Framer/Webflow/Figma/Relume/Tailwind ecosystems expose common high-quality Hero/feature/FAQ/CTA structures;
+3. Framer/Webflow/Figma/Relume/Tailwind/shadcn ecosystems expose common high-quality Hero/feature/FAQ/CTA structures;
 4. AI website generators inherit and reproduce high-frequency design patterns;
 5. many teams intentionally start from reusable blocks, then customize brand and Product proof.
 
 Current examples of this tooling convergence:
 
-- Framer AI can generate editable pages/sections/copy/visuals and has a large template marketplace;
-- Webflow AI Site Builder creates multi-page sites on a reusable Flowkit design system;
-- Figma Sites provides responsive pre-built blocks and custom interactions;
-- Relume provides 1,000+ Figma/Webflow/React components and an AI Site Builder;
-- Tailwind Plus provides 500+ professional responsive components and SaaS/app marketing templates;
-- shadcn/ui provides open-source copy/paste app blocks and components;
+- Relume exposes 1,000+ components and a 2026 Library MCP for real component retrieval;
+- Tailwind Plus provides 500+ professional responsive components and templates;
+- shadcn/ui provides local copy/paste primitives and a large registry ecosystem;
+- the official shadcn registry directory currently lists hundreds of third-party registries;
+- Webflow DevLink can now move components between a visual canvas and local React code;
+- Figma's 2026 code layers/Make/Codex workflows increasingly combine design and code;
+- Framer remains a major polished visual/template ecosystem;
 - Motion provides reusable accessible React motion primitives.
 
-External references:
+## 3. Core production role split
 
-- https://www.framer.com/ai/
-- https://www.framer.com/marketplace/templates/
-- https://webflow.com/ai-site-builder
-- https://www.figma.com/sites/
-- https://www.relume.io/
-- https://tailwindcss.com/plus
-- https://ui.shadcn.com/blocks
-- https://motion.dev/docs/react-accessibility
+### 3.1 Native HTML/CSS — first generic implementation choice
 
-## 3. Tool-role decision
-
-### 3.1 Relume — preferred structural/component discovery source
-
-Strengths:
-
-- 1,000+ components across Figma, Webflow and React/Tailwind;
-- Site Builder can generate sitemap/wireframe structure;
-- React source can be copied and edited;
-- July 2026 Library MCP allows AI editors/MCP clients to search and pull real components rather than hallucinating common UI;
-- Figma kit includes desktop/mobile variants.
+If a section needs no meaningful client state, prefer semantic Astro/HTML/CSS before adding a component runtime.
 
 Use for:
 
-- section/layout discovery;
-- alternative Hero/feature/FAQ/footer structures;
-- generic marketing scaffolding;
-- optional code starting points after compatibility and licensing are checked.
+- section/container wrappers;
+- editorial content;
+- simple CTA/footer;
+- simple disclosure where native semantics are sufficient;
+- layout and typography structure.
 
-Cautions:
+### 3.2 shadcn/ui + Base UI — preferred generic Product/app primitive source
 
-- React/HTML export and style-guide export have current limitations; some Relume support/community material notes incomplete styling/copy export;
-- existing React docs/components may target older Tailwind/React combinations than the final Lunowa stack;
-- every imported component still requires accessibility, dependency, responsiveness, bundle and Product-truth review.
+shadcn officially supports Astro and defaults new projects to Base UI as of 2026-07 while retaining Radix support.
 
-Therefore Relume is a **design/component source**, not an automatic production authority.
-
-References:
-
-- https://www.relume.io/howdy
-- https://react-docs.relume.io/
-- https://community.relume.io/x/announcements/msg_QzLmoAqEk1Lp/introducing-the-relume-library-mcp-seamless-access
-
-### 3.2 Tailwind Plus — preferred premium code-block benchmark/source
-
-Strengths:
-
-- 500+ professionally designed responsive components;
-- marketing blocks include Hero, features, CTA, FAQ, header/footer, etc.;
-- current components are provided as React, Vue and vanilla HTML;
-- current Tailwind version tracks the latest Tailwind release;
-- commercial SaaS end products are allowed under the license.
-
-Use for:
-
-- high-quality generic marketing structure;
-- header/nav/FAQ/CTA/footer/container patterns;
-- responsive and typography implementation references.
-
-Cautions:
-
-- paid license;
-- do not redistribute the component library itself;
-- customization is required so Lunowa does not look like a stock Tailwind template.
-
-References:
-
-- https://tailwindcss.com/plus
-- https://tailwindcss.com/plus/ui-blocks/marketing
-- https://tailwindcss.com/plus/license
-
-### 3.3 shadcn/ui — preferred generic Product-UI primitive source
-
-Strengths:
-
-- open-source, copy/paste, local ownership;
-- works across React frameworks;
-- provides robust sidebar/dashboard/form/dialog primitives;
-- useful for making the Hero Product proof look like believable software without inventing every control.
+The intended Base UI provenance is the MIT `@base-ui/react` / `mui/base-ui` project.
 
 Use for:
 
 - app-shell primitives inside the Lunowa Product demo;
-- buttons/disclosures/dialogs/sidebar/forms where semantically appropriate.
+- buttons/forms/dialog/sheet/popover/sidebar/disclosure where semantically appropriate.
 
-Do **not** use a stock shadcn dashboard as the Lunowa Product visual. The Product semantics and hierarchy remain custom.
+Do **not** use a stock shadcn dashboard as the Lunowa Product visual.
 
-Reference:
+### 3.3 Open shadcn registries — preferred generic marketing-block layer
 
-- https://ui.shadcn.com/blocks
+The official shadcn registry directory provides a broad discovery layer, but explicitly requires local review of third-party code.
 
-### 3.4 Motion for React — semantic motion only
+Current first candidates:
+
+- **7Ovr** — Base UI, local source, current docs state Astro/React-framework compatibility; free blocks MIT-0;
+- **Tailark open registry** — MIT, Base UI default path, marketing-focused blocks.
+
+Use for:
+
+- Hero shell;
+- simple header/mobile nav;
+- CTA;
+- FAQ;
+- footer;
+- generic content/marketing structures.
+
+Install only the smallest useful block. Do not adopt whole templates by default.
+
+### 3.4 Tailwind Plus — premium benchmark/source, not requirement
+
+Strengths:
+
+- 500+ professionally designed responsive components;
+- current Tailwind 4 line;
+- React/Vue/HTML examples;
+- commercial SaaS end products permitted under license.
+
+Use only if:
+
+- a valid license exists;
+- the selected block materially improves quality or saves enough work versus native/open-registry options.
+
+License absence must never block Lunowa.
+
+### 3.5 Relume — preferred broad structural/reference discovery source
+
+Relume's 2026 Library MCP is directly aligned with the goal of retrieving real ordinary UI instead of asking an AI model to hallucinate it.
+
+Use for:
+
+- section/layout discovery;
+- alternative Hero/FAQ/footer composition;
+- desktop/mobile structural reference;
+- optional exact code starting point after compatibility/license/dependency review.
+
+Do not install a broad Relume runtime/preset by default.
+
+### 3.6 Webflow DevLink — optional visual-to-React experiment
+
+Webflow materially changed in 2026. DevLink Export can produce local self-contained React/TSX components from Webflow visual components without a build-time Webflow connection.
+
+This is technically relevant, but not the default because:
+
+- exported components use Webflow primitives/scoped CSS rather than Lunowa's Tailwind token system;
+- it creates a second design/style system;
+- paid plan/access requirements add cost;
+- whole-site export still omits important hosted functionality.
+
+Use only if a scoped proof shows meaningful quality/time benefit over local blocks.
+
+### 3.7 Figma Design / Figma Make — preferred editable convergence surface when writable
+
+Figma's 2026 direction strongly combines design and code through Codex integration, Make/local-code work and code layers.
+
+Use for:
+
+- assembling/refining visual authority;
+- testing typography, spacing, layout and responsive composition;
+- design-system exploration;
+- implementation handoff.
+
+However Figma is not a hard dependency. The currently connected account was observed as Starter/View, so GitHub/code/docs must be able to carry equivalent structured authority.
+
+### 3.8 Framer — strong visual/reference ecosystem; production portability currently ambiguous
+
+Framer remains excellent for:
+
+- template/section inspiration;
+- polished responsive composition benchmarking;
+- rapid visual exploration.
+
+But current first-party Help contains contradictory statements about full-site HTML/CSS/JS self-host/export portability.
+
+Therefore:
+
+- do not use Framer portability as an architecture assumption;
+- keep Framer reference-only until actual product behavior or clarified official documentation resolves the contradiction.
+
+### 3.9 Motion for React — semantic motion only
 
 Use for accepted Product-state transitions and interaction feedback after static comprehension is already strong.
 
-Respect Reduced Motion and avoid decorative motion. Motion is not a reason to add JavaScript to static sections.
+Respect Reduced Motion. Motion is not a reason to add JavaScript to static sections.
 
-Reference:
+### 3.10 Aceternity / Magic UI — optional effect source, not foundation
 
-- https://motion.dev/docs/react-accessibility
-
-### 3.5 Framer — excellent rapid site builder / reference ecosystem, not current production default
-
-Framer is one of the strongest explanations for the shared polished startup-site visual vocabulary: prompt-driven generation, editable visual canvas, templates, CMS/SEO/hosting and built-in interactions.
-
-However, using Framer as the production platform would replace the current self-hosted Astro/Cloudflare/ACP architecture rather than simply accelerate it. Current Framer help explicitly states that standalone HTML self-host export is not supported by the normal site workflow.
-
-Use for:
-
-- template/section inspiration;
-- rapid visual exploration when useful;
-- benchmarking polished responsive composition.
-
-Do not adopt as Lunowa production hosting without an explicit architecture decision that accepts the platform boundary.
-
-References:
-
-- https://www.framer.com/ai/
-- https://www.framer.com/marketplace/templates/
-- https://www.framer.com/help/articles/can-i-export-my-website-to-html-and-self-host-it/
-
-### 3.6 Figma Design / Figma Make — preferred editable design convergence surface
-
-Figma is now a stronger bridge between visual design and code than static image generation:
-
-- Figma Sites has pre-built responsive blocks;
-- Figma Make/code layers support code-backed visual exploration;
-- OpenAI and Figma support direct Codex↔Figma workflows;
-- designs stay editable at layer/component/token level instead of becoming opaque raster images.
-
-Use for:
-
-- assembling/refining Lunowa's actual visual oracle;
-- testing typography, spacing, layout and responsive composition;
-- bringing reusable blocks into a coherent Lunowa design system;
-- Codex implementation handoff.
-
-Figma Sites itself is not current production default because external publishing code export is currently unavailable; use the design/code canvas rather than adopting Sites hosting by default.
-
-References:
-
-- https://www.figma.com/sites/
-- https://www.figma.com/make/
-- https://openai.com/index/figma-partnership/
-
-### 3.7 Webflow — viable alternate production builder, not preferred for current architecture
-
-Webflow is mature for visual marketing-site production and can export HTML/CSS/JS from paid Workspace plans. However exported code omits important hosted functionality such as CMS, forms and localized content/functionality.
-
-Adopting Webflow would add a second build model before translating back into the Astro/Cloudflare path.
-
-Use as reference/alternative only unless an explicit architecture decision replaces the current stack.
-
-Reference:
-
-- https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code
-
-### 3.8 Aceternity / Magic UI — optional effect source, not foundation
-
-These libraries contain many visually polished React/Tailwind/Motion landing-page sections and effects.
-
-They are useful only for narrowly justified visual behaviors. Their catalogs also contain exactly the high-frequency glow, beam, 3D, bento and animated-background vocabulary that can push Lunowa back toward generic AI-SaaS aesthetics.
+These catalogs contain many high-frequency glow/beam/3D/bento effects that can push Lunowa back toward generic AI-SaaS aesthetics.
 
 Default: **do not use** unless a specific component performs semantic work better than simpler primitives.
 
-References:
-
-- https://ui.aceternity.com/components
-- https://pro.magicui.design/docs/sections
-
 ## 4. Recommended Lunowa stack after G7
-
-Keep the current production architecture:
 
 ```text
 Astro static shell
-+ Tailwind CSS
-+ generic reusable marketing blocks where useful
-+ shadcn-style local Product UI primitives
++ Tailwind CSS 4 token/style layer
++ native semantic HTML/CSS
++ shadcn/ui / @base-ui/react where interactivity is needed
++ audited open shadcn marketing blocks where useful
++ optional Tailwind Plus if licensed
 + React island only for accepted Product demo
 + Motion only for accepted semantic transitions
 + Cloudflare Workers Static Assets
@@ -238,41 +199,67 @@ Source hierarchy for ordinary UI:
 
 ```text
 1. existing local Lunowa component
-2. proven accessible native/HTML/CSS pattern
-3. shadcn/ui for generic app primitives
-4. Tailwind Plus for generic marketing blocks if licensed
-5. Relume component/reference if it materially saves work
-6. custom component only when Lunowa semantics require it
-7. decorative/effect libraries only by explicit exception
+2. proven accessible native HTML/CSS pattern
+3. shadcn/ui + Base UI primitive
+4. audited open shadcn registry block
+   - 7Ovr first current candidate
+   - Tailark second current candidate
+5. Tailwind Plus if licensed + materially superior
+6. Relume structural/reference candidate
+7. optional Webflow DevLink proof for a specific hard visual-to-code case
+8. custom Lunowa component
+9. decorative/effect libraries only by explicit exception
 ```
 
 The hierarchy is not absolute: choose the simplest primitive that satisfies the accepted requirement with the least runtime/dependency cost.
 
-## 5. Revised design workflow
+## 5. Design-token strategy
+
+Do not make a design tool the sole authority for tokens.
+
+Use a small vendor-neutral semantic token source aligned where practical with the stable Design Tokens Community Group 2025.10 format, then project accepted values into Tailwind 4 `@theme` / CSS variables.
+
+Start only with what Lunowa needs:
+
+- semantic colors;
+- typography roles;
+- spacing;
+- containers/breakpoints;
+- radius/border/shadow;
+- focus ring;
+- motion values only if motion survives M05/M10.
+
+Avoid enterprise-scale token infrastructure until actual design complexity requires it.
+
+## 6. Revised design workflow
 
 Replace the old image-generation-heavy workflow with:
 
 ```text
 Product truth / visitor journey
         ↓
-reference harvesting from mature component/template ecosystems
+reuse-stack audit
         ↓
-Lunowa design tokens + section shortlist
+semantic token source
         ↓
-Figma editable composition / design-system assembly
+small generic shell shortlist from native/shadcn/open registries/premium refs
+        ↓
+P Product Proof + E Editorial Problem-First composition
         ↓
 mid/high-fidelity visitor-comprehension check
         ↓
-freeze implementation-grade Figma visual oracle
+freeze structured implementation-grade visual authority
         ↓
-ACP/Codex implementation using reusable code primitives
+ACP/Codex implementation using audited reusable primitives
         ↓
 Playwright/browser/accessibility/performance verification
 ```
 
+Figma can be the editable canvas when write access exists; code/docs can carry equivalent authority when it does not.
+
 Image generation remains useful for mood exploration, campaign art, illustration and genuinely novel visual concepts. It is no longer the preferred tool for precise marketing-page UI composition with Japanese text.
 
-## 6. What remains custom
+## 7. What remains custom
 
 Do not outsource these to generic template logic:
 
@@ -282,12 +269,12 @@ Do not outsource these to generic template logic:
 - outcome arrival -> attention-required transition;
 - Moment/Source trust presentation;
 - current truth/availability language;
-- distinctive Lunowa visual tokens;
+- distinctive Lunowa semantic tokens;
 - final responsive simplification of the Product demo.
 
 This is the correct place to spend design/engineering effort.
 
-## 7. Acceptance rule for reused components
+## 8. Acceptance rule for reused components
 
 A reused component is accepted only if it passes all of:
 
