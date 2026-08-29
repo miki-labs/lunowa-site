@@ -7,22 +7,43 @@ Status date: 2026-08-29
 - Product truth: `miki-thecat/lunowa`.
 - Marketing-site truth: this repository's current contracts.
 - Live task/candidate/review state: GitHub Issues / PRs / CI.
+- Implementation execution gate: `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance.
 
 ## Current phase
 
-**BOOTSTRAP / DESIGN CONTRACT**
+**BOOTSTRAP / VISITOR-COMPREHENSION + DESIGN CONTRACT**
 
-Implementation has not started. Issue #1 owns acceptance of the durable marketing-site control plane.
+Production-code implementation has not started and is intentionally held until ACP G7 PASS.
+
+Issue #1 owns acceptance of the durable marketing-site control plane. M05 #10 owns directional first-impression comprehension evidence before M10 #3 can freeze final visual authority.
 
 ## Current accepted direction
 
-- Homepage concept: **Calm Product Cinema**.
-- Core message: **メールを、確認し続けなくていい。**
+- Overall visual thesis: **Quiet Product Proof**.
+- Motion/storytelling sub-thesis: **The page stays still. Product meaning moves.**
+- Core message candidate: **メールを、確認し続けなくていい。**
+- Category/mechanism cue is required near the Hero because the H1 alone is too broadly interpretable.
 - Core differentiator to demonstrate: **Reply != Done**.
-- Product story: request -> Managed -> intermediate reply -> still Managed -> material outcome evidence -> Needs You -> Moment.
-- Marketing objective: correct comprehension -> qualified early access -> empirical learning.
-- Visual philosophy: familiar high-trust SaaS structure; restrained complexity; real Product UI as primary proof; semantic motion only.
-- Technical direction: Astro static-first + targeted React/Motion islands + Tailwind CSS 4; Cloudflare Workers Static Assets.
+- Product story must begin as a recognizable concrete email situation, not an abstract state diagram.
+- Signature temporal proof: intermediate reply arrives -> still no user action required -> material outcome arrives -> user attention becomes necessary.
+- Marketing objective: correct comprehension -> relevance -> trust -> qualified early access -> empirical learning.
+- Visual philosophy: familiar high-trust structure; restrained complexity; believable Product UI as primary proof; motion subordinate to comprehension.
+- Technical direction: Astro static-first + targeted React/Motion islands + Tailwind CSS 4; Cloudflare Workers Static Assets, re-checked at implementation time.
+
+## Rejected visual candidate
+
+The first generated dark/cinematic candidate is explicitly **rejected as M10 visual authority**.
+
+Material failure classes:
+
+- generic dark navy / purple / glow / planet-orb AI-SaaS vocabulary;
+- abstract icon/timeline explanation instead of recognizable Product use;
+- weak first-glance category comprehension;
+- contradiction with visual anti-patterns;
+- generated unsupported marketing/security claims;
+- excessive dependence on Lunowa internal state vocabulary.
+
+Preserve only the semantic storyboard, not the art direction.
 
 ## Current task graph
 
@@ -30,10 +51,17 @@ Implementation has not started. Issue #1 owns acceptance of the durable marketin
 M00  #1  Bootstrap canonical contracts
           |
           v
-M10  #3  Freeze visual oracles
+M05  #10 Directional first-impression comprehension evidence
           |
           v
-M20  #4  Astro/static foundation
+M10  #3  Freeze user-validated visual oracles
+          |
+          +-----------------------------+
+                                        |
+ACP external gate: agent-control-plane G7 PASS
+                                        |
+                                        v
+M20  #4  Astro/static foundation via accepted ACP path
         /   \
        v     v
 M30 #5      #6 M40
@@ -51,8 +79,17 @@ M70  #9  Full verification + preview deployment
 M90  future explicit production-domain cutover
 ```
 
-Notes:
+Supporting research/control-plane tasks:
 
+- #11 — visitor-journey/comprehension contract (canonicalized in `docs/VISITOR-JOURNEY.md`);
+- #12 — 2026 user-centered evidence refresh (canonicalized as dated evidence in `docs/RESEARCH-2026-08-29.md`);
+- #13 — rejected initial generated visual + preserved semantic storyboard.
+
+## Execution notes
+
+- #3 must consume #10 directional comprehension evidence; visually attractive wrong-mental-model candidates cannot win.
+- #4 must not start before ACP G7 PASS. G8 concurrency is not required.
+- The first production-code task should be run through the accepted Agent Control Plane rather than a parallel manual Codex workflow.
 - #5 and #6 may proceed in parallel only after #4 and the frozen visual direction, provided serialized dependency/config assets are coordinated.
 - #7 must reconcile the cumulative #5/#6 UI rather than optimize an obsolete intermediate candidate.
 - #8 should not start until the CTA/availability/data-purpose boundary is stable enough to define truthful consent/privacy behavior.
@@ -62,20 +99,25 @@ Notes:
 ## Current Issues
 
 - #1 — Bootstrap Lunowa marketing site control plane
-- #3 — M10 visual-oracle freeze
-- #4 — M20 Astro/static foundation
+- #10 — M05 first-impression comprehension validation
+- #3 — M10 user-validated visual-oracle freeze
+- #4 — M20 Astro/static foundation, blocked on ACP G7
 - #5 — M30 Hero Product Story + semantic motion
 - #6 — M40 remaining homepage narrative
 - #7 — M50 responsive + i18n
 - #8 — M60 secure waitlist
 - #9 — M70 verification hardening + preview deploy
+- #11/#12/#13 — supporting research/correction records
 
 Issue #2 was an accidental placeholder and is closed `not_planned`; it has no authority.
 
-## Next action
+## Next actions
 
 1. Full-audit Issue #1 contracts for internal consistency and Product-authority boundaries.
-2. If #1 passes, freeze/select M10 visual references in #3.
-3. Only then start Codex implementation at #4.
+2. Produce materially different low/mid-fidelity Hero concepts for #10; do not make another high-fidelity AI-SaaS poster first.
+3. Run directional ~10-second first-impression comprehension tests against those concepts.
+4. Feed #10 findings into #3 and only then freeze desktop/mobile visual oracles.
+5. Continue `miki-labs/agent-control-plane` toward G7 independently.
+6. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path.
 
-Codex prompts should be short: point to the current Issue and repository contracts rather than restating them.
+Codex prompts should remain short: point to the current Issue and repository contracts rather than restating them.
