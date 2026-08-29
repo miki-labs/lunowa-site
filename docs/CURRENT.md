@@ -5,22 +5,22 @@ Status date: 2026-08-30
 ## Canonical authority
 
 - Product truth: `miki-thecat/lunowa`.
-- Marketing-site contracts/design/research protocol: this repository.
+- Marketing-site contracts/design/audit state: this repository.
 - Live task/candidate/review state: GitHub Issues / PRs / CI.
 - Production implementation gate: `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance.
 
 ## Current phase
 
-**M05 PARTICIPANT RESEARCH READY — Issue #10**
+**M10 DESIGN CONVERGENCE READY — P PRODUCT PROOF SELECTED**
 
-Production-code implementation has not started and remains intentionally blocked until both:
+Production implementation has not started and remains blocked until both:
 
-1. M10 #3 freezes accepted structured visual authority; and
+1. M10 #3 freezes implementation-grade structured visual authority; and
 2. ACP G7 passes.
 
-G8 concurrency is not required for the first production implementation.
+External independent visitor validation is **deferred evidence debt**, not a current blocking gate.
 
-## Completed design-preparation gates
+## Completed gates
 
 ### R05 — reuse/tokens/common shell
 
@@ -29,22 +29,13 @@ Substantially complete.
 Current direction:
 
 - `Quiet Product Proof`;
-- familiar modern software-site grammar;
-- real Product UI as primary proof;
+- familiar high-trust software-site grammar;
+- believable Product UI as primary proof;
 - no generic AI-orb/glow/beam/3D/bento/card-wall default aesthetic;
 - ordinary shell mechanics reused rather than reinvented;
-- Product-specific design effort concentrated on `Reply != Done`, monitoring, attention return, Moment/source/trust semantics.
+- Product-specific design effort concentrated on monitoring, `Reply != Done`, attention return, Moment/source/trust semantics.
 
-Read:
-
-1. `docs/REUSE-STACK-AUDIT-2026-08-29.md`
-2. `docs/APPROVED-PRIMITIVES-2026-08-29.md`
-3. `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md`
-4. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md`
-5. `docs/M10-TOKEN-CONTRACT.md`
-6. `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md`
-
-Current implementation/reuse preference after G7:
+Current production/reuse preference after G7:
 
 ```text
 Astro + Tailwind CSS 4
@@ -57,63 +48,89 @@ Astro + Tailwind CSS 4
   -> custom Lunowa code where Product semantics require it
 ```
 
-Framer portability is not an architecture assumption. Figma is preferred when writable but is not a hard dependency. Image generation is exploratory, not precise webpage authority.
+Figma is preferred when writable but not required. Framer portability is not an architecture assumption. Image generation is exploratory, not precise webpage authority.
 
-### S05 #14 — participant stimulus construction
+### S05 #14 — stimulus construction
 
 **COMPLETED / CLOSED.**
 
-Accepted exact artifacts:
+Exact accepted historical audit artifacts remain bound in `docs/stimuli/MANIFEST.md`:
 
-- `docs/stimuli/P-v1.svg` — Product Proof Baseline — blob `0dd12d831cd1fc8020bde478c9fca6463af5427e`
-- `docs/stimuli/E-v1.svg` — Editorial Problem-First Dark Horse — blob `58b55b02abe867b0191e93f3125a4e4d8db63ca1`
-- `docs/stimuli/shared-lower-v1.svg` — shared post-Hero continuation — blob `0e7026b2dfc7230af6c1448e831aa85cc5284d82`
-- `docs/stimuli/MANIFEST.md` — artifact/token/provenance binding
+- P-v1: `0dd12d831cd1fc8020bde478c9fca6463af5427e`
+- E-v1: `58b55b02abe867b0191e93f3125a4e4d8db63ca1`
+- shared lower: `0e7026b2dfc7230af6c1448e831aa85cc5284d82`
 
-S05 full pre-research audit PASS evidence:
+S05 PASS evidence: Issue #14 comment `5463581123`.
 
-- Issue #14 comment `5463581123`
+### M05 #10 — internal comprehension-risk audit
 
-Material audit corrections already completed:
+**COMPLETED / CLOSED.**
 
-- removed E-only extra explanatory band;
-- removed P-only secondary CTA;
-- made Product-stage geometry equal across P/E;
-- removed unnecessary visitor-facing internal English jargon;
-- deleted duplicate common-shell authority.
+Current team constraint:
 
-P/E now share the same header, primary CTA, token grammar, Product-stage geometry, canonical quotation state, static-only condition and approximate fidelity. The intended variable is acquisition hierarchy/copy above the common Product stage.
+- Product owner already knows Lunowa too deeply to be a clean first-impression participant;
+- ChatGPT is not a real user and has extensive project context;
+- synthetic/model responses are not user evidence.
 
-## Current M05 #10 authority
+Therefore external participant testing is not required before M10.
 
-Read:
+Current authorities:
 
-- `docs/VISITOR-JOURNEY.md`
-- `docs/FIRST-IMPRESSION-VALIDATION.md`
-- `docs/HERO-CONCEPTS-M05.md`
-- `docs/M05-P-E-STIMULUS-CONTRACT.md`
-- `docs/M05-SESSION-PACKET.md`
-- `docs/stimuli/MANIFEST.md`
-- accepted S05 #14 evidence.
+- `docs/M05-INTERNAL-COMPREHENSION-AUDIT.md`
+- `docs/M05-INTERNAL-AUDIT-RESULT-2026-08-30.md`
+- deferred future protocol: `docs/FIRST-IMPRESSION-VALIDATION.md`
 
-Issue #10 execution handoff comment: `5463588574`.
+M05 audit result:
 
-### Research question
+> **P — Product Proof Baseline selected for M10 convergence.**
 
-Which acquisition hierarchy more reliably produces the correct unaided first-time mental model?
+Why P:
 
-- **P:** Product UI explains the job immediately.
-- **E:** repeated-checking burden is recognized first, then the same concrete Product proof appears.
+- strongest explicit email/category recognition;
+- Product UI does most explanatory work;
+- lower generic-productivity/memory-tool confusion risk than E;
+- lower copy dependence;
+- simpler mobile/responsive projection;
+- lower implementation complexity;
+- E's useful repeated-checking insight is already preserved in the shared lower-page narrative.
 
-This is not a style-preference or small-sample conversion A/B test.
+M05 PASS evidence: Issue #10 comment `5463637074`.
 
-### Target mental model
+This is **internal audit evidence, not user validation**.
 
-Approximately:
+## Selected M10 direction
 
-> Lunowa watches unfinished email-related matters for me, so I do not have to keep checking; it stays quiet while I am not needed and returns the matter when I actually need to act.
+Use P as the acquisition/Hero direction:
 
-### Canonical Product state
+```text
+minimal header
+↓
+category/mechanism cue
+↓
+メールを、確認し続けなくていい。
+↓
+concise support + primary CTA
+↓
+large believable Lunowa Product proof
+↓
+repeated-checking problem narrative
+↓
+返信 ≠ 完了
+↓
+quiet monitoring
+↓
+material outcome -> attention required
+↓
+return context / Source / trust-control
+↓
+truthful availability
+↓
+minimal FAQ
+↓
+plain final CTA/footer
+```
+
+Canonical Product proof remains:
 
 ```text
 社内確認中です。明日送ります。
@@ -122,22 +139,33 @@ Approximately:
 -> Lunowaが引き続き見守る
 ```
 
-The decisive proof is that **reply arrival does not equal outcome completion or attention need**.
+Later:
 
-### First-round protocol
+```text
+見積書が届く
+-> user review becomes necessary
+-> what changed / what to do / Source are restored
+```
 
-- default 4–8 actual/plausible users;
-- alternate P/E clean-first assignment approximately balanced;
-- default 10-second static exposure;
-- no scrolling during clean first impression;
-- no Lunowa vocabulary/competitor explanation before required questions;
-- required unaided questions first;
-- temporal probe captured verbatim before coding;
-- shared lower page only after clean Hero evidence;
-- alternate condition later is aided/comparative evidence, not a second clean first impression;
-- no artifact editing mid-round under the same artifact ID.
+## Motion decision
 
-ChatGPT simulation cannot substitute for real participant evidence.
+Baseline comprehension does **not** require motion.
+
+M10 should freeze static-first visual authority. Later implementation may add restrained semantic motion only as optional reinforcement/craft. Equivalent static and reduced-motion meaning is mandatory.
+
+## External-validation debt
+
+Still unknown until independent visitors/beta users/traffic exist:
+
+- actual first-time comprehension;
+- reminder/reply-tracker confusion rate;
+- real trust objections;
+- exact copy optimum;
+- conversion impact.
+
+Do not use `user validated`, `users understood`, `tested with users`, or similar claims.
+
+Future independent validation may test the implemented preview directly rather than recreating pre-build P/E research.
 
 ## Current task graph
 
@@ -145,18 +173,16 @@ ChatGPT simulation cannot substitute for real participant evidence.
 M00  #1  canonical control-plane acceptance
           |
           v
-R05       reuse + tokens + common shell        DONE enough for M05
+R05       reuse + semantic tokens + common shell        DONE enough
           |
           v
-S05  #14 P-v1 / E-v1 / shared continuation    DONE
+S05  #14 exact P/E/static artifacts                     DONE
           |
           v
-M05  #10 real participant evidence             READY / CURRENT
-          |
-          +--> optional isolated static-vs-motion evidence only if needed
+M05  #10 internal owner+AI comprehension-risk audit     DONE -> P selected
           |
           v
-M10  #3  freeze structured visual authority + exact token values
+M10  #3  freeze P-based desktop/mobile visual authority + exact token values   CURRENT
           |
           +-----------------------------+
                                         |
@@ -167,7 +193,7 @@ M20  #4  Astro/static foundation via accepted ACP path
         /   \
        v     v
 M30 #5      #6 M40
-Hero/motion  remaining narrative
+Hero/UI      remaining narrative
        \     /
         v   v
 M50  #7  responsive + i18n reconciliation
@@ -178,37 +204,35 @@ M50  #7  responsive + i18n reconciliation
 M70  #9  full verification + preview deployment
         |
         v
+M80  future independent visitor/traffic validation when available
+        |
+        v
 M90  future explicit production-domain cutover
 ```
 
 ## Current Issues
 
-- #1 — Bootstrap Lunowa marketing-site control plane
+- #1 — Bootstrap marketing-site control plane
 - #14 — S05 stimulus construction — **closed completed**
-- #10 — M05 first-impression comprehension research — **current**
-- #3 — M10 user-validated structured visual-oracle freeze
-- #4 — M20 Astro/static foundation — blocked on M10 + ACP G7
-- #5 — M30 Hero Product Story + semantic motion
+- #10 — M05 internal comprehension-risk audit — **closed completed**
+- #3 — M10 structured visual-authority freeze — **current**
+- #4 — M20 Astro/static foundation — blocked on #3 + ACP G7
+- #5 — M30 Hero/Product Story
 - #6 — M40 remaining homepage narrative
 - #7 — M50 responsive + i18n
 - #8 — M60 secure waitlist
 - #9 — M70 verification hardening + preview deploy
-- #11/#12/#13 — supporting research/correction records
-
-Issue #2 is an accidental placeholder, closed `not_planned`, with no authority.
 
 ## Next actions
 
-1. Recruit the first M05 round using current recruitment prior, without pretending exact ICP is validated.
-2. Run #10 using exact accepted P/E artifact blobs and `docs/M05-SESSION-PACKET.md`.
-3. Capture verbatim unaided answers before coding.
-4. Synthesize P and E separately; record wrong mental models, temporal misunderstandings, trust/orientation problems and protocol deviations.
-5. State whether `P`, `E`, both, or neither is comprehension-eligible. Do not manufacture population percentages from the small round.
-6. If a material design failure appears, create/route a bounded correction task; do not silently modify stimuli during #10.
-7. If P is eligible and E adds no materially stronger acquisition model, converge instead of generating more variants.
-8. Test motion only if the selected static direction still leaves a material temporal-comprehension gap.
-9. Feed durable #10 findings into M10 #3 and freeze exact desktop/mobile visual authority + token values.
-10. Continue `miki-labs/agent-control-plane` toward G7 independently.
-11. Only after M10 freeze + G7 PASS, start #4 through the accepted control-plane path.
+1. Execute M10 #3 using **P** as the selected direction.
+2. Freeze exact typography, colors, spacing, widths, radius, shadow and focus values using the small semantic token model in `docs/M10-TOKEN-CONTRACT.md`.
+3. Produce implementation-grade readable references for desktop Hero, intermediate/no-action, outcome/attention-required, return-context/Source, lower-page rhythm, trust/control and mobile Hero/Product story.
+4. Keep the repeated-checking insight from E only in the lower-page problem narrative; do not maintain E as a second Hero architecture.
+5. Define a mobile semantic projection rather than shrinking the desktop Product surface.
+6. Treat motion as optional enhancement, not an explanatory dependency.
+7. Record external validation as deferred Product-learning debt.
+8. Continue `miki-labs/agent-control-plane` toward G7 independently.
+9. Only after M10 freeze + G7 PASS, start #4 through the accepted control-plane path.
 
 Codex prompts remain short: point to the owning Issue and repository contracts rather than restating them.
