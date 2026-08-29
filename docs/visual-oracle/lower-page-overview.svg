@@ -12,7 +12,6 @@
     <text x="892" y="192" font-size="20" font-weight="700">山田商事 / 見積書</text>
     <text x="892" y="226" font-size="14" fill="#686864">待っているもの：見積書</text>
     <text x="892" y="266" font-size="14" font-weight="600" fill="#3D6D58">現在、あなたの対応は必要ありません。</text>
-
     <line x1="96" y1="372" x2="1344" y2="372" stroke="#D8D8D2"/>
     <text x="720" y="448" text-anchor="middle" font-size="14" font-weight="600" fill="#355F91">返信が来ても、終わっていないことがある。</text>
     <text x="720" y="506" text-anchor="middle" font-size="44" font-weight="700">返信 ≠ 完了</text>
@@ -29,7 +28,6 @@
     <rect x="792" y="720" width="454" height="66" rx="12" fill="#FFF5E8" stroke="#E8D1B1"/>
     <text x="814" y="748" font-size="16" font-weight="700" fill="#8A571C">あなたの確認が必要です</text>
     <text x="814" y="771" font-size="12" fill="#8A571C">金額と納期を確認してください。</text>
-
     <line x1="96" y1="906" x2="1344" y2="906" stroke="#D8D8D2"/>
     <text x="120" y="990" font-size="14" font-weight="600" fill="#355F91">必要でない間は、Lunowaが見ています。</text>
     <text x="120" y="1048" font-size="44" font-weight="700">静かに任せる。</text>
@@ -39,7 +37,6 @@
     <text x="792" y="1040" font-size="21" font-weight="700">山田商事 / 見積書</text>
     <text x="792" y="1072" font-size="14" fill="#686864">見積書の到着を待っています。</text>
     <text x="792" y="1107" font-size="14" font-weight="600" fill="#3D6D58">あなたの対応はまだ必要ありません。</text>
-
     <line x1="96" y1="1210" x2="1344" y2="1210" stroke="#D8D8D2"/>
     <text x="720" y="1290" text-anchor="middle" font-size="14" font-weight="600" fill="#355F91">必要になった時だけ、あなたに戻します。</text>
     <text x="720" y="1348" text-anchor="middle" font-size="44" font-weight="700">戻ってきた時には、何が変わったかも分かる。</text>
@@ -52,17 +49,14 @@
     <text x="462" y="1586" font-size="14">見積書.pdf が届きました</text>
     <text x="318" y="1622" font-size="12" fill="#777772">元のメール</text>
     <text x="462" y="1622" font-size="14" font-weight="600" fill="#355F91">山田商事との会話を見る →</text>
-
     <line x1="96" y1="1764" x2="1344" y2="1764" stroke="#D8D8D2"/>
     <text x="120" y="1844" font-size="14" font-weight="600" fill="#355F91">任せる。でも、決定権は渡さない。</text>
     <text x="120" y="1902" font-size="40" font-weight="700">根拠と元のメールへ戻れる。</text>
     <text x="120" y="1943" font-size="16" fill="#686864">不確かなことを確定したように扱わず、起きていない外部操作を起きたことにしない。</text>
     <text x="1038" y="1911" font-size="14" font-weight="600" fill="#355F91">詳しい考え方を見る →</text>
-
     <line x1="96" y1="2032" x2="1344" y2="2032" stroke="#D8D8D2"/>
     <text x="120" y="2112" font-size="14" font-weight="600" fill="#355F91">先行アクセス</text>
-    <text x="120" y="2162" font-size="34" font-weight="700">Lunowaに興味がある方へ。</text>
-    <text x="120" y="2200" font-size="15" fill="#686864">利用できるようになった時の案内を受け取るための登録導線です。</text>
+    <text x="120" y="2162" font-size="34" font-weight="700">Lunowaの先行アクセスを希望する方へ。</text>
     <text x="760" y="2112" font-size="14" font-weight="600" fill="#777772">FAQ</text>
     <text x="760" y="2154" font-size="16" font-weight="600">Lunowaは何を見守りますか？</text>
     <line x1="760" y1="2173" x2="1320" y2="2173" stroke="#D8D8D2"/>
@@ -71,7 +65,6 @@
     <text x="760" y="2262" font-size="16" font-weight="600">元のメールを確認できますか？</text>
     <line x1="760" y1="2281" x2="1320" y2="2281" stroke="#D8D8D2"/>
     <text x="760" y="2316" font-size="16" font-weight="600">Lunowaが不確かな時はどうなりますか？</text>
-
     <text x="720" y="2420" text-anchor="middle" font-size="36" font-weight="700">必要になるまで、忘れていていい。</text>
     <rect x="613" y="2460" width="214" height="52" rx="10" fill="#181817"/>
     <text x="720" y="2493" text-anchor="middle" font-size="15" font-weight="600" fill="#FFFFFF">先行アクセスに登録</text>
