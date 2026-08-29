@@ -6,6 +6,7 @@ Lunowaの公式マーケティングサイト用リポジトリです。
 
 - `AGENTS.md`
 - `docs/CURRENT.md`
+- `docs/VISITOR-JOURNEY.md`
 - `docs/HOMEPAGE.md`
 - `docs/DESIGN.md`
 - `docs/MOTION.md`
