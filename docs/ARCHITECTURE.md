@@ -191,3 +191,18 @@ Every recurring-cost or third-party dependency should answer:
 During validation/early beta, fixed marketing-site infrastructure cost should approach domain-renewal-only where practical without sacrificing trust or reliability.
 
 Do not trade material security or data integrity for negligible savings. Once real traction/revenue makes paid reliability/features rational, upgrade deliberately rather than clinging to free tiers.
+
+## 14. Repository governance
+
+The repository currently starts with an unprotected `main`. That is acceptable only during control-plane bootstrap before implementation CI exists.
+
+Before implementation candidates begin integrating routinely:
+
+- create deterministic CI for required lint/type/build/test checks;
+- use branch/PR-based implementation rather than direct feature edits on `main`;
+- enable appropriate `main` protection / required status checks once those checks exist;
+- require candidate evidence to bind to the exact PR head;
+- do not let deployment credentials or production writes be available to untrusted pull-request code;
+- coordinate serialized dependency/config assets when parallel agents are active.
+
+Canonical control-plane corrections may be made deliberately by the owning planner, but production implementation must follow the review/verification path rather than bypassing it.
