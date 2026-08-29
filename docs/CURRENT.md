@@ -31,71 +31,68 @@ Issue #1 owns acceptance of the durable marketing-site control plane. M05 #10 ow
 - Technical direction: Astro static-first + Tailwind CSS 4 + targeted React islands + shadcn/ui/Base UI local primitives + Motion only where accepted; Cloudflare Workers Static Assets, all re-checked at implementation time.
 - **Reuse-first rule:** ordinary marketing/app-shell mechanics should come from mature reusable blocks/components where this reduces work without weakening Product semantics, accessibility, performance or ownership.
 
-## Reuse-first design/build authority
+## Reuse-first authority
 
-Read both:
+Read, in order:
 
-- `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md`
-- `docs/APPROVED-PRIMITIVES-2026-08-29.md`
+1. `docs/REUSE-STACK-AUDIT-2026-08-29.md` — latest full tool/component/portability audit.
+2. `docs/APPROVED-PRIMITIVES-2026-08-29.md` — approved production/design primitive hierarchy.
+3. `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md` — deliberately small component-pattern shortlist.
+4. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — overall rationale and ecosystem role split.
 
-before new visual or implementation work.
-
-Current preferred role split:
+Current preferred production/reuse split:
 
 ```text
-Relume / Tailwind Plus / Framer / Figma/Webflow ecosystems
--> reference + reusable structural primitives
-
-Figma when write access is available
--> editable visual composition + design tokens
-
-code/docs design-system fallback
--> canonical tokens + component inventory + responsive rules + state references
-
-shadcn/ui + Base UI
--> owned generic Product/app interaction primitives
-
-Astro + Tailwind 4
--> owned static production shell
-
-React + Motion
--> only accepted semantic Product-demo interaction
+Astro + Tailwind CSS 4
+        |
+        +-- native semantic HTML/CSS first
+        |
+        +-- shadcn/ui + @base-ui/react for generic interactive/app primitives
+        |
+        +-- audited open shadcn blocks
+        |     1. 7Ovr current first candidate
+        |     2. Tailark current second candidate
+        |
+        +-- Tailwind Plus only if licensed + materially superior
+        |
+        +-- Relume for broad structural/reference search
+        |
+        +-- optional Webflow DevLink proof for a specific visual-to-React need
+        |
+        +-- custom Lunowa UI only where semantics/visual oracle require it
 ```
 
-Do not reinvent headers, containers, FAQ mechanics, footers, basic form controls, common responsive layout or generic app-shell primitives when a mature component can be adapted safely.
+### Current evidence-backed tool decisions
 
-Do not let an imported template/component define Lunowa's Product semantics or visual identity.
+- **Astro:** remains preferred static shell; current docs support Tailwind 4 through the official Vite-plugin path.
+- **Tailwind CSS 4:** local design-token/style layer; use CSS-first `@theme` variables.
+- **shadcn/ui:** official Astro setup; new projects default to Base UI as of 2026-07.
+- **Base UI:** bind to the intended MIT `@base-ui/react` / `mui/base-ui` provenance; `Base UI` is an overloaded ecosystem name.
+- **7Ovr:** current first open marketing-block candidate; listed by official shadcn registry directory, Base UI based, local-source install, free blocks MIT-0 per current docs.
+- **Tailark:** secondary open marketing-block candidate; MIT, Base UI default registry path.
+- **Tailwind Plus:** premium benchmark/source, not a requirement; use only under a valid license and when it materially beats free/local options.
+- **Relume:** preferred large-scale discovery/reference source; runtime/code adoption conditional on exact compatibility/license/dependency review.
+- **Webflow DevLink:** 2026 export can produce local self-contained React/TSX components; therefore valid as a scoped experiment, but not default because Webflow primitives/scoped CSS would create a second style system.
+- **Framer:** visual/reference only for architecture purposes because current first-party Help contains contradictory claims about full-site self-host/export portability.
+- **Figma:** preferred editable convergence surface when write access is available; current connected account was observed as Starter/View, so not a hard dependency.
+- **Motion:** semantic temporal proof only, with Reduced Motion as an acceptance path.
+- **Image generation:** mood/illustration/novel exploration only, not precise homepage composition authority.
 
-### Tool decisions
+### Token direction
 
-- **Relume:** preferred discovery/reference source for large section/component space; current public React examples still show React 18/Tailwind 3.x-era integration on many components, so do not make its runtime/preset a foundational dependency without a Tailwind 4 compatibility proof.
-- **Tailwind Plus:** preferred premium generic marketing-block source if a valid license is available; current official library targets the latest Tailwind 4 line. License absence must not block the project.
-- **shadcn/ui + Base UI:** preferred open/local primitive source for generic app/product controls and shell mechanics. shadcn officially supports Astro and made Base UI the default for new projects in 2026-07 while retaining Radix support.
-- **Motion:** semantic motion only; reduced-motion is a first-class path.
-- **Figma:** preferred editable design-convergence surface when write access exists. The currently connected Figma account was observed on 2026-08-29 as Starter / View seat, so M10 cannot depend on Figma writes until capability is confirmed.
-- **Framer/Webflow/Figma Sites:** strong reference/builder ecosystems, but not current production default because adopting them would replace or complicate the self-hosted Astro/Cloudflare/ACP path.
-- **Aceternity/Magic UI:** exception-only effect sources; do not use as foundation because their common glow/beam/3D/bento vocabulary can recreate generic AI-SaaS aesthetics.
+M10 should preserve a small vendor-neutral semantic token source, aligned where practical with the stable Design Tokens Community Group 2025.10 format, then project it into Tailwind 4/CSS variables.
 
-Image generation remains valid for mood/illustration/novel visual exploration, but is **not the primary method for precise homepage UI composition**.
+Keep it intentionally small:
 
-## Figma access boundary
+- semantic colors;
+- typography roles;
+- spacing;
+- container/breakpoint rules;
+- radius/border/shadow;
+- focus ring;
+- motion values only if motion survives evidence.
 
-Figma is preferred, not mandatory.
-
-If write capability is available, use an editable Figma file as the primary visual composition surface.
-
-If write capability is unavailable, M10 must remain executable using durable code/docs assets that preserve the same design authority:
-
-- exact design tokens;
-- typography/grid/spacing rules;
-- approved component/reference inventory;
-- exact copy;
-- desktop/mobile layout specs;
-- readable Product state references;
-- provenance/license records;
-- optional raster screenshots as evidence, not sole authority.
-
-Do not degrade to raster-only ImageGen authority merely because Figma cannot be edited.
+Do not build an enterprise token pipeline before the design surface justifies it.
 
 ## Current M05 validation authority
 
@@ -104,8 +101,6 @@ Do not degrade to raster-only ImageGen authority merely because Figma cannot be 
 - `docs/HERO-CONCEPTS-M05.md` — current divergent-pair exploration contract.
 - `docs/M05-WIREFRAMES.md` — internal structural reference only; former A/C/D participant-facing plan is retired.
 - `docs/RESEARCH-M05-EXPLORATION-2026-08-29.md` — evidence behind the exploration/fidelity correction.
-- `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — component/template reuse strategy.
-- `docs/APPROVED-PRIMITIVES-2026-08-29.md` — current approved primitive order and compatibility/licensing boundaries.
 
 M05 is intentionally **not** a small-sample statistical A/B test.
 
@@ -126,11 +121,11 @@ visitor recognizes the ongoing checking burden first,
 then immediately sees concrete email/Product proof
 ```
 
-This preserves the anti-fixation value of multiple alternatives without manufacturing near-duplicate variants.
+The already-created Concept A raster visual is retained only as an **unvalidated P structural reference**, not as design medium or visual authority. Old C/D Hero generation is stopped.
 
-The already-created Concept A raster visual is retained only as an **unvalidated P structural reference**, not as the design medium or visual authority. Old C/D Hero generation is stopped. C/D ideas may be reused later as section-level techniques if useful.
+P and E should share the accepted generic shell/token system where practical so the comparison tests the acquisition/proof thesis rather than random template aesthetics.
 
-Participant-facing first-impression stimuli should be realistic mid/high fidelity enough to evaluate category recognition, credibility, visual orientation and trust. Prefer editable composition; if Figma writes are unavailable, use code-owned/static design assets with exact bindings rather than crude wireframes or free-form image generation.
+Participant-facing first-impression stimuli should be realistic mid/high fidelity enough to evaluate category recognition, credibility, visual orientation and trust.
 
 Motion is tested only after a static direction is comprehension-eligible, using the same structure/content so the temporal effect is not mixed with a different layout.
 
@@ -155,7 +150,7 @@ Preserve only the semantic storyboard, not the art direction.
 M00  #1  Bootstrap canonical contracts
           |
           v
-R05       Reuse-source + design-system setup
+R05       Reuse-source + token/design-system setup
           |
           v
 M05  #10 P baseline vs E dark horse comprehension evidence
@@ -163,7 +158,7 @@ M05  #10 P baseline vs E dark horse comprehension evidence
           +--> optional isolated static-vs-motion evidence
           |
           v
-M10  #3  Freeze user-validated implementation-grade visual authority
+M10  #3  Freeze user-validated structured visual authority
           |
           +-----------------------------+
                                         |
@@ -195,9 +190,9 @@ M90  future explicit production-domain cutover
 - #3 must consume #10 directional comprehension evidence; visually attractive wrong-mental-model candidates cannot win.
 - #10 distinguishes unaided first impressions from aided comparative feedback and evaluates the lower-page journey as well as Hero.
 - Do not spend M05 research/sample budget on near-duplicate Hero layouts that ordinary design judgment can resolve.
-- A second/third direction is only justified by a genuinely different mental-model/proof hypothesis.
 - Do not serially patch a generated raster image and call the patches new concepts.
 - Reuse generic primitives before authoring custom ones, but require Product-truth/accessibility/responsive/performance/license review.
+- Community shadcn registries are discovery/distribution surfaces, not trust authorities; audit exact source before adoption.
 - #4 must not start before ACP G7 PASS. G8 concurrency is not required.
 - The first production-code task should run through the accepted Agent Control Plane rather than a parallel manual Codex workflow.
 - #5 and #6 may proceed in parallel only after #4 and frozen visual direction, provided serialized dependency/config assets are coordinated.
@@ -224,15 +219,16 @@ Issue #2 was an accidental placeholder and is closed `not_planned`; it has no au
 ## Next actions
 
 1. Stop bespoke raster homepage iteration as the default design process.
-2. Curate a small set of proven structural references/components and record source/license/role; prefer Relume/Figma references and licensed Tailwind Plus if available, while avoiding generic AI-SaaS effects.
-3. Establish the Lunowa web design system in an editable design surface if available, otherwise in durable code/docs tokens/specs.
-4. Assemble **P Product Proof** and **E Editorial Problem-First** as independently conceived realistic mid/high-fidelity stimuli using reused generic structure plus custom Lunowa Product proof.
-5. Run Product-truth/claim/accessibility/visual anti-pattern audit on P/E before user exposure.
-6. Run small directional M05 unaided comprehension research with P/E assignment rotated across participants.
-7. If P is clearly comprehension-eligible and E reveals no stronger acquisition model, stop exploration and converge rather than generating more variants.
-8. Test motion only when the temporal distinction still needs proof.
-9. Feed M05 evidence into #3 and freeze readable desktop/mobile implementation-grade visual authority.
-10. Continue `miki-labs/agent-control-plane` toward G7 independently.
-11. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path, reusing approved components before custom implementation.
+2. Define the minimal Lunowa semantic token source.
+3. Inspect a **small** set of native/7Ovr/Tailark/Tailwind Plus-if-licensed/Relume Hero/header/CTA/FAQ/footer candidates; record exact source/license/role and reject generic AI-SaaS effects.
+4. Choose one generic shell system rather than mixing unrelated library aesthetics section by section.
+5. Compose P Product Proof and E Editorial Problem-First using that common shell plus custom Lunowa Product proof.
+6. Run Product-truth/claim/accessibility/visual anti-pattern audit on P/E before user exposure.
+7. Run small directional M05 unaided comprehension research with P/E assignment rotated across participants.
+8. If P is clearly comprehension-eligible and E reveals no stronger acquisition model, stop exploration and converge rather than generating more variants.
+9. Test motion only when the temporal distinction still needs proof.
+10. Feed M05 evidence into #3 and freeze readable desktop/mobile structured visual references.
+11. Continue `miki-labs/agent-control-plane` toward G7 independently.
+12. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path, reusing approved components before custom implementation.
 
 Codex prompts remain short: point to the current Issue and repository contracts rather than restating them.
