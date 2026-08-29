@@ -2,38 +2,58 @@
 
 Status: canonical marketing-site motion direction, 2026-08-29.
 
+Read `docs/VISITOR-JOURNEY.md` before motion work.
+
 ## 1. Motion thesis
 
 Lunowa should not be an animation-heavy website.
 
 > **The page stays still. Product meaning moves.**
 
-Motion exists to explain state, causality, continuity, and interaction feedback. It is not a substitute for visual design.
+Motion exists to explain state, causality, continuity, and interaction feedback. It is not a substitute for category recognition, Product proof, copy, or visual design.
 
-## 2. Signature motion
+The Product must remain understandable without motion.
+
+## 2. Signature temporal proof
 
 The primary motion story is one unresolved communication loop:
 
 ```text
-request
--> Managed
--> intermediate reply/evidence
--> still Managed
+user requests a quotation
+-> Lunowa visibly watches the unresolved result
+-> intermediate reply/evidence arrives
+-> user still does not need to act
 -> quiet interval
--> material outcome evidence
--> Needs You
--> Moment
+-> material outcome evidence arrives
+-> user attention becomes necessary
+-> concise context/source is revealed
 ```
 
-The most important beat is **intermediate reply -> still Managed**. A reply is observed without creating unnecessary attention.
+Internal Product state labels may map to this sequence, but the visitor should not need to know them first.
 
-## 3. Implementation model
+The most important beat is **intermediate reply -> still no user action required**. A reply is observed without creating unnecessary attention.
 
-The animation must be implemented as real UI state transitions, not a pre-rendered Hero video.
+## 3. Static-first requirement
+
+Every animated Product story begins from a meaningful static frame.
+
+The static frame must already answer:
+
+- what kind of communication matter is being watched;
+- what Lunowa is currently doing;
+- whether the user needs to act now.
+
+Motion may add temporal proof, but may not be necessary to decode the Product category or core benefit.
+
+If a still screenshot of the Hero looks like an unexplained diagram, motion design has already failed.
+
+## 4. Implementation model
+
+The primary Product demonstration must be implemented as real UI state transitions, not a pre-rendered Hero video.
 
 React owns demo state. Motion/CSS owns visual interpolation.
 
-Conceptual states:
+Conceptual internal states may include:
 
 - `request`
 - `managed`
@@ -43,9 +63,11 @@ Conceptual states:
 - `needsYou`
 - `moment`
 
+These are implementation/storyboard concepts, not copy the visitor must memorize.
+
 Animation code must not become a second Product semantic authority.
 
-## 4. Preferred tools
+## 5. Preferred tools
 
 - CSS transitions/keyframes: small hover/focus/fade/reveal effects.
 - Motion for React: Product state/layout transitions, presence, sequencing.
@@ -53,39 +75,43 @@ Animation code must not become a second Product semantic authority.
 - GSAP: only if a later verified requirement cannot reasonably be achieved with the simpler stack.
 - Rive/Lottie/video: optional brand/illustration media, not primary Product proof.
 
-## 5. Hero playback
+## 6. Hero playback — empirical boundary
 
-Preferred initial behavior:
+Do not freeze autoplay by preference alone.
 
-- Hero and Product stage render meaningful static content immediately.
-- Do not delay LCP for animation code.
-- Prefer user-triggered `15秒で見る` / replay control over an endless autoplay loop.
-- If a short automatic first-play is later tested, it must stop, remain comprehensible without motion, and provide pause/replay controls where required.
+M05/M10 should compare at least:
 
-Illustrative timing, subject to visual testing:
+1. a strong static-first Product frame with explicit playback/replay control;
+2. a restrained short first-play variant that stops and leaves a meaningful final/static state.
+
+Any automatic motion must remain short, stoppable where required, and non-essential to basic comprehension.
+
+Do not use an endless autoplay loop as the default proof.
+
+Possible prototype timing only:
 
 ```text
-0s   meaningful static Hero already visible
-2s   request becomes the active evidence
-4s   Managed state settles
-7s   intermediate reply arrives
-9s   Still Managed / no attention required
-12s  quiet hold
-15s  material evidence arrives
-17s  Needs You transition
-19s  Moment opens
-23s  stop
+0s   meaningful Product frame already visible
+2s   intermediate reply arrives
+4s   Lunowa remains in quiet monitoring / no action required
+7s   short quiet hold
+9s   material evidence arrives
+11s  user-attention state appears
+13s  concise context/source reveal
+15s  stop
 ```
+
+The previous 20+ second explanatory sequence is no longer the preferred starting point because first-time visitors should not need to watch a long state-machine lesson to understand the Product.
 
 Timing values are prototype starting points, not scientific constants.
 
-## 6. Motion grammar
+## 7. Motion grammar
 
 Use motion to indicate:
 
-- continuity of the same item across states;
-- evidence arrival;
-- state transition;
+- continuity of the same communication item across states;
+- one new piece of evidence arriving;
+- a material change in whether the user needs to act;
 - hierarchy/focus;
 - direct response to user action.
 
@@ -103,21 +129,33 @@ Avoid:
 - large zooms;
 - permanent background motion;
 - scrolling text/marquees;
-- motion that changes reading order or steals focus.
+- abstract icon conveyor belts;
+- motion that changes reading order or steals focus;
+- decorative movement whose only purpose is to make the site look `AI` or `cinematic`.
 
-## 7. Object continuity
+## 8. Object continuity
 
-Where the same tracked item changes from Managed to Needs You, preserve visual identity where practical. The visitor should perceive `the same unresolved item changed state`, not `one card disappeared and another unrelated card appeared`.
+Where the same tracked matter changes from quiet monitoring to user-attention state, preserve visual identity where practical.
 
-## 8. Scroll motion
+The visitor should perceive:
+
+> `the same unresolved matter changed in a meaningful way`
+
+not:
+
+> `one marketing card disappeared and a different card appeared`.
+
+## 9. Scroll motion
 
 Most sections should work perfectly while static.
 
-Allowed default reveal is subtle and non-essential. Scroll-driven storytelling is allowed only when it clarifies a Product mechanism and ordinary document scrolling remains under user control.
+Allowed reveal is subtle and non-essential. Scroll-driven storytelling is allowed only when it clarifies a Product mechanism and ordinary document scrolling remains under user control.
 
 No scroll-jacking.
 
-## 9. Reduced motion
+A lower section may continue the same scenario, but it must not require the visitor to remember an animation frame that has already scrolled away.
+
+## 10. Reduced motion
 
 `prefers-reduced-motion: reduce` is a first-class acceptance path.
 
@@ -126,11 +164,11 @@ For reduced-motion users:
 - suppress non-essential translation/zoom/parallax;
 - use instant or minimal opacity/state changes;
 - preserve every piece of information;
-- provide a static stepper/sequence for the Product story where needed.
+- provide static before/after or explicit step states where needed.
 
 The no-motion version must not be a degraded explanation.
 
-## 10. Interaction accessibility
+## 11. Interaction accessibility
 
 Motion must never:
 
@@ -140,19 +178,25 @@ Motion must never:
 - use color/motion alone to communicate semantic state;
 - create a blind duplicate action or imply an unconfirmed external effect.
 
-## 11. Performance
+## 12. Performance
 
-- animation must not block initial content;
+- animation must not block initial content or Product recognition;
 - prefer compositor-friendly properties;
 - lazy-hydrate lower-page interactive islands when appropriate;
 - stable dimensions prevent CLS during state transitions;
-- visual testing must cover at least desktop, mobile, and reduced-motion states.
+- visual testing must cover desktop, mobile, reduced-motion, and static-before-hydration states.
 
-## 12. Acceptance question
+## 13. Scientific/evidence boundary
+
+Current HCI evidence supports the claim that animation type can affect emotion and perceived time in specific interaction contexts, and that motion can either clarify or increase cognitive burden depending on design and task. It does **not** prove that an animated landing-page Hero universally converts better than a static one.
+
+Therefore the static-vs-motion choice for Lunowa is an experiment, while accessibility and basic static comprehension are hard requirements.
+
+## 14. Acceptance question
 
 A motion is justified only if at least one is true:
 
-1. it makes a state relationship easier to understand;
+1. it makes the temporal `reply != outcome completion` distinction easier to understand;
 2. it preserves object continuity;
 3. it gives necessary interaction feedback;
 4. it directs attention to the one material change.
