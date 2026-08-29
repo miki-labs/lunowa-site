@@ -11,11 +11,16 @@ Status date: 2026-08-30
 
 ## Current phase
 
-**R05 COMPLETE ENOUGH FOR STIMULUS CONSTRUCTION / M05 P-E PRE-RESEARCH**
+**S05 STIMULUS CONSTRUCTION READY — Issue #14**
 
 Production-code implementation has not started and is intentionally held until ACP G7 PASS.
 
-Issue #1 owns acceptance of the durable marketing-site control plane. M05 #10 owns directional comprehension evidence before M10 #3 can freeze final visual authority.
+Issue ownership:
+
+- #1 — canonical marketing-site control plane acceptance;
+- #14 — construct and internally audit P-v1 / E-v1 + shared lower-page research stimuli;
+- #10 — participant-facing first-impression research after #14 acceptance;
+- #3 — freeze final structured visual authority after durable #10 evidence.
 
 ## Current accepted direction
 
@@ -109,12 +114,7 @@ plain final CTA
 minimal footer
 ```
 
-Why:
-
-- current Linear/Cursor/Granola/Attio patterns strongly reinforce Product UI as proof and one-job-per-section vertical narrative;
-- centered Product-first shell preserves enough width for real email/Product UI;
-- it matches current `Quiet Product Proof` constraints;
-- it can remain common between P and E, making the acquisition hierarchy rather than template aesthetics the experimental variable.
+Current strong Product-site references — Linear, Cursor, Granola and Attio — reinforce Product UI as proof and a vertically staged one-job-per-section narrative. This is market/design evidence, not proof of a universal conversion optimum.
 
 Do **not** import a complete generic SaaS template. Whole templates commonly carry logo clouds, stats, testimonials, pricing, bento grids and other unsupported/unnecessary sections.
 
@@ -154,19 +154,11 @@ M05 is intentionally **not** a small-sample statistical A/B test.
 
 ## P/E construction state
 
-Current experiment uses a minimal genuinely divergent pair:
+S05 Issue #14 owns exactly:
 
-```text
-P — Product Proof Baseline
-Product/category/value/CTA
-then large real-looking Lunowa UI explains the job immediately
-
-vs
-
-E — Editorial Problem-First Dark Horse
-visitor recognizes the repeated checking/remembering burden first,
-then concrete email/Product proof appears early
-```
+1. `P-v1` — Product Proof Baseline;
+2. `E-v1` — independently conceived Editorial Problem-First Dark Horse;
+3. one shared lower-page continuation reference.
 
 The already-created Concept A raster visual remains only an **unvalidated historical P structural reference**. It is not the design medium or authority and should not be serially patched.
 
@@ -202,10 +194,10 @@ M00  #1  Bootstrap canonical contracts
 R05       reuse + tokens + common shell  [substantially complete]
           |
           v
-S05       construct internally-audited P-v1 / E-v1 stimuli
+S05  #14 construct + internally audit P-v1 / E-v1 / shared continuation
           |
           v
-M05  #10 directional comprehension evidence
+M05  #10 participant first-impression evidence
           |
           +--> optional isolated static-vs-motion evidence
           |
@@ -235,12 +227,13 @@ M70  #9  Full verification + preview deployment
 M90  future explicit production-domain cutover
 ```
 
-`S05`/R05 are design/research preparation, not production-code authorization. They may proceed before ACP G7.
+R05/S05 are design/research preparation, not production-code authorization. They may proceed before ACP G7.
 
 ## Execution notes
 
-- #3 must consume #10 directional comprehension evidence; visually attractive wrong-mental-model candidates cannot win.
-- #10 distinguishes unaided first impressions from aided comparative feedback and evaluates lower-page understanding after Hero exposure.
+- #14 must complete and internally audit participant stimuli before #10 exposes them to users.
+- #10 should collect evidence, not redesign stimuli during participant sessions.
+- #3 must consume #10 evidence; visually attractive wrong-mental-model candidates cannot win.
 - Do not spend M05 sample budget on near-duplicate Hero layouts.
 - Do not serially patch a generated raster image and call patches new concepts.
 - Do not restart broad template/tool discovery unless a concrete shell requirement cannot be satisfied.
@@ -257,7 +250,8 @@ M90  future explicit production-domain cutover
 ## Current Issues
 
 - #1 — Bootstrap Lunowa marketing site control plane
-- #10 — M05 first-impression comprehension validation
+- #14 — S05 construct comparable P-v1/E-v1 research stimuli
+- #10 — M05 participant first-impression comprehension validation
 - #3 — M10 user-validated visual-oracle freeze
 - #4 — M20 Astro/static foundation, blocked on ACP G7
 - #5 — M30 Hero Product Story + semantic motion
@@ -271,16 +265,15 @@ Issue #2 was an accidental placeholder and is closed `not_planned`; it has no au
 
 ## Next actions
 
-1. **Do not continue broad tool/template research by default.** The common shell is selected.
-2. Construct **P-v1** using the selected shell, current semantic token roles, and the canonical intermediate-reply Product state.
-3. Independently construct **E-v1** using the same shell/tokens/Product scene but a real problem-first acquisition hierarchy; do not derive E by cosmetically editing P.
-4. Create one shared realistic lower-page continuation reference for the post-Hero probe instead of two duplicate long homepages.
-5. Run full internal pre-research audit on P-v1/E-v1: Product truth, wrong-category risk, copy, unsupported claims, visual anti-patterns, accessibility plausibility, comparable fidelity and hidden variables.
-6. Only after both pass internal audit, run small directional M05 unaided comprehension research with assignment rotated across participants.
-7. If P is clearly comprehension-eligible and E reveals no materially stronger acquisition model, converge instead of creating more variants.
-8. Test motion only if temporal understanding remains materially weak.
-9. Feed evidence into #3 and freeze desktop/mobile structured visual authority + exact token values.
-10. Continue `miki-labs/agent-control-plane` toward G7 independently.
-11. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path.
+1. Execute Issue #14: construct **P-v1** using the selected shell, semantic token roles, and canonical intermediate-reply Product state.
+2. Independently construct **E-v1** using the same shell/tokens/Product scene but a real problem-first acquisition hierarchy; do not derive E by cosmetically editing P.
+3. Create one shared realistic lower-page continuation reference for the post-Hero probe instead of two duplicate long homepages.
+4. Run full internal pre-research audit on #14's cumulative artifact set: Product truth, wrong-category risk, copy, unsupported claims, visual anti-patterns, accessibility plausibility, comparable fidelity and hidden variables.
+5. Only after #14 PASS, run #10 small directional unaided comprehension research with P/E assignment rotated across participants.
+6. If P is clearly comprehension-eligible and E reveals no materially stronger acquisition model, converge instead of creating more variants.
+7. Test motion only if temporal understanding remains materially weak.
+8. Feed evidence into #3 and freeze desktop/mobile structured visual authority + exact token values.
+9. Continue `miki-labs/agent-control-plane` toward G7 independently.
+10. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path.
 
 Codex prompts remain short: point to the current Issue and repository contracts rather than restating them.
