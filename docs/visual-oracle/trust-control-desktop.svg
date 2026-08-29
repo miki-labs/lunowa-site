@@ -1,36 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
   <title id="title">Lunowa Trust and Control section visual authority</title>
   <desc id="desc">A restrained trust section translating source visibility, uncertainty and external-effect boundaries into user-facing consequences.</desc>
+  <!-- Public wording must be rechecked against current implementation/provider/runtime truth before release. -->
   <rect width="1200" height="700" fill="#F8F8F5"/>
   <g font-family="Inter Variable, Noto Sans JP, Hiragino Sans, Yu Gothic UI, Yu Gothic, sans-serif" fill="#181817">
-    <text x="84" y="104" font-size="14" font-weight="600" fill="#355F91">Trust &amp; Control</text>
+    <text x="84" y="104" font-size="14" font-weight="600" fill="#355F91">信頼とコントロール</text>
     <text x="84" y="162" font-size="44" font-weight="700">任せる。でも、決定権は渡さない。</text>
     <text x="84" y="204" font-size="17" fill="#686864">Lunowaの判断だけを信じさせるのではなく、元のメールと根拠へ戻れる状態を保ちます。</text>
-
     <line x1="84" y1="258" x2="1116" y2="258" stroke="#D8D8D2"/>
-
-    <!-- Source row -->
     <text x="84" y="310" font-size="12" font-weight="600" fill="#777772">01</text>
     <text x="140" y="310" font-size="22" font-weight="700">元のメールを確認できる</text>
     <text x="140" y="346" font-size="15" fill="#686864">何を見てこの状態になったのか、元の会話へ戻って確認できます。</text>
     <text x="944" y="328" font-size="14" font-weight="600" fill="#355F91">山田商事との会話を見る →</text>
-
-    <line x1="84" y1="386" x2="1116" y2="386" stroke="#E1E1DC"/>
-
-    <!-- Uncertainty row -->
+    <line x1="84" y1="386" x2="1116" y2="386" stroke="#D8D8D2"/>
     <text x="84" y="438" font-size="12" font-weight="600" fill="#777772">02</text>
     <text x="140" y="438" font-size="22" font-weight="700">不確かなことを、確定したように扱わない</text>
     <text x="140" y="474" font-size="15" fill="#686864">根拠が足りない時は、勝手に完了へ進めるのではなく確認が必要な状態として扱います。</text>
     <rect x="932" y="417" width="164" height="42" rx="10" fill="#F1F2EE" stroke="#D8D8D2"/>
     <text x="1014" y="443" text-anchor="middle" font-size="13" font-weight="600">確認が必要</text>
-
-    <line x1="84" y1="514" x2="1116" y2="514" stroke="#E1E1DC"/>
-
-    <!-- External effect row -->
+    <line x1="84" y1="514" x2="1116" y2="514" stroke="#D8D8D2"/>
     <text x="84" y="566" font-size="12" font-weight="600" fill="#777772">03</text>
     <text x="140" y="566" font-size="22" font-weight="700">起きていない外部操作を、起きたことにしない</text>
     <text x="140" y="602" font-size="15" fill="#686864">送信や完了などの外部結果は、実際の根拠と整合している時だけその状態として扱います。</text>
-
-    <text x="84" y="662" font-size="12" fill="#777772">※ 公開時の具体表現は、その時点の実装・provider/runtime truthへ再照合する。</text>
   </g>
 </svg>
