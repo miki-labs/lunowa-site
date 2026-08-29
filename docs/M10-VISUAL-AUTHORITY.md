@@ -1,67 +1,45 @@
 # Lunowa M10 Structured Visual Authority — 2026-08-30
 
-Status: **M10 FREEZE CANDIDATE — P DIRECTION / STATIC-FIRST / CODE-OWNED**.
+Status: **M10 FREEZE CANDIDATE — INTERNAL FULL AUDIT IN PROGRESS / OWNER VISUAL CONFIRMATION PENDING**.
 
 Read with:
 
 - `docs/visual-oracle/MANIFEST.md`
 - `docs/tokens/lunowa-m10.tokens.json`
 - `docs/M10-TOKEN-CONTRACT.md`
+- `docs/M10-RESPONSIVE-SPEC.md`
 - `docs/HOMEPAGE.md`
 - `docs/DESIGN.md`
 - `docs/MOTION.md`
 - current Product authority in `miki-thecat/lunowa`.
 
-This authority is internally audited and owner-selected. It is **not external user validation**.
+This authority is based on the internally audited **P — Product Proof Baseline** recommendation. It is neither independent-user validation nor final Product-owner visual acceptance until the owner reviews the M10 candidate.
 
 ## 1. Selected thesis
 
-### Visual thesis
+- visual: **Quiet Product Proof**;
+- acquisition: **P — Product Proof Baseline**;
+- motion: **static-first; optional reinforcement only**;
+- reuse: **reuse ordinary mechanics; custom-design Product meaning**.
 
-> **Quiet Product Proof**
-
-### Acquisition thesis
-
-> **P — Product Proof Baseline**
-
-### Motion thesis
-
-> **Static-first. Motion is optional reinforcement, not an explanatory dependency.**
-
-### Reuse thesis
-
-> **Reuse ordinary mechanics; custom-design Product meaning.**
-
-The homepage should feel familiar as high-quality software marketing while making Lunowa distinctive through the actual behavior it demonstrates.
+The page should feel familiar as high-quality software marketing while making Lunowa distinctive through the behavior it demonstrates.
 
 ## 2. Complete page order
 
 ```text
 minimal Header
-↓
-category/mechanism cue
-↓
-H1 + concise support + primary CTA
-↓
-large believable Lunowa Product stage
-↓
-repeated-checking problem
-↓
-返信 ≠ 完了
-↓
-quiet monitoring / no user action
-↓
-material outcome / attention required
-↓
-return context / Source
-↓
-Trust / Control
-↓
-early-access boundary
-↓
-material FAQ
-↓
-final CTA + minimal Footer
+-> category/mechanism cue
+-> H1 + concise support + primary CTA
+-> large believable Lunowa Product stage
+-> repeated-checking problem
+-> 返信 ≠ 完了
+-> quiet monitoring / no user action
+-> material outcome / attention required
+-> return context / Source
+-> Trust / Control
+-> early-access boundary
+-> material FAQ
+-> final CTA + minimal Footer
 ```
 
 One section owns one visitor question. Do not replace this with a generic feature-card inventory.
@@ -71,20 +49,20 @@ One section owns one visitor question. Do not replace this with a generic featur
 Desktop:
 
 - Lunowa wordmark/name at left;
-- maximum a few plain anchors such as `仕組み`, `FAQ` when the destination exists;
+- only a few plain anchors such as `仕組み`, `FAQ` when destinations exist;
 - one primary early-access CTA;
-- no announcement bar unless there is an actual announcement;
+- no announcement bar without an actual announcement;
 - no mega menu, command palette, blur island or scroll choreography.
 
 Mobile:
 
-- brand + primary CTA may remain directly visible;
-- add a menu only if final navigation requires it;
-- do not hydrate a mobile menu merely because a reference component used React.
+- brand + primary CTA may remain visible directly;
+- add a menu only if final navigation needs it;
+- do not hydrate merely because a reference component used React.
 
 ## 4. Hero copy and hierarchy
 
-Required current hierarchy:
+Required hierarchy:
 
 1. category/mechanism cue;
 2. H1;
@@ -99,257 +77,208 @@ Current copy:
 - support: `必要な結果が届くまで見守り、あなたの対応が必要になった時だけ戻します。`
 - CTA: `先行アクセスに登録`
 
-The H1 is not self-sufficient. Keep explicit email/category/mechanism evidence nearby unless a later reviewed copy change provides equal or stronger category clarity.
+The H1 is not self-sufficient. Keep explicit email/category/mechanism evidence nearby unless a reviewed later copy provides equal or stronger category clarity.
 
 ## 5. Hero Product proof
 
 Desktop authority: `docs/visual-oracle/hero-desktop.svg`.
 
-The initial still Product stage must visibly contain:
+The initial still Product stage visibly contains:
 
 - recognizable email/conversation context;
 - counterparty;
-- tracked/awaited outcome = quotation;
+- awaited outcome = quotation;
 - latest intermediate reply = `社内確認中です。明日送ります。`;
-- explicit user consequence = `あなたの対応はまだ必要ありません`;
-- explicit continued-monitoring consequence;
+- `あなたの対応はまだ必要ありません`;
+- continued-monitoring consequence;
 - original-email/Source path.
 
-Avoid unrelated inbox controls. The UI should feel believable but task-focused.
+Avoid unrelated inbox controls. Product UI should feel believable but task-focused.
 
 ## 6. `返信 ≠ 完了` proof
 
-The same object must remain continuous across states.
+The same matter remains continuous across states.
 
-### State A — intermediate evidence
+### Intermediate evidence
 
 - reply arrived;
-- requested quotation did not;
+- quotation did not;
 - no material user action;
 - Lunowa keeps monitoring.
 
-### State B — material outcome
+### Material outcome
 
-Authority: `state-attention-desktop.svg`.
+Authority: `docs/visual-oracle/state-attention-desktop.svg`.
 
 - quotation arrives;
-- attention state becomes visible;
-- user is asked to review amount and delivery date;
+- attention becomes necessary;
+- amount/delivery-date review is requested;
 - attachment is visible;
 - Source remains available.
 
-Do not imply that attachment arrival alone proves the entire Responsibility is safely closed after the user's review/action; the marketing state only proves that user attention is now warranted.
+Do not imply that attachment arrival itself proves the entire Responsibility is safely closed.
 
 ## 7. Return context
 
-Authority: `state-return-context-desktop.svg`.
+Authority: `docs/visual-oracle/state-return-context-desktop.svg`.
 
-Return context must answer with minimal reconstruction:
+The return state answers:
 
-- **what changed?** quotation arrived;
-- **what remains?** check amount and delivery date;
-- **what is the evidence?** latest source text + attachment;
-- **where is the original?** original email path.
+- what changed? — quotation arrived;
+- what remains? — check amount and delivery date;
+- evidence? — latest source text + attachment;
+- original? — direct Source path.
 
-This section may use user-friendly `今の要点` wording. Internal ontology names are not required.
+`今の要点` is acceptable user-facing language; internal ontology names are unnecessary.
 
 ## 8. Lower-page rhythm
 
-Authority: `lower-page-overview.svg`.
+Authority: `docs/visual-oracle/lower-page-overview.svg`.
 
-### Problem band
+- Problem: retain E's useful insight — `「あの件、どうなった？」を頭の片隅に置き続けること。`
+- Distinction: concrete intermediate-vs-material-outcome comparison.
+- Monitoring: explain what the user can stop checking.
+- Return: continue the same quotation scenario.
+- Trust: use the dedicated Trust/Control authority.
+- Early access/FAQ: keep runtime-dependent claims narrow.
 
-Use E's strongest retained insight:
-
-> `「あの件、どうなった？」を頭の片隅に置き続けること。`
-
-This self-recognition belongs below the Product-first Hero.
-
-### Distinction band
-
-Use one concrete before/after comparison:
-
-- intermediate reply / no action;
-- material result / attention required.
-
-This is one of the few places where adjacent cards/containers are semantically justified because two states are being compared.
-
-### Monitoring band
-
-Explain what the user can stop doing, not merely a `Managed` label.
-
-### Return band
-
-Continue the same quotation matter. Do not swap scenarios merely to showcase more features.
-
-### Trust band
-
-Use `trust-control-desktop.svg` for detailed authority.
-
-### Availability / FAQ / CTA
-
-Keep early access narrow and truthful. Exact post-registration behavior/provider availability remains owned by later runtime/waitlist work.
+Adjacent cards are justified only where two real Product states are being compared; do not turn the page into a generic card grid.
 
 ## 9. Trust / Control
 
-Authority: `trust-control-desktop.svg`.
+Authority: `docs/visual-oracle/trust-control-desktop.svg`.
 
-Trust is shown through user consequences rather than badges:
+Trust is shown through consequences rather than badges:
 
-1. original email/source can be inspected;
+1. original Source can be inspected;
 2. uncertainty is not promoted into fake certainty;
-3. external actions/results are not represented as happened unless supported by actual evidence/state.
+3. external actions/results are not represented as happened unless supported by evidence/state.
 
-Do not add generic security shields, certification logos, encryption badges or vague `enterprise-grade` language without exact current authority.
+No generic security shields, certification logos, encryption badges or vague `enterprise-grade` wording without exact authority.
 
-## 10. Mobile semantic projection
+## 10. Responsive/mobile authority
 
 Authorities:
 
-- `hero-mobile.svg`
-- `product-story-mobile.svg`
+- `docs/M10-RESPONSIVE-SPEC.md`;
+- `docs/visual-oracle/hero-mobile.svg`;
+- `docs/visual-oracle/product-story-mobile.svg`.
 
-Mobile is a recomposition, not a desktop screenshot scale transform.
+Mobile is a recomposition, not a scaled desktop screenshot.
 
-Required first-screen order:
+Required semantics include awaited outcome, latest reply, no-action consequence, continued monitoring, Source, material-outcome arrival and attention-required state.
 
-1. brand/CTA;
-2. category cue;
-3. H1;
-4. concise support;
-5. CTA;
-6. simplified Product proof.
+At 320px, use the frozen narrow type/reflow behavior rather than shrinking Product evidence into illegibility.
 
-Required Product semantics on mobile:
+## 11. Typography and color
 
-- awaited outcome;
-- latest reply;
-- no-action consequence;
-- continued monitoring;
-- Source;
-- later material-outcome/attention-required state.
+Exact semantic values live in:
 
-At 320px:
+- `docs/tokens/lunowa-m10.tokens.json`;
+- `docs/M10-TOKEN-CONTRACT.md`.
 
-- use the frozen 36/44 narrow Hero size if required;
-- reduce horizontal padding only to the accepted reflow boundary;
-- never shrink Product text until unreadable;
-- stack states vertically;
-- no horizontal scroll.
+Implementation may use component-specific type sizes explicitly visible in these SVG authorities, but must not inherit arbitrary third-party values.
 
-## 11. Typography
+Color meaning:
 
-Exact family/role values live in the token source/contract.
-
-Design intent:
-
-- large headings are limited to actual Hero/section statements;
-- Japanese readability outranks aggressive letter-spacing aesthetics;
-- Product UI is compact but not decorative-small;
-- hierarchy comes from size/weight/spacing before excess color.
-
-Implementation may refine individual component typography only when the SVG/spec itself clearly uses a component-specific size. Such values must be copied from the authority rather than invented from a third-party template.
-
-## 12. Color / semantic state
-
-Exact semantic colors are frozen in `lunowa-m10.tokens.json`.
-
-Meaning:
-
-- green family = quiet monitoring / no current user attention;
-- amber family = attention now required;
-- red family = genuine integrity/error only;
+- green = quiet monitoring / no current attention;
+- amber = attention now required;
+- red = genuine integrity/error only;
 - cobalt = restrained link/category/focus accent;
-- near-white/deep-neutral = page/product foundation.
+- warm near-white/deep-neutral = foundation.
 
 Never use color alone as state meaning.
 
-## 13. Shape / depth
+## 12. Shape / depth
 
-- restrained control/surface/Product radii from tokens;
+- restrained tokenized radii;
 - borders before shadows;
-- Product stage can receive a very subtle shadow only if browser comparison improves hierarchy;
-- no glassmorphism;
-- no universal pills;
-- no floating-card wall.
+- Product stage may receive only subtle shadow if real-browser comparison improves hierarchy;
+- no glassmorphism, universal pills or floating-card wall.
 
-## 14. Motion
+## 13. Motion
 
-No motion is required to implement the accepted homepage.
+No motion is required for the accepted design thesis.
 
-If M30 later adds motion, it must:
+Any later M30 motion must:
 
-- use the same Product state authority;
+- use the same Product-state authority;
 - preserve object continuity;
 - not alter Product semantics;
 - remain non-essential;
-- stop/flatten cleanly under Reduced Motion;
+- flatten cleanly under Reduced Motion;
 - avoid perpetual ambient animation.
 
-## 15. Reuse / implementation mapping
+## 14. Reuse / implementation mapping
 
-For M20/M30/M40:
-
-- static marketing bands should default to Astro/native semantic markup;
-- React islands only for actual interaction;
-- shadcn/Base UI only where a real interactive primitive helps;
-- open/premium blocks may provide structure but must be mapped into Lunowa tokens;
+- static marketing bands default to Astro/native semantic markup;
+- React islands only for real interaction;
+- shadcn/Base UI only where an interactive primitive helps;
+- open/premium blocks may provide structure but must map into Lunowa tokens;
 - no whole generic SaaS template;
-- every material borrowed code source requires provenance/license/dependency evidence.
+- borrowed code requires provenance/license/dependency evidence.
 
-The visual oracle owns result, not a specific component vendor.
+The visual authority owns the result, not a component vendor.
 
-## 16. Copy/truth freeze boundary
+## 15. Copy/truth freeze boundary
 
-Frozen now:
+Frozen candidate:
 
 - Product positioning/order;
 - canonical quotation scenario;
-- Hero copy family/current text;
+- Hero copy/current text;
 - `返信 ≠ 完了` narrative;
 - monitoring/attention/Source meanings;
 - early-access CTA intent;
-- material Product-semantic FAQ answers in the manifest.
+- Product-semantic FAQ answers in the manifest.
 
 Still runtime/release-bound:
 
-- supported providers shown publicly;
-- language availability claims;
-- exact beta/access timing;
-- what confirmation is sent after waitlist registration;
+- public supported-provider wording;
+- language availability;
+- beta/access timing;
+- confirmation behavior after waitlist registration;
 - pricing;
-- security/privacy claims tied to deployed behavior.
+- deployed security/privacy claims.
 
-Later tasks may adjust only these runtime-bound copies without reopening the whole M10 visual thesis, unless their truthful wording materially changes layout/comprehension.
+Later runtime-bound copy may change without reopening the whole visual thesis unless truthful wording materially affects layout/comprehension.
 
-## 17. External-validation debt
+## 16. External-validation debt
 
-The selected direction has not been independently tested with first-time visitors.
+No independent first-time visitor evidence exists yet.
 
-Current authority is valid for implementation because:
+Current candidate is:
 
-- Product truth is canonical and live-checked;
-- P/E were controlled enough for structured internal comparison;
-- P passed the full internal comprehension-risk audit;
-- the owner accepted P as the lower-risk/lower-complexity direction;
-- code-owned tokens/references now remove implementation ambiguity.
+- Product-truth checked;
+- internally audited/recommended;
+- code-owned and implementation-deterministic.
 
-But this does **not** prove real first-time comprehension or conversion.
+It is not evidence that real visitors definitely understand or convert better. Future preview/beta/traffic evidence may require correction.
 
-When independent preview users/traffic exist, external evidence may require correction.
+## 17. Owner confirmation boundary
 
-## 18. Freeze rule
+Before M10 #3 can be called finally accepted/closed, the Product owner should review the current visual-oracle candidate itself.
 
-After M10 acceptance, M20/Codex must treat this authority as the visual/design input.
+Owner review is a Product/design authority check, **not a first-time visitor test**.
 
-Do not:
+The owner may:
+
+- accept P visual authority;
+- reject material aesthetics/composition/copy;
+- request a bounded correction.
+
+Aesthetic preference must not reintroduce known Product-truth or wrong-model blockers without explicit adjudication.
+
+## 18. Freeze rule after owner acceptance
+
+After M10 acceptance, M20/Codex must not silently:
 
 - restart Hero concept generation;
-- reintroduce E as a separate Hero without new evidence;
-- switch palettes because a library default looks nicer;
+- revive E as a separate Hero without new evidence;
+- switch palette because a library default looks nicer;
 - add decorative AI effects;
-- add motion because a component demo contains it;
-- make unsupported availability/security/performance claims;
+- add motion because a demo contains it;
+- invent availability/security/performance claims;
 - reinterpret mobile as a scaled desktop screenshot.
 
-Material deviations require an explicit reviewed change to the owning contract/authority.
+Material deviations require an explicit reviewed authority change.
