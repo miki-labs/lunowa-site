@@ -49,21 +49,23 @@ If a still screenshot of the Hero looks like an unexplained diagram, motion desi
 
 ## 4. M05 evidence boundary
 
-Do not evaluate motion while also changing the Hero's information architecture if the variables can be isolated.
+Motion is **not a mandatory M05 comparison**.
 
-Current M05 sequence:
+Current sequence:
 
-1. compare A/C/D as static structures;
-2. eliminate structures that repeatedly create the wrong mental model;
-3. apply B motion to an eligible static structure while keeping content/layout stable as practical;
-4. compare static vs motion evidence for the temporal mechanism;
-5. treat autoplay vs user-triggered playback as an additional playback-policy question, not as interchangeable exposure.
+1. establish a static acquisition/mental-model direction from the genuinely divergent P/E exploration;
+2. reject directions that repeatedly create the wrong Product mental model;
+3. if `Reply != Done`, object continuity, or delegated-monitoring confidence remains insufficiently clear, apply a bounded motion treatment to the same accepted structure/content;
+4. compare static vs motion only for that isolated temporal question;
+5. treat autoplay vs user-triggered playback as a separate playback-policy question if it is ever tested.
+
+Do not spend research effort proving that motion exists. Motion must earn its complexity by solving a specific comprehension/interaction problem.
 
 This is directional qualitative evidence, not a statistically powered claim that motion improves conversion.
 
 ## 5. Implementation model
 
-The primary Product demonstration must be implemented as real UI state transitions, not a pre-rendered Hero video.
+If a primary Product demonstration uses motion, implement it as real UI state transitions, not a pre-rendered Hero video.
 
 React owns demo state. Motion/CSS owns visual interpolation.
 
@@ -84,14 +86,16 @@ Animation code must not become a second Product semantic authority.
 ## 6. Preferred tools
 
 - CSS transitions/keyframes: small hover/focus/fade/reveal effects.
-- Motion for React: Product state/layout transitions, presence, sequencing.
+- Motion for React: Product state/layout transitions, presence, sequencing when accepted.
 - Native browser transitions/scroll-driven animation: progressive enhancement where simpler and robust.
 - GSAP: only if a later verified requirement cannot reasonably be achieved with the simpler stack.
 - Rive/Lottie/video: optional brand/illustration media, not primary Product proof.
 
 ## 7. Hero playback
 
-The current initial B hypothesis is **user-controlled playback** applied to a meaningful static Product frame.
+There is no default playback policy until motion has first been justified.
+
+If M05/M10 retains a bounded Hero Product demo, the current starting hypothesis is **user-controlled playback** applied to a meaningful static Product frame.
 
 Example control:
 
@@ -115,8 +119,6 @@ Possible prototype timing only:
 13s  concise context/source reveal
 15s  stop
 ```
-
-The previous 20+ second explanatory sequence is not the preferred starting point because a first-time visitor should not need to watch a long state-machine lesson to understand the Product.
 
 Timing values are prototype starting points, not scientific constants.
 
@@ -199,13 +201,17 @@ Motion must never:
 - prefer compositor-friendly properties;
 - lazy-hydrate lower-page interactive islands when appropriate;
 - stable dimensions prevent CLS during state transitions;
-- visual testing must cover desktop, mobile, reduced-motion, and static-before-hydration states.
+- visual testing must cover desktop, mobile, reduced-motion, and static-before-hydration states when motion exists.
 
 ## 14. Scientific/evidence boundary
 
 Current HCI evidence supports the bounded statement that motion/animation design can affect experience and comprehension in particular tasks, but motion can also add cognitive burden. It does **not** prove that an animated landing-page Hero universally converts better than a static one.
 
-Therefore the static-vs-motion choice for Lunowa is an experiment, while accessibility and basic static comprehension are hard requirements.
+Therefore:
+
+- accessibility and basic static comprehension are hard requirements;
+- motion is a conditional intervention, not a mandatory feature;
+- `no motion required` is a valid final design outcome if static Product proof already communicates the temporal distinction adequately.
 
 ## 15. Acceptance question
 
