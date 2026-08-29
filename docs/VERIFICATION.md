@@ -2,7 +2,7 @@
 
 Status: canonical acceptance oracle for design and implementation-facing work, 2026-08-29.
 
-Read `docs/VISITOR-JOURNEY.md` before evaluating visual or implementation candidates.
+Read `docs/VISITOR-JOURNEY.md`, `docs/FIRST-IMPRESSION-VALIDATION.md`, `docs/HERO-CONCEPTS-M05.md`, and `docs/M05-WIREFRAMES.md` before evaluating visual or implementation candidates.
 
 ## 1. Principle
 
@@ -10,21 +10,27 @@ No candidate is accepted because it merely "looks right" in review.
 
 Required high-level loop:
 
-`Product truth -> visitor/comprehension contract -> visual candidate -> first-impression evidence -> selected visual oracle -> implement -> run -> inspect in real browser -> compare -> test -> independently audit final cumulative candidate`.
+`Product truth -> visitor/comprehension contract -> low-fidelity static structures -> Stage 1 first-impression evidence -> eligible static structure -> Stage 2 motion evidence -> selected visual oracle -> implement -> run -> inspect in real browser -> compare -> test -> independently audit final cumulative candidate`.
 
 A candidate that is visually polished but produces the wrong Product mental model is a failure.
 
 ## 2. Pre-implementation comprehension oracle
 
-Before final M10 visual freeze, collect directional first-impression evidence as defined by the current M05 task and `VISITOR-JOURNEY.md`.
+Before final M10 visual freeze, collect directional evidence under the current M05 task and `FIRST-IMPRESSION-VALIDATION.md`.
 
-Primary ~10-second question:
+### Stage 1 — static structure
 
-> `Lunowaは何をするものだと思いましたか？`
+Compare current A/C/D static concepts with stable scenario/copy/stimulus bindings.
+
+Required unaided first questions after bounded initial exposure:
+
+1. `これは何をするサービス／アプリだと思いましたか？`
+2. `使うと何が楽になると思いましたか？`
+3. `画面の中で、そう思った根拠はどこでしたか？`
 
 Target mental model is approximately:
 
-> Lunowa watches unfinished email-related matters and returns them when the user actually needs to act, reducing the need for repeated manual checking.
+> Lunowa watches unfinished email-related matters and returns them when the user actually needs to act, reducing repeated manual checking.
 
 Material misinterpretations to track explicitly:
 
@@ -34,9 +40,24 @@ Material misinterpretations to track explicitly:
 - automatic follow-up sender;
 - notification muter;
 - generic task manager;
-- autonomous agent that takes over email decisions.
+- autonomous agent that takes over email decisions;
+- unclear category.
 
-This small study is directional design evidence, not market representativeness, PMF, or exact-ICP validation.
+### Stage 2 — temporal motion
+
+After at least one static structure is comprehension-eligible, compare the same structure/content in static form versus the bounded B motion treatment.
+
+The Stage 2 question is not whether animation looks more impressive. It is whether motion materially improves understanding of:
+
+`intermediate reply -> still no user action required -> material outcome -> attention required`
+
+without introducing more confusion, accessibility cost, or dependence on motion for basic Product comprehension.
+
+Autoplay, user-triggered playback, and other playback modes are distinct conditions and must not be silently merged.
+
+### Evidence limit
+
+M05 is directional qualitative evidence, not market representativeness, PMF, exact-ICP validation, conversion lift, or a statistically powered A/B test.
 
 ## 3. Visual-oracle acceptance
 
@@ -48,8 +69,10 @@ Before a generated/mock visual becomes canonical:
 - the concrete scenario matches Product truth;
 - unsupported functionality/security/performance claims are absent;
 - generated text has been independently checked rather than trusted as marketing authority;
-- #10 directional comprehension evidence has been consumed;
-- major confusion/distrust findings are resolved or explicitly carried as open hypothesis.
+- #10 Stage 1 and Stage 2 evidence has been consumed where applicable;
+- unaided and aided findings remain distinct;
+- major confusion/distrust findings are resolved or explicitly carried as open hypothesis;
+- readable implementation-grade references exist for major states/sections rather than relying only on one compressed full-page board.
 
 The rejected first dark/purple/orb/icon-timeline candidate is not a valid baseline.
 
@@ -107,6 +130,7 @@ Candidate baseline states should include user-meaningful forms of:
 - material evidence arrival;
 - user-attention-required state;
 - concise context/Source state;
+- representative lower-page section states where layout is material;
 - mobile Hero;
 - reduced-motion presentation where visually distinct;
 - static-before-hydration state where implementation differs.
@@ -151,6 +175,7 @@ Target WCAG 2.2 AA unless an explicit higher requirement is adopted.
 
 When motion is touched:
 
+- verify the accepted static baseline first;
 - verify normal motion;
 - verify `prefers-reduced-motion: reduce`;
 - verify all information remains available with motion suppressed;
@@ -159,7 +184,8 @@ When motion is touched:
 - verify no endless non-essential animation steals attention;
 - verify only one material change dominates at a time;
 - verify Product-state transitions do not imply unsupported Product semantics;
-- do not treat animation as a conversion improvement without direct Lunowa evidence.
+- verify motion preserves object continuity of the same unresolved matter;
+- do not treat animation as a conversion or comprehension improvement without direct Lunowa evidence.
 
 ## 10. Performance
 
@@ -216,7 +242,7 @@ If a PR changes hosting/dynamic behavior, verify as applicable:
 
 ## 13. Implementation-entry gate
 
-Production-code implementation must not start until the external `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance gate has passed, in addition to the local visual/design prerequisites.
+Production-code implementation must not start until the external `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance gate has passed, in addition to local visual/design prerequisites.
 
 G8 concurrency is not required.
 
