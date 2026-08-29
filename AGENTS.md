@@ -4,153 +4,153 @@
 
 `miki-labs/lunowa-site` owns the public Lunowa marketing website.
 
-It is a **projection of Product truth**, not the Product authority. The canonical Product authority remains in `miki-thecat/lunowa`, especially `docs/product/PRODUCT.md`, `docs/product/PRODUCT-CONTENT.md`, Responsibility semantics, and canonical design contracts.
+It is a **projection of Product truth**, not Product authority. Canonical Product truth remains in `miki-thecat/lunowa`, especially Product, Product Content, Responsibility semantics and canonical design contracts.
 
-This repository must not invent Product semantics, supported capabilities, pricing, customer counts, testimonials, security certifications, performance claims, or validated ICP conclusions.
+This repository must not invent Product semantics, providers, availability, pricing, customer counts, testimonials, security certifications, performance claims or validated ICP conclusions.
 
 ## Read first
 
-Before implementation or review, read:
+Before design, implementation or review, read:
 
-1. `docs/CURRENT.md` — current execution router and status.
-2. `docs/VISITOR-JOURNEY.md` — first-time visitor mental-model sequence and comprehension oracle.
-3. `docs/REUSE-STACK-AUDIT-2026-08-29.md` — latest reuse/tool/portability audit.
-4. `docs/APPROVED-PRIMITIVES-2026-08-29.md` — approved primitive hierarchy and provenance boundaries.
-5. `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md` — curated generic component-pattern shortlist.
-6. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — reuse-first rationale and ecosystem roles.
-7. `docs/M10-TOKEN-CONTRACT.md` — provisional semantic token structure; roles are authoritative before exact M10 values freeze.
-8. `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md` — selected generic homepage shell; do not restart broad template exploration without new evidence.
-9. `docs/M05-P-E-STIMULUS-CONTRACT.md` — exact P/E participant-stimulus construction and hidden-variable controls.
-10. `docs/stimuli/MANIFEST.md` — accepted exact S05 artifact/blob/token/provenance binding.
-11. `docs/M05-SESSION-PACKET.md` — current participant assignment, moderator, evidence and coding protocol for M05 #10.
-12. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research-method authority.
-13. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration rationale; retired A/C/D variants are not the active participant plan.
-14. `docs/M05-WIREFRAMES.md` — internal structural reference only.
-15. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
-16. `docs/DESIGN.md` — visual direction and anti-patterns.
-17. `docs/MOTION.md` — semantic motion contract.
-18. `docs/ARCHITECTURE.md` — technical/deployment architecture.
-19. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
-20. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
+1. `docs/CURRENT.md` — current execution router/status.
+2. `docs/VISITOR-JOURNEY.md` — visitor mental-model sequence.
+3. `docs/M05-INTERNAL-COMPREHENSION-AUDIT.md` — current owner+AI evidence boundary/audit method.
+4. `docs/M05-INTERNAL-AUDIT-RESULT-2026-08-30.md` — current P-selection rationale and external-validation debt.
+5. `docs/M10-TOKEN-CONTRACT.md` — provisional semantic token roles.
+6. `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md` — selected generic homepage shell.
+7. `docs/stimuli/MANIFEST.md` — historical exact S05 artifact binding used by the audit.
+8. `docs/HOMEPAGE.md` — homepage projection/copy/truth boundaries.
+9. `docs/DESIGN.md` — visual direction/anti-patterns.
+10. `docs/MOTION.md` — semantic motion contract.
+11. `docs/REUSE-STACK-AUDIT-2026-08-29.md`.
+12. `docs/APPROVED-PRIMITIVES-2026-08-29.md`.
+13. `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md`.
+14. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md`.
+15. `docs/ARCHITECTURE.md`.
+16. `docs/VERIFICATION.md`.
+17. `docs/FIRST-IMPRESSION-VALIDATION.md` — **future/deferred external-human protocol**, not current blocking evidence.
+18. dated research supplements as rationale, not authority over current contracts.
 
 ## Current execution boundary
 
-S05 Issue #14 is completed. M05 Issue #10 is the current participant-research task.
+S05 #14 and M05 #10 are completed.
 
-Use only the exact accepted stimulus set bound in `docs/stimuli/MANIFEST.md`. If any accepted artifact changes, the prior S05 acceptance becomes stale and a new pre-research audit is required before participant exposure.
+Current selected direction: **P — Product Proof Baseline**.
 
-M05 #10 owns **real participant evidence**, not visual redesign. Do not silently patch stimuli inside participant sessions. ChatGPT simulation cannot substitute for human evidence.
+M10 #3 is current and must converge P into implementation-grade desktop/mobile structured visual authority.
+
+The active team consists only of the Product owner and ChatGPT. Therefore:
+
+- owner self-evaluation is not a clean first-impression user test;
+- ChatGPT/persona/synthetic responses are not user evidence;
+- current design is **internally audited / owner-selected**, not `user validated`;
+- external independent visitor validation is deferred until real visitors/beta users/traffic exist;
+- lack of current participants is not a reason to halt implementation indefinitely.
 
 ## Visitor-first rule
 
 Do not design from Lunowa's internal ontology outward.
 
-For public marketing surfaces, first establish what a first-time visitor must recognize and understand. Internal labels such as `Managed`, `Needs You`, `Moment`, `Responsibility`, and `Attention Delegation` may appear only where their user-facing meaning is already clear.
+A first-time visitor should not need `Managed`, `Needs You`, `Moment`, `Responsibility`, or `Attention Delegation` vocabulary to understand the Product.
 
-A visually impressive candidate that repeatedly produces the wrong Product mental model is a failure.
+Current selected acquisition sequence:
+
+`email/category cue -> value promise -> concise mechanism -> dominant believable Product proof`.
+
+Preserve the concrete intermediate-reply state:
+
+`社内確認中です。明日送ります。 -> result still missing -> あなたの対応はまだ必要ありません -> Lunowa continues monitoring`.
+
+A polished candidate with a materially wrong Product model is a failure.
 
 ## Reuse-first rule
 
-Do not reinvent ordinary web mechanics when a mature, adaptable primitive exists.
+Do not reinvent ordinary web mechanics when a mature adaptable primitive exists.
 
 Current selection order:
 
 1. accepted local Lunowa primitive;
 2. native semantic HTML/CSS;
 3. shadcn/ui + intended MIT `@base-ui/react` / `mui/base-ui` primitive;
-4. audited open shadcn registry block — current first candidates 7Ovr then Tailark;
+4. audited open shadcn registry block — current candidates 7Ovr then Tailark;
 5. Tailwind Plus if licensed and materially superior;
 6. Relume/reference adaptation;
 7. optional Webflow DevLink proof for a specific visual-to-React need;
 8. custom Lunowa implementation;
-9. decorative/effect libraries only by exception.
+9. decorative/effect libraries only by explicit exception.
 
-Community registries are not trust authorities. Review exact code, dependencies, license, accessibility and responsive behavior before adoption.
+Community registries are discovery/distribution surfaces, not trust authorities. Inspect exact code, dependencies, license, accessibility, responsive behavior and network effects before adoption.
 
-Do not use a full third-party template merely because it exists. Prefer the smallest adequate block.
+Do not use a complete third-party SaaS template merely because it exists. Prefer the smallest adequate block and map it into Lunowa tokens.
 
 ### Selected generic shell
 
-`docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md` is the current generic shell decision.
+Do not restart broad Navbar/Hero/FAQ/Footer exploration without a concrete unmet requirement.
 
-Do not restart broad Hero/navbar/FAQ/footer exploration by default. Current shell family is:
+Current shell:
 
-`minimal header -> category/value -> centered/near-centered Hero -> large Product proof -> editorial one-job sections -> Product/trust proof -> availability -> minimal FAQ -> plain CTA -> minimal footer`.
+`minimal header -> category/value -> centered/near-centered Hero -> large Product proof -> editorial one-job sections -> Product/trust proof -> availability -> minimal FAQ -> plain CTA/footer`.
 
-Generic shell decisions should stay shared between P and E where practical. Product semantics and acquisition hierarchy are the experiment; random template aesthetics are not.
+P is now selected; E is no longer maintained as a parallel Hero architecture. E's useful repeated-checking/self-recognition insight remains in the lower-page problem narrative.
 
-### Current tool boundaries
+### Tool boundaries
 
-- Figma is preferred for editable convergence when write access exists, but it is not a hard dependency.
-- Framer remains visual/reference-only for architecture decisions until its conflicting current first-party export/self-host documentation is reconciled.
-- Webflow DevLink is technically viable as a scoped visual-to-React experiment, but it is not the default because it introduces Webflow primitives/scoped CSS beside the Tailwind system.
+- Figma is preferred when writable but not required.
+- Framer portability is not an architecture assumption.
+- Webflow DevLink is optional/scoped, not default.
 - Image generation is exploratory, not precise webpage authority.
-- Motion exists only for semantic Product change/feedback and must respect Reduced Motion.
+- Motion is optional semantic reinforcement/craft; baseline comprehension must remain static-first and Reduced Motion equivalent.
 
 ## Design-token rule
 
-`docs/M10-TOKEN-CONTRACT.md` defines the current semantic token roles. Before M10 freeze, **semantic roles are authoritative while exact aesthetic values remain provisional**.
+`docs/M10-TOKEN-CONTRACT.md` defines semantic token roles. Before M10 freeze, roles are authority while exact aesthetic values remain provisional.
 
-Preserve a small vendor-neutral semantic token source for M10 where practical, aligned with the stable Design Tokens Community Group 2025.10 format, and project it into Tailwind CSS 4/CSS variables.
+M10 must freeze a small vendor-neutral token source, DTCG-compatible where practical, deterministically projectable into Tailwind CSS 4/CSS variables.
 
-Do not create an oversized enterprise token pipeline. Token complexity must be justified by actual design surface.
+Do not create an enterprise token platform for a small marketing surface.
 
-Third-party blocks must map into Lunowa tokens; do not let an imported block's palette, font, radius or shadow system silently become authority.
+Third-party blocks must inherit Lunowa tokens rather than silently importing foreign color/type/radius/shadow systems.
 
-## M05 experiment rule
+## Evidence rule
 
-Do not spend participant/sample budget on near-duplicate Hero layouts.
+Evidence classes must remain explicit:
 
-Current primary divergence is:
+- Product truth = canonical authority;
+- external research = general method/current-market evidence;
+- internal rubric audit = known-risk reduction;
+- owner decision = Product/design authority;
+- external independent visitor evidence = currently deferred.
 
-`P Product Proof baseline vs E Editorial Problem-First dark horse`.
+Never promote ChatGPT simulation or owner familiarity into `users understood` evidence.
 
-The old A/C/D participant-facing comparison is retired. Existing Concept A raster output is only an unvalidated historical structural reference.
-
-P and E use the accepted common shell, token snapshot, CTA treatment, canonical quotation scenario, Product-stage geometry and static-only condition bound in `docs/stimuli/MANIFEST.md`. The intended variable is the acquisition hierarchy above the common Product stage.
-
-Execute participant research according to `docs/M05-SESSION-PACKET.md`. Keep unaided first impressions separate from aided/comparative discussion and bind findings to exact stimuli.
-
-If a static direction is comprehension-eligible, test motion only when the temporal mechanism still needs additional proof.
-
-Small M05 rounds are directional qualitative evidence, not statistically powered conversion tests or market validation.
+`docs/FIRST-IMPRESSION-VALIDATION.md` and `docs/M05-SESSION-PACKET.md` are future external-validation support only.
 
 ## AI-native delivery workflow
 
-Use this loop:
+Current loop:
 
-`research/Product truth -> visitor contract -> reuse-stack audit -> semantic tokens + selected generic shell -> accepted P/E stimuli -> real participant comprehension evidence -> optional isolated motion evidence -> structured visual authority -> scoped ACP/Codex implementation -> real-browser verification -> correction -> independent full acceptance audit`.
+`Product truth -> visitor contract -> reuse/tokens/common shell -> exact P/E artifacts -> internal owner+AI audit -> P selected -> M10 structured visual freeze -> ACP/Codex implementation after G7 -> real-browser verification -> later external validation when independent evidence becomes available -> correction`.
 
-- ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, reuse strategy, token/design direction, research synthesis, independent review.
-- Human participants: first-impression evidence that cannot be simulated by the model.
+- ChatGPT: research, Product/marketing synthesis, contracts, design direction, internal audit, independent acceptance review where appropriate.
+- Product owner: final Product/design authority and decisions.
 - Codex: implementation, tests, browser verification, build/deploy evidence, PR candidate construction.
-- Figma when writable: editable design convergence and visual reference surface.
-- GitHub: canonical durable task contracts, tokens/specs, provenance and evidence.
+- Figma when writable: optional editable convergence/reference surface.
+- GitHub: durable canonical contracts, tokens, provenance and evidence.
 
-Do not duplicate the full repository contract in long Codex prompts. Point Codex at the owning Issue + these docs.
+Do not duplicate full contracts into long Codex prompts; point Codex to the owning Issue and canonical docs.
 
 ## Generated-visual boundary
 
-Raster image generation is exploratory, not the default precise homepage-design workflow and not authoritative.
+Raster image generation is exploratory, not the default precise homepage-design workflow.
 
-Use image generation for mood exploration, illustration, campaign assets or genuinely novel visual concepts. Prefer editable/code-owned structure for typography/layout/responsive/Product UI work.
+Use editable/code-owned structure for typography, layout, responsive behavior and Product UI. Generated images may support mood, illustration or genuinely novel exploration, but never become Product truth by themselves.
 
-Before any generated visual becomes evidence, verify:
-
-- first-glance Product/category comprehension;
-- consistency with Product truth;
-- absence of invented functionality/security/performance claims;
-- consistency with `DESIGN.md` and `VISITOR-JOURNEY.md`;
-- a meaningful static state before relying on animation.
-
-For long pages, do not rely on one compressed board if implementation-critical Product text/states are unreadable. Prefer coordinated readable section/state references plus an overview for page rhythm.
-
-Do not cosmetically patch a failed visual prior if the failure came from the underlying design thesis or comprehension model.
+For long pages, freeze coordinated readable section/state references plus an overview rather than one unreadable compressed board.
 
 ## Review discipline
 
 Independent review is against **current task contract × entire final cumulative candidate**, not only the latest patch.
 
-On FAIL, complete the audit and record all known material blockers/corrections in one durable batch. Avoid one-defect-at-a-time micro-correction loops. If corrections repeatedly fail, analyze specification, oracle, architecture, decomposition, or verification gaps before another patch loop.
+On FAIL, complete the audit and record all known material blockers/corrections in one durable batch. Avoid one-defect-at-a-time micro-correction loops. After repeated failures, analyze specification, oracle, architecture, decomposition or verification gaps before another patch loop.
 
-Immediate stop is reserved for security, destructive, or data-loss risk.
+Immediate stop is reserved for security, destructive or data-loss risk.
