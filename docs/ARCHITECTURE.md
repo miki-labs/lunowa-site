@@ -23,13 +23,34 @@ Reasons:
 - independent deployment lifecycle;
 - avoid unrelated dependency/lockfile contention with Product engineering;
 - keep marketing analytics/waitlist dependencies out of Product runtime;
-- allow marketing iteration while Product implementation gates remain active.
+- allow marketing research/design iteration while Product implementation gates remain active.
 
 Product semantics remain owned by `miki-thecat/lunowa`.
 
-## 3. Frontend stack
+## 3. Execution / control-plane boundary
 
-Initial preferred stack:
+Marketing research, visitor contracts, visual exploration, copy, and design oracles may progress before code implementation.
+
+**Production code implementation in this repository is intentionally held until `miki-labs/agent-control-plane` has passed its G7 single-task same-production-path acceptance gate.**
+
+Rationale:
+
+- use `lunowa-site` as an early real-world dogfooding target for the control plane;
+- avoid building one manual Codex workflow and later migrating to a different execution path;
+- prove the single-task GitHub -> Controller -> credential-less Codex -> candidate -> trusted verification -> independent review -> human integration path before relying on it here;
+- keep implementation/review evidence structurally compatible with the longer-term autonomous workflow.
+
+G8 concurrency/scheduler work is **not** required to begin `lunowa-site` implementation. G7 is the implementation-entry gate.
+
+Until G7 PASS:
+
+- no Astro/React/Tailwind production scaffold is required;
+- no dependency lockfile should be created merely to get ahead of the gate;
+- design/research work should leave implementation-ready contracts and visual oracles so the first control-plane task can start immediately after G7.
+
+## 4. Frontend stack
+
+Initial preferred stack, to be re-checked against current stable releases immediately before M20 implementation:
 
 - Astro — static-first page shell, routing, metadata, content composition;
 - React — interactive islands only;
@@ -38,7 +59,7 @@ Initial preferred stack:
 - TypeScript — strict implementation language;
 - Playwright — browser/e2e/visual/accessibility-tree verification.
 
-### 3.1 Static-first rule
+### 4.1 Static-first rule
 
 Default to static HTML/CSS.
 
@@ -52,7 +73,7 @@ Examples:
 
 Do not convert the marketing site into a full client SPA by default.
 
-## 4. Hosting
+## 5. Hosting
 
 Use **Cloudflare Workers Static Assets** for new production deployment unless a later evidence-backed task changes the provider.
 
@@ -65,7 +86,7 @@ Rationale:
 
 The site must remain deployable as a predominantly static artifact.
 
-## 5. Initial dynamic boundary
+## 6. Initial dynamic boundary
 
 The only planned initial dynamic marketing endpoint is:
 
@@ -88,7 +109,7 @@ browser
 -> optional Resend verification/confirmation mail
 ```
 
-## 6. Waitlist data minimization
+## 7. Waitlist data minimization
 
 Store only what is needed for the current validation/early-access purpose.
 
@@ -103,7 +124,7 @@ Candidate fields, subject to an explicit waitlist contract:
 
 Do not collect mailbox content, credentials, sensitive Product data, or broad profiling data in the marketing database.
 
-## 7. Analytics
+## 8. Analytics
 
 Start with low-complexity, low-privacy-cost measurement.
 
@@ -113,7 +134,7 @@ Start with low-complexity, low-privacy-cost measurement.
 
 No tracking script should be added solely because it is conventional.
 
-## 8. Security baseline
+## 9. Security baseline
 
 At minimum:
 
@@ -134,7 +155,7 @@ At minimum:
 
 The safest default is no dynamic endpoint and no third-party script unless required.
 
-## 9. Domain architecture
+## 10. Domain architecture
 
 Intended future public routing:
 
@@ -145,7 +166,7 @@ app.lunowa.com    -> Lunowa application
 
 Repository separation does not imply brand/navigation separation.
 
-## 10. Localization
+## 11. Localization
 
 Initial site architecture must not hard-code Japanese assumptions into layout or motion.
 
@@ -158,7 +179,7 @@ Requirements:
 - Product screenshots/demos should use localized string data rather than baked video text where practical;
 - locale is not a separate Product semantic implementation.
 
-## 11. SEO
+## 12. SEO
 
 Server/static-render meaningful content.
 
@@ -173,7 +194,7 @@ Required eventual baseline:
 - meaningful internal navigation;
 - no important marketing copy hidden behind client-only rendering.
 
-## 12. Dependency policy
+## 13. Dependency policy
 
 Choose the simplest proven tool that meets the accepted requirement.
 
@@ -186,23 +207,23 @@ Every recurring-cost or third-party dependency should answer:
 3. what privacy/security/availability/cost surface does it add?
 4. what is the exit/migration path?
 
-## 13. Cost policy
+## 14. Cost policy
 
 During validation/early beta, fixed marketing-site infrastructure cost should approach domain-renewal-only where practical without sacrificing trust or reliability.
 
 Do not trade material security or data integrity for negligible savings. Once real traction/revenue makes paid reliability/features rational, upgrade deliberately rather than clinging to free tiers.
 
-## 14. Repository governance
+## 15. Repository governance
 
-The repository currently starts with an unprotected `main`. That is acceptable only during control-plane bootstrap before implementation CI exists.
+The repository currently starts with an unprotected `main`. Direct canonical-document edits are permitted only during this pre-implementation bootstrap/research phase by the owning planner.
 
-Before implementation candidates begin integrating routinely:
+Before implementation candidates begin integrating routinely after ACP G7:
 
 - create deterministic CI for required lint/type/build/test checks;
-- use branch/PR-based implementation rather than direct feature edits on `main`;
+- use the accepted control-plane / branch / PR implementation path rather than direct feature edits on `main`;
 - enable appropriate `main` protection / required status checks once those checks exist;
 - require candidate evidence to bind to the exact PR head;
 - do not let deployment credentials or production writes be available to untrusted pull-request code;
 - coordinate serialized dependency/config assets when parallel agents are active.
 
-Canonical control-plane corrections may be made deliberately by the owning planner, but production implementation must follow the review/verification path rather than bypassing it.
+Canonical control-plane corrections may be made deliberately by the owning planner during bootstrap, but production implementation must follow the review/verification path rather than bypassing it.
