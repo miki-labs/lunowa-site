@@ -3,63 +3,55 @@
   <desc id="desc">P-based static-first homepage Hero showing Lunowa monitoring a quotation request after an intermediate reply while no user action is required.</desc>
   <rect width="1440" height="900" fill="#F8F8F5"/>
   <g font-family="Inter Variable, Noto Sans JP, Hiragino Sans, Yu Gothic UI, Yu Gothic, sans-serif" fill="#181817">
-    <!-- Header -->
     <text x="72" y="58" font-size="28" font-weight="700">Lunowa</text>
     <text x="1082" y="55" font-size="14" fill="#686864">仕組み</text>
     <text x="1152" y="55" font-size="14" fill="#686864">FAQ</text>
     <rect x="1212" y="27" width="156" height="44" rx="10" fill="#181817"/>
     <text x="1290" y="55" text-anchor="middle" font-size="14" font-weight="600" fill="#FFFFFF">先行アクセス</text>
 
-    <!-- Hero copy -->
     <text x="720" y="130" text-anchor="middle" font-size="16" font-weight="600" fill="#355F91">返信待ち・資料待ちを、Lunowaが代わりに見守る。</text>
     <text x="720" y="205" text-anchor="middle" font-size="60" font-weight="700">メールを、確認し続けなくていい。</text>
     <text x="720" y="256" text-anchor="middle" font-size="18" fill="#686864">必要な結果が届くまで見守り、あなたの対応が必要になった時だけ戻します。</text>
     <rect x="613" y="292" width="214" height="52" rx="10" fill="#181817"/>
     <text x="720" y="325" text-anchor="middle" font-size="15" font-weight="600" fill="#FFFFFF">先行アクセスに登録</text>
 
-    <!-- Product stage -->
     <rect x="96" y="382" width="1248" height="472" rx="20" fill="#FFFFFF" stroke="#D8D8D2" stroke-width="1"/>
-    <line x1="96" y1="446" x2="1344" y2="446" stroke="#E1E1DC"/>
+    <line x1="96" y1="446" x2="1344" y2="446" stroke="#D8D8D2"/>
     <text x="124" y="422" font-size="18" font-weight="700">Lunowa</text>
     <text x="1100" y="421" font-size="12" fill="#777772">メールを検索</text>
     <rect x="1238" y="400" width="78" height="28" rx="8" fill="#F1F2EE"/>
     <text x="1277" y="419" text-anchor="middle" font-size="11" fill="#686864">山田</text>
 
-    <!-- Sidebar -->
-    <line x1="286" y1="446" x2="286" y2="854" stroke="#E1E1DC"/>
+    <line x1="286" y1="446" x2="286" y2="854" stroke="#D8D8D2"/>
     <text x="122" y="491" font-size="12" fill="#777772">対応が必要</text>
-    <rect x="112" y="510" width="158" height="40" rx="9" fill="#EEF4F9"/>
+    <rect x="112" y="510" width="158" height="40" rx="9" fill="#F1F2EE"/>
     <text x="132" y="536" font-size="14" font-weight="600" fill="#355F91">見守り中</text>
     <text x="122" y="583" font-size="12" fill="#777772">すべての会話</text>
-    <line x1="120" y1="619" x2="258" y2="619" stroke="#E8E8E3"/>
+    <line x1="120" y1="619" x2="258" y2="619" stroke="#D8D8D2"/>
     <text x="122" y="650" font-size="11" fill="#777772">見守っている用件</text>
     <text x="122" y="677" font-size="13" font-weight="600">山田商事</text>
     <text x="122" y="700" font-size="12" fill="#686864">見積書</text>
 
-    <!-- Conversation header -->
     <text x="326" y="483" font-size="12" font-weight="600" fill="#777772">メールの会話</text>
     <text x="326" y="523" font-size="28" font-weight="700">Re: 見積書のお願い</text>
     <text x="326" y="554" font-size="14" fill="#686864">山田商事</text>
-    <rect x="1038" y="488" width="246" height="42" rx="10" fill="#EEF4F9"/>
+    <rect x="1038" y="488" width="246" height="42" rx="10" fill="#F1F2EE"/>
     <text x="1161" y="514" text-anchor="middle" font-size="13" font-weight="600" fill="#355F91">見積書を待っています</text>
 
-    <!-- Monitoring consequence -->
     <rect x="326" y="580" width="780" height="82" rx="16" fill="#EDF6F1" stroke="#C8DED3"/>
     <circle cx="356" cy="621" r="13" fill="#3D6D58"/>
     <path d="M350 621 l4 4 l8 -9" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="386" y="613" font-size="19" font-weight="700">あなたの対応はまだ必要ありません</text>
-    <text x="386" y="641" font-size="14" fill="#66706A">見積書が届くまで、Lunowaがこの会話を引き続き見守ります。</text>
+    <text x="386" y="641" font-size="14" fill="#3D6D58">見積書が届くまで、Lunowaがこの会話を引き続き見守ります。</text>
 
-    <!-- Thread -->
     <text x="326" y="700" font-size="12" font-weight="600" fill="#777772">会話</text>
-    <rect x="326" y="718" width="780" height="54" rx="10" fill="#FBFBF9" stroke="#E1E1DC"/>
+    <rect x="326" y="718" width="780" height="54" rx="10" fill="#F8F8F5" stroke="#D8D8D2"/>
     <text x="346" y="740" font-size="11" font-weight="600" fill="#686864">あなた ・ 09:12</text>
     <text x="346" y="760" font-size="14">金曜までに見積書をお願いします。</text>
-    <rect x="326" y="784" width="780" height="54" rx="10" fill="#FBFBF9" stroke="#E1E1DC"/>
+    <rect x="326" y="784" width="780" height="54" rx="10" fill="#F8F8F5" stroke="#D8D8D2"/>
     <text x="346" y="806" font-size="11" font-weight="600" fill="#686864">山田商事 ・ 11:08</text>
     <text x="346" y="826" font-size="14">社内確認中です。明日送ります。</text>
 
-    <!-- Source / outcome -->
     <text x="1138" y="740" font-size="12" fill="#777772">待っているもの</text>
     <text x="1138" y="765" font-size="14" font-weight="600">見積書</text>
     <text x="1138" y="815" font-size="13" font-weight="600" fill="#355F91">元のメールを見る →</text>
