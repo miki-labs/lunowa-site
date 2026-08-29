@@ -21,15 +21,25 @@ Before implementation or review, read:
 7. `docs/M10-TOKEN-CONTRACT.md` — provisional semantic token structure; roles are authoritative before exact M10 values freeze.
 8. `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md` — selected generic homepage shell; do not restart broad template exploration without new evidence.
 9. `docs/M05-P-E-STIMULUS-CONTRACT.md` — exact P/E participant-stimulus construction and hidden-variable controls.
-10. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research protocol.
-11. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration contract; retired A/C/D variants are not the active participant plan.
-12. `docs/M05-WIREFRAMES.md` — internal structural reference only.
-13. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
-14. `docs/DESIGN.md` — visual direction and anti-patterns.
-15. `docs/MOTION.md` — semantic motion contract.
-16. `docs/ARCHITECTURE.md` — technical/deployment architecture.
-17. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
-18. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
+10. `docs/stimuli/MANIFEST.md` — accepted exact S05 artifact/blob/token/provenance binding.
+11. `docs/M05-SESSION-PACKET.md` — current participant assignment, moderator, evidence and coding protocol for M05 #10.
+12. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research-method authority.
+13. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration rationale; retired A/C/D variants are not the active participant plan.
+14. `docs/M05-WIREFRAMES.md` — internal structural reference only.
+15. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
+16. `docs/DESIGN.md` — visual direction and anti-patterns.
+17. `docs/MOTION.md` — semantic motion contract.
+18. `docs/ARCHITECTURE.md` — technical/deployment architecture.
+19. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
+20. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
+
+## Current execution boundary
+
+S05 Issue #14 is completed. M05 Issue #10 is the current participant-research task.
+
+Use only the exact accepted stimulus set bound in `docs/stimuli/MANIFEST.md`. If any accepted artifact changes, the prior S05 acceptance becomes stale and a new pre-research audit is required before participant exposure.
+
+M05 #10 owns **real participant evidence**, not visual redesign. Do not silently patch stimuli inside participant sessions. ChatGPT simulation cannot substitute for human evidence.
 
 ## Visitor-first rule
 
@@ -95,23 +105,24 @@ Current primary divergence is:
 
 `P Product Proof baseline vs E Editorial Problem-First dark horse`.
 
-The old A/C/D participant-facing comparison is retired. Existing Concept A raster output is only an unvalidated structural reference.
+The old A/C/D participant-facing comparison is retired. Existing Concept A raster output is only an unvalidated historical structural reference.
 
-P and E should share the accepted generic shell/token system where practical. The test is the mental-model/acquisition hypothesis, not arbitrary library aesthetics.
+P and E use the accepted common shell, token snapshot, CTA treatment, canonical quotation scenario, Product-stage geometry and static-only condition bound in `docs/stimuli/MANIFEST.md`. The intended variable is the acquisition hierarchy above the common Product stage.
 
-Construct participant stimuli according to `docs/M05-P-E-STIMULUS-CONTRACT.md`. The initial clean comparison is static and uses the same canonical quotation scenario. Do not introduce motion, social proof, different Product styling, or unequal fidelity in only one condition.
+Execute participant research according to `docs/M05-SESSION-PACKET.md`. Keep unaided first impressions separate from aided/comparative discussion and bind findings to exact stimuli.
 
-If a static direction is comprehension-eligible, test motion only when the temporal mechanism still needs additional proof. Keep unaided first impressions separate from aided/comparative discussion and bind findings to exact stimuli.
+If a static direction is comprehension-eligible, test motion only when the temporal mechanism still needs additional proof.
 
-Small M05 rounds are directional qualitative evidence, not statistically powered conversion tests.
+Small M05 rounds are directional qualitative evidence, not statistically powered conversion tests or market validation.
 
 ## AI-native delivery workflow
 
 Use this loop:
 
-`research/Product truth -> visitor contract -> reuse-stack audit -> semantic tokens + selected generic shell -> P/E stimulus construction -> P/E comprehension evidence -> optional isolated motion evidence -> structured visual authority -> scoped ACP/Codex implementation -> real-browser verification -> correction -> independent full acceptance audit`.
+`research/Product truth -> visitor contract -> reuse-stack audit -> semantic tokens + selected generic shell -> accepted P/E stimuli -> real participant comprehension evidence -> optional isolated motion evidence -> structured visual authority -> scoped ACP/Codex implementation -> real-browser verification -> correction -> independent full acceptance audit`.
 
-- ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, reuse strategy, token/design direction, independent review.
+- ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, reuse strategy, token/design direction, research synthesis, independent review.
+- Human participants: first-impression evidence that cannot be simulated by the model.
 - Codex: implementation, tests, browser verification, build/deploy evidence, PR candidate construction.
 - Figma when writable: editable design convergence and visual reference surface.
 - GitHub: canonical durable task contracts, tokens/specs, provenance and evidence.
