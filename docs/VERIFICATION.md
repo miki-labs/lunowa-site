@@ -2,17 +2,19 @@
 
 Status: canonical acceptance oracle for design and implementation-facing work, 2026-08-29.
 
-Read `docs/VISITOR-JOURNEY.md`, `docs/FIRST-IMPRESSION-VALIDATION.md`, `docs/HERO-CONCEPTS-M05.md`, and `docs/M05-WIREFRAMES.md` before evaluating visual or implementation candidates.
+Read `docs/VISITOR-JOURNEY.md`, `docs/FIRST-IMPRESSION-VALIDATION.md`, `docs/HERO-CONCEPTS-M05.md`, `docs/REUSE-STACK-AUDIT-2026-08-29.md`, `docs/APPROVED-PRIMITIVES-2026-08-29.md`, `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md`, and `docs/M05-WIREFRAMES.md` before evaluating visual or implementation candidates.
 
 ## 1. Principle
 
-No candidate is accepted because it merely "looks right" in review.
+No candidate is accepted because it merely "looks right" in review or because a component came from a reputable library.
 
 Required high-level loop:
 
-`Product truth -> visitor/comprehension contract -> divergent visual thesis exploration -> first-impression evidence -> eligible direction -> optional isolated motion evidence -> selected visual oracle -> implement -> run -> inspect in real browser -> compare -> test -> independently audit final cumulative candidate`.
+`Product truth -> visitor/comprehension contract -> reuse-stack/token/shell decision -> divergent P/E exploration -> first-impression evidence -> eligible direction -> optional isolated motion evidence -> structured visual authority -> implement with audited primitives -> run -> inspect in real browser -> compare -> test -> independently audit final cumulative candidate`.
 
 A candidate that is visually polished but produces the wrong Product mental model is a failure.
+
+Reuse reduces reinvention; it does not waive verification.
 
 ## 2. Pre-implementation comprehension oracle
 
@@ -26,6 +28,8 @@ Use the current minimal divergent pair:
 - **E — Editorial Problem-First Dark Horse**.
 
 The former A/C/D participant-facing matrix is retired. Do not require its completion for acceptance.
+
+P and E should share the accepted generic shell/token system where practical. Do not let unrelated template aesthetics become the uncontrolled variable.
 
 Required unaided first questions after bounded initial exposure:
 
@@ -75,27 +79,65 @@ Autoplay, user-triggered playback, and other playback modes are distinct conditi
 
 M05 is directional qualitative evidence, not market representativeness, PMF, exact-ICP validation, conversion lift, or a statistically powered A/B test.
 
-## 3. Visual-oracle acceptance
+## 3. Structured visual-authority acceptance
 
-Before a generated/mock visual becomes canonical:
+Before a generated/mock/editable visual becomes canonical:
 
 - Product/category is recognizable without prior Lunowa vocabulary;
-- the initial still state is meaningful without animation;
-- the dominant visual shows believable Product use where Product behavior is the evidence;
-- the concrete scenario matches Product truth;
+- initial still state is meaningful without animation;
+- dominant visual shows believable Product use where Product behavior is the evidence;
+- concrete scenario matches Product truth;
 - unsupported functionality/security/performance claims are absent;
 - generated text has been independently checked rather than trusted as marketing authority;
 - #10 current P/E evidence has been consumed;
 - any motion evidence has been consumed only where motion remains part of the selected direction;
 - unaided and aided findings remain distinct;
 - major confusion/distrust findings are resolved or explicitly carried as open hypothesis;
-- readable implementation-grade references exist for major states/sections rather than relying only on one compressed full-page board.
+- readable implementation-grade references exist for major states/sections rather than relying only on one compressed full-page board;
+- a small semantic token source exists for material colors/typography/spacing/layout/focus semantics and can be projected deterministically into implementation;
+- Figma write access or hosted-builder export is not required to reproduce the accepted authority.
 
 The rejected first dark/purple/orb/icon-timeline candidate is not a valid baseline.
 
-The current old Concept A artifact is an unvalidated P baseline reference only; it is not accepted visual authority merely because it exists.
+The old Concept A artifact is an unvalidated P baseline reference only; it is not accepted visual authority merely because it exists.
 
-## 4. Required implementation evidence classes
+## 4. Reused-source / provenance acceptance
+
+Every material reused component/block/reference must be classified as one of:
+
+- copied code;
+- adapted structure;
+- visual inspiration only.
+
+For copied/adapted code, record as applicable:
+
+- source/product/registry;
+- exact component/block name;
+- retrieval date and URL/reference;
+- exact revision/version/registry item when practical;
+- license basis;
+- modifications;
+- runtime dependencies introduced;
+- whether source is local-owned after copy or remains a runtime dependency.
+
+Community shadcn directory listing, brand reputation, popularity, or a polished demo are **not** trust evidence.
+
+At acceptance verify:
+
+- license permits repository/end-product use;
+- no unreviewed transitive dependency is introduced merely for decoration;
+- copied code does not silently introduce analytics/network calls/hosted assets;
+- semantic HTML and ARIA remain correct after restyling;
+- keyboard/focus behavior is correct;
+- 320px reflow/mobile behavior is acceptable;
+- representative Japanese and longer English copy survive;
+- reduced-motion behavior is correct where motion exists;
+- Product semantics have not been inherited from a generic dashboard/template;
+- third-party visual defaults do not reintroduce rejected generic AI-SaaS vocabulary.
+
+Current candidate-source order is defined by `APPROVED-PRIMITIVES-2026-08-29.md`; verification must use the source actually selected, not assume 7Ovr/Tailark/Tailwind Plus/Relume/Webflow are automatically present.
+
+## 5. Required implementation evidence classes
 
 A material UI PR should provide evidence appropriate to its scope:
 
@@ -108,9 +150,11 @@ A material UI PR should provide evidence appropriate to its scope:
 7. visual-regression evidence when a baseline exists;
 8. performance evidence when initial-load or bundle behavior changes;
 9. security evidence when dynamic endpoints, third-party scripts, headers, or data handling change;
-10. copy/Product-truth evidence for visible claim movement.
+10. copy/Product-truth evidence for visible claim movement;
+11. reused-source/provenance/license/dependency evidence when third-party code/structure is introduced;
+12. token-authority mapping evidence when design tokens change.
 
-## 5. Browser verification
+## 6. Browser verification
 
 Use Playwright for browser-level verification after implementation begins.
 
@@ -138,7 +182,7 @@ Required checks:
 - localized copy does not break containers;
 - no decorative layer competes with the one material Product change.
 
-## 6. Visual regression
+## 7. Visual regression
 
 Use Playwright screenshot comparison (`toHaveScreenshot`) for stable states after the visual direction is accepted.
 
@@ -156,9 +200,9 @@ Candidate baseline states should include user-meaningful forms of:
 
 Visual snapshots are regression oracles, not authority over Product truth. Intentional design changes require reviewed baseline updates.
 
-## 7. Accessibility semantics
+## 8. Accessibility semantics
 
-Use Playwright assertions and ARIA snapshots where useful to verify accessible structure.
+Use Playwright assertions and ARIA snapshots where useful to verify the accessible structure.
 
 At minimum verify:
 
@@ -175,7 +219,7 @@ At minimum verify:
 
 Automated checks do not replace manual keyboard/reflow/reduced-motion review.
 
-## 8. Accessibility automation
+## 9. Accessibility automation
 
 Integrate an automated accessibility scanner such as `@axe-core/playwright` when implementation begins.
 
@@ -190,7 +234,7 @@ Treat automated findings as one layer. Manual checks remain required for:
 
 Target WCAG 2.2 AA unless an explicit higher requirement is adopted.
 
-## 9. Motion verification
+## 10. Motion verification
 
 When motion is present/touched:
 
@@ -208,7 +252,7 @@ When motion is present/touched:
 
 If final visual authority is static, motion-specific implementation evidence is not required except for ordinary interaction feedback that is actually implemented.
 
-## 10. Performance
+## 11. Performance
 
 External Core Web Vitals "Good" thresholds remain a minimum reference:
 
@@ -230,9 +274,9 @@ Implementation acceptance should also monitor:
 
 Do not optimize synthetic scores by harming accessibility, truthfulness, Product comprehension, or brand clarity.
 
-## 11. Copy/truth audit
+## 12. Copy/truth audit
 
-Every visual oracle and release candidate must be checked against current Product authority for:
+Every visual authority and release candidate must be checked against current Product authority for:
 
 - supported providers;
 - availability/beta status;
@@ -247,7 +291,7 @@ Every visual oracle and release candidate must be checked against current Produc
 
 Unknown/unvalidated statements remain unknown. Marketing copy cannot promote a hypothesis to fact by repetition or image generation.
 
-## 12. Security verification
+## 13. Security verification
 
 If a PR changes hosting/dynamic behavior, verify as applicable:
 
@@ -261,7 +305,7 @@ If a PR changes hosting/dynamic behavior, verify as applicable:
 - data-minimization and retention boundary;
 - failure states do not leak sensitive information.
 
-## 13. Implementation-entry gate
+## 14. Implementation-entry gate
 
 Production-code implementation must not start until external `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance has passed, in addition to local visual/design prerequisites.
 
@@ -269,7 +313,7 @@ G8 concurrency is not required.
 
 The first implementation candidate should use the accepted Agent Control Plane path rather than creating a separate manual Codex authority path.
 
-## 14. Independent full acceptance audit
+## 15. Independent full acceptance audit
 
 The reviewer must audit **current Issue/task contract × final cumulative candidate**.
 
