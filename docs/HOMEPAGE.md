@@ -1,226 +1,182 @@
 # Lunowa Homepage Contract
 
-Status: canonical marketing-site direction, 2026-08-29. This document does not supersede Product truth in `miki-thecat/lunowa`.
+Status: canonical marketing-site direction, 2026-08-30. This document does not supersede Product truth in `miki-thecat/lunowa`.
 
-Read `docs/VISITOR-JOURNEY.md`, `docs/FIRST-IMPRESSION-VALIDATION.md`, `docs/HERO-CONCEPTS-M05.md`, and `docs/M05-WIREFRAMES.md` with this document. The visitor contract defines the mental-model sequence; this document defines the homepage projection.
+Read `docs/VISITOR-JOURNEY.md`, `docs/M05-INTERNAL-AUDIT-RESULT-2026-08-30.md`, `docs/M10-TOKEN-CONTRACT.md`, `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md`, `docs/DESIGN.md`, and `docs/MOTION.md` with this document.
+
+Current acquisition direction: **P — Product Proof Baseline**. It is internally audited/owner-selected, not externally user validated.
 
 ## 1. Homepage job
 
-The homepage must enable a first-time visitor to answer, quickly and correctly:
+The homepage should enable a first-time visitor to answer quickly:
 
 1. What is Lunowa?
 2. What does it do for me?
-3. Is this a problem I actually have?
-4. Why is it different from ordinary reminders, reply tracking, inbox organization, and generic AI email assistants?
-5. Can I really stop checking without missing something important?
-6. When Lunowa brings something back, will I understand why and what to do?
+3. Is this a problem I have?
+4. Why is it different from reminders/reply tracking/inbox organization/generic AI email?
+5. Can I stop checking without missing something important?
+6. When Lunowa returns something, will I understand why and what to do?
 7. Why should I trust it with email-related work?
-8. What can I do next right now?
+8. What can I do next?
 
-Current funnel objective:
+Current objective:
 
-`correct comprehension -> relevance -> trust -> qualified early access -> real Product use -> learning`
+`correct comprehension -> relevance -> trust -> qualified early access -> real Product use -> learning`.
 
-Do not optimize for empty traffic, generic AI curiosity, inflated signup count, or visual novelty.
+Do not optimize for generic AI curiosity, visual novelty or inflated signup counts.
 
 ## 2. Core positioning
-
-Primary promise candidate:
-
-> **メールを、確認し続けなくていい。**
-
-Because this line can be interpreted too broadly by itself, the Hero must provide a nearby category/mechanism cue. Current candidate:
-
-> 返信待ち・資料待ちを、Lunowaが代わりに見守る。
-
-Supporting idea:
-
-> Lunowaは、メールで始まった未完了の用件を見守ります。必要でない間は静かに管理し、本当にあなたの判断や対応が必要になった時だけ、何が変わったかと一緒に戻します。
-
-Core distinction:
-
-> **返信が来ても、終わっていないことがある。**
-
-Marketing shorthand:
-
-> **Reply != Done**
-
-This distinction must be demonstrated through a concrete email scenario, not merely stated or represented as an abstract state diagram.
-
-## 3. Hero
-
-### 3.1 First-glance requirements
-
-The first viewport must support category recognition before requiring Product-specific vocabulary.
-
-A visitor should be able to infer that Lunowa is an email/communication Product and that it watches unfinished matters on the user's behalf.
-
-Do not lead with `Managed`, `Needs You`, `Moment`, `Responsibility`, `Attention Delegation`, `AI`, `AI assistant`, `AI inbox`, or `automation` as the explanation the visitor must decode.
-
-### 3.2 Information hierarchy
-
-Current **Product-Proof baseline** structure:
-
-1. brand/product name as a clear first-screen signal;
-2. short category/mechanism cue;
-3. H1 promise;
-4. one short supporting sentence;
-5. primary CTA;
-6. secondary `仕組みを見る` action if it remains useful after visual testing;
-7. one dominant real-looking Lunowa Product stage.
 
 Current H1:
 
 > **メールを、確認し続けなくていい。**
 
+Because the H1 alone is broad, Hero needs a nearby category/mechanism cue:
+
+> **返信待ち・資料待ちを、Lunowaが代わりに見守る。**
+
+Current support direction:
+
+> Lunowaは、必要な結果が届くまで見守り、あなたの対応が必要になった時だけ戻します。
+
+Core distinction:
+
+> **返信が来ても、終わっていないことがある。**
+
+Internal shorthand may remain `Reply != Done`, but public explanation should be Japanese-first and concrete.
+
+Exact copy remains owner-controlled and externally unvalidated.
+
+## 3. Selected Hero
+
+### 3.1 First-glance requirements
+
+The first viewport must establish email/communication territory before requiring Product-specific vocabulary.
+
+Do not lead with `Managed`, `Needs You`, `Moment`, `Responsibility`, `Attention Delegation`, `AI assistant`, `AI inbox`, or `automation` as concepts the visitor must decode.
+
+### 3.2 P information hierarchy
+
+Current selected structure:
+
+1. Lunowa brand/product signal;
+2. category/mechanism cue;
+3. H1 promise;
+4. one short support sentence;
+5. primary CTA;
+6. one dominant believable Lunowa Product stage.
+
 Primary CTA:
 
 > **先行アクセスに登録**
 
-Secondary CTA:
+A secondary `仕組みを見る` path is optional and must not compete with Product proof.
 
-> **仕組みを見る**
-
-Exact copy remains a hypothesis until first-impression evidence supports it.
-
-M05 may challenge this baseline with a genuinely divergent **problem-first/editorial** acquisition direction. That dark-horse direction is not permission to remove Product/category proof: recognizable email/Product evidence must still appear early enough to avoid a generic productivity interpretation.
+Do not maintain E as a parallel Hero architecture. E's repeated-checking insight is retained below the Hero.
 
 ### 3.3 Hero composition
 
-For Product-Proof baseline work, prefer one coherent composition with the Product itself as the dominant visual anchor.
+Prefer centered/near-centered copy with a large Product surface directly below.
 
-The Product stage must be understandable in its initial static state. Motion can reinforce temporal differentiation but cannot be required for basic comprehension.
+The Product stage must be meaningful statically. Do not compress the Product story into a narrow generic dashboard card merely to satisfy a split-Hero template.
 
-Avoid squeezing a complex Product story into a generic narrow right-hand card merely to conform to a split-hero template.
-
-Avoid abstract icon timelines as the primary Hero proof.
+Avoid abstract icon timelines and decorative illustration as primary proof.
 
 ## 4. Canonical concrete Product story
 
-Use one recognizable unresolved communication scenario throughout the Hero and key lower-page sections rather than unrelated feature mockups.
-
-Canonical initial scenario:
+Use one unresolved communication scenario throughout Hero and key lower sections:
 
 ```text
 User: 金曜までに見積書をお願いします。
--> Lunowa visibly indicates that the quotation is being watched.
+-> Lunowa watches the quotation outcome.
 
-Counterparty: 社内確認中です。明日回答します。
+Counterparty: 社内確認中です。明日送ります。
 -> evidence changed
--> Lunowa continues watching
--> visitor sees: まだあなたの対応は必要ありません
+-> quotation still missing
+-> user action still unnecessary
+-> Lunowa continues monitoring
 
 Counterparty: 見積書を添付しました。ご確認ください。
 -> material outcome evidence arrived
--> the same item becomes attention-worthy
+-> user review becomes necessary
 
-Moment:
+Return context:
 見積書が届きました
 金額と納期を確認してください
--> Source / attachment / safe next action
+-> what changed / attachment / Source / safe next action
 ```
 
-The decisive proof is the **non-event after the intermediate reply**: a reply arrives, but Lunowa does not unnecessarily interrupt the user because the outcome is still unresolved.
-
-Internal state labels may be visible as authentic Product UI, but the underlying user meaning must be obvious without knowing those terms.
+The decisive proof is the **non-event after the intermediate reply**: Lunowa does not return the matter merely because a reply arrived.
 
 ## 5. Page narrative by visitor question
 
 Use a small number of full-width narrative bands. Do not turn every section into a floating card.
 
-### H01 — What is this / what does it do for me?
+### H01 — What is this / what does it do?
 
 Hero + concrete Product proof.
 
 ### H02 — Is this my problem?
 
-Heading:
-
 > **メールの負担は、読むことだけではありません。**
 
-Explain familiar monitoring burden: remembering whether a quotation, document, approval, payment confirmation, or answer actually arrived; checking again; reconstructing whether the next move belongs to the user or the other party.
+Explain the repeated mental checking burden: whether a quotation/document/approval/answer actually arrived and whose turn it is.
 
-Do not imply a validated exact ICP.
+This is where the useful E/self-recognition insight belongs.
 
 ### H03 — How is this different?
 
-Heading:
-
 > **返信が来ても、終わっていないことがある。**
 
-Show one actual intermediate-reply example. Explain why reply/no-reply tracking alone is insufficient without turning the section into a competitor attack.
+Show the actual intermediate-reply example. Distinguish outcome monitoring from simple reply/no-reply tracking without competitor theatrics.
 
-### H04 — Can I really leave it alone?
-
-Heading direction:
+### H04 — Can I leave it alone?
 
 > **必要でない間は、Lunowaが見ています。**
 
-Show real-looking monitoring UI and user-facing status language. The section should answer what the visitor can stop doing, not just name `Managed`.
+Show what the visitor can stop doing, not merely `Managed` vocabulary.
 
 ### H05 — Will I miss something important?
 
-Heading direction:
-
 > **必要になった時だけ、あなたに戻します。**
 
-Show the same object becoming attention-worthy when material evidence changes the situation.
+Show the same object becoming attention-worthy only when material evidence changes the outcome.
 
 ### H06 — Will I know what changed and what to do?
 
-Heading direction:
-
 > **戻ってきた時には、何が変わったかも分かる。**
 
-Show a concise Moment: material change, remaining decision/action, attachment/source, and direct return to original communication.
+Show concise context: material change, remaining action/decision, attachment and original Source.
 
 ### H07 — Can I trust it?
-
-Heading:
 
 > **任せる。でも、決定権は渡さない。**
 
 Translate architecture into user consequences:
 
 - original Source remains reachable;
-- evidence, interpretation, accepted state, and safe action are not silently collapsed;
-- uncertainty can route to Review rather than fake certainty;
-- reply, attachment, send, read, or silence do not automatically mean successful closure;
-- monitoring degradation is communicated truthfully;
-- no external effect is implied when it has not occurred.
-
-Do not expose internal architecture terminology merely to sound rigorous.
+- uncertainty does not become fake certainty;
+- reply/attachment/send/read/silence do not automatically prove successful closure;
+- external effects are not implied when they have not occurred;
+- monitoring degradation is communicated truthfully.
 
 ### H08 — Can I use it now?
 
-State only current facts. If the beta is Gmail-first, say so. Do not imply broad provider parity, general availability, or functionality not accepted/implemented.
+State only current provider/language/beta facts.
 
 ### H09 — What else do I need to know?
 
-FAQ for material objections such as:
-
-- What does Lunowa actually monitor?
-- Does a reply automatically mark something complete?
-- Does Lunowa send email without permission?
-- Can I open the original email?
-- What happens when Lunowa is uncertain or cannot monitor reliably?
-- Which providers/languages are currently available?
-
-Only include answers supported by current Product/runtime truth.
+FAQ for material objections only. Every answer must be supported by Product/runtime truth.
 
 ### H10 — What should I do now?
 
-Emotional close:
-
 > **必要になるまで、忘れていていい。**
 
-Primary CTA remains behaviorally consistent with the Hero.
+Use the same primary CTA action model as Hero.
 
 ## 6. Scannability acceptance
 
-A visitor reading only major headings must still understand the story.
-
-Current direction:
+A visitor reading only major headings should still get the progression:
 
 ```text
 メールを、確認し続けなくていい。
@@ -233,90 +189,93 @@ Current direction:
 必要になるまで、忘れていていい。
 ```
 
-Do not repeat the same emotional claim across sections. Each section has one distinct responsibility: orient, make relevant, differentiate, prove delegation, prove return, explain trust, state availability, resolve objections, or convert.
+Each section has one job: orient, make relevant, differentiate, prove delegation, prove return, explain trust, state availability, resolve objections, or convert.
 
 ## 7. Motion boundary
 
-Motion may demonstrate the temporal distinction:
+Internal M05 audit concluded that baseline comprehension does **not** require motion.
 
-`intermediate reply -> still no user action required -> material outcome evidence -> user attention required`.
+Static-first is authoritative.
 
-The initial static Product frame must already explain what Lunowa is doing. Motion is additive proof, not the entry fee for comprehension.
+Motion may later reinforce:
 
-**Motion is not a mandatory comparison merely because Lunowa has a temporal mechanism.** First establish a static acquisition/mental-model direction. Test motion only if there remains a material question about whether temporal playback improves `Reply != Done` comprehension, object continuity, or delegated-monitoring confidence enough to justify interaction/accessibility cost.
+`intermediate reply -> still no action -> material outcome -> attention required`
 
-If motion is tested, apply it to the same accepted information architecture/content rather than changing layout and motion together.
+but:
 
-Autoplay vs user-triggered playback is a later bounded experiment, not a preference to freeze in advance.
+- first static state must already explain the Product;
+- motion cannot be mandatory for understanding;
+- reduced-motion/static path must preserve equivalent information;
+- no endless decorative loop;
+- no motion may imply unsupported Product semantics.
+
+M10 does not need to create a motion comparison to pass.
 
 ## 8. Truth / anti-claim boundary
 
-Until supported by durable evidence, the site must not claim:
+Until supported by durable evidence, do not claim:
 
-- a validated exact ICP;
+- validated exact ICP;
 - PMF;
 - customer/user counts;
-- time-saved percentages/hours;
-- accuracy percentages;
+- time-saved/accuracy metrics;
 - security certifications;
-- end-to-end encryption unless the exact implementation and scope support that wording;
-- `enterprise-grade` security as a vague badge;
-- supported providers/features not accepted in Product/runtime contracts;
-- pricing that has not been approved;
-- fabricated testimonials, logos, reviews, or awards.
+- end-to-end encryption without exact implementation/scope support;
+- vague `enterprise-grade` security badges;
+- unsupported providers/features;
+- unapproved pricing;
+- fabricated testimonials/logos/reviews/awards;
+- `user validated`, `users understood`, or `tested with users` for the current P direction.
 
-Generated visual candidates are untrusted for claims: every visible claim must be checked against Product/runtime authority before a visual can become canonical.
+Generated visuals are untrusted for claims; every visible claim must be checked against Product/runtime authority.
 
-## 9. Pre-freeze user evidence
+## 9. Pre-freeze evidence
 
-Before M10 final visual freeze, consume the dedicated #10 M05 evidence.
+Current pre-freeze evidence is **internal**, not participant research.
 
-Current exploration is a **minimal divergent pair**, not the retired A/C/D matrix:
+Completed sources:
 
-- **P — Product Proof Baseline**;
-- **E — Editorial Problem-First Dark Horse**.
+- `docs/stimuli/MANIFEST.md` — exact historical P/E artifact binding;
+- `docs/M05-INTERNAL-COMPREHENSION-AUDIT.md` — current audit method;
+- `docs/M05-INTERNAL-AUDIT-RESULT-2026-08-30.md` — full P/E audit and P selection;
+- Issue #10 durable PASS evidence.
 
-The purpose is to challenge the underlying visitor-acquisition/mental-model thesis, not to manufacture a prescribed number of variants.
+Current decision:
 
-Participant-facing first-impression stimuli should be realistic enough to assess category recognition, credibility, orientation, aesthetics/prototypicality and trust while remaining inexpensive to revise.
+> **P selected for M10 convergence. E is retired as a parallel Hero architecture.**
 
-A visually attractive direction that repeatedly produces the wrong Product mental model is blocked.
+External independent visitor evidence is deferred and may later test the implemented preview. Future protocol: `docs/FIRST-IMPRESSION-VALIDATION.md`.
 
-If P is clearly comprehension-eligible and E reveals no materially stronger acquisition model, converge rather than generating more near-duplicate concepts.
-
-Motion evidence is required only when motion remains a material unresolved question after a static direction becomes comprehension-eligible.
-
-Unaided first-impression evidence must remain distinct from later aided/comparative feedback.
+Do not treat the absence of external participants as proof that comprehension is correct; keep the limitation explicit.
 
 ## 10. Visual-reference output
 
-M10 must eventually freeze readable implementation-grade references for major Product states/sections.
+M10 must freeze readable implementation-grade references/specs, not one unreadable giant board.
 
-Do not rely only on a giant full-page board if copy/state detail becomes unreadable.
+At minimum:
 
-At minimum preserve readable references for:
-
-- desktop Hero initial monitoring state;
+- desktop Hero initial state;
 - intermediate-reply / still-no-action state;
 - material-outcome / attention-required state;
-- Moment / Source state;
+- return context / Source state;
 - representative lower-page rhythm;
 - Trust/Control section;
-- mobile Hero / simplified Product story.
+- availability/FAQ/final CTA/footer;
+- mobile Hero / mobile Product-state projection;
+- static/reduced-motion meaning.
 
-A full-page overview may supplement these references for rhythm and composition.
+A full-page overview may supplement these for rhythm/composition.
 
 ## 11. Early-success measures
 
-Prefer qualified measures over vanity measures:
+Once real visitors exist, prefer:
 
-1. **Correct Product comprehension** after short first exposure.
-2. Ability to distinguish Lunowa from ordinary reminder/reply-tracking/generic AI-email categories.
-3. Relevance: visitor recognizes a real monitoring burden.
-4. Trust questions are answerable from the page without misleading claims.
-5. CTA click-through.
-6. Qualified early-access completion.
-7. Source/campaign attribution for registrations.
-8. Later: activation into a real delegated monitoring loop and retention.
+1. correct Product comprehension;
+2. distinction from reminder/reply-tracker/generic AI-email categories;
+3. relevance/self-recognition;
+4. trust questions answerable without misleading claims;
+5. qualified CTA click;
+6. early-access completion;
+7. later activation into a real delegated-monitoring loop.
 
-Later sufficiently powered experiments may compare copy, motion treatment, CTA framing, or section emphasis, but no test may silently change Product truth.
+Later sufficiently powered experiments may compare copy/motion/CTA/section emphasis, but no test may silently change Product truth.
