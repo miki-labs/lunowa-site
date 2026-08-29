@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="1120" viewBox="0 0 390 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Lunowa mobile Product story visual authority</title>
+  <desc id="desc">Mobile sequence showing the same quotation matter first remaining quietly monitored after an intermediate reply, then returning when the quotation arrives.</desc>
+  <rect width="390" height="1120" fill="#F8F8F5"/>
+  <g font-family="Inter Variable, Noto Sans JP, Hiragino Sans, Yu Gothic UI, Yu Gothic, sans-serif" fill="#181817">
+    <text x="20" y="54" font-size="13" font-weight="600" fill="#355F91">返信が来ても、終わっていないことがある。</text>
+    <text x="20" y="100" font-size="32" font-weight="700">同じ用件を、</text>
+    <text x="20" y="140" font-size="32" font-weight="700">必要になるまで見守る。</text>
+
+    <!-- Step 1 -->
+    <text x="20" y="198" font-size="11" font-weight="600" fill="#777772">1 / 途中返信</text>
+    <rect x="20" y="218" width="350" height="330" rx="20" fill="#FFFFFF" stroke="#D8D8D2"/>
+    <text x="40" y="258" font-size="12" fill="#777772">山田商事</text>
+    <text x="40" y="288" font-size="19" font-weight="700">Re: 見積書のお願い</text>
+    <text x="40" y="320" font-size="12" font-weight="600" fill="#355F91">見積書を待っています</text>
+    <rect x="40" y="344" width="310" height="88" rx="14" fill="#EDF6F1" stroke="#C8DED3"/>
+    <text x="58" y="375" font-size="14" font-weight="700">あなたの対応はまだ必要ありません</text>
+    <text x="58" y="400" font-size="12" fill="#66706A">見積書が届くまで、Lunowaが見守ります。</text>
+    <rect x="40" y="454" width="310" height="56" rx="10" fill="#FBFBF9" stroke="#E1E1DC"/>
+    <text x="54" y="477" font-size="10" fill="#686864">最新の返信</text>
+    <text x="54" y="498" font-size="13">社内確認中です。明日送ります。</text>
+    <text x="40" y="530" font-size="11" font-weight="600" fill="#355F91">元のメールを見る →</text>
+
+    <!-- Connector -->
+    <line x1="195" y1="576" x2="195" y2="626" stroke="#B8B8B0" stroke-width="1.5"/>
+    <path d="M190 620 l5 7 l5 -7" fill="none" stroke="#B8B8B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Step 2 -->
+    <text x="20" y="668" font-size="11" font-weight="600" fill="#777772">2 / 見積書が到着</text>
+    <rect x="20" y="688" width="350" height="356" rx="20" fill="#FFFFFF" stroke="#D8D8D2"/>
+    <text x="40" y="728" font-size="12" fill="#777772">山田商事</text>
+    <text x="40" y="758" font-size="19" font-weight="700">Re: 見積書のお願い</text>
+    <rect x="40" y="788" width="310" height="92" rx="14" fill="#FFF5E8" stroke="#E8D1B1"/>
+    <text x="58" y="819" font-size="14" font-weight="700" fill="#8A571C">あなたの確認が必要です</text>
+    <text x="58" y="844" font-size="12" fill="#735F49">見積書が届きました。</text>
+    <text x="58" y="864" font-size="12" fill="#735F49">金額と納期を確認してください。</text>
+    <rect x="40" y="902" width="310" height="58" rx="10" fill="#F1F2EE" stroke="#D8D8D2"/>
+    <text x="56" y="937" font-size="13" font-weight="600">見積書.pdf</text>
+    <rect x="40" y="980" width="136" height="44" rx="10" fill="#181817"/>
+    <text x="108" y="1008" text-anchor="middle" font-size="13" font-weight="600" fill="#FFFFFF">見積書を開く</text>
+    <text x="194" y="1008" font-size="12" font-weight="600" fill="#355F91">元メール →</text>
+
+    <text x="20" y="1090" font-size="12" fill="#777772">Mobileではdesktop UIを縮小せず、意味のあるstateだけを縦に再構成する。</text>
+  </g>
+</svg>
