@@ -18,15 +18,16 @@ Before implementation or review, read:
 4. `docs/APPROVED-PRIMITIVES-2026-08-29.md` — approved primitive hierarchy and provenance boundaries.
 5. `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md` — curated generic component-pattern shortlist.
 6. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — reuse-first rationale and ecosystem roles.
-7. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research protocol.
-8. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration contract; retired A/C/D variants are not the active participant plan.
-9. `docs/M05-WIREFRAMES.md` — internal structural reference only.
-10. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
-11. `docs/DESIGN.md` — visual direction and anti-patterns.
-12. `docs/MOTION.md` — semantic motion contract.
-13. `docs/ARCHITECTURE.md` — technical/deployment architecture.
-14. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
-15. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
+7. `docs/M10-TOKEN-CONTRACT.md` — provisional semantic token structure; roles are authoritative before exact M10 values freeze.
+8. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research protocol.
+9. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration contract; retired A/C/D variants are not the active participant plan.
+10. `docs/M05-WIREFRAMES.md` — internal structural reference only.
+11. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
+12. `docs/DESIGN.md` — visual direction and anti-patterns.
+13. `docs/MOTION.md` — semantic motion contract.
+14. `docs/ARCHITECTURE.md` — technical/deployment architecture.
+15. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
+16. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
 
 ## Visitor-first rule
 
@@ -66,9 +67,13 @@ Do not use a full third-party template merely because it exists. Prefer the smal
 
 ## Design-token rule
 
+`docs/M10-TOKEN-CONTRACT.md` defines the current semantic token roles. Before M10 freeze, **semantic roles are authoritative while exact aesthetic values remain provisional**.
+
 Preserve a small vendor-neutral semantic token source for M10 where practical, aligned with the stable Design Tokens Community Group 2025.10 format, and project it into Tailwind CSS 4/CSS variables.
 
 Do not create an oversized enterprise token pipeline. Token complexity must be justified by actual design surface.
+
+Third-party blocks must map into Lunowa tokens; do not let an imported block's palette, font, radius or shadow system silently become authority.
 
 ## M05 experiment rule
 
