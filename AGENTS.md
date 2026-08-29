@@ -14,12 +14,15 @@ Before implementation or review, read:
 
 1. `docs/CURRENT.md` — current execution router and status.
 2. `docs/VISITOR-JOURNEY.md` — first-time visitor mental-model sequence and comprehension oracle.
-3. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
-4. `docs/DESIGN.md` — visual direction and anti-patterns.
-5. `docs/MOTION.md` — semantic motion contract.
-6. `docs/ARCHITECTURE.md` — technical/deployment architecture.
-7. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
-8. `docs/RESEARCH-2026-08-29.md` — dated evidence/rationale; not authority over the contracts above.
+3. `docs/FIRST-IMPRESSION-VALIDATION.md` — M05 research protocol and static-vs-motion evidence boundary.
+4. `docs/HERO-CONCEPTS-M05.md` — current A/C/D static hypotheses and B motion treatment.
+5. `docs/M05-WIREFRAMES.md` — low-fidelity research stimuli and lower-page narrative.
+6. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
+7. `docs/DESIGN.md` — visual direction and anti-patterns.
+8. `docs/MOTION.md` — semantic motion contract.
+9. `docs/ARCHITECTURE.md` — technical/deployment architecture.
+10. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
+11. `docs/RESEARCH-2026-08-29.md` — dated evidence/rationale; not authority over the contracts above.
 
 ## Visitor-first rule
 
@@ -29,11 +32,21 @@ For public marketing surfaces, first establish what a first-time visitor must re
 
 A visually impressive candidate that repeatedly produces the wrong Product mental model is a failure.
 
+## M05 experiment rule
+
+Do not confound static information architecture and motion if the research question can isolate them.
+
+Current sequence:
+
+`A/C/D static structures -> unaided first-impression evidence -> eliminate wrong mental models -> B motion on an eligible static structure -> temporal evidence -> M10 visual freeze`.
+
+Small M05 rounds are directional qualitative evidence, not statistically powered conversion tests. Keep unaided first impressions separate from aided/comparative discussion and bind findings to exact stimuli.
+
 ## AI-native delivery workflow
 
 Use this loop:
 
-`research/Product truth -> visitor contract -> IA/copy -> materially different visual exploration -> first-impression comprehension evidence -> selected visual oracle -> scoped implementation -> real-browser verification -> correction -> independent full acceptance audit`.
+`research/Product truth -> visitor contract -> IA/copy -> low-fidelity structures -> directional first-impression evidence -> isolated temporal-motion evidence -> selected visual oracle -> scoped implementation -> real-browser verification -> correction -> independent full acceptance audit`.
 
 - ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, design contracts, visual direction, independent review.
 - Codex: implementation, tests, browser verification, build/deploy evidence, PR candidate construction.
@@ -53,6 +66,8 @@ Before any generated image becomes a visual oracle, verify:
 - consistency with `DESIGN.md` and `VISITOR-JOURNEY.md`;
 - a meaningful static state before relying on animation;
 - directionally acceptable first-impression evidence when required by M05/M10.
+
+For long pages, do not rely on one compressed board if implementation-critical Product text/states are unreadable. Prefer coordinated readable section/state references plus an overview for page rhythm.
 
 Do not cosmetically patch a failed visual prior if the failure came from the underlying design thesis or comprehension model.
 
