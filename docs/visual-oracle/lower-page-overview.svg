@@ -3,7 +3,6 @@
   <desc id="desc">Full-width narrative rhythm after the Hero: repeated checking burden, reply not equal completion, quiet monitoring, attention return, context, trust, availability, FAQ and final CTA.</desc>
   <rect width="1440" height="2580" fill="#F8F8F5"/>
   <g font-family="Inter Variable, Noto Sans JP, Hiragino Sans, Yu Gothic UI, Yu Gothic, sans-serif" fill="#181817">
-    <!-- H02 problem -->
     <text x="120" y="126" font-size="14" font-weight="600" fill="#355F91">メールの負担は、読むことだけではありません。</text>
     <text x="120" y="188" font-size="44" font-weight="700">「あの件、どうなった？」を</text>
     <text x="120" y="242" font-size="44" font-weight="700">頭の片隅に置き続けること。</text>
@@ -15,29 +14,23 @@
     <text x="892" y="266" font-size="14" font-weight="600" fill="#3D6D58">現在、あなたの対応は必要ありません。</text>
 
     <line x1="96" y1="372" x2="1344" y2="372" stroke="#D8D8D2"/>
-
-    <!-- H03 distinction -->
     <text x="720" y="448" text-anchor="middle" font-size="14" font-weight="600" fill="#355F91">返信が来ても、終わっていないことがある。</text>
     <text x="720" y="506" text-anchor="middle" font-size="44" font-weight="700">返信 ≠ 完了</text>
     <text x="720" y="544" text-anchor="middle" font-size="16" fill="#686864">Lunowaが見ているのは、返信の有無だけではなく、必要な結果が届いたかどうか。</text>
-
     <rect x="120" y="598" width="560" height="224" rx="16" fill="#FFFFFF" stroke="#D8D8D2"/>
     <text x="152" y="638" font-size="12" font-weight="600" fill="#777772">途中返信</text>
     <text x="152" y="680" font-size="20" font-weight="700">社内確認中です。明日送ります。</text>
     <rect x="152" y="720" width="454" height="66" rx="12" fill="#EDF6F1" stroke="#C8DED3"/>
     <text x="174" y="748" font-size="16" font-weight="700">あなたの対応はまだ必要ありません</text>
-    <text x="174" y="771" font-size="12" fill="#66706A">見積書が届くまで、Lunowaが見守ります。</text>
-
+    <text x="174" y="771" font-size="12" fill="#3D6D58">見積書が届くまで、Lunowaが見守ります。</text>
     <rect x="760" y="598" width="560" height="224" rx="16" fill="#FFFFFF" stroke="#D8D8D2"/>
     <text x="792" y="638" font-size="12" font-weight="600" fill="#777772">必要な結果が到着</text>
     <text x="792" y="680" font-size="20" font-weight="700">見積書を添付しました。ご確認ください。</text>
     <rect x="792" y="720" width="454" height="66" rx="12" fill="#FFF5E8" stroke="#E8D1B1"/>
     <text x="814" y="748" font-size="16" font-weight="700" fill="#8A571C">あなたの確認が必要です</text>
-    <text x="814" y="771" font-size="12" fill="#735F49">金額と納期を確認してください。</text>
+    <text x="814" y="771" font-size="12" fill="#8A571C">金額と納期を確認してください。</text>
 
     <line x1="96" y1="906" x2="1344" y2="906" stroke="#D8D8D2"/>
-
-    <!-- H04 monitoring -->
     <text x="120" y="990" font-size="14" font-weight="600" fill="#355F91">必要でない間は、Lunowaが見ています。</text>
     <text x="120" y="1048" font-size="44" font-weight="700">静かに任せる。</text>
     <text x="120" y="1090" font-size="16" fill="#686864">何もする必要がない時間まで、あなたが覚えておく必要はありません。</text>
@@ -48,45 +41,37 @@
     <text x="792" y="1107" font-size="14" font-weight="600" fill="#3D6D58">あなたの対応はまだ必要ありません。</text>
 
     <line x1="96" y1="1210" x2="1344" y2="1210" stroke="#D8D8D2"/>
-
-    <!-- H05/H06 return -->
     <text x="720" y="1290" text-anchor="middle" font-size="14" font-weight="600" fill="#355F91">必要になった時だけ、あなたに戻します。</text>
     <text x="720" y="1348" text-anchor="middle" font-size="44" font-weight="700">戻ってきた時には、何が変わったかも分かる。</text>
     <rect x="280" y="1400" width="880" height="278" rx="20" fill="#FFFFFF" stroke="#D8D8D2"/>
     <text x="318" y="1444" font-size="12" font-weight="600" fill="#8A571C">対応が必要</text>
     <text x="318" y="1488" font-size="26" font-weight="700">見積書が届きました</text>
     <text x="318" y="1522" font-size="15" fill="#686864">金額と納期を確認してください。</text>
-    <line x1="318" y1="1550" x2="1122" y2="1550" stroke="#E1E1DC"/>
+    <line x1="318" y1="1550" x2="1122" y2="1550" stroke="#D8D8D2"/>
     <text x="318" y="1586" font-size="12" fill="#777772">変わったこと</text>
     <text x="462" y="1586" font-size="14">見積書.pdf が届きました</text>
     <text x="318" y="1622" font-size="12" fill="#777772">元のメール</text>
     <text x="462" y="1622" font-size="14" font-weight="600" fill="#355F91">山田商事との会話を見る →</text>
 
     <line x1="96" y1="1764" x2="1344" y2="1764" stroke="#D8D8D2"/>
-
-    <!-- Trust -->
     <text x="120" y="1844" font-size="14" font-weight="600" fill="#355F91">任せる。でも、決定権は渡さない。</text>
     <text x="120" y="1902" font-size="40" font-weight="700">根拠と元のメールへ戻れる。</text>
     <text x="120" y="1943" font-size="16" fill="#686864">不確かなことを確定したように扱わず、起きていない外部操作を起きたことにしない。</text>
     <text x="1038" y="1911" font-size="14" font-weight="600" fill="#355F91">詳しい考え方を見る →</text>
 
     <line x1="96" y1="2032" x2="1344" y2="2032" stroke="#D8D8D2"/>
-
-    <!-- Availability / FAQ -->
     <text x="120" y="2112" font-size="14" font-weight="600" fill="#355F91">先行アクセス</text>
-    <text x="120" y="2162" font-size="34" font-weight="700">まずは、Lunowaを試したい人へ。</text>
-    <text x="120" y="2200" font-size="15" fill="#686864">公開時点のprovider・language・利用条件は、実装された事実だけを表示します。</text>
-
+    <text x="120" y="2162" font-size="34" font-weight="700">Lunowaに興味がある方へ。</text>
+    <text x="120" y="2200" font-size="15" fill="#686864">利用できるようになった時の案内を受け取るための登録導線です。</text>
     <text x="760" y="2112" font-size="14" font-weight="600" fill="#777772">FAQ</text>
     <text x="760" y="2154" font-size="16" font-weight="600">Lunowaは何を見守りますか？</text>
-    <line x1="760" y1="2173" x2="1320" y2="2173" stroke="#E1E1DC"/>
+    <line x1="760" y1="2173" x2="1320" y2="2173" stroke="#D8D8D2"/>
     <text x="760" y="2208" font-size="16" font-weight="600">返信が来ると自動で完了になりますか？</text>
-    <line x1="760" y1="2227" x2="1320" y2="2227" stroke="#E1E1DC"/>
+    <line x1="760" y1="2227" x2="1320" y2="2227" stroke="#D8D8D2"/>
     <text x="760" y="2262" font-size="16" font-weight="600">元のメールを確認できますか？</text>
-    <line x1="760" y1="2281" x2="1320" y2="2281" stroke="#E1E1DC"/>
+    <line x1="760" y1="2281" x2="1320" y2="2281" stroke="#D8D8D2"/>
     <text x="760" y="2316" font-size="16" font-weight="600">Lunowaが不確かな時はどうなりますか？</text>
 
-    <!-- Final CTA -->
     <text x="720" y="2420" text-anchor="middle" font-size="36" font-weight="700">必要になるまで、忘れていていい。</text>
     <rect x="613" y="2460" width="214" height="52" rx="10" fill="#181817"/>
     <text x="720" y="2493" text-anchor="middle" font-size="15" font-weight="600" fill="#FFFFFF">先行アクセスに登録</text>
