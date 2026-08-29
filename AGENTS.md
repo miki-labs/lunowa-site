@@ -14,17 +14,19 @@ Before implementation or review, read:
 
 1. `docs/CURRENT.md` — current execution router and status.
 2. `docs/VISITOR-JOURNEY.md` — first-time visitor mental-model sequence and comprehension oracle.
-3. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — current component/template reuse strategy.
-4. `docs/APPROVED-PRIMITIVES-2026-08-29.md` — approved primitive order, compatibility/licensing and Figma-access boundaries.
-5. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research protocol.
-6. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration contract; retired A/C/D variants are not the active participant plan.
-7. `docs/M05-WIREFRAMES.md` — internal structural reference only.
-8. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
-9. `docs/DESIGN.md` — visual direction and anti-patterns.
-10. `docs/MOTION.md` — semantic motion contract.
-11. `docs/ARCHITECTURE.md` — technical/deployment architecture.
-12. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
-13. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
+3. `docs/REUSE-STACK-AUDIT-2026-08-29.md` — latest reuse/tool/portability audit.
+4. `docs/APPROVED-PRIMITIVES-2026-08-29.md` — approved primitive hierarchy and provenance boundaries.
+5. `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md` — curated generic component-pattern shortlist.
+6. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — reuse-first rationale and ecosystem roles.
+7. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research protocol.
+8. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration contract; retired A/C/D variants are not the active participant plan.
+9. `docs/M05-WIREFRAMES.md` — internal structural reference only.
+10. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
+11. `docs/DESIGN.md` — visual direction and anti-patterns.
+12. `docs/MOTION.md` — semantic motion contract.
+13. `docs/ARCHITECTURE.md` — technical/deployment architecture.
+14. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
+15. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
 
 ## Visitor-first rule
 
@@ -38,21 +40,35 @@ A visually impressive candidate that repeatedly produces the wrong Product menta
 
 Do not reinvent ordinary web mechanics when a mature, adaptable primitive exists.
 
-Prefer existing/local/native/reusable components for generic layout and controls. Spend custom design/engineering effort on Lunowa-specific Product proof and semantics.
+Current selection order:
 
-Current preferred production roles:
+1. accepted local Lunowa primitive;
+2. native semantic HTML/CSS;
+3. shadcn/ui + intended MIT `@base-ui/react` / `mui/base-ui` primitive;
+4. audited open shadcn registry block — current first candidates 7Ovr then Tailark;
+5. Tailwind Plus if licensed and materially superior;
+6. Relume/reference adaptation;
+7. optional Webflow DevLink proof for a specific visual-to-React need;
+8. custom Lunowa implementation;
+9. decorative/effect libraries only by exception.
 
-- Astro + Tailwind CSS 4: owned static production shell;
-- shadcn/ui + Base UI: owned generic Product/app interaction primitives for new work;
-- React islands: only where actual interaction requires them;
-- Motion: accepted semantic Product-demo motion only;
-- Relume / Tailwind Plus / Framer / Figma/Webflow ecosystems: reference and reusable structural sources, subject to current compatibility/licensing review.
+Community registries are not trust authorities. Review exact code, dependencies, license, accessibility and responsive behavior before adoption.
 
-Figma is a preferred editable visual-convergence medium only when write access exists. The workflow must remain executable through code/docs design tokens, component/reference inventories, responsive rules and state references when Figma write capability is unavailable.
+Do not use a full third-party template merely because it exists. Prefer the smallest adequate block.
 
-Every reused component still requires Product-truth, accessibility, responsive, performance, dependency and license/provenance review.
+### Current tool boundaries
 
-Do not use decorative effect libraries as a shortcut to visual quality. Aceternity/Magic UI-style effects are exception-only because common glow/beam/3D/bento treatments can recreate generic AI-SaaS aesthetics.
+- Figma is preferred for editable convergence when write access exists, but it is not a hard dependency.
+- Framer remains visual/reference-only for architecture decisions until its conflicting current first-party export/self-host documentation is reconciled.
+- Webflow DevLink is technically viable as a scoped visual-to-React experiment, but it is not the default because it introduces Webflow primitives/scoped CSS beside the Tailwind system.
+- Image generation is exploratory, not precise webpage authority.
+- Motion exists only for semantic Product change/feedback and must respect Reduced Motion.
+
+## Design-token rule
+
+Preserve a small vendor-neutral semantic token source for M10 where practical, aligned with the stable Design Tokens Community Group 2025.10 format, and project it into Tailwind CSS 4/CSS variables.
+
+Do not create an oversized enterprise token pipeline. Token complexity must be justified by actual design surface.
 
 ## M05 experiment rule
 
@@ -64,6 +80,8 @@ Current primary divergence is:
 
 The old A/C/D participant-facing comparison is retired. Existing Concept A raster output is only an unvalidated structural reference.
 
+P and E should share the accepted generic shell/token system where practical. The test is the mental-model/acquisition hypothesis, not arbitrary library aesthetics.
+
 If a static direction is comprehension-eligible, test motion only when the temporal mechanism still needs additional proof. Keep unaided first impressions separate from aided/comparative discussion and bind findings to exact stimuli.
 
 Small M05 rounds are directional qualitative evidence, not statistically powered conversion tests.
@@ -72,12 +90,12 @@ Small M05 rounds are directional qualitative evidence, not statistically powered
 
 Use this loop:
 
-`research/Product truth -> visitor contract -> mature reference/component harvesting -> editable design-system composition when available OR code/docs design-system authority -> P/E first-impression evidence -> optional isolated motion evidence -> implementation-grade visual authority -> scoped ACP/Codex implementation using approved reusable primitives -> real-browser verification -> correction -> independent full acceptance audit`.
+`research/Product truth -> visitor contract -> reuse-stack audit -> semantic tokens + audited generic shell -> P/E comprehension evidence -> optional isolated motion evidence -> structured visual authority -> scoped ACP/Codex implementation -> real-browser verification -> correction -> independent full acceptance audit`.
 
-- ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, reuse strategy, design-system direction, independent review.
+- ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, reuse strategy, token/design direction, independent review.
 - Codex: implementation, tests, browser verification, build/deploy evidence, PR candidate construction.
-- Figma when writable: editable design convergence and visual-oracle surface.
-- GitHub: canonical durable task contracts and evidence.
+- Figma when writable: editable design convergence and visual reference surface.
+- GitHub: canonical durable task contracts, tokens/specs, provenance and evidence.
 
 Do not duplicate the full repository contract in long Codex prompts. Point Codex at the owning Issue + these docs.
 
@@ -85,7 +103,7 @@ Do not duplicate the full repository contract in long Codex prompts. Point Codex
 
 Raster image generation is exploratory, not the default precise homepage-design workflow and not authoritative.
 
-Use image generation for mood exploration, illustration, campaign assets or genuinely novel visual concepts. Prefer editable composition or code-owned structured design specs for typography/layout/responsive/Product UI work.
+Use image generation for mood exploration, illustration, campaign assets or genuinely novel visual concepts. Prefer editable/code-owned structure for typography/layout/responsive/Product UI work.
 
 Before any generated visual becomes evidence, verify:
 
