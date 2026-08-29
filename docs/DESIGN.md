@@ -1,6 +1,6 @@
 # Lunowa Marketing Visual Contract
 
-Status: canonical visual direction for the initial marketing site, 2026-08-29.
+Status: canonical visual direction for the initial marketing site, 2026-08-30.
 
 Read `docs/VISITOR-JOURNEY.md` before visual work.
 
@@ -31,6 +31,65 @@ In descending order:
 7. delight.
 
 Decoration must never outrank comprehension or proof.
+
+### 2.1 Subtractive quality principle
+
+For the initial homepage, optimize **downside prevention before delight maximization**.
+
+The page is normally scanned quickly rather than studied as an art object. A single material failure — unclear category, suspicious claim, slow/unstable loading, cramped mobile layout, unreadable text, misleading CTA, visual noise, or generic template/AI decoration obscuring Product proof — can outweigh several decorative positives.
+
+Use this quality stack:
+
+#### Tier 0 — veto failures
+
+Must not ship:
+
+- wrong or unclear Product mental model;
+- unsupported capability/security/performance/social-proof claim;
+- broken or misleading CTA;
+- unreadable/low-contrast essential text;
+- horizontal overflow or materially broken mobile/reflow behavior;
+- Product proof that looks fake, contradictory, or detached from Product truth;
+- essential meaning dependent on animation;
+- obvious loading/layout instability introduced for decoration;
+- generic AI visual treatment that dominates the Product.
+
+#### Tier 1 — hygiene quality
+
+Must feel ordinary in the best sense:
+
+- recognizable software-site structure;
+- clear hierarchy and descriptive headings;
+- fast scanning;
+- restrained spacing/color/depth;
+- accessible controls and visible focus;
+- stable, fast, responsive rendering;
+- familiar interaction patterns;
+- truthful availability and trust language.
+
+#### Tier 2 — necessary differentiation
+
+Spend custom design effort here:
+
+- believable Lunowa Product UI;
+- `reply != outcome complete`;
+- quiet monitoring while the user is not needed;
+- material outcome -> attention return;
+- concise return context and Source access;
+- wording/timing that makes attention delegation concrete.
+
+#### Tier 3 — optional delight
+
+Only after Tiers 0–2 are strong:
+
+- subtle motion;
+- small microinteractions;
+- refined depth/typographic craft;
+- non-essential visual flourish.
+
+Tier 3 must be removable without damaging comprehension, trust, performance, accessibility, or brand coherence.
+
+The target is **not the most impressive homepage**. The target is a homepage with no obvious reason to distrust, misunderstand, struggle with, or leave — plus one memorable Product proof that explains why Lunowa is different.
 
 ## 3. Composition
 
@@ -213,3 +272,4 @@ Litmus checks:
 5. Does each section have one job?
 6. Does motion clarify one material change instead of adding ambient activity?
 7. Would the visual still feel distinct if the Lunowa logo were temporarily hidden because the Product behavior itself is distinctive?
+8. Is there any obvious reason to distrust, misunderstand, wait for, struggle with, or abandon the page that can simply be removed?
