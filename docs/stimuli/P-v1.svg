@@ -1,57 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
   <title id="title">Lunowa P-v1 Product Proof stimulus</title>
   <desc id="desc">Product-first Lunowa homepage first-impression stimulus showing an intermediate email reply while Lunowa continues monitoring and no user action is required.</desc>
-  <!-- S05 P-v1. Static only. Target viewport 1440x900. Common shell/token snapshot shared with E-v1. -->
+  <!-- S05 P-v1. Static only. Target viewport 1440x900. Common shell/token/Product-stage geometry shared with E-v1. -->
   <rect width="1440" height="900" fill="#F8F8F5"/>
   <g font-family="Inter, Noto Sans JP, Hiragino Sans, Yu Gothic, sans-serif" fill="#181817">
-    <!-- header -->
     <text x="72" y="58" font-size="28" font-weight="700">Lunowa</text>
     <text x="1080" y="55" font-size="15" fill="#696965">仕組み</text>
     <text x="1150" y="55" font-size="15" fill="#696965">FAQ</text>
     <rect x="1215" y="27" width="153" height="44" rx="10" fill="#181817"/>
     <text x="1244" y="55" font-size="15" font-weight="650" fill="#FFFFFF">先行アクセス</text>
 
-    <!-- hero copy -->
     <text x="720" y="132" text-anchor="middle" font-size="18" font-weight="600" fill="#355F91">返信待ち・資料待ちを、Lunowaが代わりに見守る。</text>
     <text x="720" y="198" text-anchor="middle" font-size="48" font-weight="750">メールを、確認し続けなくていい。</text>
     <text x="720" y="244" text-anchor="middle" font-size="18" fill="#686864">必要な結果が届くまで見守り、あなたの対応が必要になった時だけ戻します。</text>
     <rect x="617" y="276" width="206" height="52" rx="10" fill="#181817"/>
     <text x="720" y="309" text-anchor="middle" font-size="16" font-weight="650" fill="#FFFFFF">先行アクセスに登録</text>
-    <text x="720" y="352" text-anchor="middle" font-size="14" fill="#4D6380">仕組みを見る ↓</text>
 
-    <!-- product stage -->
-    <rect x="94" y="390" width="1252" height="450" rx="18" fill="#FFFFFF" stroke="#D8D8D2" stroke-width="1.5"/>
-    <line x1="94" y1="448" x2="1346" y2="448" stroke="#E1E1DC"/>
-    <text x="122" y="427" font-size="18" font-weight="700">Lunowa</text>
-    <text x="1118" y="426" font-size="13" fill="#777772">メールを検索</text>
-    <circle cx="1308" cy="419" r="16" fill="#F1F1ED" stroke="#D8D8D2"/>
+    <rect x="94" y="370" width="1252" height="470" rx="18" fill="#FFFFFF" stroke="#D8D8D2" stroke-width="1.5"/>
+    <line x1="94" y1="428" x2="1346" y2="428" stroke="#E1E1DC"/>
+    <text x="122" y="407" font-size="18" font-weight="700">Lunowa</text>
+    <text x="1118" y="406" font-size="13" fill="#777772">メールを検索</text>
+    <circle cx="1308" cy="399" r="16" fill="#F1F1ED" stroke="#D8D8D2"/>
 
-    <!-- sidebar -->
-    <line x1="286" y1="448" x2="286" y2="840" stroke="#E1E1DC"/>
-    <text x="120" y="492" font-size="13" fill="#7A7A75">対応が必要</text>
-    <rect x="111" y="512" width="158" height="38" rx="8" fill="#EEF4F9"/>
-    <text x="132" y="536" font-size="14" font-weight="650" fill="#355F91">見守り中</text>
-    <text x="120" y="584" font-size="13" fill="#7A7A75">すべての会話</text>
+    <line x1="286" y1="428" x2="286" y2="840" stroke="#E1E1DC"/>
+    <text x="120" y="472" font-size="13" fill="#7A7A75">対応が必要</text>
+    <rect x="111" y="492" width="158" height="38" rx="8" fill="#EEF4F9"/>
+    <text x="132" y="516" font-size="14" font-weight="650" fill="#355F91">見守り中</text>
+    <text x="120" y="564" font-size="13" fill="#7A7A75">すべての会話</text>
 
-    <!-- conversation -->
-    <text x="326" y="486" font-size="12" font-weight="650" fill="#797974">メールの会話</text>
-    <text x="326" y="525" font-size="27" font-weight="720">Re: 見積書のお願い</text>
-    <text x="326" y="555" font-size="14" fill="#6E6E69">山田商事</text>
-    <rect x="1041" y="489" width="243" height="42" rx="9" fill="#EEF4F9"/>
-    <text x="1162" y="515" text-anchor="middle" font-size="13" font-weight="650" fill="#355F91">見積書を待っています</text>
+    <text x="326" y="466" font-size="12" font-weight="650" fill="#797974">メールの会話</text>
+    <text x="326" y="505" font-size="27" font-weight="720">Re: 見積書のお願い</text>
+    <text x="326" y="535" font-size="14" fill="#6E6E69">山田商事</text>
+    <rect x="1041" y="469" width="243" height="42" rx="9" fill="#EEF4F9"/>
+    <text x="1162" y="495" text-anchor="middle" font-size="13" font-weight="650" fill="#355F91">見積書を待っています</text>
 
-    <!-- semantic consequence -->
-    <rect x="326" y="584" width="780" height="78" rx="12" fill="#EDF6F1"/>
-    <circle cx="354" cy="623" r="13" fill="#3D6D58"/>
-    <path d="M348 623 l4 4 l8 -9" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="382" y="615" font-size="19" font-weight="720">あなたの対応はまだ必要ありません</text>
-    <text x="382" y="643" font-size="14" fill="#66706A">見積書が届くまで、Lunowaがこの会話を引き続き見守ります。</text>
+    <rect x="326" y="564" width="780" height="78" rx="12" fill="#EDF6F1"/>
+    <circle cx="354" cy="603" r="13" fill="#3D6D58"/>
+    <path d="M348 603 l4 4 l8 -9" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="382" y="595" font-size="19" font-weight="720">あなたの対応はまだ必要ありません</text>
+    <text x="382" y="623" font-size="14" fill="#66706A">見積書が届くまで、Lunowaがこの会話を引き続き見守ります。</text>
 
-    <!-- latest reply -->
-    <text x="326" y="704" font-size="12" font-weight="650" fill="#797974">最新の返信</text>
-    <rect x="326" y="724" width="780" height="86" rx="11" fill="#FBFBF8" stroke="#DEDED8"/>
-    <text x="346" y="751" font-size="12" font-weight="650">山田商事 ・ 11:08</text>
-    <text x="346" y="784" font-size="18">社内確認中です。明日送ります。</text>
-    <text x="1156" y="790" font-size="13" font-weight="600" fill="#355F91">元のメールを見る →</text>
+    <text x="326" y="684" font-size="12" font-weight="650" fill="#797974">最新の返信</text>
+    <rect x="326" y="704" width="780" height="86" rx="11" fill="#FBFBF8" stroke="#DEDED8"/>
+    <text x="346" y="731" font-size="12" font-weight="650">山田商事 ・ 11:08</text>
+    <text x="346" y="764" font-size="18">社内確認中です。明日送ります。</text>
+    <text x="1156" y="770" font-size="13" font-weight="600" fill="#355F91">元のメールを見る →</text>
   </g>
 </svg>
