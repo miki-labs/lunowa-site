@@ -14,16 +14,17 @@ Before implementation or review, read:
 
 1. `docs/CURRENT.md` — current execution router and status.
 2. `docs/VISITOR-JOURNEY.md` — first-time visitor mental-model sequence and comprehension oracle.
-3. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — current component/template/Figma reuse strategy.
-4. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research protocol.
-5. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration contract; retired A/C/D variants are not the active participant plan.
-6. `docs/M05-WIREFRAMES.md` — internal structural reference only.
-7. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
-8. `docs/DESIGN.md` — visual direction and anti-patterns.
-9. `docs/MOTION.md` — semantic motion contract.
-10. `docs/ARCHITECTURE.md` — technical/deployment architecture.
-11. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
-12. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
+3. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — current component/template reuse strategy.
+4. `docs/APPROVED-PRIMITIVES-2026-08-29.md` — approved primitive order, compatibility/licensing and Figma-access boundaries.
+5. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research protocol.
+6. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration contract; retired A/C/D variants are not the active participant plan.
+7. `docs/M05-WIREFRAMES.md` — internal structural reference only.
+8. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
+9. `docs/DESIGN.md` — visual direction and anti-patterns.
+10. `docs/MOTION.md` — semantic motion contract.
+11. `docs/ARCHITECTURE.md` — technical/deployment architecture.
+12. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
+13. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
 
 ## Visitor-first rule
 
@@ -39,13 +40,15 @@ Do not reinvent ordinary web mechanics when a mature, adaptable primitive exists
 
 Prefer existing/local/native/reusable components for generic layout and controls. Spend custom design/engineering effort on Lunowa-specific Product proof and semantics.
 
-Current preferred roles:
+Current preferred production roles:
 
-- Relume / Tailwind Plus / Framer / Figma ecosystem: reference and reusable structural primitives;
-- Figma: editable design-system composition and implementation-grade visual oracle;
-- shadcn/ui-style local components: generic Product/app primitives;
-- Astro + Tailwind: owned static production shell;
-- React + Motion: accepted interactive Product demo only.
+- Astro + Tailwind CSS 4: owned static production shell;
+- shadcn/ui + Base UI: owned generic Product/app interaction primitives for new work;
+- React islands: only where actual interaction requires them;
+- Motion: accepted semantic Product-demo motion only;
+- Relume / Tailwind Plus / Framer / Figma/Webflow ecosystems: reference and reusable structural sources, subject to current compatibility/licensing review.
+
+Figma is a preferred editable visual-convergence medium only when write access exists. The workflow must remain executable through code/docs design tokens, component/reference inventories, responsive rules and state references when Figma write capability is unavailable.
 
 Every reused component still requires Product-truth, accessibility, responsive, performance, dependency and license/provenance review.
 
@@ -69,11 +72,11 @@ Small M05 rounds are directional qualitative evidence, not statistically powered
 
 Use this loop:
 
-`research/Product truth -> visitor contract -> mature reference/component harvesting -> Figma design-system composition -> P/E first-impression evidence -> optional isolated motion evidence -> implementation-grade visual oracle -> scoped ACP/Codex implementation using approved reusable primitives -> real-browser verification -> correction -> independent full acceptance audit`.
+`research/Product truth -> visitor contract -> mature reference/component harvesting -> editable design-system composition when available OR code/docs design-system authority -> P/E first-impression evidence -> optional isolated motion evidence -> implementation-grade visual authority -> scoped ACP/Codex implementation using approved reusable primitives -> real-browser verification -> correction -> independent full acceptance audit`.
 
-- ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, reuse strategy, design-system direction, Figma collaboration, independent review.
+- ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, reuse strategy, design-system direction, independent review.
 - Codex: implementation, tests, browser verification, build/deploy evidence, PR candidate construction.
-- Figma: editable design convergence and visual oracle surface.
+- Figma when writable: editable design convergence and visual-oracle surface.
 - GitHub: canonical durable task contracts and evidence.
 
 Do not duplicate the full repository contract in long Codex prompts. Point Codex at the owning Issue + these docs.
@@ -82,7 +85,7 @@ Do not duplicate the full repository contract in long Codex prompts. Point Codex
 
 Raster image generation is exploratory, not the default precise homepage-design workflow and not authoritative.
 
-Use image generation for mood exploration, illustration, campaign assets or genuinely novel visual concepts. Prefer editable Figma composition for typography/layout/responsive/Product UI work.
+Use image generation for mood exploration, illustration, campaign assets or genuinely novel visual concepts. Prefer editable composition or code-owned structured design specs for typography/layout/responsive/Product UI work.
 
 Before any generated visual becomes evidence, verify:
 
