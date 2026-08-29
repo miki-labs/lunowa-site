@@ -1,234 +1,161 @@
-# M05 Hero Concept Set
+# M05 Hero Exploration Contract
 
-Status: canonical low/mid-fidelity concept contract for directional first-impression testing. None is final visual authority.
+Status: canonical design-exploration contract for directional first-impression work, 2026-08-29. None of the concepts in this file is final visual authority.
 
-The purpose of this file is to prevent visual work from collapsing into one generic AI-SaaS aesthetic and to keep the comparison method interpretable. Each concept changes how a first-time visitor is introduced to Lunowa, not merely color or typography.
+## 1. Research correction
 
-All concepts use the same Product truth and the same quotation scenario so layout/composition differences are not confounded with different jobs-to-be-done.
+The earlier A/C/D set was useful for identifying information-architecture dimensions, but it is **not** the preferred participant-facing comparison set anymore.
 
-## 1. Shared Product scenario
+Reason: A, C, and D all preserve the same H1, same quotation scenario, same monitoring consequence, same near-white SaaS frame, and mostly vary ordering or simultaneous presentation. Their conceptual distance is too small to justify spending a limited qualitative sample treating them as three independent design directions.
 
-1. User has asked a counterparty for a quotation by a date.
-2. Lunowa is watching for the requested outcome.
+This is an information-gain correction, not a claim that parallel prototyping is useless.
+
+Research on parallel prototyping supports exploring multiple alternatives when they are meaningfully divergent. Tohidi et al. also found that users were more critical when shown multiple alternatives. Those findings do not imply that a team should manufacture several near-isomorphic variants merely to satisfy a variant count.
+
+A 2024 CHI study additionally found that AI-image-supported visual ideation can increase design fixation and reduce idea variety/originality. Therefore repeated prompt-level mutation of the same generated layout is not accepted as evidence of genuine exploration.
+
+## 2. Current exploration rule
+
+Use a **minimal divergent pair**, not A/C/D variant proliferation:
+
+1. **P — Product Proof Baseline**
+2. **E — Editorial Problem-First Dark Horse**
+
+Add a third direction only when it tests a genuinely different visitor mental model or proof modality. Color, typography, card position, one-vs-two snapshots, or copy rearrangement alone do not qualify.
+
+The goal is not to crown a winner statistically. The goal is to expose whether the current design thesis is wrong before refinement creates sunk-cost/fixation.
+
+## 3. Shared Product truth
+
+Both directions use the same canonical job:
+
+1. User has asked for a quotation by a date.
+2. Lunowa watches for the requested outcome.
 3. Counterparty replies: `社内確認中です。明日送ります。`
 4. User still does not need to act; Lunowa continues monitoring.
 5. `見積書.pdf` arrives.
 6. User attention becomes necessary.
 7. Lunowa returns concise context and Source access.
 
-No concept may imply that a reply alone completes the matter, that Lunowa autonomously sends email, or that unsupported security/performance claims are true.
+Neither direction may imply:
 
-## 2. Current evidence constraints
+- reply == completion;
+- autonomous send/follow-up;
+- unsupported provider/security/performance/pricing claims;
+- a validated exact ICP;
+- generic AI assistant positioning as the primary category.
 
-Current evidence does not prove one unique best SaaS Hero. It does support the following bounded constraints:
-
-- use recognizable Product/category cues rather than requiring interpretation of abstract symbols;
-- reduce simultaneous first-viewport visual competition;
-- use concrete Product content before internal ontology;
-- treat real Product UI as proof where the UI itself communicates the job;
-- keep each section focused on one visitor question;
-- treat motion as a separate hypothesis unless the experiment is designed to isolate it.
-
-Current live Product-marketing examples such as Linear, Cursor, Granola, Attio and Fyxer all pair explicit category/value language with recognizable Product/workflow surfaces. This is industry observation, not causal proof for Lunowa.
-
-## 3. Experimental decomposition
-
-Do **not** directly crown `static A` versus `interactive B` from one small first-impression sample. That would confound information architecture with playback/interaction.
-
-Use two stages:
-
-### Stage 1 — static first-impression structure
-
-Compare materially different static compositions under the same exposure protocol:
-
-- A — Product First / Static Proof
-- C — Familiar Situation First
-- D — Static Dual-State Comparison
-
-The same H1/value family, Product scenario, viewport class and approximate exposure duration should be held as constant as practical. Differences that are intentionally part of the concept must be recorded.
-
-### Stage 2 — temporal mechanism
-
-After an eligible static structure exists, compare that **same structure/content** with and without restrained temporal motion:
-
-- static base
-- motion-enabled variant B
-
-This stage asks whether motion improves understanding of `intermediate reply -> still no action -> material outcome -> attention required` enough to justify the added complexity.
-
-This decomposition is preferred because the key motion question should not be mixed with a completely different information architecture.
-
----
-
-## Concept A — Product First / Static Proof
+## 4. Direction P — Product Proof Baseline
 
 ### Hypothesis
 
-The fastest correct mental model may come from showing a believable Lunowa surface immediately, with motion unnecessary for basic comprehension.
+The fastest correct mental model comes from recognizable Product UI itself. A visitor should see real-looking email/work context and immediately understand what Lunowa is doing on their behalf.
 
 ### First viewport
 
-Category/mechanism line:
+Use the current Product-first information hierarchy:
 
-> 返信待ち・資料待ちを、Lunowaが代わりに見守る。
+- Lunowa brand;
+- short category/mechanism cue;
+- `メールを、確認し続けなくていい。`;
+- one short support line;
+- primary CTA;
+- one dominant believable Lunowa Product surface.
 
-H1:
+The Product surface shows the intermediate-reply state:
 
-> **メールを、確認し続けなくていい。**
+- sender/thread/subject context;
+- `見積書を待っています`;
+- latest reply `社内確認中です。明日送ります。`;
+- explicit consequence `あなたの対応はまだ必要ありません`;
+- Lunowa continues watching;
+- original Source affordance visible but subordinate.
 
-Supporting copy:
+### What P tests
 
-> 必要な結果が届くまでLunowaが見守り、あなたの対応が必要になった時だけ戻します。
+Can the Product itself explain the new behavior without an abstract diagram, a long story, or prior Lunowa vocabulary?
 
-Primary CTA:
+### Main failure signatures
 
-> 先行アクセス
+- ordinary inbox;
+- simple waiting/reminder tracker;
+- email summarizer;
+- automatic reply/follow-up tool;
+- attractive but unclear software screenshot.
 
-Primary visual: one large real-looking Lunowa surface in the intermediate-reply state.
+## 5. Direction E — Editorial Problem-First Dark Horse
 
-Required visible content:
+### Why this direction exists
 
-- recognizable sender/thread/subject context;
-- `見積書を待っています` or equivalent user-facing monitoring statement;
-- latest email: `社内確認中です。明日送ります。`;
-- explicit consequence: `あなたの対応はまだ必要ありません`;
-- original Source affordance visible but subordinate;
-- no abstract state timeline required to understand the screen.
+E is intentionally not a rearranged Product-first Hero. It tests a different acquisition path: **self-recognition of the monitoring burden before Product explanation**.
 
-The Product surface should be the dominant visual anchor and should not be squeezed into a decorative side card.
-
-### What this concept tests
-
-Can recognizable Product UI plus explicit user consequence communicate monitoring offload without animation or explanatory diagrams?
-
-### Main risk
-
-The visitor may understand only `waiting tracker` and not the deeper outcome-level distinction.
-
----
-
-## Concept C — Familiar Situation First -> Product Consequence
-
-### Hypothesis
-
-A visitor may understand Lunowa faster when the first screen begins from an email situation they already recognize, then immediately shows Lunowa's consequence.
+If P is already the correct thesis, E may lose on immediate category clarity. That is acceptable; a dark-horse alternative exists to challenge fixation, not to be made artificially competitive.
 
 ### First viewport
 
-H1:
+The opening is editorial and human, not dashboard-led.
 
-> **メールを、確認し続けなくていい。**
+Primary visual/text rhythm centers on familiar internal questions such as:
 
-Recognizable exchange:
+- `見積書、届いたかな。`
+- `契約書、返ってきたっけ。`
+- `次は自分が返す番だったかな。`
 
-> あなた: `金曜までに見積書をお願いします。`
->
-> 相手: `社内確認中です。明日送ります。`
+Then make the consequence explicit:
 
-Immediate Lunowa consequence:
+> **その確認を、Lunowaに任せる。**
 
-> **まだ確認しなくて大丈夫です。**
->
-> Lunowaが見積書の到着を引き続き見守ります。
+A recognizable email/Product proof must still appear within or immediately adjacent to the first viewport so the visitor does not leave with an abstract productivity/wellness interpretation.
 
-Primary CTA remains visible in the first viewport. A believable Lunowa Product surface begins in the same viewport where practical or immediately below; the visitor must not leave the first screen thinking this is merely an email-rule illustration.
+The same quotation scenario shows:
 
-### What this concept tests
+- intermediate reply exists;
+- Lunowa says no action is required yet;
+- Lunowa continues monitoring.
 
-Does self-recognition in a familiar situation improve correct Product/category comprehension versus Product-first chrome?
+### What E tests
 
-### Main risks
+Does starting from the visitor's lived monitoring burden produce stronger self-recognition and a more accurate explanation of why Lunowa matters than starting from Product chrome?
 
-- can become copy-heavy;
-- can look like a marketing illustration instead of real software;
-- may under-signal that Lunowa is a broader Product rather than one hard-coded rule.
+### Main failure signatures
 
----
+- unclear category;
+- generic productivity or attention-management interpretation;
+- too much copy before software proof;
+- visitor understands the pain but not what Lunowa actually does.
 
-## Concept D — Static Dual-State Product Comparison
+## 6. Fidelity rule
 
-### Hypothesis
+Do not use intentionally crude wireframes as the final first-impression/trust stimulus.
 
-The distinctive temporal rule may be understood quickly through two snapshots of the **same Product object** without requiring motion.
+Low fidelity remains useful for cheap structural reasoning and internal review. However, M05 asks about first impression, category recognition, perceived credibility, visual orientation, and whether the Product feels believable. Those outcomes are partly affected by aesthetics/prototypicality, so participant-facing stimuli should be **mid-to-high fidelity enough to resemble a plausible real homepage and Product** while remaining cheap to revise.
 
-### First viewport
+This does not mean pixel-perfect production design is required before research.
 
-Category cue + H1 + concise supporting copy.
+Recommended sequence:
 
-One continuous Product frame shows two clearly related semantic moments:
+1. low-fidelity structure sanity check internally;
+2. create P and E independently as realistic mid/high-fidelity stimuli;
+3. do not generate E by editing P or telling an image model to make `a variant of P`;
+4. inspect for Product-truth/claim violations before participants see them;
+5. collect unaided comprehension evidence;
+6. refine the stronger thesis or synthesize only when evidence shows a specific useful element from the other direction.
 
-**After intermediate reply**
+## 7. Motion boundary
 
-> `社内確認中です。明日送ります。`
->
-> Lunowa: `まだ対応は必要ありません。`
+Motion is no longer part of concept-count pressure.
 
-**After material outcome**
+Only after a static direction is comprehension-eligible should a motion treatment be considered.
 
-> `見積書.pdf`
->
-> Lunowa: `対応が必要です。金額と納期を確認してください。`
+Motion asks one isolated question:
 
-The relationship between the two states must be unmistakably one thread/item changing meaning. Do not render them as two unrelated feature cards.
+> Does showing `intermediate reply -> still no action -> material outcome -> attention required` improve understanding or confidence enough to justify the added motion/interaction/accessibility cost?
 
-### What this concept tests
+The static state must remain independently understandable.
 
-Can a static before/after comparison teach `Reply != Done` more clearly than one single state without exceeding the first-viewport complexity budget?
+## 8. Lower-page contract
 
-### Main risks
-
-- simultaneous comparison can increase visual complexity;
-- can read like a marketing infographic instead of a Product surface;
-- may reveal too much before the visitor knows the baseline category.
-
----
-
-## Concept B — Motion Variant of an Eligible Static Structure
-
-### Status
-
-B is no longer a separate first-impression information architecture. It is a **motion treatment applied to the strongest eligible static structure from Stage 1**.
-
-### Hypothesis
-
-Because Lunowa's key distinction is temporal, restrained user-controlled motion may produce a stronger `aha` than the same static structure.
-
-### Static initial state
-
-Before interaction, the Hero must already communicate what Lunowa does. Motion may not be required for baseline comprehension.
-
-Control near the Product stage:
-
-> 15秒で見る
-
-### Playback
-
-One focal change at a time:
-
-1. Intermediate reply appears.
-2. Lunowa explicitly remains in quiet monitoring.
-3. Deliberate stillness.
-4. Quotation attachment arrives.
-5. Item becomes attention-worthy.
-6. Concise return context appears.
-7. End state remains visible; replay is explicit.
-
-No infinite loop. Reduced-motion uses static key states with equivalent explanation.
-
-### What this concept tests
-
-Does temporal motion improve understanding of `reply != outcome completion` and confidence in delegated monitoring enough to justify the added motion/interaction cost?
-
-### Main risks
-
-- visitor may not trigger playback;
-- motion may capture attention without improving understanding;
-- poor timing can make the decisive non-event after intermediate reply invisible;
-- autoplay/user-trigger differences can contaminate comparison if not recorded separately.
-
-## 4. Lower-page composition shared across concepts
-
-M05 must not evaluate a Hero disconnected from the rest of the page. After the first-impression measurement, each concept continues through the same visitor-question sequence:
+Both directions converge after the first acquisition/mental-model section into the same visitor-question narrative:
 
 1. `メールの負担は、読むことだけではありません。`
 2. `返信が来ても、終わっていないことがある。`
@@ -240,46 +167,25 @@ M05 must not evaluate a Hero disconnected from the rest of the page. After the f
 8. material FAQ;
 9. final CTA.
 
-The page should vary visual rhythm rather than repeat one card formula. Product UI is used where Product behavior is the evidence; text/space can dominate where the user's own problem is the subject.
+The lower page is not required to have two independent full designs during M05 unless first-viewport differences materially imply different downstream narrative needs.
 
-## 5. Visual-oracle production rule
+## 9. Explicitly rejected exploration behavior
 
-For the eventual high-fidelity M10 oracle, do not compress the entire long homepage into one giant concept board if important Product text/states become unreadable.
+Do not:
 
-Prefer coordinated references for major surfaces/states, for example:
+- generate three or five close variants merely to create a comparison table;
+- use ImageGen outputs as the source of Product semantics;
+- serially patch one generated image and call each patch a new concept;
+- return to dark-purple/orb/glow/icon-timeline AI-SaaS defaults;
+- spend participant research on differences that can be resolved by ordinary design judgment;
+- infer population-level preference from a small qualitative sample.
 
-- desktop Hero initial state;
-- intermediate reply / still-no-action state;
-- material-outcome / attention-required state;
-- Moment / Source state;
-- representative lower-page narrative sections;
-- Trust/Control section;
-- mobile Hero and simplified Product story.
+## 10. Current next action
 
-An overview may show section rhythm, but it cannot substitute for readable implementation-grade references.
+Stop generating C/D from the old variant set.
 
-## 6. Explicitly excluded concept family
+Use the existing Concept A work only as an **unvalidated Product-first baseline reference**, not as final design authority.
 
-Do not regenerate the rejected dark navy / purple / glow / planet-orb / icon-timeline concept as a cosmetic variant.
+Next, create one independently conceived **E editorial/problem-first dark horse** at realistic visual fidelity. Compare P vs E primarily for mental-model failure modes and self-recognition, not for cosmetic preference.
 
-Also exclude:
-
-- generic AI orb or 3D centerpiece;
-- abstract flowchart as Hero proof;
-- feature-card grids before Product proof;
-- autoplay cinematic video required for basic comprehension;
-- fake social proof;
-- unsupported encryption/security badges;
-- `AI email assistant` as the primary category label;
-- invented Product screens unrelated to canonical Product semantics.
-
-## 7. Current testing order
-
-1. Produce A/C/D low/mid-fidelity static concepts.
-2. Capture clean unaided first-impression evidence under the M05 protocol.
-3. Eliminate structures that repeatedly produce the wrong mental model.
-4. Apply B motion to an eligible static structure.
-5. Test the temporal mechanism separately.
-6. Feed both evidence sets into M10 #3.
-
-Do not select a final visual direction before `docs/FIRST-IMPRESSION-VALIDATION.md` evidence is collected.
+If P clearly satisfies comprehension and E does not reveal a better acquisition model, converge on P and move to refinement/motion rather than continuing variant production.
