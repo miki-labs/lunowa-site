@@ -19,15 +19,17 @@ Before implementation or review, read:
 5. `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md` — curated generic component-pattern shortlist.
 6. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — reuse-first rationale and ecosystem roles.
 7. `docs/M10-TOKEN-CONTRACT.md` — provisional semantic token structure; roles are authoritative before exact M10 values freeze.
-8. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research protocol.
-9. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration contract; retired A/C/D variants are not the active participant plan.
-10. `docs/M05-WIREFRAMES.md` — internal structural reference only.
-11. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
-12. `docs/DESIGN.md` — visual direction and anti-patterns.
-13. `docs/MOTION.md` — semantic motion contract.
-14. `docs/ARCHITECTURE.md` — technical/deployment architecture.
-15. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
-16. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
+8. `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md` — selected generic homepage shell; do not restart broad template exploration without new evidence.
+9. `docs/M05-P-E-STIMULUS-CONTRACT.md` — exact P/E participant-stimulus construction and hidden-variable controls.
+10. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research protocol.
+11. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration contract; retired A/C/D variants are not the active participant plan.
+12. `docs/M05-WIREFRAMES.md` — internal structural reference only.
+13. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
+14. `docs/DESIGN.md` — visual direction and anti-patterns.
+15. `docs/MOTION.md` — semantic motion contract.
+16. `docs/ARCHITECTURE.md` — technical/deployment architecture.
+17. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
+18. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
 
 ## Visitor-first rule
 
@@ -56,6 +58,16 @@ Current selection order:
 Community registries are not trust authorities. Review exact code, dependencies, license, accessibility and responsive behavior before adoption.
 
 Do not use a full third-party template merely because it exists. Prefer the smallest adequate block.
+
+### Selected generic shell
+
+`docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md` is the current generic shell decision.
+
+Do not restart broad Hero/navbar/FAQ/footer exploration by default. Current shell family is:
+
+`minimal header -> category/value -> centered/near-centered Hero -> large Product proof -> editorial one-job sections -> Product/trust proof -> availability -> minimal FAQ -> plain CTA -> minimal footer`.
+
+Generic shell decisions should stay shared between P and E where practical. Product semantics and acquisition hierarchy are the experiment; random template aesthetics are not.
 
 ### Current tool boundaries
 
@@ -87,6 +99,8 @@ The old A/C/D participant-facing comparison is retired. Existing Concept A raste
 
 P and E should share the accepted generic shell/token system where practical. The test is the mental-model/acquisition hypothesis, not arbitrary library aesthetics.
 
+Construct participant stimuli according to `docs/M05-P-E-STIMULUS-CONTRACT.md`. The initial clean comparison is static and uses the same canonical quotation scenario. Do not introduce motion, social proof, different Product styling, or unequal fidelity in only one condition.
+
 If a static direction is comprehension-eligible, test motion only when the temporal mechanism still needs additional proof. Keep unaided first impressions separate from aided/comparative discussion and bind findings to exact stimuli.
 
 Small M05 rounds are directional qualitative evidence, not statistically powered conversion tests.
@@ -95,7 +109,7 @@ Small M05 rounds are directional qualitative evidence, not statistically powered
 
 Use this loop:
 
-`research/Product truth -> visitor contract -> reuse-stack audit -> semantic tokens + audited generic shell -> P/E comprehension evidence -> optional isolated motion evidence -> structured visual authority -> scoped ACP/Codex implementation -> real-browser verification -> correction -> independent full acceptance audit`.
+`research/Product truth -> visitor contract -> reuse-stack audit -> semantic tokens + selected generic shell -> P/E stimulus construction -> P/E comprehension evidence -> optional isolated motion evidence -> structured visual authority -> scoped ACP/Codex implementation -> real-browser verification -> correction -> independent full acceptance audit`.
 
 - ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, reuse strategy, token/design direction, independent review.
 - Codex: implementation, tests, browser verification, build/deploy evidence, PR candidate construction.
