@@ -59,7 +59,7 @@ Do not lead with `Managed`, `Needs You`, `Moment`, `Responsibility`, `Attention 
 
 ### 3.2 Information hierarchy
 
-Recommended structure:
+Current **Product-Proof baseline** structure:
 
 1. brand/product name as a clear first-screen signal;
 2. short category/mechanism cue;
@@ -83,9 +83,11 @@ Secondary CTA:
 
 Exact copy remains a hypothesis until first-impression evidence supports it.
 
+M05 may challenge this baseline with a genuinely divergent **problem-first/editorial** acquisition direction. That dark-horse direction is not permission to remove Product/category proof: recognizable email/Product evidence must still appear early enough to avoid a generic productivity interpretation.
+
 ### 3.3 Hero composition
 
-Prefer one coherent composition with the Product itself as the dominant visual anchor.
+For Product-Proof baseline work, prefer one coherent composition with the Product itself as the dominant visual anchor.
 
 The Product stage must be understandable in its initial static state. Motion can reinforce temporal differentiation but cannot be required for basic comprehension.
 
@@ -128,7 +130,7 @@ Use a small number of full-width narrative bands. Do not turn every section into
 
 ### H01 — What is this / what does it do for me?
 
-Hero + concrete Product stage.
+Hero + concrete Product proof.
 
 ### H02 — Is this my problem?
 
@@ -241,11 +243,11 @@ Motion may demonstrate the temporal distinction:
 
 The initial static Product frame must already explain what Lunowa is doing. Motion is additive proof, not the entry fee for comprehension.
 
-M05 treats motion as a separate second-stage hypothesis after static information architecture is tested. Do not compare a completely different motion-led layout against a static layout and attribute the result to animation.
+**Motion is not a mandatory comparison merely because Lunowa has a temporal mechanism.** First establish a static acquisition/mental-model direction. Test motion only if there remains a material question about whether temporal playback improves `Reply != Done` comprehension, object continuity, or delegated-monitoring confidence enough to justify interaction/accessibility cost.
 
-The current initial B hypothesis is user-controlled bounded playback applied to an eligible static structure. Autoplay/first-play is a separate condition if later tested.
+If motion is tested, apply it to the same accepted information architecture/content rather than changing layout and motion together.
 
-Do not freeze a long or endless autoplay loop by preference alone.
+Autoplay vs user-triggered playback is a later bounded experiment, not a preference to freeze in advance.
 
 ## 8. Truth / anti-claim boundary
 
@@ -267,19 +269,22 @@ Generated visual candidates are untrusted for claims: every visible claim must b
 
 ## 9. Pre-freeze user evidence
 
-Before M10 final visual freeze, consume the dedicated #10 M05 evidence in two layers.
+Before M10 final visual freeze, consume the dedicated #10 M05 evidence.
 
-### Stage 1 — static structure
+Current exploration is a **minimal divergent pair**, not the retired A/C/D matrix:
 
-Compare materially different static A/C/D first-viewport structures under the shared stimulus constraints in `docs/M05-WIREFRAMES.md`.
+- **P — Product Proof Baseline**;
+- **E — Editorial Problem-First Dark Horse**.
 
-A visually attractive structure that repeatedly creates the wrong Product mental model is blocked.
+The purpose is to challenge the underlying visitor-acquisition/mental-model thesis, not to manufacture a prescribed number of variants.
 
-### Stage 2 — temporal motion
+Participant-facing first-impression stimuli should be realistic enough to assess category recognition, credibility, orientation, aesthetics/prototypicality and trust while remaining inexpensive to revise.
 
-After a static structure is comprehension-eligible, compare the same structure/content in static form and with the bounded B motion treatment.
+A visually attractive direction that repeatedly produces the wrong Product mental model is blocked.
 
-Motion is retained only if it adds meaningful temporal comprehension/continuity/confidence without becoming necessary for baseline understanding or creating material accessibility/confusion cost.
+If P is clearly comprehension-eligible and E reveals no materially stronger acquisition model, converge rather than generating more near-duplicate concepts.
+
+Motion evidence is required only when motion remains a material unresolved question after a static direction becomes comprehension-eligible.
 
 Unaided first-impression evidence must remain distinct from later aided/comparative feedback.
 
@@ -314,4 +319,4 @@ Prefer qualified measures over vanity measures:
 7. Source/campaign attribution for registrations.
 8. Later: activation into a real delegated monitoring loop and retention.
 
-Later quantitative experiments may compare copy, static vs Product-motion treatment, CTA framing, or section emphasis with appropriate power, but no test may silently change Product truth.
+Later sufficiently powered experiments may compare copy, motion treatment, CTA framing, or section emphasis, but no test may silently change Product truth.
