@@ -2,340 +2,271 @@
 
 Status: canonical acceptance oracle for design and implementation-facing work, 2026-08-30.
 
-Read `docs/VISITOR-JOURNEY.md`, `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md`, `docs/M05-P-E-STIMULUS-CONTRACT.md`, `docs/FIRST-IMPRESSION-VALIDATION.md`, `docs/HERO-CONCEPTS-M05.md`, and `docs/M05-WIREFRAMES.md` before evaluating visual or implementation candidates.
+Read `docs/CURRENT.md`, `docs/VISITOR-JOURNEY.md`, `docs/M05-INTERNAL-COMPREHENSION-AUDIT.md`, `docs/M05-INTERNAL-AUDIT-RESULT-2026-08-30.md`, `docs/M10-TOKEN-CONTRACT.md`, `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md`, `docs/HOMEPAGE.md`, `docs/DESIGN.md`, and `docs/MOTION.md` before evaluating current candidates.
 
 ## 1. Principle
 
-No candidate is accepted because it merely "looks right" in review.
+No candidate is accepted because it merely "looks right".
 
-Required high-level loop:
+Current high-level loop:
 
-`Product truth -> visitor/comprehension contract -> reuse/common-shell selection -> comparable P/E stimulus construction -> full pre-research stimulus audit -> first-impression evidence -> eligible direction -> optional isolated motion evidence -> selected visual oracle -> implement -> run -> inspect in real browser -> compare -> test -> independently audit final cumulative candidate`.
+`Product truth -> visitor/comprehension contract -> reuse/common-shell -> exact P/E artifacts -> internal owner+AI full audit -> P selected -> M10 structured visual authority -> implement after ACP G7 -> real browser verification -> later independent visitor validation when available -> correction`.
 
-A candidate that is visually polished but produces the wrong Product mental model is a failure.
+The current P selection is internally audited/owner-selected, **not user validated**.
 
-## 2. S05 pre-research stimulus gate
+A polished candidate that contradicts Product truth or materially obscures the intended Product model fails.
 
-Issue #14 owns construction of the participant-facing P-v1/E-v1 stimulus set before Issue #10 begins user exposure.
+## 2. Completed S05 artifact gate
 
-Required cumulative artifact set:
+S05 #14 is complete.
 
-1. `P-v1` Product Proof Baseline;
-2. `E-v1` Editorial Problem-First Dark Horse;
-3. one shared lower-page continuation reference.
+Historical exact artifact set is bound by `docs/stimuli/MANIFEST.md`:
 
-P/E must be comparable enough that the acquisition/proof hierarchy, rather than unrelated design quality, is the material variable.
+- P-v1 Product Proof Baseline;
+- E-v1 Editorial Problem-First Dark Horse;
+- shared lower-page continuation.
 
-Before handoff to #10, verify all of:
+These artifacts were normalized for shell/token/Product-state/fidelity before internal audit. They are evidence inputs, not final M10 visual authority.
 
-- same canonical quotation scenario and Product-state truth;
-- same selected generic shell/token/Product-stage grammar where practical;
-- comparable visual fidelity;
-- exact copy and viewport binding;
-- initial static-only status;
-- no social proof/metrics/security claims in only one condition;
-- no motion in only one condition;
-- no premium/template advantage in only one condition;
-- concrete Product/email evidence remains early enough in E to avoid generic productivity interpretation;
-- P does not collapse into an ordinary reply-reminder mental model;
-- Japanese text is legible and coherent;
-- Product UI is plausible enough to judge Product rather than mock roughness;
-- all material reused sources have provenance/license/role recorded;
-- no current `DESIGN.md` anti-pattern or unsupported Product claim.
+## 3. Completed M05 internal comprehension-risk gate
 
-The reviewer must audit **current #14 contract × entire cumulative stimulus set**, not the latest visual correction only. On FAIL, finish the audit and return all known material blockers/corrections together unless an immediate security/destructive/data-loss risk requires stop.
+M05 #10 is complete under the current owner+AI-only constraint.
 
-Do not expose a known-failing stimulus to participants merely to gather evidence that the internal audit already predicts.
+Authoritative method/result:
 
-## 3. Pre-implementation comprehension oracle
+- `docs/M05-INTERNAL-COMPREHENSION-AUDIT.md`
+- `docs/M05-INTERNAL-AUDIT-RESULT-2026-08-30.md`
 
-M05 participant research in Issue #10 starts only after #14 stimulus acceptance evidence exists.
+Result:
 
-### Current static acquisition/mental-model comparison
+> **P — Product Proof Baseline selected for M10 convergence.**
 
-Use exactly the accepted:
+Known reason:
 
-- **P-v1 — Product Proof Baseline**;
-- **E-v1 — Editorial Problem-First Dark Horse**.
+- stronger explicit email/category recognition;
+- lower generic-productivity/memory-tool risk;
+- lower copy dependence;
+- simpler responsive path;
+- lower implementation complexity;
+- no unique E benefit that is not already preserved in lower-page problem framing.
 
-The former A/C/D participant-facing matrix is retired. Do not require its completion for acceptance.
+Evidence limitation:
 
-Required unaided first questions after bounded initial exposure:
+- Product owner is not a clean first-time participant;
+- ChatGPT is not a real user;
+- synthetic/persona/model responses are not user evidence;
+- external independent visitor validation is deferred.
 
-1. `これは何をするサービス／アプリだと思いましたか？`
-2. `使うと何が楽になると思いましたか？`
-3. `画面の中で、そう思った根拠はどこでしたか？`
+Do not convert this audit into claims such as `users understood`, `tested with users`, or `user validated`.
 
-Target mental model is approximately:
+## 4. M10 visual-authority acceptance
 
-> Lunowa watches unfinished email-related matters and returns them when the user actually needs to act, reducing repeated manual checking.
+Before M10 #3 may pass, verify the complete P-based homepage direction against its current contract.
 
-Material misinterpretations to track explicitly:
-
-- generic AI email writer;
-- inbox organizer / inbox-zero product;
-- ordinary reminder/no-reply tracker;
-- automatic follow-up sender;
-- notification muter;
-- generic task manager;
-- generic productivity/attention tool;
-- autonomous agent that takes over email decisions;
-- unclear category.
-
-### Fidelity
-
-Internal low-fidelity sketches may be used for structure sanity checks.
-
-Participant-facing first-impression stimuli should be realistic enough to evaluate category recognition, Product credibility/believability, orientation, aesthetics/prototypicality and trust while remaining inexpensive to revise.
-
-Do not accept crude wireframe evidence as sufficient proof for the final visual-trust question.
-
-### Optional temporal motion evidence
-
-Motion is tested only when a static direction is already comprehension-eligible and a material temporal question remains.
-
-Apply motion to the same structure/content and ask whether it materially improves understanding of:
-
-`intermediate reply -> still no user action required -> material outcome -> attention required`
-
-without adding more confusion, accessibility cost, or dependence on motion for baseline Product comprehension.
-
-Motion is **not** mandatory evidence when static Product proof already communicates the relevant distinction adequately.
-
-Autoplay, user-triggered playback, and other playback modes are distinct conditions and must not be silently merged.
-
-### Evidence limit
-
-M05 is directional qualitative evidence, not market representativeness, PMF, exact-ICP validation, conversion lift, or a statistically powered A/B test.
-
-## 4. Visual-oracle acceptance
-
-Before a generated/mock visual becomes canonical:
+Required:
 
 - Product/category is recognizable without prior Lunowa vocabulary;
-- the initial still state is meaningful without animation;
-- the dominant visual shows believable Product use where Product behavior is the evidence;
-- the concrete scenario matches Product truth;
-- unsupported functionality/security/performance claims are absent;
-- generated text has been independently checked rather than trusted as marketing authority;
-- #10 current P/E evidence has been consumed;
-- any motion evidence has been consumed only where motion remains part of the selected direction;
-- unaided and aided findings remain distinct;
-- major confusion/distrust findings are resolved or explicitly carried as open hypothesis;
-- readable implementation-grade references exist for major states/sections rather than relying only on one compressed full-page board;
-- final exact semantic tokens/specs are durably reconstructible without a hosted design tool.
+- category/mechanism evidence remains near the broad H1;
+- dominant Hero visual is believable Product use, not abstract decoration;
+- canonical intermediate reply is visibly unresolved;
+- `あなたの対応はまだ必要ありません` and continued monitoring remain clear;
+- material-outcome/attention-required state is specified;
+- return context explains what changed, what remains and original Source access;
+- lower-page repeated-checking / `返信 ≠ 完了` narrative is preserved;
+- Trust/Control is truthful and source-grounded;
+- availability/CTA/FAQ claims match current Product/runtime truth;
+- exact desktop/mobile token/spec authority exists;
+- mobile Product story is a semantic projection, not an unreadable shrunk desktop screenshot;
+- static/reduced-motion meaning is complete;
+- no unsupported Product/security/performance/social-proof claim exists;
+- reused-source provenance is recorded;
+- external-validation debt remains explicit.
 
-The rejected first dark/purple/orb/icon-timeline candidate is not a valid baseline.
+Motion is not required for M10 PASS. If visual authority is static, no motion variant is needed.
 
-The old Concept A raster artifact is an unvalidated historical P structural reference only; it is not accepted visual authority merely because it exists.
+Do not rely on one compressed full-page board if implementation-critical text/states are unreadable.
 
 ## 5. Reuse/provenance acceptance
 
-For every material third-party block/template/component/reference that affects the accepted design or implementation, record and verify as applicable:
+For every material third-party block/template/component/reference affecting accepted design or implementation, verify as applicable:
 
-- exact source/product/item name;
-- URL or repository/revision/retrieval reference;
-- license basis for the intended use;
-- whether code is copied, structure is adapted, or only visual inspiration is used;
-- runtime dependencies and transitive dependency impact when code is adopted;
-- external network/telemetry behavior if any;
-- modifications made to map into Lunowa tokens/semantics;
+- exact source/item/revision/retrieval reference;
+- license basis;
+- copied code vs adapted structure vs visual inspiration;
+- runtime/transitive dependencies;
+- external network/telemetry behavior;
+- modifications required to map into Lunowa tokens/semantics;
 - keyboard/focus/ARIA behavior when interactive;
 - responsive/reflow behavior;
-- reduced-motion behavior when motion exists;
-- no unsupported Product semantics or claims introduced by demo content;
+- reduced-motion behavior when relevant;
+- no unsupported Product semantics/demo claims;
 - no foreign palette/type/radius/shadow system silently promoted to authority.
 
-Official shadcn registry listing or a library vendor's accessibility claim is discovery evidence, not a substitute for local acceptance testing.
+Library/registry listing is discovery evidence, not trust evidence.
 
-A whole generic SaaS template should be rejected when a smaller block/native structure satisfies the requirement with less irrelevant IA, dependency, or truth burden.
+Reject a complete generic SaaS template when native structure or a smaller audited block is sufficient.
 
 ## 6. Required implementation evidence classes
 
-A material UI PR should provide evidence appropriate to its scope:
+A material UI PR should provide evidence appropriate to scope:
 
 1. build/type/lint/test status;
 2. real-browser route verification;
-3. screenshots for material desktop/mobile states;
+3. material desktop/mobile screenshots;
 4. interaction verification;
 5. accessibility-tree/semantic verification;
 6. reduced-motion verification when motion is touched;
 7. visual-regression evidence when a baseline exists;
-8. performance evidence when initial-load or bundle behavior changes;
-9. security evidence when dynamic endpoints, third-party scripts, headers, or data handling change;
+8. performance evidence when initial-load/bundle behavior changes;
+9. security evidence when endpoints/scripts/headers/data handling change;
 10. copy/Product-truth evidence for visible claim movement;
-11. reused-source/provenance/dependency evidence when third-party code or structure changes.
+11. reused-source/provenance/dependency evidence when borrowed code/structure changes.
 
 ## 7. Browser verification
 
-Use Playwright for browser-level verification after implementation begins.
+Use Playwright after implementation begins.
 
-Minimum baseline viewports for homepage acceptance:
+Minimum baseline viewports:
 
-- desktop wide: 1440 x 900;
-- desktop compact: 1280 x 800;
-- tablet/narrow: ~768 x 1024 where relevant;
-- mobile: 390 x 844;
-- narrow mobile/reflow: 320 CSS px width.
+- 1440 × 900;
+- 1280 × 800;
+- ~768 × 1024 where relevant;
+- 390 × 844;
+- 320 CSS px width.
 
-A PR may need additional breakpoints when its layout changes materially.
+Required checks include:
 
-Required checks:
-
-- no blank/partially rendered Hero;
-- brand/category/value remain legible in the first viewport;
-- meaningful Product state is visible before animation hydration completes when an island exists;
-- no text overlap or clipping;
-- no unintended horizontal overflow;
-- CTA visible and operable;
+- no blank/partial Hero;
+- category/value legible in first viewport;
+- meaningful Product state before optional animation hydration;
+- no overlap/clipping/horizontal overflow;
+- CTA operable;
 - Product stage readable;
 - navigation usable;
-- visual order matches semantic/DOM order where required;
-- localized copy does not break containers;
-- no decorative layer competes with the one material Product change.
+- semantic/DOM order correct;
+- Japanese/localized copy fits;
+- decorative layers do not compete with Product proof.
 
 ## 8. Visual regression
 
-Use Playwright screenshot comparison (`toHaveScreenshot`) for stable states after the visual direction is accepted.
+Use Playwright screenshot comparison for stable accepted states.
 
-Candidate baseline states should include user-meaningful forms of:
+Candidate baseline states:
 
 - Hero static initial monitoring state;
 - intermediate reply / still no user action required;
 - material evidence arrival;
-- user-attention-required state;
-- concise context/Source state;
-- representative lower-page section states where layout is material;
-- mobile Hero;
-- reduced-motion presentation where visually distinct;
-- static-before-hydration state where implementation differs.
+- attention-required state;
+- return context / Source;
+- representative lower-page sections;
+- mobile Hero/Product state;
+- reduced-motion presentation when visually distinct;
+- static-before-hydration state when relevant.
 
-Visual snapshots are regression oracles, not authority over Product truth. Intentional design changes require reviewed baseline updates.
+Snapshots are regression oracles, not Product-truth authority.
 
 ## 9. Accessibility semantics
 
-Use Playwright assertions and ARIA snapshots where useful to verify accessible structure.
-
 At minimum verify:
 
-- one correct page H1;
+- one correct H1;
 - landmark structure;
-- real buttons/links for actions;
+- real buttons/links;
 - meaningful accessible names;
-- keyboard focusability/order;
-- visible focus;
+- logical keyboard focus order and visible focus;
 - form labels/errors if waitlist exists;
-- status updates do not depend only on visual motion/color;
+- state changes do not depend only on color/motion;
 - decorative imagery is not exposed as misleading content;
-- static/reduced-motion explanation preserves the same informational result.
+- reduced-motion/static path preserves information;
+- zoom/reflow remains usable.
 
-Automated checks do not replace manual keyboard/reflow/reduced-motion review.
+Integrate automated scanning such as `@axe-core/playwright` when implementation begins, but retain manual keyboard/reflow/Japanese-content review.
 
-## 10. Accessibility automation
+Target WCAG 2.2 AA unless explicitly strengthened.
 
-Integrate an automated accessibility scanner such as `@axe-core/playwright` when implementation begins.
+## 10. Motion verification
 
-Treat automated findings as one layer. Manual checks remain required for:
+When motion is present:
 
-- logical reading/focus order;
-- Japanese text behavior;
-- interaction comprehension;
-- motion/vestibular safety;
-- zoom/reflow;
-- actual clarity of labels/instructions.
+- verify accepted static baseline first;
+- verify normal and `prefers-reduced-motion: reduce` paths;
+- all information must survive without motion;
+- first still frame already explains what is being watched and whether user must act;
+- no focus trap/frame-perfect timing/endless non-essential loop;
+- no motion implies unsupported Product semantics;
+- object continuity of the same unresolved matter remains clear.
 
-Target WCAG 2.2 AA unless an explicit higher requirement is adopted.
+Do not claim motion improves comprehension/conversion without direct evidence.
 
-## 11. Motion verification
+## 11. Performance
 
-When motion is present/touched:
-
-- verify the accepted static baseline first;
-- verify normal motion;
-- verify `prefers-reduced-motion: reduce`;
-- verify all information remains available with motion suppressed;
-- verify first still frame already explains what is being watched and whether user must act;
-- verify playback cannot trap focus or require frame-perfect timing;
-- verify no endless non-essential animation steals attention;
-- verify only one material change dominates at a time;
-- verify Product-state transitions do not imply unsupported Product semantics;
-- verify object continuity of the same unresolved matter;
-- do not treat animation as a conversion/comprehension improvement without direct Lunowa evidence.
-
-If final visual authority is static, motion-specific implementation evidence is not required except for ordinary interaction feedback that is actually implemented.
-
-## 12. Performance
-
-External Core Web Vitals "Good" thresholds remain a minimum reference:
+External Core Web Vitals `Good` thresholds remain minimum references:
 
 - LCP <= 2.5 s;
 - INP <= 200 ms;
 - CLS <= 0.1.
 
-Because this site is static-first, internal targets may be stricter after measurement baselines exist.
+Also monitor shipped JS, image/font weight, Hero/LCP behavior, hydration, layout stability and third-party script cost.
 
-Implementation acceptance should also monitor:
+Static-first architecture should normally allow stricter practical baselines once measured.
 
-- shipped JavaScript;
-- image/font weight;
-- Hero/LCP asset behavior;
-- hydration timing;
-- static-before-hydration usefulness;
-- layout stability;
-- third-party script cost.
+## 12. Copy/truth audit
 
-Do not optimize synthetic scores by harming accessibility, truthfulness, Product comprehension, or brand clarity.
+Every visual/release candidate must be checked against current authority for:
 
-## 13. Copy/truth audit
-
-Every visual oracle and release candidate must be checked against current Product authority for:
-
-- supported providers;
-- availability/beta status;
-- feature claims;
-- autonomy/send behavior;
-- security/privacy claims;
-- encryption claims;
+- provider/language/availability status;
+- feature/autonomy/send behavior;
+- security/privacy/encryption wording;
 - pricing;
 - testimonials/logos;
 - performance/time-saved/accuracy metrics;
-- ICP language.
+- ICP language;
+- external-validation claims.
 
-Unknown/unvalidated statements remain unknown. Marketing copy cannot promote a hypothesis to fact by repetition or image generation.
+Unknown remains unknown. Marketing repetition does not turn a hypothesis into fact.
 
-## 14. Security verification
+## 13. Security verification
 
-If a PR changes hosting/dynamic behavior, verify as applicable:
+If hosting/dynamic behavior changes, verify as applicable:
 
-- no secret committed or exposed client-side;
-- dependency versions and lockfile changes are scoped;
-- endpoint validation and abuse boundaries;
-- Turnstile token server verification if present;
-- rate limiting strategy;
+- no exposed secrets;
+- scoped dependency/lockfile changes;
+- endpoint validation/abuse boundaries;
+- Turnstile verification if used;
+- rate limiting;
 - CSP/header compatibility;
 - third-party origin inventory;
-- data-minimization and retention boundary;
-- failure states do not leak sensitive information.
+- data minimization/retention;
+- failures do not leak sensitive information.
 
-## 15. Implementation-entry gate
+## 14. Implementation-entry gate
 
-Production-code implementation must not start until external `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance has passed, in addition to local visual/design prerequisites.
+Production implementation starts only when:
 
-G8 concurrency is not required.
+1. M10 #3 has accepted structured visual authority; and
+2. external `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance has passed.
 
-The first implementation candidate should use the accepted Agent Control Plane path rather than creating a separate manual Codex authority path.
+G8 is not required for first implementation.
+
+First production candidate should use the accepted Agent Control Plane path rather than a separate manual Codex authority path.
+
+## 15. Future independent visitor validation
+
+External validation is deferred, not deleted.
+
+When real visitors/beta users/preview traffic exist, use `docs/FIRST-IMPRESSION-VALIDATION.md` or a later superseding protocol.
+
+Independent evidence may trigger post-implementation correction. This is accepted Product-learning debt.
 
 ## 16. Independent full acceptance audit
 
-The reviewer must audit **current Issue/task contract × final cumulative candidate**.
-
-Do not review only the latest fix.
+Reviewer audits **current task contract × final cumulative candidate**, not only latest patch.
 
 On FAIL:
 
 - finish the audit unless immediate security/data-loss/destructive risk requires stop;
 - list all known material blockers in one durable response;
 - distinguish required correction from optional polish;
-- after repeated correction failure, identify the upstream gap before another patch cycle.
+- after repeated correction failure, identify upstream specification/oracle/architecture/decomposition/verification gaps before another patch cycle.
 
-On PASS, evidence should bind to the exact candidate head/artifact set and current contract.
+On PASS, bind evidence to exact candidate head/artifact set and current contract.
