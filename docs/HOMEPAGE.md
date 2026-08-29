@@ -2,7 +2,7 @@
 
 Status: canonical marketing-site direction, 2026-08-29. This document does not supersede Product truth in `miki-thecat/lunowa`.
 
-Read `docs/VISITOR-JOURNEY.md` with this document. The visitor contract defines the mental-model sequence; this document defines the homepage projection.
+Read `docs/VISITOR-JOURNEY.md`, `docs/FIRST-IMPRESSION-VALIDATION.md`, `docs/HERO-CONCEPTS-M05.md`, and `docs/M05-WIREFRAMES.md` with this document. The visitor contract defines the mental-model sequence; this document defines the homepage projection.
 
 ## 1. Homepage job
 
@@ -241,7 +241,11 @@ Motion may demonstrate the temporal distinction:
 
 The initial static Product frame must already explain what Lunowa is doing. Motion is additive proof, not the entry fee for comprehension.
 
-Autoplay vs user-triggered playback remains an empirical question for M05/M10 testing. Do not freeze a long autoplay loop by preference alone.
+M05 treats motion as a separate second-stage hypothesis after static information architecture is tested. Do not compare a completely different motion-led layout against a static layout and attribute the result to animation.
+
+The current initial B hypothesis is user-controlled bounded playback applied to an eligible static structure. Autoplay/first-play is a separate condition if later tested.
+
+Do not freeze a long or endless autoplay loop by preference alone.
 
 ## 8. Truth / anti-claim boundary
 
@@ -263,13 +267,41 @@ Generated visual candidates are untrusted for claims: every visible claim must b
 
 ## 9. Pre-freeze user evidence
 
-Before M10 final visual freeze, consume the directional first-impression evidence from the dedicated comprehension-validation task.
+Before M10 final visual freeze, consume the dedicated #10 M05 evidence in two layers.
 
-At minimum compare materially different concepts, not cosmetic variants. A static-first real-Product-UI concept and a restrained Product-motion concept must both be represented.
+### Stage 1 — static structure
 
-Record likely misinterpretations and distrust questions. A visually attractive candidate that repeatedly produces the wrong Product mental model must not win the visual selection.
+Compare materially different static A/C/D first-viewport structures under the shared stimulus constraints in `docs/M05-WIREFRAMES.md`.
 
-## 10. Early-success measures
+A visually attractive structure that repeatedly creates the wrong Product mental model is blocked.
+
+### Stage 2 — temporal motion
+
+After a static structure is comprehension-eligible, compare the same structure/content in static form and with the bounded B motion treatment.
+
+Motion is retained only if it adds meaningful temporal comprehension/continuity/confidence without becoming necessary for baseline understanding or creating material accessibility/confusion cost.
+
+Unaided first-impression evidence must remain distinct from later aided/comparative feedback.
+
+## 10. Visual-reference output
+
+M10 must eventually freeze readable implementation-grade references for major Product states/sections.
+
+Do not rely only on a giant full-page board if copy/state detail becomes unreadable.
+
+At minimum preserve readable references for:
+
+- desktop Hero initial monitoring state;
+- intermediate-reply / still-no-action state;
+- material-outcome / attention-required state;
+- Moment / Source state;
+- representative lower-page rhythm;
+- Trust/Control section;
+- mobile Hero / simplified Product story.
+
+A full-page overview may supplement these references for rhythm and composition.
+
+## 11. Early-success measures
 
 Prefer qualified measures over vanity measures:
 
@@ -282,4 +314,4 @@ Prefer qualified measures over vanity measures:
 7. Source/campaign attribution for registrations.
 8. Later: activation into a real delegated monitoring loop and retention.
 
-A/B tests may compare copy, static vs Product-motion Hero, CTA framing, or section emphasis, but no test may silently change Product truth.
+Later quantitative experiments may compare copy, static vs Product-motion treatment, CTA framing, or section emphasis with appropriate power, but no test may silently change Product truth.
