@@ -2,7 +2,7 @@
 
 Status: canonical marketing-site motion direction, 2026-08-29.
 
-Read `docs/VISITOR-JOURNEY.md` before motion work.
+Read `docs/VISITOR-JOURNEY.md`, `docs/FIRST-IMPRESSION-VALIDATION.md`, and `docs/HERO-CONCEPTS-M05.md` before motion work.
 
 ## 1. Motion thesis
 
@@ -47,7 +47,21 @@ Motion may add temporal proof, but may not be necessary to decode the Product ca
 
 If a still screenshot of the Hero looks like an unexplained diagram, motion design has already failed.
 
-## 4. Implementation model
+## 4. M05 evidence boundary
+
+Do not evaluate motion while also changing the Hero's information architecture if the variables can be isolated.
+
+Current M05 sequence:
+
+1. compare A/C/D as static structures;
+2. eliminate structures that repeatedly create the wrong mental model;
+3. apply B motion to an eligible static structure while keeping content/layout stable as practical;
+4. compare static vs motion evidence for the temporal mechanism;
+5. treat autoplay vs user-triggered playback as an additional playback-policy question, not as interchangeable exposure.
+
+This is directional qualitative evidence, not a statistically powered claim that motion improves conversion.
+
+## 5. Implementation model
 
 The primary Product demonstration must be implemented as real UI state transitions, not a pre-rendered Hero video.
 
@@ -67,7 +81,7 @@ These are implementation/storyboard concepts, not copy the visitor must memorize
 
 Animation code must not become a second Product semantic authority.
 
-## 5. Preferred tools
+## 6. Preferred tools
 
 - CSS transitions/keyframes: small hover/focus/fade/reveal effects.
 - Motion for React: Product state/layout transitions, presence, sequencing.
@@ -75,16 +89,17 @@ Animation code must not become a second Product semantic authority.
 - GSAP: only if a later verified requirement cannot reasonably be achieved with the simpler stack.
 - Rive/Lottie/video: optional brand/illustration media, not primary Product proof.
 
-## 6. Hero playback — empirical boundary
+## 7. Hero playback
 
-Do not freeze autoplay by preference alone.
+The current initial B hypothesis is **user-controlled playback** applied to a meaningful static Product frame.
 
-M05/M10 should compare at least:
+Example control:
 
-1. a strong static-first Product frame with explicit playback/replay control;
-2. a restrained short first-play variant that stops and leaves a meaningful final/static state.
+`▶ 15秒で見る`
 
-Any automatic motion must remain short, stoppable where required, and non-essential to basic comprehension.
+A bounded first-play/autoplay treatment may be tested later, but it must be a separately recorded condition. Do not infer that autoplay is better merely because motion exists.
+
+No motion treatment may be required for basic Product/category comprehension.
 
 Do not use an endless autoplay loop as the default proof.
 
@@ -101,11 +116,11 @@ Possible prototype timing only:
 15s  stop
 ```
 
-The previous 20+ second explanatory sequence is no longer the preferred starting point because first-time visitors should not need to watch a long state-machine lesson to understand the Product.
+The previous 20+ second explanatory sequence is not the preferred starting point because a first-time visitor should not need to watch a long state-machine lesson to understand the Product.
 
 Timing values are prototype starting points, not scientific constants.
 
-## 7. Motion grammar
+## 8. Motion grammar
 
 Use motion to indicate:
 
@@ -133,7 +148,7 @@ Avoid:
 - motion that changes reading order or steals focus;
 - decorative movement whose only purpose is to make the site look `AI` or `cinematic`.
 
-## 8. Object continuity
+## 9. Object continuity
 
 Where the same tracked matter changes from quiet monitoring to user-attention state, preserve visual identity where practical.
 
@@ -145,7 +160,7 @@ not:
 
 > `one marketing card disappeared and a different card appeared`.
 
-## 9. Scroll motion
+## 10. Scroll motion
 
 Most sections should work perfectly while static.
 
@@ -155,7 +170,7 @@ No scroll-jacking.
 
 A lower section may continue the same scenario, but it must not require the visitor to remember an animation frame that has already scrolled away.
 
-## 10. Reduced motion
+## 11. Reduced motion
 
 `prefers-reduced-motion: reduce` is a first-class acceptance path.
 
@@ -168,7 +183,7 @@ For reduced-motion users:
 
 The no-motion version must not be a degraded explanation.
 
-## 11. Interaction accessibility
+## 12. Interaction accessibility
 
 Motion must never:
 
@@ -178,7 +193,7 @@ Motion must never:
 - use color/motion alone to communicate semantic state;
 - create a blind duplicate action or imply an unconfirmed external effect.
 
-## 12. Performance
+## 13. Performance
 
 - animation must not block initial content or Product recognition;
 - prefer compositor-friendly properties;
@@ -186,13 +201,13 @@ Motion must never:
 - stable dimensions prevent CLS during state transitions;
 - visual testing must cover desktop, mobile, reduced-motion, and static-before-hydration states.
 
-## 13. Scientific/evidence boundary
+## 14. Scientific/evidence boundary
 
-Current HCI evidence supports the claim that animation type can affect emotion and perceived time in specific interaction contexts, and that motion can either clarify or increase cognitive burden depending on design and task. It does **not** prove that an animated landing-page Hero universally converts better than a static one.
+Current HCI evidence supports the bounded statement that motion/animation design can affect experience and comprehension in particular tasks, but motion can also add cognitive burden. It does **not** prove that an animated landing-page Hero universally converts better than a static one.
 
 Therefore the static-vs-motion choice for Lunowa is an experiment, while accessibility and basic static comprehension are hard requirements.
 
-## 14. Acceptance question
+## 15. Acceptance question
 
 A motion is justified only if at least one is true:
 
