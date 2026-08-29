@@ -23,8 +23,8 @@ Issue #1 owns acceptance of the durable marketing-site control plane. M05 #10 ow
 - Motion/storytelling sub-thesis: **The page stays still. Product meaning moves.**
 - Core message candidate: **メールを、確認し続けなくていい。**
 - Category/mechanism cue is required near the Hero because the H1 alone is too broadly interpretable.
-- Core differentiator to demonstrate: **Reply != Done**.
-- Product story begins as a recognizable concrete email situation, not an abstract state diagram.
+- Core differentiator: **Reply != Done**.
+- Product story begins from recognizable email reality rather than an abstract state diagram.
 - Signature temporal proof: intermediate reply arrives -> still no user action required -> material outcome arrives -> user attention becomes necessary.
 - Marketing objective: correct comprehension -> relevance -> trust -> qualified early access -> empirical learning.
 - Visual philosophy: familiar high-trust structure; restrained complexity; believable Product UI as primary proof; motion subordinate to comprehension.
@@ -33,33 +33,41 @@ Issue #1 owns acceptance of the durable marketing-site control plane. M05 #10 ow
 ## Current M05 validation authority
 
 - `docs/VISITOR-JOURNEY.md` — first-visit mental-model and page-order contract.
-- `docs/FIRST-IMPRESSION-VALIDATION.md` — exact qualitative protocol and two-stage static/motion evidence boundary.
-- `docs/HERO-CONCEPTS-M05.md` — A/C/D static information-architecture hypotheses plus B motion treatment.
-- `docs/M05-WIREFRAMES.md` — common-copy/common-scenario low-fidelity desktop/mobile stimuli and lower-page narrative.
+- `docs/FIRST-IMPRESSION-VALIDATION.md` — current qualitative protocol.
+- `docs/HERO-CONCEPTS-M05.md` — current divergent-pair exploration contract.
+- `docs/M05-WIREFRAMES.md` — internal structural reference only; former A/C/D participant-facing plan is retired.
+- `docs/RESEARCH-M05-EXPLORATION-2026-08-29.md` — evidence behind the exploration/fidelity correction.
 
 M05 is intentionally **not** a small-sample statistical A/B test.
 
-Current experiment decomposition:
+## M05 method correction — 2026-08-29
+
+The former A/C/D static comparison was retired as the primary participant-facing plan because the three directions shared too much of the same structure/content and were unlikely to produce enough decision-relevant learning for the research cost.
+
+Current design exploration uses a minimal genuinely divergent pair:
 
 ```text
-Stage 1
-A Product First static
-C Familiar Situation first
-D Dual-State static
-        ↓
-eliminate wrong mental models
-        ↓
-Stage 2
-same eligible structure: static vs B motion
-        ↓
-M10 visual freeze
+P — Product Proof Baseline
+real-looking Lunowa UI explains the job immediately
+
+vs
+
+E — Editorial Problem-First Dark Horse
+visitor recognizes the ongoing checking burden first,
+then immediately sees concrete email/Product proof
 ```
 
-This separation avoids attributing a comprehension difference to motion when layout/information architecture also changed.
+This preserves the anti-fixation value of multiple alternatives without manufacturing near-duplicate variants.
+
+The already-created Concept A visual is retained only as an **unvalidated P baseline reference**. Old C/D Hero generation is stopped. C/D ideas may be reused later as section-level techniques if useful.
+
+Participant-facing first-impression stimuli should be realistic mid/high fidelity enough to evaluate category recognition, credibility, visual orientation and trust. Crude wireframes remain useful only for cheap structural reasoning.
+
+Motion is tested only after a static direction is comprehension-eligible, using the same structure/content so the temporal effect is not mixed with a different layout.
 
 ## Rejected visual candidate
 
-The first generated dark/cinematic candidate is explicitly **rejected as M10 visual authority**.
+The first generated dark/cinematic candidate remains explicitly **rejected as M10 visual authority**.
 
 Material failure classes:
 
@@ -78,7 +86,9 @@ Preserve only the semantic storyboard, not the art direction.
 M00  #1  Bootstrap canonical contracts
           |
           v
-M05  #10 Stage 1 static comprehension -> Stage 2 motion evidence
+M05  #10 P baseline vs E dark horse comprehension evidence
+          |
+          +--> optional isolated static-vs-motion evidence
           |
           v
 M10  #3  Freeze user-validated visual oracles
@@ -114,9 +124,11 @@ Supporting research/control-plane tasks:
 
 ## Execution notes
 
-- #3 must consume #10 Stage 1 and Stage 2 evidence; visually attractive wrong-mental-model candidates cannot win.
-- #10 must distinguish unaided first impressions from aided comparative feedback and evaluate the lower-page journey as well as Hero.
-- Stage 1 first-impression concepts are static A/C/D; B is a later motion treatment on an eligible static structure.
+- #3 must consume #10 directional comprehension evidence; visually attractive wrong-mental-model candidates cannot win.
+- #10 distinguishes unaided first impressions from aided comparative feedback and evaluates the lower-page journey as well as Hero.
+- Do not spend M05 research/sample budget on near-duplicate Hero layouts that ordinary design judgment can resolve.
+- A second/third direction is only justified by a genuinely different mental-model/proof hypothesis.
+- Do not serially patch the P image and call the patches new concepts.
 - #4 must not start before ACP G7 PASS. G8 concurrency is not required.
 - The first production-code task should run through the accepted Agent Control Plane rather than a parallel manual Codex workflow.
 - #5 and #6 may proceed in parallel only after #4 and frozen visual direction, provided serialized dependency/config assets are coordinated.
@@ -142,13 +154,13 @@ Issue #2 was an accidental placeholder and is closed `not_planned`; it has no au
 
 ## Next actions
 
-1. Full-audit Issue #1 contracts for internal consistency and Product-authority boundaries.
-2. Render Stage 1 A/C/D from `docs/M05-WIREFRAMES.md` as clean low/mid-fidelity static stimuli; do not add new copy/claims/decorative concepts.
-3. Prepare the shared complete lower-page low/mid-fidelity narrative for the same stimuli.
-4. Run directional Stage 1 M05 first-impression rounds under `docs/FIRST-IMPRESSION-VALIDATION.md`.
-5. Eliminate wrong-mental-model structures and apply B motion only to an eligible static structure.
-6. Run Stage 2 temporal evidence and feed both evidence sets into #3.
-7. Freeze readable desktop/mobile visual-oracle references; one giant compressed board is insufficient.
+1. Keep current Product-first Concept A artifact as unvalidated P reference; do not refine it serially yet.
+2. Create one independently conceived realistic **E editorial/problem-first dark-horse** visual; do not derive it from P.
+3. Run Product-truth/claim/visual anti-pattern audit on both before user exposure.
+4. Run small directional M05 unaided comprehension research with P/E assignment rotated across participants.
+5. If P is clearly comprehension-eligible and E reveals no stronger acquisition model, stop exploration and converge on P rather than generating more variants.
+6. If a static direction survives, test motion only when the temporal distinction still needs proof.
+7. Feed M05 evidence into #3 and freeze readable desktop/mobile visual references.
 8. Continue `miki-labs/agent-control-plane` toward G7 independently.
 9. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path.
 
