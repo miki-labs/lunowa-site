@@ -10,7 +10,7 @@ No candidate is accepted because it merely "looks right" in review.
 
 Required high-level loop:
 
-`Product truth -> visitor/comprehension contract -> low-fidelity static structures -> Stage 1 first-impression evidence -> eligible static structure -> Stage 2 motion evidence -> selected visual oracle -> implement -> run -> inspect in real browser -> compare -> test -> independently audit final cumulative candidate`.
+`Product truth -> visitor/comprehension contract -> divergent visual thesis exploration -> first-impression evidence -> eligible direction -> optional isolated motion evidence -> selected visual oracle -> implement -> run -> inspect in real browser -> compare -> test -> independently audit final cumulative candidate`.
 
 A candidate that is visually polished but produces the wrong Product mental model is a failure.
 
@@ -18,9 +18,14 @@ A candidate that is visually polished but produces the wrong Product mental mode
 
 Before final M10 visual freeze, collect directional evidence under the current M05 task and `FIRST-IMPRESSION-VALIDATION.md`.
 
-### Stage 1 — static structure
+### Current static acquisition/mental-model comparison
 
-Compare current A/C/D static concepts with stable scenario/copy/stimulus bindings.
+Use the current minimal divergent pair:
+
+- **P — Product Proof Baseline**;
+- **E — Editorial Problem-First Dark Horse**.
+
+The former A/C/D participant-facing matrix is retired. Do not require its completion for acceptance.
 
 Required unaided first questions after bounded initial exposure:
 
@@ -40,18 +45,29 @@ Material misinterpretations to track explicitly:
 - automatic follow-up sender;
 - notification muter;
 - generic task manager;
+- generic productivity/attention tool;
 - autonomous agent that takes over email decisions;
 - unclear category.
 
-### Stage 2 — temporal motion
+### Fidelity
 
-After at least one static structure is comprehension-eligible, compare the same structure/content in static form versus the bounded B motion treatment.
+Internal low-fidelity sketches may be used for structure sanity checks.
 
-The Stage 2 question is not whether animation looks more impressive. It is whether motion materially improves understanding of:
+Participant-facing first-impression stimuli should be realistic enough to evaluate category recognition, Product credibility/believability, orientation, aesthetics/prototypicality and trust while remaining inexpensive to revise.
+
+Do not accept crude wireframe evidence as sufficient proof for the final visual-trust question.
+
+### Optional temporal motion evidence
+
+Motion is tested only when a static direction is already comprehension-eligible and a material temporal question remains.
+
+Apply motion to the same structure/content and ask whether it materially improves understanding of:
 
 `intermediate reply -> still no user action required -> material outcome -> attention required`
 
-without introducing more confusion, accessibility cost, or dependence on motion for basic Product comprehension.
+without adding more confusion, accessibility cost, or dependence on motion for baseline Product comprehension.
+
+Motion is **not** mandatory evidence when static Product proof already communicates the relevant distinction adequately.
 
 Autoplay, user-triggered playback, and other playback modes are distinct conditions and must not be silently merged.
 
@@ -65,16 +81,19 @@ Before a generated/mock visual becomes canonical:
 
 - Product/category is recognizable without prior Lunowa vocabulary;
 - the initial still state is meaningful without animation;
-- the dominant visual shows believable Product use rather than only an abstract metaphor/diagram;
+- the dominant visual shows believable Product use where Product behavior is the evidence;
 - the concrete scenario matches Product truth;
 - unsupported functionality/security/performance claims are absent;
 - generated text has been independently checked rather than trusted as marketing authority;
-- #10 Stage 1 and Stage 2 evidence has been consumed where applicable;
+- #10 current P/E evidence has been consumed;
+- any motion evidence has been consumed only where motion remains part of the selected direction;
 - unaided and aided findings remain distinct;
 - major confusion/distrust findings are resolved or explicitly carried as open hypothesis;
 - readable implementation-grade references exist for major states/sections rather than relying only on one compressed full-page board.
 
 The rejected first dark/purple/orb/icon-timeline candidate is not a valid baseline.
+
+The current old Concept A artifact is an unvalidated P baseline reference only; it is not accepted visual authority merely because it exists.
 
 ## 4. Required implementation evidence classes
 
@@ -89,7 +108,7 @@ A material UI PR should provide evidence appropriate to its scope:
 7. visual-regression evidence when a baseline exists;
 8. performance evidence when initial-load or bundle behavior changes;
 9. security evidence when dynamic endpoints, third-party scripts, headers, or data handling change;
-10. copy/Product-truth evidence for any visible claim movement.
+10. copy/Product-truth evidence for visible claim movement.
 
 ## 5. Browser verification
 
@@ -109,7 +128,7 @@ Required checks:
 
 - no blank/partially rendered Hero;
 - brand/category/value remain legible in the first viewport;
-- meaningful Product state is visible before animation hydration completes;
+- meaningful Product state is visible before animation hydration completes when an island exists;
 - no text overlap or clipping;
 - no unintended horizontal overflow;
 - CTA visible and operable;
@@ -139,7 +158,7 @@ Visual snapshots are regression oracles, not authority over Product truth. Inten
 
 ## 7. Accessibility semantics
 
-Use Playwright assertions and ARIA snapshots where useful to verify the accessible structure.
+Use Playwright assertions and ARIA snapshots where useful to verify accessible structure.
 
 At minimum verify:
 
@@ -152,7 +171,7 @@ At minimum verify:
 - form labels/errors if waitlist exists;
 - status updates do not depend only on visual motion/color;
 - decorative imagery is not exposed as misleading content;
-- the static/reduced-motion explanation preserves the same informational result.
+- static/reduced-motion explanation preserves the same informational result.
 
 Automated checks do not replace manual keyboard/reflow/reduced-motion review.
 
@@ -173,19 +192,21 @@ Target WCAG 2.2 AA unless an explicit higher requirement is adopted.
 
 ## 9. Motion verification
 
-When motion is touched:
+When motion is present/touched:
 
 - verify the accepted static baseline first;
 - verify normal motion;
 - verify `prefers-reduced-motion: reduce`;
 - verify all information remains available with motion suppressed;
-- verify the first still frame already explains what is being watched and whether the user must act;
+- verify first still frame already explains what is being watched and whether user must act;
 - verify playback cannot trap focus or require frame-perfect timing;
 - verify no endless non-essential animation steals attention;
 - verify only one material change dominates at a time;
 - verify Product-state transitions do not imply unsupported Product semantics;
-- verify motion preserves object continuity of the same unresolved matter;
-- do not treat animation as a conversion or comprehension improvement without direct Lunowa evidence.
+- verify object continuity of the same unresolved matter;
+- do not treat animation as a conversion/comprehension improvement without direct Lunowa evidence.
+
+If final visual authority is static, motion-specific implementation evidence is not required except for ordinary interaction feedback that is actually implemented.
 
 ## 10. Performance
 
@@ -242,7 +263,7 @@ If a PR changes hosting/dynamic behavior, verify as applicable:
 
 ## 13. Implementation-entry gate
 
-Production-code implementation must not start until the external `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance gate has passed, in addition to local visual/design prerequisites.
+Production-code implementation must not start until external `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance has passed, in addition to local visual/design prerequisites.
 
 G8 concurrency is not required.
 
