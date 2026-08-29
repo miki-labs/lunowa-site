@@ -14,15 +14,16 @@ Before implementation or review, read:
 
 1. `docs/CURRENT.md` — current execution router and status.
 2. `docs/VISITOR-JOURNEY.md` — first-time visitor mental-model sequence and comprehension oracle.
-3. `docs/FIRST-IMPRESSION-VALIDATION.md` — M05 research protocol and static-vs-motion evidence boundary.
-4. `docs/HERO-CONCEPTS-M05.md` — current A/C/D static hypotheses and B motion treatment.
-5. `docs/M05-WIREFRAMES.md` — low-fidelity research stimuli and lower-page narrative.
-6. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
-7. `docs/DESIGN.md` — visual direction and anti-patterns.
-8. `docs/MOTION.md` — semantic motion contract.
-9. `docs/ARCHITECTURE.md` — technical/deployment architecture.
-10. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
-11. `docs/RESEARCH-2026-08-29.md` — dated evidence/rationale; not authority over the contracts above.
+3. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — current component/template/Figma reuse strategy.
+4. `docs/FIRST-IMPRESSION-VALIDATION.md` — current M05 research protocol.
+5. `docs/HERO-CONCEPTS-M05.md` — current P/E exploration contract; retired A/C/D variants are not the active participant plan.
+6. `docs/M05-WIREFRAMES.md` — internal structural reference only.
+7. `docs/HOMEPAGE.md` — homepage projection, copy hierarchy, truth boundaries.
+8. `docs/DESIGN.md` — visual direction and anti-patterns.
+9. `docs/MOTION.md` — semantic motion contract.
+10. `docs/ARCHITECTURE.md` — technical/deployment architecture.
+11. `docs/VERIFICATION.md` — acceptance oracle and required evidence.
+12. `docs/RESEARCH-2026-08-29.md` and dated research supplements — evidence/rationale; not authority over the contracts above.
 
 ## Visitor-first rule
 
@@ -32,40 +33,64 @@ For public marketing surfaces, first establish what a first-time visitor must re
 
 A visually impressive candidate that repeatedly produces the wrong Product mental model is a failure.
 
+## Reuse-first rule
+
+Do not reinvent ordinary web mechanics when a mature, adaptable primitive exists.
+
+Prefer existing/local/native/reusable components for generic layout and controls. Spend custom design/engineering effort on Lunowa-specific Product proof and semantics.
+
+Current preferred roles:
+
+- Relume / Tailwind Plus / Framer / Figma ecosystem: reference and reusable structural primitives;
+- Figma: editable design-system composition and implementation-grade visual oracle;
+- shadcn/ui-style local components: generic Product/app primitives;
+- Astro + Tailwind: owned static production shell;
+- React + Motion: accepted interactive Product demo only.
+
+Every reused component still requires Product-truth, accessibility, responsive, performance, dependency and license/provenance review.
+
+Do not use decorative effect libraries as a shortcut to visual quality. Aceternity/Magic UI-style effects are exception-only because common glow/beam/3D/bento treatments can recreate generic AI-SaaS aesthetics.
+
 ## M05 experiment rule
 
-Do not confound static information architecture and motion if the research question can isolate them.
+Do not spend participant/sample budget on near-duplicate Hero layouts.
 
-Current sequence:
+Current primary divergence is:
 
-`A/C/D static structures -> unaided first-impression evidence -> eliminate wrong mental models -> B motion on an eligible static structure -> temporal evidence -> M10 visual freeze`.
+`P Product Proof baseline vs E Editorial Problem-First dark horse`.
 
-Small M05 rounds are directional qualitative evidence, not statistically powered conversion tests. Keep unaided first impressions separate from aided/comparative discussion and bind findings to exact stimuli.
+The old A/C/D participant-facing comparison is retired. Existing Concept A raster output is only an unvalidated structural reference.
+
+If a static direction is comprehension-eligible, test motion only when the temporal mechanism still needs additional proof. Keep unaided first impressions separate from aided/comparative discussion and bind findings to exact stimuli.
+
+Small M05 rounds are directional qualitative evidence, not statistically powered conversion tests.
 
 ## AI-native delivery workflow
 
 Use this loop:
 
-`research/Product truth -> visitor contract -> IA/copy -> low-fidelity structures -> directional first-impression evidence -> isolated temporal-motion evidence -> selected visual oracle -> scoped implementation -> real-browser verification -> correction -> independent full acceptance audit`.
+`research/Product truth -> visitor contract -> mature reference/component harvesting -> Figma design-system composition -> P/E first-impression evidence -> optional isolated motion evidence -> implementation-grade visual oracle -> scoped ACP/Codex implementation using approved reusable primitives -> real-browser verification -> correction -> independent full acceptance audit`.
 
-- ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, design contracts, visual direction, independent review.
+- ChatGPT: research, Product/marketing synthesis, visitor/comprehension contracts, reuse strategy, design-system direction, Figma collaboration, independent review.
 - Codex: implementation, tests, browser verification, build/deploy evidence, PR candidate construction.
+- Figma: editable design convergence and visual oracle surface.
 - GitHub: canonical durable task contracts and evidence.
 
 Do not duplicate the full repository contract in long Codex prompts. Point Codex at the owning Issue + these docs.
 
 ## Generated-visual boundary
 
-Generated visuals are exploratory, not authoritative.
+Raster image generation is exploratory, not the default precise homepage-design workflow and not authoritative.
 
-Before any generated image becomes a visual oracle, verify:
+Use image generation for mood exploration, illustration, campaign assets or genuinely novel visual concepts. Prefer editable Figma composition for typography/layout/responsive/Product UI work.
+
+Before any generated visual becomes evidence, verify:
 
 - first-glance Product/category comprehension;
 - consistency with Product truth;
 - absence of invented functionality/security/performance claims;
 - consistency with `DESIGN.md` and `VISITOR-JOURNEY.md`;
-- a meaningful static state before relying on animation;
-- directionally acceptable first-impression evidence when required by M05/M10.
+- a meaningful static state before relying on animation.
 
 For long pages, do not rely on one compressed board if implementation-critical Product text/states are unreadable. Prefer coordinated readable section/state references plus an overview for page rhythm.
 
