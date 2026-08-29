@@ -39,6 +39,7 @@ Read, in order:
 2. `docs/APPROVED-PRIMITIVES-2026-08-29.md` — approved production/design primitive hierarchy.
 3. `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md` — deliberately small component-pattern shortlist.
 4. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — overall rationale and ecosystem role split.
+5. `docs/M10-TOKEN-CONTRACT.md` — provisional semantic token structure; semantic roles are current authority, exact visual values remain unfrozen.
 
 Current preferred production/reuse split:
 
@@ -80,9 +81,17 @@ Astro + Tailwind CSS 4
 
 ### Token direction
 
-M10 should preserve a small vendor-neutral semantic token source, aligned where practical with the stable Design Tokens Community Group 2025.10 format, then project it into Tailwind 4/CSS variables.
+`docs/M10-TOKEN-CONTRACT.md` now defines the provisional R05 token roles.
 
-Keep it intentionally small:
+Current rule:
+
+- semantic roles are authoritative;
+- exact colors/font family/type scale/container widths/radius/shadow/motion values remain unfrozen until P/E visual evidence;
+- final M10 source should be vendor-neutral and DTCG-compatible where practical;
+- accepted values project deterministically into Tailwind 4/CSS variables;
+- third-party blocks must map into Lunowa tokens rather than importing a foreign palette/type/radius system.
+
+The token surface is intentionally small:
 
 - semantic colors;
 - typography roles;
@@ -218,17 +227,16 @@ Issue #2 was an accidental placeholder and is closed `not_planned`; it has no au
 
 ## Next actions
 
-1. Stop bespoke raster homepage iteration as the default design process.
-2. Define the minimal Lunowa semantic token source.
-3. Inspect a **small** set of native/7Ovr/Tailark/Tailwind Plus-if-licensed/Relume Hero/header/CTA/FAQ/footer candidates; record exact source/license/role and reject generic AI-SaaS effects.
-4. Choose one generic shell system rather than mixing unrelated library aesthetics section by section.
-5. Compose P Product Proof and E Editorial Problem-First using that common shell plus custom Lunowa Product proof.
-6. Run Product-truth/claim/accessibility/visual anti-pattern audit on P/E before user exposure.
-7. Run small directional M05 unaided comprehension research with P/E assignment rotated across participants.
-8. If P is clearly comprehension-eligible and E reveals no stronger acquisition model, stop exploration and converge rather than generating more variants.
-9. Test motion only when the temporal distinction still needs proof.
-10. Feed M05 evidence into #3 and freeze readable desktop/mobile structured visual references.
-11. Continue `miki-labs/agent-control-plane` toward G7 independently.
-12. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path, reusing approved components before custom implementation.
+1. Keep the current R05 semantic token roles; do not freeze exact aesthetic values yet.
+2. Inspect a **small** set of native/7Ovr/Tailark/Tailwind Plus-if-licensed/Relume Hero/header/CTA/FAQ/footer candidates; record exact source/license/role and reject generic AI-SaaS effects.
+3. Choose one generic shell system rather than mixing unrelated library aesthetics section by section.
+4. Compose P Product Proof and E Editorial Problem-First using that common shell plus custom Lunowa Product proof.
+5. Run Product-truth/claim/accessibility/visual anti-pattern audit on P/E before user exposure.
+6. Run small directional M05 unaided comprehension research with P/E assignment rotated across participants.
+7. If P is clearly comprehension-eligible and E reveals no stronger acquisition model, stop exploration and converge rather than generating more variants.
+8. Test motion only when the temporal distinction still needs proof.
+9. Feed M05 evidence into #3 and freeze readable desktop/mobile structured visual references + exact token values.
+10. Continue `miki-labs/agent-control-plane` toward G7 independently.
+11. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path, reusing approved components before custom implementation.
 
 Codex prompts remain short: point to the current Issue and repository contracts rather than restating them.
