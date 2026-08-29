@@ -1,6 +1,6 @@
 # Current execution router
 
-Status date: 2026-08-29
+Status date: 2026-08-30
 
 ## Canonical authority
 
@@ -11,7 +11,7 @@ Status date: 2026-08-29
 
 ## Current phase
 
-**BOOTSTRAP / VISITOR-COMPREHENSION + REUSE-FIRST DESIGN CONTRACT**
+**R05 COMPLETE ENOUGH FOR STIMULUS CONSTRUCTION / M05 P-E PRE-RESEARCH**
 
 Production-code implementation has not started and is intentionally held until ACP G7 PASS.
 
@@ -29,9 +29,9 @@ Issue #1 owns acceptance of the durable marketing-site control plane. M05 #10 ow
 - Marketing objective: correct comprehension -> relevance -> trust -> qualified early access -> empirical learning.
 - Visual philosophy: familiar high-trust structure; restrained complexity; believable Product UI as primary proof; motion subordinate to comprehension.
 - Technical direction: Astro static-first + Tailwind CSS 4 + targeted React islands + shadcn/ui/Base UI local primitives + Motion only where accepted; Cloudflare Workers Static Assets, all re-checked at implementation time.
-- **Reuse-first rule:** ordinary marketing/app-shell mechanics should come from mature reusable blocks/components where this reduces work without weakening Product semantics, accessibility, performance or ownership.
+- **Reuse-first rule:** ordinary marketing/app-shell mechanics should come from mature reusable patterns/components where this reduces work without weakening Product semantics, accessibility, performance or ownership.
 
-## Reuse-first authority
+## Reuse/design authority
 
 Read, in order:
 
@@ -39,7 +39,9 @@ Read, in order:
 2. `docs/APPROVED-PRIMITIVES-2026-08-29.md` — approved production/design primitive hierarchy.
 3. `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md` — deliberately small component-pattern shortlist.
 4. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md` — overall rationale and ecosystem role split.
-5. `docs/M10-TOKEN-CONTRACT.md` — provisional semantic token structure; semantic roles are current authority, exact visual values remain unfrozen.
+5. `docs/M10-TOKEN-CONTRACT.md` — provisional semantic token structure; semantic roles are authority, exact visual values remain unfrozen.
+6. `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md` — selected generic homepage shell.
+7. `docs/M05-P-E-STIMULUS-CONTRACT.md` — exact P/E participant-stimulus construction and comparability constraints.
 
 Current preferred production/reuse split:
 
@@ -60,33 +62,70 @@ Astro + Tailwind CSS 4
         |
         +-- optional Webflow DevLink proof for a specific visual-to-React need
         |
-        +-- custom Lunowa UI only where semantics/visual oracle require it
+        +-- custom Lunowa UI only where semantics/visual authority require it
 ```
 
 ### Current evidence-backed tool decisions
 
-- **Astro:** remains preferred static shell; current docs support Tailwind 4 through the official Vite-plugin path.
-- **Tailwind CSS 4:** local design-token/style layer; use CSS-first `@theme` variables.
-- **shadcn/ui:** official Astro setup; new projects default to Base UI as of 2026-07.
-- **Base UI:** bind to the intended MIT `@base-ui/react` / `mui/base-ui` provenance; `Base UI` is an overloaded ecosystem name.
-- **7Ovr:** current first open marketing-block candidate; listed by official shadcn registry directory, Base UI based, local-source install, free blocks MIT-0 per current docs.
-- **Tailark:** secondary open marketing-block candidate; MIT, Base UI default registry path.
-- **Tailwind Plus:** premium benchmark/source, not a requirement; use only under a valid license and when it materially beats free/local options.
-- **Relume:** preferred large-scale discovery/reference source; runtime/code adoption conditional on exact compatibility/license/dependency review.
-- **Webflow DevLink:** 2026 export can produce local self-contained React/TSX components; therefore valid as a scoped experiment, but not default because Webflow primitives/scoped CSS would create a second style system.
-- **Framer:** visual/reference only for architecture purposes because current first-party Help contains contradictory claims about full-site self-host/export portability.
-- **Figma:** preferred editable convergence surface when write access is available; current connected account was observed as Starter/View, so not a hard dependency.
+- **Astro:** preferred static shell; current docs support Tailwind 4 through the official Vite-plugin path.
+- **Tailwind CSS 4:** local design-token/style layer using CSS-first theme variables.
+- **shadcn/ui:** official Astro setup; current new-project path uses Base UI while Radix remains supported.
+- **Base UI:** bind to intended MIT `@base-ui/react` / `mui/base-ui` provenance.
+- **7Ovr:** strong current open marketing-block candidate; current site exposes 16 Hero blocks, 230+ free blocks, local-source shadcn installation, Base UI, React-stack/Astro compatibility claims, and MIT-0 for free blocks. Exact source still requires adoption-time audit.
+- **Tailark:** secondary marketing-block candidate; current site/docs focus on shadcn marketing blocks/pages and support Base UI/Radix paths. Exact OSS item/license/dependency remains adoption-time evidence.
+- **Tailwind Plus:** premium benchmark/source, not a requirement. Current official library exposes 12 Hero, 15 Feature, 11 CTA, 8 Header, 7 FAQ and 7 Footer section families; use only with valid license and when materially superior.
+- **Relume:** large-scale discovery/reference source; runtime/code adoption conditional on exact compatibility/license/dependency review.
+- **Webflow DevLink:** viable scoped visual-to-React experiment, not default because it introduces a second styling model.
+- **Framer:** visual/reference only for architecture purposes while current first-party portability documentation remains contradictory.
+- **Figma:** preferred editable convergence surface when write access exists; current connected account was observed as Starter/View, so not a hard dependency.
 - **Motion:** semantic temporal proof only, with Reduced Motion as an acceptance path.
-- **Image generation:** mood/illustration/novel exploration only, not precise homepage composition authority.
+- **Image generation:** mood/illustration/novel exploration only, not precise homepage-composition authority.
 
-### Token direction
+## Selected common homepage shell — 2026-08-30
 
-`docs/M10-TOKEN-CONTRACT.md` now defines the provisional R05 token roles.
+Broad generic-shell exploration is now stopped by default.
+
+Current shell:
+
+```text
+minimal header
+↓
+category/mechanism cue
+↓
+centered/near-centered H1 + support + CTA
+↓
+large believable Lunowa Product proof
+↓
+editorial problem/distinction bands
+↓
+additional Product proof / return-context / trust-control
+↓
+truthful availability
+↓
+minimal FAQ
+↓
+plain final CTA
+↓
+minimal footer
+```
+
+Why:
+
+- current Linear/Cursor/Granola/Attio patterns strongly reinforce Product UI as proof and one-job-per-section vertical narrative;
+- centered Product-first shell preserves enough width for real email/Product UI;
+- it matches current `Quiet Product Proof` constraints;
+- it can remain common between P and E, making the acquisition hierarchy rather than template aesthetics the experimental variable.
+
+Do **not** import a complete generic SaaS template. Whole templates commonly carry logo clouds, stats, testimonials, pricing, bento grids and other unsupported/unnecessary sections.
+
+## Token direction
+
+`docs/M10-TOKEN-CONTRACT.md` defines the provisional token roles.
 
 Current rule:
 
 - semantic roles are authoritative;
-- exact colors/font family/type scale/container widths/radius/shadow/motion values remain unfrozen until P/E visual evidence;
+- exact colors/font family/type scale/container widths/radius/shadow/motion values remain unfrozen until realistic P/E visual evidence;
 - final M10 source should be vendor-neutral and DTCG-compatible where practical;
 - accepted values project deterministically into Tailwind 4/CSS variables;
 - third-party blocks must map into Lunowa tokens rather than importing a foreign palette/type/radius system.
@@ -101,42 +140,43 @@ The token surface is intentionally small:
 - focus ring;
 - motion values only if motion survives evidence.
 
-Do not build an enterprise token pipeline before the design surface justifies it.
-
 ## Current M05 validation authority
 
-- `docs/VISITOR-JOURNEY.md` — first-visit mental-model and page-order contract.
-- `docs/FIRST-IMPRESSION-VALIDATION.md` — current qualitative protocol.
-- `docs/HERO-CONCEPTS-M05.md` — current divergent-pair exploration contract.
-- `docs/M05-WIREFRAMES.md` — internal structural reference only; former A/C/D participant-facing plan is retired.
-- `docs/RESEARCH-M05-EXPLORATION-2026-08-29.md` — evidence behind the exploration/fidelity correction.
+- `docs/VISITOR-JOURNEY.md`
+- `docs/FIRST-IMPRESSION-VALIDATION.md`
+- `docs/HERO-CONCEPTS-M05.md`
+- `docs/M05-P-E-STIMULUS-CONTRACT.md`
+- `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md`
+- `docs/M05-WIREFRAMES.md` — internal structural reference only; former A/C/D participant plan retired.
+- `docs/RESEARCH-M05-EXPLORATION-2026-08-29.md`
 
 M05 is intentionally **not** a small-sample statistical A/B test.
 
-## M05 method correction — 2026-08-29
+## P/E construction state
 
-The former A/C/D static comparison was retired as the primary participant-facing plan because the three directions shared too much of the same structure/content and were unlikely to produce enough decision-relevant learning for the research cost.
-
-Current design exploration uses a minimal genuinely divergent pair:
+Current experiment uses a minimal genuinely divergent pair:
 
 ```text
 P — Product Proof Baseline
-real-looking Lunowa UI explains the job immediately
+Product/category/value/CTA
+then large real-looking Lunowa UI explains the job immediately
 
 vs
 
 E — Editorial Problem-First Dark Horse
-visitor recognizes the ongoing checking burden first,
-then immediately sees concrete email/Product proof
+visitor recognizes the repeated checking/remembering burden first,
+then concrete email/Product proof appears early
 ```
 
-The already-created Concept A raster visual is retained only as an **unvalidated P structural reference**, not as design medium or visual authority. Old C/D Hero generation is stopped.
+The already-created Concept A raster visual remains only an **unvalidated historical P structural reference**. It is not the design medium or authority and should not be serially patched.
 
-P and E should share the accepted generic shell/token system where practical so the comparison tests the acquisition/proof thesis rather than random template aesthetics.
+P/E must share the common shell/token/Product-scene grammar where practical.
 
-Participant-facing first-impression stimuli should be realistic mid/high fidelity enough to evaluate category recognition, credibility, visual orientation and trust.
+Canonical first state for both is the quotation intermediate-reply state:
 
-Motion is tested only after a static direction is comprehension-eligible, using the same structure/content so the temporal effect is not mixed with a different layout.
+`社内確認中です。明日送ります。 -> 見積書は未到着 -> あなたの対応はまだ必要ありません -> Lunowaが引き続き見守る`.
+
+Initial comparison is static. Motion is tested only after a static direction is comprehension-eligible and a temporal question remains.
 
 ## Rejected visual candidate
 
@@ -159,15 +199,18 @@ Preserve only the semantic storyboard, not the art direction.
 M00  #1  Bootstrap canonical contracts
           |
           v
-R05       Reuse-source + token/design-system setup
+R05       reuse + tokens + common shell  [substantially complete]
           |
           v
-M05  #10 P baseline vs E dark horse comprehension evidence
+S05       construct internally-audited P-v1 / E-v1 stimuli
+          |
+          v
+M05  #10 directional comprehension evidence
           |
           +--> optional isolated static-vs-motion evidence
           |
           v
-M10  #3  Freeze user-validated structured visual authority
+M10  #3  freeze user-validated structured visual authority + exact token values
           |
           +-----------------------------+
                                         |
@@ -192,20 +235,21 @@ M70  #9  Full verification + preview deployment
 M90  future explicit production-domain cutover
 ```
 
-`R05` is a planning/design step, not production-code authorization. It may proceed before ACP G7.
+`S05`/R05 are design/research preparation, not production-code authorization. They may proceed before ACP G7.
 
 ## Execution notes
 
 - #3 must consume #10 directional comprehension evidence; visually attractive wrong-mental-model candidates cannot win.
-- #10 distinguishes unaided first impressions from aided comparative feedback and evaluates the lower-page journey as well as Hero.
-- Do not spend M05 research/sample budget on near-duplicate Hero layouts that ordinary design judgment can resolve.
-- Do not serially patch a generated raster image and call the patches new concepts.
-- Reuse generic primitives before authoring custom ones, but require Product-truth/accessibility/responsive/performance/license review.
-- Community shadcn registries are discovery/distribution surfaces, not trust authorities; audit exact source before adoption.
-- #4 must not start before ACP G7 PASS. G8 concurrency is not required.
-- The first production-code task should run through the accepted Agent Control Plane rather than a parallel manual Codex workflow.
-- #5 and #6 may proceed in parallel only after #4 and frozen visual direction, provided serialized dependency/config assets are coordinated.
-- #7 reconciles the cumulative #5/#6 UI rather than optimizing an obsolete intermediate candidate.
+- #10 distinguishes unaided first impressions from aided comparative feedback and evaluates lower-page understanding after Hero exposure.
+- Do not spend M05 sample budget on near-duplicate Hero layouts.
+- Do not serially patch a generated raster image and call patches new concepts.
+- Do not restart broad template/tool discovery unless a concrete shell requirement cannot be satisfied.
+- Reuse generic primitives before custom implementation, but local Product-truth/accessibility/responsive/performance/license review remains mandatory.
+- Community registries are discovery/distribution surfaces, not trust authorities.
+- #4 must not start before ACP G7 PASS. G8 is not required.
+- First production-code task should run through the accepted Agent Control Plane path.
+- #5 and #6 may proceed in parallel only after #4 and frozen visual direction, with serialized dependency/config coordination.
+- #7 reconciles the cumulative #5/#6 UI.
 - #8 waits until CTA/availability/data-purpose boundaries are stable enough for truthful consent/privacy behavior.
 - #9 is a full cumulative acceptance audit, not a latest-patch check.
 - Production domain cutover is intentionally not authorized by #9.
@@ -227,16 +271,16 @@ Issue #2 was an accidental placeholder and is closed `not_planned`; it has no au
 
 ## Next actions
 
-1. Keep the current R05 semantic token roles; do not freeze exact aesthetic values yet.
-2. Inspect a **small** set of native/7Ovr/Tailark/Tailwind Plus-if-licensed/Relume Hero/header/CTA/FAQ/footer candidates; record exact source/license/role and reject generic AI-SaaS effects.
-3. Choose one generic shell system rather than mixing unrelated library aesthetics section by section.
-4. Compose P Product Proof and E Editorial Problem-First using that common shell plus custom Lunowa Product proof.
-5. Run Product-truth/claim/accessibility/visual anti-pattern audit on P/E before user exposure.
-6. Run small directional M05 unaided comprehension research with P/E assignment rotated across participants.
-7. If P is clearly comprehension-eligible and E reveals no stronger acquisition model, stop exploration and converge rather than generating more variants.
-8. Test motion only when the temporal distinction still needs proof.
-9. Feed M05 evidence into #3 and freeze readable desktop/mobile structured visual references + exact token values.
+1. **Do not continue broad tool/template research by default.** The common shell is selected.
+2. Construct **P-v1** using the selected shell, current semantic token roles, and the canonical intermediate-reply Product state.
+3. Independently construct **E-v1** using the same shell/tokens/Product scene but a real problem-first acquisition hierarchy; do not derive E by cosmetically editing P.
+4. Create one shared realistic lower-page continuation reference for the post-Hero probe instead of two duplicate long homepages.
+5. Run full internal pre-research audit on P-v1/E-v1: Product truth, wrong-category risk, copy, unsupported claims, visual anti-patterns, accessibility plausibility, comparable fidelity and hidden variables.
+6. Only after both pass internal audit, run small directional M05 unaided comprehension research with assignment rotated across participants.
+7. If P is clearly comprehension-eligible and E reveals no materially stronger acquisition model, converge instead of creating more variants.
+8. Test motion only if temporal understanding remains materially weak.
+9. Feed evidence into #3 and freeze desktop/mobile structured visual authority + exact token values.
 10. Continue `miki-labs/agent-control-plane` toward G7 independently.
-11. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path, reusing approved components before custom implementation.
+11. After both M10 visual freeze and ACP G7 PASS, start #4 through the accepted control-plane path.
 
 Codex prompts remain short: point to the current Issue and repository contracts rather than restating them.
