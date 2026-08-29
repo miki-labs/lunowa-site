@@ -14,6 +14,8 @@ Lunowaの公式マーケティングサイト用リポジトリです。
 - `docs/M10-TOKEN-CONTRACT.md`
 - `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md`
 - `docs/M05-P-E-STIMULUS-CONTRACT.md`
+- `docs/stimuli/MANIFEST.md`
+- `docs/M05-SESSION-PACKET.md`
 - `docs/FIRST-IMPRESSION-VALIDATION.md`
 - `docs/HERO-CONCEPTS-M05.md`
 - `docs/M05-WIREFRAMES.md`
@@ -24,4 +26,4 @@ Lunowaの公式マーケティングサイト用リポジトリです。
 - `docs/VERIFICATION.md`
 - `docs/RESEARCH-2026-08-29.md`
 
-Product本体のcanonical truthは `miki-thecat/lunowa` が所有します。現在の作業状況・common-shell decision・M05 P/E stimulus construction・reuse-first primitive order・semantic-token authority・ACP G7実装gateは `docs/CURRENT.md` を参照してください。
+Product本体のcanonical truthは `miki-thecat/lunowa` が所有します。現在の作業状況、accepted P/E stimulus bindings、M05 participant protocol、reuse-first primitive order、semantic-token authority、ACP G7実装gateは `docs/CURRENT.md` を参照してください。
