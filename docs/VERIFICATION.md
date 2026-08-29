@@ -1,16 +1,59 @@
 # Lunowa Marketing Site Verification Contract
 
-Status: canonical acceptance oracle for implementation-facing work, 2026-08-29.
+Status: canonical acceptance oracle for design and implementation-facing work, 2026-08-29.
+
+Read `docs/VISITOR-JOURNEY.md` before evaluating visual or implementation candidates.
 
 ## 1. Principle
 
-No frontend candidate is accepted because the code "looks right" in review.
+No candidate is accepted because it merely "looks right" in review.
 
-Required loop:
+Required high-level loop:
 
-`implement -> run -> inspect in real browser -> compare against contract/visual oracle -> test -> independently audit final cumulative candidate`.
+`Product truth -> visitor/comprehension contract -> visual candidate -> first-impression evidence -> selected visual oracle -> implement -> run -> inspect in real browser -> compare -> test -> independently audit final cumulative candidate`.
 
-## 2. Required evidence classes
+A candidate that is visually polished but produces the wrong Product mental model is a failure.
+
+## 2. Pre-implementation comprehension oracle
+
+Before final M10 visual freeze, collect directional first-impression evidence as defined by the current M05 task and `VISITOR-JOURNEY.md`.
+
+Primary ~10-second question:
+
+> `Lunowaは何をするものだと思いましたか？`
+
+Target mental model is approximately:
+
+> Lunowa watches unfinished email-related matters and returns them when the user actually needs to act, reducing the need for repeated manual checking.
+
+Material misinterpretations to track explicitly:
+
+- generic AI email writer;
+- inbox organizer / inbox-zero product;
+- ordinary reminder/no-reply tracker;
+- automatic follow-up sender;
+- notification muter;
+- generic task manager;
+- autonomous agent that takes over email decisions.
+
+This small study is directional design evidence, not market representativeness, PMF, or exact-ICP validation.
+
+## 3. Visual-oracle acceptance
+
+Before a generated/mock visual becomes canonical:
+
+- Product/category is recognizable without prior Lunowa vocabulary;
+- the initial still state is meaningful without animation;
+- the dominant visual shows believable Product use rather than only an abstract metaphor/diagram;
+- the concrete scenario matches Product truth;
+- unsupported functionality/security/performance claims are absent;
+- generated text has been independently checked rather than trusted as marketing authority;
+- #10 directional comprehension evidence has been consumed;
+- major confusion/distrust findings are resolved or explicitly carried as open hypothesis.
+
+The rejected first dark/purple/orb/icon-timeline candidate is not a valid baseline.
+
+## 4. Required implementation evidence classes
 
 A material UI PR should provide evidence appropriate to its scope:
 
@@ -22,11 +65,12 @@ A material UI PR should provide evidence appropriate to its scope:
 6. reduced-motion verification when motion is touched;
 7. visual-regression evidence when a baseline exists;
 8. performance evidence when initial-load or bundle behavior changes;
-9. security evidence when dynamic endpoints, third-party scripts, headers, or data handling change.
+9. security evidence when dynamic endpoints, third-party scripts, headers, or data handling change;
+10. copy/Product-truth evidence for any visible claim movement.
 
-## 3. Browser verification
+## 5. Browser verification
 
-Use Playwright for browser-level verification.
+Use Playwright for browser-level verification after implementation begins.
 
 Minimum baseline viewports for homepage acceptance:
 
@@ -41,31 +85,35 @@ A PR may need additional breakpoints when its layout changes materially.
 Required checks:
 
 - no blank/partially rendered Hero;
+- brand/category/value remain legible in the first viewport;
+- meaningful Product state is visible before animation hydration completes;
 - no text overlap or clipping;
 - no unintended horizontal overflow;
 - CTA visible and operable;
 - Product stage readable;
 - navigation usable;
 - visual order matches semantic/DOM order where required;
-- localized copy does not break containers.
+- localized copy does not break containers;
+- no decorative layer competes with the one material Product change.
 
-## 4. Visual regression
+## 6. Visual regression
 
-Use Playwright screenshot comparison (`toHaveScreenshot`) for stable states after the initial visual direction is accepted.
+Use Playwright screenshot comparison (`toHaveScreenshot`) for stable states after the visual direction is accepted.
 
-Candidate baseline states should include:
+Candidate baseline states should include user-meaningful forms of:
 
-- Hero static initial state;
-- Managed;
-- intermediate evidence / Still Managed;
-- Needs You;
-- Moment;
+- Hero static initial monitoring state;
+- intermediate reply / still no user action required;
+- material evidence arrival;
+- user-attention-required state;
+- concise context/Source state;
 - mobile Hero;
-- reduced-motion presentation where visually distinct.
+- reduced-motion presentation where visually distinct;
+- static-before-hydration state where implementation differs.
 
 Visual snapshots are regression oracles, not authority over Product truth. Intentional design changes require reviewed baseline updates.
 
-## 5. Accessibility semantics
+## 7. Accessibility semantics
 
 Use Playwright assertions and ARIA snapshots where useful to verify the accessible structure.
 
@@ -79,11 +127,12 @@ At minimum verify:
 - visible focus;
 - form labels/errors if waitlist exists;
 - status updates do not depend only on visual motion/color;
-- decorative imagery is not exposed as misleading content.
+- decorative imagery is not exposed as misleading content;
+- the static/reduced-motion explanation preserves the same informational result.
 
 Automated checks do not replace manual keyboard/reflow/reduced-motion review.
 
-## 6. Accessibility automation
+## 8. Accessibility automation
 
 Integrate an automated accessibility scanner such as `@axe-core/playwright` when implementation begins.
 
@@ -98,24 +147,27 @@ Treat automated findings as one layer. Manual checks remain required for:
 
 Target WCAG 2.2 AA unless an explicit higher requirement is adopted.
 
-## 7. Motion verification
+## 9. Motion verification
 
 When motion is touched:
 
 - verify normal motion;
 - verify `prefers-reduced-motion: reduce`;
 - verify all information remains available with motion suppressed;
+- verify the first still frame already explains what is being watched and whether the user must act;
 - verify playback cannot trap focus or require frame-perfect timing;
 - verify no endless non-essential animation steals attention;
-- verify Product-state transitions do not imply unsupported Product semantics.
+- verify only one material change dominates at a time;
+- verify Product-state transitions do not imply unsupported Product semantics;
+- do not treat animation as a conversion improvement without direct Lunowa evidence.
 
-## 8. Performance
+## 10. Performance
 
 External Core Web Vitals "Good" thresholds remain a minimum reference:
 
 - LCP <= 2.5 s;
 - INP <= 200 ms;
-- CLS <= 0.1;
+- CLS <= 0.1.
 
 Because this site is static-first, internal targets may be stricter after measurement baselines exist.
 
@@ -125,28 +177,30 @@ Implementation acceptance should also monitor:
 - image/font weight;
 - Hero/LCP asset behavior;
 - hydration timing;
+- static-before-hydration usefulness;
 - layout stability;
 - third-party script cost.
 
-Do not optimize synthetic scores by harming accessibility, truthfulness, or Product comprehension.
+Do not optimize synthetic scores by harming accessibility, truthfulness, Product comprehension, or brand clarity.
 
-## 9. Copy/truth audit
+## 11. Copy/truth audit
 
-Every release candidate must be checked against current Product authority for:
+Every visual oracle and release candidate must be checked against current Product authority for:
 
 - supported providers;
 - availability/beta status;
 - feature claims;
 - autonomy/send behavior;
 - security/privacy claims;
+- encryption claims;
 - pricing;
 - testimonials/logos;
 - performance/time-saved/accuracy metrics;
 - ICP language.
 
-Unknown/unvalidated statements remain unknown. Marketing copy cannot promote a hypothesis to fact by repetition.
+Unknown/unvalidated statements remain unknown. Marketing copy cannot promote a hypothesis to fact by repetition or image generation.
 
-## 10. Security verification
+## 12. Security verification
 
 If a PR changes hosting/dynamic behavior, verify as applicable:
 
@@ -160,7 +214,15 @@ If a PR changes hosting/dynamic behavior, verify as applicable:
 - data-minimization and retention boundary;
 - failure states do not leak sensitive information.
 
-## 11. Independent full acceptance audit
+## 13. Implementation-entry gate
+
+Production-code implementation must not start until the external `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance gate has passed, in addition to the local visual/design prerequisites.
+
+G8 concurrency is not required.
+
+The first implementation candidate should use the accepted Agent Control Plane path rather than creating a separate manual Codex authority path.
+
+## 14. Independent full acceptance audit
 
 The reviewer must audit **current Issue/task contract × final cumulative candidate**.
 
