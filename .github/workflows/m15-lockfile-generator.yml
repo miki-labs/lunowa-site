@@ -1,0 +1,64 @@
+name: Temporary M15 lockfile generator
+
+on:
+  pull_request:
+    paths:
+      - 'package.json'
+      - 'astro.config.*'
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'eslint.config.mjs'
+      - 'tsconfig.json'
+      - 'playwright.config.ts'
+      - '.github/workflows/m15-lockfile-generator.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  generate-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact pull-request head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      - name: Setup pinned pnpm and Node.js LTS
+        uses: pnpm/setup@703c52620218391530e48b9e8870d5c0082e1b9b # v2.1.0
+        with:
+          runtime: node@24.20.0
+          install: false
+
+      - name: Generate lockfile from exact package manifest
+        run: pnpm install --lockfile-only --no-frozen-lockfile
+
+      - name: Install from generated frozen lockfile
+        run: pnpm install --frozen-lockfile
+
+      - name: Run token, type, lint, and build verification
+        run: pnpm run check
+
+      - name: Install Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Run browser evidence suite
+        run: pnpm run evidence
+
+      - name: Record lockfile digest
+        shell: bash
+        run: sha256sum pnpm-lock.yaml | tee generated-lockfile.sha256
+
+      - name: Upload generated lockfile and provisional browser evidence
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: m15-generated-lock-and-provisional-evidence-${{ github.event.pull_request.head.sha }}
+          path: |
+            pnpm-lock.yaml
+            generated-lockfile.sha256
+            evidence/**
+          if-no-files-found: error
+          retention-days: 1
