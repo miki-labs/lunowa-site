@@ -1,0 +1,313 @@
+name: M15 browser evidence
+
+on:
+  pull_request:
+    paths:
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'astro.config.*'
+      - 'src/**'
+      - 'tests/homepage.spec.ts'
+      - 'playwright.config.ts'
+      - 'docs/M10-VISUAL-AUTHORITY.md'
+      - 'docs/M10-RESPONSIVE-SPEC.md'
+      - 'docs/M10-TOKEN-CONTRACT.md'
+      - 'docs/HOMEPAGE.md'
+      - 'docs/DESIGN.md'
+      - 'docs/tokens/**'
+      - 'docs/visual-oracle/**'
+      - '.github/workflows/m15-browser-evidence.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: m15-browser-evidence-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  M15_CONTRACT_URL: 'https://github.com/miki-labs/lunowa-site/issues/15'
+  NODE_VERSION: '24.20.0'
+
+jobs:
+  browser-evidence:
+    name: Exact-head browser evidence
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout exact pull-request head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Verify exact-head checkout and patch hygiene
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          EXPECTED_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          actual="$(git rev-parse HEAD)"
+          test "$actual" = "$EXPECTED_HEAD_SHA"
+          git cat-file -e "${BASE_SHA}^{commit}"
+          git diff --check "$BASE_SHA" "$EXPECTED_HEAD_SHA"
+
+      - name: Setup pinned pnpm and Node.js LTS
+        uses: pnpm/setup@703c52620218391530e48b9e8870d5c0082e1b9b # v2.1.0
+        with:
+          runtime: node@${{ env.NODE_VERSION }}
+          install: false
+
+      - name: Verify package-manager/runtime basis
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(node --version)" = "v${NODE_VERSION}"
+          test "$(pnpm --version)" = "11.24.0"
+          node -e "const p=require('./package.json'); if (p.packageManager !== 'pnpm@11.24.0') process.exit(1)"
+
+      - name: Install dependencies from accepted lockfile
+        run: pnpm install --frozen-lockfile
+
+      - name: Resolve current Issue #15 contract digest
+        id: contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --retry 3 --retry-all-errors \
+            --header 'Accept: application/vnd.github+json' \
+            --header 'X-GitHub-Api-Version: 2022-11-28' \
+            'https://api.github.com/repos/miki-labs/lunowa-site/issues/15' \
+            --output "$RUNNER_TEMP/issue-15.json"
+
+          node <<'NODE'
+          const crypto = require('node:crypto');
+          const fs = require('node:fs');
+          const issue = JSON.parse(fs.readFileSync(`${process.env.RUNNER_TEMP}/issue-15.json`, 'utf8'));
+          if (
+            issue.number !== 15 ||
+            issue.html_url !== process.env.M15_CONTRACT_URL ||
+            typeof issue.body !== 'string' ||
+            issue.body.length === 0 ||
+            typeof issue.updated_at !== 'string'
+          ) {
+            throw new Error('Unable to resolve the canonical Issue #15 body');
+          }
+          const digest = crypto.createHash('sha256').update(issue.body, 'utf8').digest('hex');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `sha256=${digest}\nupdated_at=${issue.updated_at}\n`);
+          NODE
+
+      - name: Detect M15 application candidate
+        id: candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -f playwright.config.ts && -f tests/homepage.spec.ts ]] && compgen -G 'astro.config.*' >/dev/null && [[ -d src ]]; then
+            echo 'present=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'present=false' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Verify M15 scripts are declared
+        if: steps.candidate.outputs.present == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const pkg = require('./package.json');
+          for (const script of ['build', 'typecheck', 'lint', 'evidence']) {
+            if (!pkg.scripts?.[script]) {
+              throw new Error(`Missing required package script: ${script}`);
+            }
+          }
+          NODE
+
+      - name: Typecheck
+        if: steps.candidate.outputs.present == 'true'
+        run: pnpm run typecheck
+
+      - name: Lint
+        if: steps.candidate.outputs.present == 'true'
+        run: pnpm run lint
+
+      - name: Build
+        if: steps.candidate.outputs.present == 'true'
+        run: pnpm run build
+
+      - name: Install Playwright Chromium
+        if: steps.candidate.outputs.present == 'true'
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Run M15 browser evidence suite
+        if: steps.candidate.outputs.present == 'true'
+        run: pnpm run evidence
+
+      - name: Verify required browser evidence and write manifest
+        if: steps.candidate.outputs.present == 'true'
+        shell: bash
+        env:
+          REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          M15_CONTRACT_SHA256: ${{ steps.contract.outputs.sha256 }}
+          M15_CONTRACT_UPDATED_AT: ${{ steps.contract.outputs.updated_at }}
+        run: |
+          set -euo pipefail
+
+          expected=(
+            'desktop-1440x900.png'
+            'desktop-1280x800.png'
+            'desktop-full-page.png'
+            'tablet-768x1024.png'
+            'mobile-390x844.png'
+            'reflow-320.png'
+            'reflow-200-percent.png'
+          )
+
+          for file in "${expected[@]}"; do
+            test -s "evidence/$file" || {
+              echo "Missing required evidence file: $file" >&2
+              exit 1
+            }
+          done
+
+          test -s evidence/viewport-checks.json || {
+            echo 'Missing native viewport verification: evidence/viewport-checks.json' >&2
+            exit 1
+          }
+          test -s evidence/reflow-200-percent.json || {
+            echo 'Missing executable 200% reflow result: evidence/reflow-200-percent.json' >&2
+            exit 1
+          }
+
+          node <<'NODE'
+          const fs = require('node:fs');
+
+          const pngDimensions = (file) => {
+            const data = fs.readFileSync(file);
+            if (data.length < 24 || data.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a') {
+              throw new Error(`${file} is not a valid PNG`);
+            }
+            return { width: data.readUInt32BE(16), height: data.readUInt32BE(20) };
+          };
+
+          const exactDimensions = new Map([
+            ['desktop-1440x900.png', [1440, 900]],
+            ['desktop-1280x800.png', [1280, 800]],
+            ['tablet-768x1024.png', [768, 1024]],
+            ['mobile-390x844.png', [390, 844]],
+            ['reflow-320.png', [320, 844]],
+            ['reflow-200-percent.png', [640, 800]],
+          ]);
+
+          for (const [file, [width, height]] of exactDimensions) {
+            const actual = pngDimensions(`evidence/${file}`);
+            if (actual.width !== width || actual.height !== height) {
+              throw new Error(`${file} dimensions ${actual.width}x${actual.height}; expected ${width}x${height}`);
+            }
+          }
+
+          const fullPage = pngDimensions('evidence/desktop-full-page.png');
+          if (fullPage.width !== 1440 || fullPage.height < 900) {
+            throw new Error(`desktop-full-page.png dimensions ${fullPage.width}x${fullPage.height}; expected width 1440 and height >= 900`);
+          }
+
+          const expectedViewports = new Map([
+            ['desktop-1440x900', [1440, 900]],
+            ['desktop-1280x800', [1280, 800]],
+            ['tablet-768x1024', [768, 1024]],
+            ['mobile-390x844', [390, 844]],
+            ['reflow-320', [320, 844]],
+          ]);
+          const viewportEvidence = JSON.parse(fs.readFileSync('evidence/viewport-checks.json', 'utf8'));
+          if (!Array.isArray(viewportEvidence.viewports)) throw new Error('viewport-checks.json must contain a viewports array');
+          const byName = new Map(viewportEvidence.viewports.map((entry) => [entry.name, entry]));
+          for (const [name, [width, height]] of expectedViewports) {
+            const entry = byName.get(name);
+            if (!entry) throw new Error(`Missing viewport verification: ${name}`);
+            if (entry.width !== width || entry.height !== height) throw new Error(`Invalid viewport dimensions for ${name}`);
+            if (entry.horizontalOverflow !== false) throw new Error(`${name} reports horizontal overflow`);
+            if (typeof entry.scrollWidth !== 'number' || entry.scrollWidth > width) {
+              throw new Error(`${name} has invalid scrollWidth evidence`);
+            }
+          }
+
+          const result = JSON.parse(fs.readFileSync('evidence/reflow-200-percent.json', 'utf8'));
+          if (result.zoomPercent !== 200) throw new Error('200% evidence must declare zoomPercent=200');
+          if (result.method !== '1280px-to-640csspx-reflow-equivalent') {
+            throw new Error('200% evidence must use the documented deterministic reflow-equivalent method');
+          }
+          if (result.sourceViewportWidth !== 1280 || result.effectiveCssViewportWidth !== 640) {
+            throw new Error('200% reflow-equivalent viewport dimensions are invalid');
+          }
+          if (result.horizontalOverflow !== false) throw new Error('200% evidence reports horizontal overflow');
+          if (result.contentLoss !== false) throw new Error('200% evidence reports content loss');
+          NODE
+
+          node <<'NODE'
+          const fs = require('node:fs');
+          const screenshots = [
+            'desktop-1440x900.png',
+            'desktop-1280x800.png',
+            'desktop-full-page.png',
+            'tablet-768x1024.png',
+            'mobile-390x844.png',
+            'reflow-320.png',
+            'reflow-200-percent.png',
+          ];
+          const digest = process.env.M15_CONTRACT_SHA256;
+          if (!/^[0-9a-f]{64}$/.test(digest)) throw new Error('Invalid Issue #15 SHA-256 binding');
+          const manifest = {
+            schemaVersion: 1,
+            repository: process.env.REPOSITORY,
+            issue: 15,
+            pullRequest: Number(process.env.PR_NUMBER),
+            headSha: process.env.HEAD_SHA,
+            contract: {
+              digest: `sha256:${digest}`,
+              url: process.env.M15_CONTRACT_URL,
+              updatedAt: process.env.M15_CONTRACT_UPDATED_AT,
+              digestBasis: 'SHA-256 of the UTF-8 GitHub Issue #15 body fetched during this exact-head workflow run.',
+            },
+            screenshots,
+            viewportEvidence: 'viewport-checks.json',
+            reflowEvidence: {
+              file: 'reflow-200-percent.json',
+              method: '1280px-to-640csspx-reflow-equivalent',
+              rationale: 'Playwright has no native browser-zoom API; 200% layout reflow is deterministically qualified at the equivalent 640 CSS-pixel viewport from a 1280px desktop basis. The separate 320px case remains the stricter narrow-width reflow check.',
+            },
+            checks: {
+              install: 'PASS',
+              typecheck: 'PASS',
+              lint: 'PASS',
+              build: 'PASS',
+              browser: 'PASS',
+            },
+            authorityBoundary: 'M15 owner-review evidence only; not Product validation, M10 approval, production acceptance, deployment approval, or ACP G7 PASS.',
+          };
+          fs.writeFileSync('evidence/manifest.json', `${JSON.stringify(manifest, null, 2)}\n`);
+          NODE
+
+      - name: Upload exact-head browser evidence
+        if: steps.candidate.outputs.present == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: m15-browser-evidence-pr-${{ github.event.pull_request.number }}-${{ github.event.pull_request.head.sha }}
+          path: |
+            evidence/*.png
+            evidence/viewport-checks.json
+            evidence/reflow-200-percent.json
+            evidence/manifest.json
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Infrastructure-only candidate note
+        if: steps.candidate.outputs.present != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo 'M15 application scaffold is not present on this PR head.'
+          echo 'The browser proof path is installed but intentionally does not fabricate homepage evidence on the infrastructure-only branch.'
