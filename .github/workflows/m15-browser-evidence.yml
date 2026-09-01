@@ -18,6 +18,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: m15-browser-evidence-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 env:
   M15_CONTRACT_BINDING: 'issue-15@2026-09-01T15:17:54Z'
   M15_CONTRACT_URL: 'https://github.com/miki-labs/lunowa-site/issues/15'
@@ -34,16 +38,20 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
           persist-credentials: false
 
-      - name: Verify exact-head checkout
+      - name: Verify exact-head checkout and patch hygiene
         shell: bash
         env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
           EXPECTED_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           set -euo pipefail
           actual="$(git rev-parse HEAD)"
           test "$actual" = "$EXPECTED_HEAD_SHA"
+          git cat-file -e "${BASE_SHA}^{commit}"
+          git diff --check "$BASE_SHA" "$EXPECTED_HEAD_SHA"
 
       - name: Setup pinned pnpm and Node.js LTS
         uses: pnpm/setup@703c52620218391530e48b9e8870d5c0082e1b9b # v2.1.0
@@ -126,7 +134,7 @@ jobs:
 
           for file in "${expected[@]}"; do
             test -s "evidence/$file" || {
-              echo "Missing required evidence/evidence file: $file" >&2
+              echo "Missing required evidence file: $file" >&2
               exit 1
             }
           done
@@ -138,8 +146,7 @@ jobs:
 
           node <<'NODE'
           const fs = require('node:fs');
-          const path = 'evidence/reflow-200-percent.json';
-          const result = JSON.parse(fs.readFileSync(path, 'utf8'));
+          const result = JSON.parse(fs.readFileSync('evidence/reflow-200-percent.json', 'utf8'));
           if (result.zoomPercent !== 200) throw new Error('200% evidence must declare zoomPercent=200');
           if (result.horizontalOverflow !== false) throw new Error('200% evidence reports horizontal overflow');
           if (result.contentLoss !== false) throw new Error('200% evidence reports content loss');
