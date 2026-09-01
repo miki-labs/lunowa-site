@@ -30,3 +30,7 @@ Future/deferred independent-human validation support:
 Product本体のcanonical truthは `miki-thecat/lunowa` が所有します。
 
 Current marketing direction is **P — Product Proof Baseline**, selected by internal owner+AI comprehension-risk audit. This is not external user validation. Current execution status, M10 freeze requirements, reuse-first policy, semantic-token authority and ACP G7 implementation gate are routed through `docs/CURRENT.md`.
+
+## M15 local preview
+
+This isolated, reversible preview uses Astro + TypeScript + Tailwind CSS 4 and no client islands. With dependencies installed, run `npm run dev`, `npm run check`, and `npm run evidence`. See `docs/M15-VERIFICATION.md` for the required owner-review captures and the explicit non-production/G7 boundary.
