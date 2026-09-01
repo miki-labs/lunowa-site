@@ -23,7 +23,6 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  M15_CONTRACT_BINDING: 'issue-15@2026-09-01T15:17:54Z'
   M15_CONTRACT_URL: 'https://github.com/miki-labs/lunowa-site/issues/15'
   NODE_VERSION: '24.20.0'
 
@@ -92,6 +91,29 @@ jobs:
           }
           NODE
 
+      - name: Resolve current Issue #15 contract digest
+        if: steps.candidate.outputs.present == 'true'
+        id: contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error \
+            --header 'Accept: application/vnd.github+json' \
+            --header 'X-GitHub-Api-Version: 2022-11-28' \
+            'https://api.github.com/repos/miki-labs/lunowa-site/issues/15' \
+            --output "$RUNNER_TEMP/issue-15.json"
+
+          node <<'NODE'
+          const crypto = require('node:crypto');
+          const fs = require('node:fs');
+          const issue = JSON.parse(fs.readFileSync(`${process.env.RUNNER_TEMP}/issue-15.json`, 'utf8'));
+          if (issue.number !== 15 || typeof issue.body !== 'string' || issue.body.length === 0) {
+            throw new Error('Unable to resolve the canonical Issue #15 body');
+          }
+          const digest = crypto.createHash('sha256').update(issue.body, 'utf8').digest('hex');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `sha256=${digest}\nupdated_at=${issue.updated_at}\n`);
+          NODE
+
       - name: Typecheck
         if: steps.candidate.outputs.present == 'true'
         run: pnpm run typecheck
@@ -119,6 +141,8 @@ jobs:
           REPOSITORY: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          M15_CONTRACT_SHA256: ${{ steps.contract.outputs.sha256 }}
+          M15_CONTRACT_UPDATED_AT: ${{ steps.contract.outputs.updated_at }}
         run: |
           set -euo pipefail
 
@@ -163,6 +187,8 @@ jobs:
             'reflow-320.png',
             'reflow-200-percent.png',
           ];
+          const digest = process.env.M15_CONTRACT_SHA256;
+          if (!/^[0-9a-f]{64}$/.test(digest)) throw new Error('Invalid Issue #15 SHA-256 binding');
           const manifest = {
             schemaVersion: 1,
             repository: process.env.REPOSITORY,
@@ -170,9 +196,10 @@ jobs:
             pullRequest: Number(process.env.PR_NUMBER),
             headSha: process.env.HEAD_SHA,
             contract: {
-              binding: process.env.M15_CONTRACT_BINDING,
+              digest: `sha256:${digest}`,
               url: process.env.M15_CONTRACT_URL,
-              note: 'Binding identifies the reviewed Issue #15 contract version by issue number and GitHub updated_at timestamp.',
+              updatedAt: process.env.M15_CONTRACT_UPDATED_AT,
+              digestBasis: 'SHA-256 of the UTF-8 GitHub Issue #15 body fetched during this exact-head workflow run.',
             },
             screenshots,
             reflowEvidence: 'reflow-200-percent.json',
