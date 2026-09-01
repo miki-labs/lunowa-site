@@ -72,33 +72,7 @@ jobs:
       - name: Install dependencies from accepted lockfile
         run: pnpm install --frozen-lockfile
 
-      - name: Detect M15 application candidate
-        id: candidate
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [[ -f playwright.config.ts && -f tests/homepage.spec.ts ]] && compgen -G 'astro.config.*' >/dev/null && [[ -d src ]]; then
-            echo 'present=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'present=false' >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Verify M15 scripts are declared
-        if: steps.candidate.outputs.present == 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-          node <<'NODE'
-          const pkg = require('./package.json');
-          for (const script of ['build', 'typecheck', 'lint', 'evidence']) {
-            if (!pkg.scripts?.[script]) {
-              throw new Error(`Missing required package script: ${script}`);
-            }
-          }
-          NODE
-
       - name: Resolve current Issue #15 contract digest
-        if: steps.candidate.outputs.present == 'true'
         id: contract
         shell: bash
         run: |
@@ -124,6 +98,31 @@ jobs:
           }
           const digest = crypto.createHash('sha256').update(issue.body, 'utf8').digest('hex');
           fs.appendFileSync(process.env.GITHUB_OUTPUT, `sha256=${digest}\nupdated_at=${issue.updated_at}\n`);
+          NODE
+
+      - name: Detect M15 application candidate
+        id: candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -f playwright.config.ts && -f tests/homepage.spec.ts ]] && compgen -G 'astro.config.*' >/dev/null && [[ -d src ]]; then
+            echo 'present=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'present=false' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Verify M15 scripts are declared
+        if: steps.candidate.outputs.present == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const pkg = require('./package.json');
+          for (const script of ['build', 'typecheck', 'lint', 'evidence']) {
+            if (!pkg.scripts?.[script]) {
+              throw new Error(`Missing required package script: ${script}`);
+            }
+          }
           NODE
 
       - name: Typecheck
