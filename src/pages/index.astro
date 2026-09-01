@@ -1,0 +1,192 @@
+---
+import ProductStage from '../components/ProductStage.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Lunowa — M15 Preview"
+  description="返信待ち・資料待ちを、必要な結果が届くまで見守るLunowaの非本番ブラウザプレビュー"
+>
+  <a class="skip" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <a class="brand" href="#main" aria-label="Lunowa ホーム">Lunowa<span aria-hidden="true">.</span></a>
+    <nav aria-label="主要ナビゲーション">
+      <a href="#how-it-works">仕組み</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="button button-small" href="#early-access">先行アクセスに登録</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">返信待ち・資料待ちを、Lunowaが代わりに見守る。</p>
+        <h1 id="hero-title">メールを、確認し続けなくていい。</h1>
+        <p class="lead">必要な結果が届くまで見守り、あなたの対応が必要になった時だけ戻します。</p>
+        <a class="button" href="#early-access">先行アクセスに登録 <span aria-hidden="true">→</span></a>
+      </div>
+      <ProductStage />
+    </section>
+
+    <section class="editorial" aria-labelledby="problem-title">
+      <p class="section-kicker">確認し続ける負担</p>
+      <h2 id="problem-title">メールの負担は、読むことだけではありません。</h2>
+      <p>「あの件、どうなった？」を頭の片隅に置き続けること。見積書、資料、返答。必要な結果が届いたかを、何度も自分で確かめにいく負担があります。</p>
+    </section>
+
+    <section id="how-it-works" class="section" aria-labelledby="distinction-title">
+      <div class="section-heading">
+        <p class="section-kicker">返信 ≠ 完了</p>
+        <h2 id="distinction-title">返信が来ても、終わっていないことがある。</h2>
+        <p>返信の有無ではなく、待っていた結果が届いたかを見ます。同じ件を、途中で切らずに追い続けます。</p>
+      </div>
+
+      <div class="comparison" aria-label="途中の返信と必要な結果の比較">
+        <article class="state-card">
+          <p class="card-number">01 / 途中の返信</p>
+          <h3>返信は届いた</h3>
+          <blockquote>「社内確認中です。明日送ります。」</blockquote>
+          <p>新しい情報はある。でも、待っている見積書はまだ届いていません。</p>
+          <span class="state monitor"><span aria-hidden="true">✓</span> まだ、あなたの対応は不要</span>
+        </article>
+
+        <article class="state-card attention-card">
+          <p class="card-number">02 / 必要な結果</p>
+          <h3>見積書が届いた</h3>
+          <blockquote>「見積書を添付しました。ご確認ください。」</blockquote>
+          <p>待っていた結果が届いた。ここで初めて、金額と納期の確認が必要になります。</p>
+          <span class="state attention"><span aria-hidden="true">!</span> あなたの確認が必要です</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section monitoring" aria-labelledby="monitoring-title">
+      <div class="section-heading compact-heading">
+        <p class="section-kicker">静かな見守り</p>
+        <h2 id="monitoring-title">必要でない間は、Lunowaが見ています。</h2>
+      </div>
+      <div class="monitoring-proof">
+        <span class="large-check" aria-hidden="true">✓</span>
+        <div>
+          <h3>あなたは、確認しにいかなくていい。</h3>
+          <p>途中の返信で終わりにせず、待っていたものが届くまで、同じメールの文脈を見守り続けます。</p>
+          <p class="small-note">今は、あなたにすることはありません。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section two-column" aria-labelledby="attention-title">
+      <div class="section-heading">
+        <p class="section-kicker">必要なときだけ</p>
+        <h2 id="attention-title">必要になった時だけ、あなたに戻します。</h2>
+        <p>同じ件が、待っていた結果の到着によって初めて「今、見るべきこと」になります。</p>
+      </div>
+      <article class="return-alert">
+        <span class="state attention"><span aria-hidden="true">!</span> 確認が必要です</span>
+        <h3>見積書が届きました</h3>
+        <p>金額と納期を確認してください。</p>
+        <div class="attachment" aria-label="添付ファイル お見積書.pdf">
+          <span class="attachment-icon" aria-hidden="true">▧</span>
+          <div>
+            <strong>お見積書.pdf</strong>
+            <small>添付ファイル</small>
+          </div>
+          <span class="attachment-arrow" aria-hidden="true">↗</span>
+        </div>
+      </article>
+    </section>
+
+    <section id="source-context" class="section two-column" aria-labelledby="context-title">
+      <div class="section-heading">
+        <p class="section-kicker">戻るときの文脈</p>
+        <h2 id="context-title">戻ってきた時には、何が変わったかも分かる。</h2>
+        <p>新しく届いたものと、次に確認すること。元のメールへ戻る道筋まで、ひとつの件として残します。</p>
+      </div>
+      <article class="context-card">
+        <p class="ui-label">今の要点</p>
+        <dl>
+          <div><dt>変わったこと</dt><dd>見積書が届きました</dd></div>
+          <div><dt>確認すること</dt><dd>金額と納期</dd></div>
+          <div><dt>根拠</dt><dd>最新の返信と添付ファイル</dd></div>
+        </dl>
+        <a href="#source-preview-note">元のメールを Source で開く <span aria-hidden="true">↗</span></a>
+        <p id="source-preview-note" class="preview-inline-note">M15ではSource導線を静的に示しています。実メールボックスへの接続は行いません。</p>
+      </article>
+    </section>
+
+    <section class="section trust" aria-labelledby="trust-title">
+      <div class="section-heading">
+        <p class="section-kicker">Trust / Control</p>
+        <h2 id="trust-title">任せる。でも、決定権は渡さない。</h2>
+        <p>見守ることと、根拠なく確定することは別です。</p>
+      </div>
+
+      <div class="trust-rows">
+        <article>
+          <span class="row-number">01</span>
+          <div>
+            <h3>元のやりとりに戻れる</h3>
+            <p>判断の根拠は、Sourceへの導線から確認できる設計です。</p>
+          </div>
+          <a href="#source-context">Source を確認する <span aria-hidden="true">↗</span></a>
+        </article>
+        <article>
+          <span class="row-number">02</span>
+          <div>
+            <h3>不確かなことを、確定にしない</h3>
+            <p>返信や添付があっても、必要な結果が揃ったとは限りません。</p>
+          </div>
+        </article>
+        <article>
+          <span class="row-number">03</span>
+          <div>
+            <h3>起きていないことを、起きたことにしない</h3>
+            <p>外部での結果や判断を、根拠なく完了として扱いません。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="early-access" class="early-access" aria-labelledby="access-title">
+      <p class="section-kicker">先行アクセス</p>
+      <h2 id="access-title">Lunowaを、早く試したい方へ。</h2>
+      <p>このM15ブラウザプレビューでは、登録フォームや案内時期はまだ接続していません。</p>
+      <a class="button" href="#preview-note">先行アクセスに登録 <span aria-hidden="true">→</span></a>
+      <p id="preview-note" class="fine-print">これはデザイン確認用の非本番プレビューです。登録・送信・外部処理は発生しません。</p>
+    </section>
+
+    <section id="faq" class="faq section" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <p class="section-kicker">FAQ</p>
+        <h2 id="faq-title">よくある質問</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>どんなやりとりを見守るのですか？</summary>
+          <p>返信や資料など、待っている結果があるメール上のやりとりを、必要な文脈とともに見守ることを目指しています。</p>
+        </details>
+        <details>
+          <summary>返信が来たら、すぐに戻ってきますか？</summary>
+          <p>いいえ。返信が来たことだけでは、待っていた結果が届いたとは限りません。必要な結果が届き、あなたの対応が必要になった時に戻します。</p>
+        </details>
+        <details>
+          <summary>返信や添付があれば、自動で完了になりますか？</summary>
+          <p>なりません。返信や添付だけで、必要な結果や外部での完了を根拠なく確定しないことが、現在のProduct semanticsです。</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-title">
+      <p class="section-kicker">Lunowa</p>
+      <h2 id="final-title">必要になるまで、忘れていていい。</h2>
+      <p>返信待ち・資料待ちを、Lunowaが代わりに見守ります。</p>
+      <a class="button" href="#early-access">先行アクセスに登録 <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#main">Lunowa<span aria-hidden="true">.</span></a>
+    <p>M15 browser preview — not production, Product validation, M10 approval, or ACP G7 acceptance.</p>
+  </footer>
+</BaseLayout>
