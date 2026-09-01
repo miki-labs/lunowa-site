@@ -1,0 +1,202 @@
+name: M15 browser evidence
+
+on:
+  pull_request:
+    paths:
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'astro.config.*'
+      - 'src/**'
+      - 'tests/homepage.spec.ts'
+      - 'playwright.config.ts'
+      - 'docs/M10-VISUAL-AUTHORITY.md'
+      - 'docs/M10-RESPONSIVE-SPEC.md'
+      - 'docs/M10-TOKEN-CONTRACT.md'
+      - 'docs/tokens/**'
+      - '.github/workflows/m15-browser-evidence.yml'
+
+permissions:
+  contents: read
+
+env:
+  M15_CONTRACT_BINDING: 'issue-15@2026-09-01T15:17:54Z'
+  M15_CONTRACT_URL: 'https://github.com/miki-labs/lunowa-site/issues/15'
+  NODE_VERSION: '24.20.0'
+
+jobs:
+  browser-evidence:
+    name: Exact-head browser evidence
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout exact pull-request head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      - name: Verify exact-head checkout
+        shell: bash
+        env:
+          EXPECTED_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          actual="$(git rev-parse HEAD)"
+          test "$actual" = "$EXPECTED_HEAD_SHA"
+
+      - name: Setup pinned pnpm and Node.js LTS
+        uses: pnpm/setup@703c52620218391530e48b9e8870d5c0082e1b9b # v2.1.0
+        with:
+          runtime: node@${{ env.NODE_VERSION }}
+          require-lockfile: true
+
+      - name: Verify package-manager/runtime basis
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(node --version)" = "v${NODE_VERSION}"
+          test "$(pnpm --version)" = "11.24.0"
+          node -e "const p=require('./package.json'); if (p.packageManager !== 'pnpm@11.24.0') process.exit(1)"
+
+      - name: Detect M15 application candidate
+        id: candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -f playwright.config.ts && -f tests/homepage.spec.ts ]] && compgen -G 'astro.config.*' >/dev/null && [[ -d src ]]; then
+            echo 'present=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'present=false' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Verify M15 scripts are declared
+        if: steps.candidate.outputs.present == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const pkg = require('./package.json');
+          for (const script of ['build', 'typecheck', 'lint', 'evidence']) {
+            if (!pkg.scripts?.[script]) {
+              throw new Error(`Missing required package script: ${script}`);
+            }
+          }
+          NODE
+
+      - name: Typecheck
+        if: steps.candidate.outputs.present == 'true'
+        run: pnpm run typecheck
+
+      - name: Lint
+        if: steps.candidate.outputs.present == 'true'
+        run: pnpm run lint
+
+      - name: Build
+        if: steps.candidate.outputs.present == 'true'
+        run: pnpm run build
+
+      - name: Install Playwright Chromium
+        if: steps.candidate.outputs.present == 'true'
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Run M15 browser evidence suite
+        if: steps.candidate.outputs.present == 'true'
+        run: pnpm run evidence
+
+      - name: Verify required browser evidence and write manifest
+        if: steps.candidate.outputs.present == 'true'
+        shell: bash
+        env:
+          REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+
+          expected=(
+            'desktop-1440x900.png'
+            'desktop-1280x800.png'
+            'desktop-full-page.png'
+            'tablet-768x1024.png'
+            'mobile-390x844.png'
+            'reflow-320.png'
+            'reflow-200-percent.png'
+          )
+
+          for file in "${expected[@]}"; do
+            test -s "evidence/$file" || {
+              echo "Missing required evidence/evidence file: $file" >&2
+              exit 1
+            }
+          done
+
+          test -s evidence/reflow-200-percent.json || {
+            echo 'Missing executable 200% zoom/reflow result: evidence/reflow-200-percent.json' >&2
+            exit 1
+          }
+
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = 'evidence/reflow-200-percent.json';
+          const result = JSON.parse(fs.readFileSync(path, 'utf8'));
+          if (result.zoomPercent !== 200) throw new Error('200% evidence must declare zoomPercent=200');
+          if (result.horizontalOverflow !== false) throw new Error('200% evidence reports horizontal overflow');
+          if (result.contentLoss !== false) throw new Error('200% evidence reports content loss');
+          NODE
+
+          node <<'NODE'
+          const fs = require('node:fs');
+          const screenshots = [
+            'desktop-1440x900.png',
+            'desktop-1280x800.png',
+            'desktop-full-page.png',
+            'tablet-768x1024.png',
+            'mobile-390x844.png',
+            'reflow-320.png',
+            'reflow-200-percent.png',
+          ];
+          const manifest = {
+            schemaVersion: 1,
+            repository: process.env.REPOSITORY,
+            issue: 15,
+            pullRequest: Number(process.env.PR_NUMBER),
+            headSha: process.env.HEAD_SHA,
+            contract: {
+              binding: process.env.M15_CONTRACT_BINDING,
+              url: process.env.M15_CONTRACT_URL,
+              note: 'Binding identifies the reviewed Issue #15 contract version by issue number and GitHub updated_at timestamp.',
+            },
+            screenshots,
+            reflowEvidence: 'reflow-200-percent.json',
+            checks: {
+              install: 'PASS',
+              typecheck: 'PASS',
+              lint: 'PASS',
+              build: 'PASS',
+              browser: 'PASS',
+            },
+            authorityBoundary: 'M15 owner-review evidence only; not Product validation, M10 approval, production acceptance, deployment approval, or ACP G7 PASS.',
+          };
+          fs.writeFileSync('evidence/manifest.json', `${JSON.stringify(manifest, null, 2)}\n`);
+          NODE
+
+      - name: Upload exact-head browser evidence
+        if: steps.candidate.outputs.present == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: m15-browser-evidence-pr-${{ github.event.pull_request.number }}-${{ github.event.pull_request.head.sha }}
+          path: |
+            evidence/*.png
+            evidence/reflow-200-percent.json
+            evidence/manifest.json
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Infrastructure-only candidate note
+        if: steps.candidate.outputs.present != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo 'M15 application scaffold is not present on this PR head.'
+          echo 'The browser proof path is installed but intentionally does not fabricate homepage evidence on the infrastructure-only branch.'
