@@ -113,7 +113,13 @@ jobs:
           const crypto = require('node:crypto');
           const fs = require('node:fs');
           const issue = JSON.parse(fs.readFileSync(`${process.env.RUNNER_TEMP}/issue-15.json`, 'utf8'));
-          if (issue.number !== 15 || typeof issue.body !== 'string' || issue.body.length === 0) {
+          if (
+            issue.number !== 15 ||
+            issue.html_url !== process.env.M15_CONTRACT_URL ||
+            typeof issue.body !== 'string' ||
+            issue.body.length === 0 ||
+            typeof issue.updated_at !== 'string'
+          ) {
             throw new Error('Unable to resolve the canonical Issue #15 body');
           }
           const digest = crypto.createHash('sha256').update(issue.body, 'utf8').digest('hex');
