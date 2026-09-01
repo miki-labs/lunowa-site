@@ -1,0 +1,14 @@
+{
+  "name": "lunowa-m15-preview",
+  "version": "0.0.0-preview",
+  "private": true,
+  "description": "Static, non-production browser preview for Lunowa M15",
+  "scripts": {
+    "dev": "python3 -m http.server 4321",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
