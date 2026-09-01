@@ -12,7 +12,10 @@ on:
       - 'docs/M10-VISUAL-AUTHORITY.md'
       - 'docs/M10-RESPONSIVE-SPEC.md'
       - 'docs/M10-TOKEN-CONTRACT.md'
+      - 'docs/HOMEPAGE.md'
+      - 'docs/DESIGN.md'
       - 'docs/tokens/**'
+      - 'docs/visual-oracle/**'
       - '.github/workflows/m15-browser-evidence.yml'
 
 permissions:
@@ -56,7 +59,7 @@ jobs:
         uses: pnpm/setup@703c52620218391530e48b9e8870d5c0082e1b9b # v2.1.0
         with:
           runtime: node@${{ env.NODE_VERSION }}
-          require-lockfile: true
+          install: false
 
       - name: Verify package-manager/runtime basis
         shell: bash
@@ -65,6 +68,9 @@ jobs:
           test "$(node --version)" = "v${NODE_VERSION}"
           test "$(pnpm --version)" = "11.24.0"
           node -e "const p=require('./package.json'); if (p.packageManager !== 'pnpm@11.24.0') process.exit(1)"
+
+      - name: Install dependencies from accepted lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Detect M15 application candidate
         id: candidate
@@ -97,7 +103,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          curl --fail --silent --show-error \
+          curl --fail --silent --show-error --retry 3 --retry-all-errors \
             --header 'Accept: application/vnd.github+json' \
             --header 'X-GitHub-Api-Version: 2022-11-28' \
             'https://api.github.com/repos/miki-labs/lunowa-site/issues/15' \
@@ -164,7 +170,7 @@ jobs:
           done
 
           test -s evidence/reflow-200-percent.json || {
-            echo 'Missing executable 200% zoom/reflow result: evidence/reflow-200-percent.json' >&2
+            echo 'Missing executable 200% reflow result: evidence/reflow-200-percent.json' >&2
             exit 1
           }
 
@@ -172,6 +178,12 @@ jobs:
           const fs = require('node:fs');
           const result = JSON.parse(fs.readFileSync('evidence/reflow-200-percent.json', 'utf8'));
           if (result.zoomPercent !== 200) throw new Error('200% evidence must declare zoomPercent=200');
+          if (result.method !== '1280px-to-640csspx-reflow-equivalent') {
+            throw new Error('200% evidence must use the documented deterministic reflow-equivalent method');
+          }
+          if (result.sourceViewportWidth !== 1280 || result.effectiveCssViewportWidth !== 640) {
+            throw new Error('200% reflow-equivalent viewport dimensions are invalid');
+          }
           if (result.horizontalOverflow !== false) throw new Error('200% evidence reports horizontal overflow');
           if (result.contentLoss !== false) throw new Error('200% evidence reports content loss');
           NODE
@@ -202,7 +214,11 @@ jobs:
               digestBasis: 'SHA-256 of the UTF-8 GitHub Issue #15 body fetched during this exact-head workflow run.',
             },
             screenshots,
-            reflowEvidence: 'reflow-200-percent.json',
+            reflowEvidence: {
+              file: 'reflow-200-percent.json',
+              method: '1280px-to-640csspx-reflow-equivalent',
+              rationale: 'Playwright has no native browser-zoom API; 200% layout reflow is deterministically qualified at the equivalent 640 CSS-pixel viewport from a 1280px desktop basis. The separate 320px case remains the stricter narrow-width reflow check.',
+            },
             checks: {
               install: 'PASS',
               typecheck: 'PASS',
