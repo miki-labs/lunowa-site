@@ -1,0 +1,26 @@
+{
+  "name": "lunowa-m15-preview",
+  "version": "0.0.0-preview",
+  "private": true,
+  "description": "Static, non-production browser preview for Lunowa M15",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "typecheck": "astro check",
+    "lint": "eslint .",
+    "check": "npm run typecheck && npm run lint && npm run build",
+    "evidence": "playwright test"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@playwright/test": "^1.55.0",
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/node": "^22.18.0",
+    "astro": "^5.13.5",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2"
+  }
+}
