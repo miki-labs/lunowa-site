@@ -174,6 +174,10 @@ jobs:
             }
           done
 
+          test -s evidence/viewport-checks.json || {
+            echo 'Missing native viewport verification: evidence/viewport-checks.json' >&2
+            exit 1
+          }
           test -s evidence/reflow-200-percent.json || {
             echo 'Missing executable 200% reflow result: evidence/reflow-200-percent.json' >&2
             exit 1
@@ -181,6 +185,56 @@ jobs:
 
           node <<'NODE'
           const fs = require('node:fs');
+
+          const pngDimensions = (file) => {
+            const data = fs.readFileSync(file);
+            if (data.length < 24 || data.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a') {
+              throw new Error(`${file} is not a valid PNG`);
+            }
+            return { width: data.readUInt32BE(16), height: data.readUInt32BE(20) };
+          };
+
+          const exactDimensions = new Map([
+            ['desktop-1440x900.png', [1440, 900]],
+            ['desktop-1280x800.png', [1280, 800]],
+            ['tablet-768x1024.png', [768, 1024]],
+            ['mobile-390x844.png', [390, 844]],
+            ['reflow-320.png', [320, 844]],
+            ['reflow-200-percent.png', [640, 800]],
+          ]);
+
+          for (const [file, [width, height]] of exactDimensions) {
+            const actual = pngDimensions(`evidence/${file}`);
+            if (actual.width !== width || actual.height !== height) {
+              throw new Error(`${file} dimensions ${actual.width}x${actual.height}; expected ${width}x${height}`);
+            }
+          }
+
+          const fullPage = pngDimensions('evidence/desktop-full-page.png');
+          if (fullPage.width !== 1440 || fullPage.height < 900) {
+            throw new Error(`desktop-full-page.png dimensions ${fullPage.width}x${fullPage.height}; expected width 1440 and height >= 900`);
+          }
+
+          const expectedViewports = new Map([
+            ['desktop-1440x900', [1440, 900]],
+            ['desktop-1280x800', [1280, 800]],
+            ['tablet-768x1024', [768, 1024]],
+            ['mobile-390x844', [390, 844]],
+            ['reflow-320', [320, 844]],
+          ]);
+          const viewportEvidence = JSON.parse(fs.readFileSync('evidence/viewport-checks.json', 'utf8'));
+          if (!Array.isArray(viewportEvidence.viewports)) throw new Error('viewport-checks.json must contain a viewports array');
+          const byName = new Map(viewportEvidence.viewports.map((entry) => [entry.name, entry]));
+          for (const [name, [width, height]] of expectedViewports) {
+            const entry = byName.get(name);
+            if (!entry) throw new Error(`Missing viewport verification: ${name}`);
+            if (entry.width !== width || entry.height !== height) throw new Error(`Invalid viewport dimensions for ${name}`);
+            if (entry.horizontalOverflow !== false) throw new Error(`${name} reports horizontal overflow`);
+            if (typeof entry.scrollWidth !== 'number' || entry.scrollWidth > width) {
+              throw new Error(`${name} has invalid scrollWidth evidence`);
+            }
+          }
+
           const result = JSON.parse(fs.readFileSync('evidence/reflow-200-percent.json', 'utf8'));
           if (result.zoomPercent !== 200) throw new Error('200% evidence must declare zoomPercent=200');
           if (result.method !== '1280px-to-640csspx-reflow-equivalent') {
@@ -219,6 +273,7 @@ jobs:
               digestBasis: 'SHA-256 of the UTF-8 GitHub Issue #15 body fetched during this exact-head workflow run.',
             },
             screenshots,
+            viewportEvidence: 'viewport-checks.json',
             reflowEvidence: {
               file: 'reflow-200-percent.json',
               method: '1280px-to-640csspx-reflow-equivalent',
@@ -243,6 +298,7 @@ jobs:
           name: m15-browser-evidence-pr-${{ github.event.pull_request.number }}-${{ github.event.pull_request.head.sha }}
           path: |
             evidence/*.png
+            evidence/viewport-checks.json
             evidence/reflow-200-percent.json
             evidence/manifest.json
           if-no-files-found: error
