@@ -4,7 +4,7 @@ Status: **CURRENT EXECUTION CONTRACT — OWNER + AI ONLY**.
 
 This document replaces external-participant research as the current blocking M05 step because the active project team consists only of the Product owner and ChatGPT. It does **not** claim user validation and does not convert model simulation into participant evidence.
 
-Product truth remains in `miki-thecat/lunowa`.
+Product truth remains in `miki-labs/lunowa`.
 
 ## 1. Current constraint
 
@@ -52,7 +52,7 @@ Keep evidence classes explicit.
 
 Highest authority for what Lunowa is allowed to claim and show.
 
-Sources include current `miki-thecat/lunowa` Product/Responsibility/design contracts.
+Sources include current `miki-labs/lunowa` Product/Responsibility/design contracts.
 
 ### B. External research / current-market evidence
 

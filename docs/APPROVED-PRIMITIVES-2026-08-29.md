@@ -1,6 +1,8 @@
 # Lunowa Approved Web Primitives — 2026-08-29
 
-Status: implementation/design decision record. Re-check versions immediately before M20 execution. Product truth remains in `miki-thecat/lunowa`; this document does not grant Product semantics to any third-party library.
+> **Historical implementation input (2026-09-09):** accessibility/mechanics guidance remains useful, but old static-first visual defaults do not override current `DESIGN.md`, `MOTION.md`, or `ARCHITECTURE.md`.
+
+Status: implementation/design decision record. Re-check versions immediately before M20 execution. Product truth remains in `miki-labs/lunowa`; this document does not grant Product semantics to any third-party library.
 
 Read `docs/REUSE-STACK-AUDIT-2026-08-29.md` for the current evidence behind this decision.
 

@@ -1,132 +1,216 @@
-# Lunowa M10 Responsive Composition Spec — 2026-08-30
+# Lunowa M10 Responsive Composition Spec — 2026-09-09 Rebaseline
 
-Status: **M10 FREEZE CANDIDATE — behavior-level responsive authority**.
+Status: **frontier responsive design candidate; old P geometry is not frozen authority**.
 
-Read with `docs/visual-oracle/MANIFEST.md`, `docs/tokens/lunowa-m10.tokens.json`, and `docs/M10-VISUAL-AUTHORITY.md`.
+Read with `docs/DESIGN.md`, `docs/HOMEPAGE.md`, `docs/MOTION.md`, and `docs/M10-VISUAL-AUTHORITY.md`.
 
-Mobile is a semantic recomposition, not a scaled desktop screenshot.
+## 1. Responsive thesis
 
-## 1. Hard invariants at every width
+> **Preserve the idea, not the desktop coordinates.**
 
-Never remove merely to make the layout fit:
+Mobile, tablet and desktop may have materially different art direction, crop, Product staging and motion. They should feel like the same Lunowa world without forcing one layout to shrink across every viewport.
+
+## 2. Hard semantic invariants
+
+Across the complete responsive experience, preserve:
 
 - Lunowa/email category recognition;
-- category/mechanism cue near the broad H1;
-- primary CTA;
-- awaited outcome (`見積書`);
-- intermediate reply (`社内確認中です。明日送ります。`);
-- explicit no-action consequence;
-- continued-monitoring meaning;
-- material-outcome -> attention-required meaning in the story;
-- original Source path;
-- Trust/Control truth boundary;
-- final early-access CTA.
+- monitoring-offload promise;
+- canonical unresolved quotation story;
+- intermediate reply remains unresolved;
+- explicit no-current-action consequence;
+- continued monitoring;
+- later material outcome -> attention return;
+- return context / Source;
+- truthful CTA and Trust/Control boundaries.
 
-No horizontal scrolling at 320 CSS px.
+Not every invariant must occupy the first 390x844 viewport simultaneously. The first mobile viewport must, however, establish category/value and show or immediately lead into credible Product evidence.
 
-## 2. Wide desktop — >= 1280px
+## 3. Required verification widths
 
-Reference: `hero-desktop.svg` at 1440×900.
+At minimum evaluate:
 
-- page gutter 48px minimum;
-- Product stage max 1248px;
-- Hero H1 60/68;
-- centered Hero copy;
-- full Product sidebar + conversation + consequence + source/context rail may appear together;
-- lower comparison states may be side by side when each remains readable;
-- section vertical rhythm around 128px between major narrative jobs.
+- 1440 × 900;
+- 1280 × 800;
+- 1024-class desktop/tablet boundary;
+- 768 × 1024;
+- 390 × 844;
+- 320 CSS px reflow;
+- 200% text/reflow equivalent evidence where applicable.
 
-Do not stretch content beyond the frozen max widths merely because more screen is available.
+Use additional breakpoints based on actual composition failures, not a fixed framework taxonomy.
 
-## 3. Compact desktop — 1024–1279px
+## 4. Wide desktop
 
-- page gutter 32–48px;
-- Hero H1 52/60;
-- Product stage fills available content width up to max;
-- sidebar may narrow but must not squeeze primary conversation/status copy;
-- secondary metadata may move below the conversation rather than shrink text;
-- lower two-state comparison may remain two columns if each semantic card stays comfortably readable; otherwise stack before text becomes cramped.
+Wide desktop is the primary canvas for ambitious Hero art direction.
 
-## 4. Tablet / narrow — 768–1023px
+Allowed:
 
-- page gutter 32px;
-- Hero remains one vertical column: copy -> CTA -> Product proof;
-- do not introduce a left-copy/right-Product split merely because desktop references exist;
-- Product-stage desktop chrome is simplified:
-  - sidebar becomes secondary or disappears from the marketing projection;
-  - keep conversation title, awaited outcome, status consequence, latest reply and Source;
-- lower before/after state comparison stacks vertically by default;
-- Trust/Control rows become stacked label -> heading -> explanation -> action;
-- FAQ becomes one column;
-- no tiny multi-column Product dashboard.
+- full-bleed media;
+- asymmetric grid;
+- large overlapping Product window;
+- oversized editorial type;
+- sticky/canvas/video layers;
+- chapter/progress UI;
+- edge-to-edge background world;
+- visual elements extending beyond ordinary content max widths.
 
-## 5. Mobile — 390–767px
+Keep essential text within readable line lengths and key controls away from unsafe viewport edges.
 
-References:
+## 5. Compact desktop / tablet landscape
 
-- `hero-mobile.svg` at 390×844;
-- `product-story-mobile.svg` at 390×1120.
+Do not wait until text becomes cramped to change composition.
 
-- page gutter 20px;
-- Hero 40/48;
-- brand + primary CTA remain visible without requiring a menu;
-- category cue -> H1 -> support -> CTA -> Product proof;
-- Product proof uses one focused card, not desktop app chrome;
-- intermediate and attention-required states are shown as explicit vertical steps in lower story;
-- minimum control target should approach ordinary touch-target guidance; implementation acceptance handles exact browser hit areas;
-- Source action remains textually explicit;
-- section gap around 88px.
+Potential adaptations:
 
-## 6. Narrow mobile — 320–389px
+- scale/crop brand art independently from Product UI;
+- move Product evidence below/over copy;
+- simplify secondary Product chrome;
+- reduce simultaneous layers;
+- switch from multi-column Product UI to a focused evidence state;
+- shorten/pause heavy ambient visual systems when device capability warrants it.
 
-- page gutter remains 20px unless a reviewed 16px exception is required for a specific control; do not go lower by default;
-- Hero may use 36/44;
-- CTA may become full-width when this prevents awkward wrapping;
-- avoid two visible header navigation links; use only brand + primary action, with a simple disclosure menu only if destinations require it;
-- Product card width = viewport minus gutters;
-- status text may wrap to multiple lines but stays >= the accepted UI/body sizes;
-- attachment/action controls stack instead of compressing horizontally;
-- state comparison is always vertical;
-- trust actions and FAQ rows remain one column;
-- no 10–11px essential semantic text solely to preserve desktop geometry.
+## 6. 768/tablet portrait
 
-## 7. Typography/reflow rules
+Tablet is not required to preserve the wide Hero split.
 
-- do not truncate H1/category/mechanism copy;
-- avoid manual line breaks that only work in Japanese desktop unless equivalent responsive rules exist;
-- Japanese should wrap naturally at phrase boundaries where practical;
-- future English strings may occupy more lines; solve through height/reflow, not text shrinking;
-- 200% zoom/reflow behavior is implementation acceptance, not optional polish.
+Prefer a deliberate composition such as:
 
-## 8. Product UI prioritization order
+```text
+brand/copy
+-> primary action
+-> signature art / Product stage
+-> chapter continuation
+```
 
-When space is constrained, preserve in this priority order:
+or an intentionally layered alternative.
 
-1. awaited outcome;
-2. no-action / attention-required consequence;
-3. latest material source evidence;
-4. continued monitoring / next meaning;
-5. Source action;
+Avoid a miniature unreadable desktop Product window.
+
+## 7. Mobile 390-class
+
+Mobile must be separately art-directed.
+
+Possible mobile language:
+
+- strong vertical typography;
+- cropped/zoomed signature illustration;
+- one focused Product evidence card/state;
+- chapter dots/progress rather than wide nav;
+- simplified ambient motion;
+- explicit vertical state transitions;
+- touch-driven Product demo instead of hover;
+- static poster in reduced-motion/data-constrained path.
+
+The Hero does not need to show every desktop layer. It must still feel premium and intentional rather than like a stack produced by media queries.
+
+## 8. Narrow mobile 320-class
+
+Hard requirements:
+
+- no horizontal page scroll;
+- no essential 10–11px text to preserve desktop geometry;
+- controls remain comfortably targetable;
+- Product evidence remains legible;
+- copy may gain lines rather than shrink excessively;
+- layered art may crop/simplify/reposition;
+- navigation may collapse into the smallest truthful pattern required by actual destinations.
+
+Use 16–20px page gutters as the composition requires; do not treat a specific old gutter value as sacred.
+
+## 9. Responsive Product UI
+
+When Product UI cannot remain fully legible, preserve in this semantic priority:
+
+1. awaited outcome / matter identity;
+2. latest relevant evidence;
+3. explicit current consequence (`あなたの対応はまだ必要ありません` or attention return);
+4. continued-monitoring / why-now meaning;
+5. Source path;
 6. counterparty/context;
-7. ordinary app chrome;
-8. secondary navigation/metadata.
+7. secondary metadata;
+8. ordinary navigation chrome.
 
-Remove/simplify 7–8 before weakening 1–5.
+Simplify or restage 7–8 before weakening 1–5.
 
-## 9. Interaction/hydration rule
+Desktop sidebars/navigation are marketing staging, not sacred Product truth.
 
-Responsive layout alone does not justify a React island.
+## 10. Art-directed assets
 
-Use CSS/Astro layout for static reflow. Hydrate only controls with real interaction needs such as an accepted disclosure menu or Product demonstration.
+Do not rely on one raster crop for every device when that damages the composition.
 
-## 10. Visual-regression acceptance targets
+Use where appropriate:
 
-Implementation should capture at least:
+- `<picture>` / responsive image sources;
+- separate mobile/desktop generated art crops;
+- alternate poster frames;
+- different video encodes;
+- SVG/vector responsive composition;
+- Rive responsive layout;
+- canvas scene parameters based on viewport/capability.
 
-- 1440×900;
-- 1280×800;
-- ~768×1024;
-- 390×844;
-- 320px width reflow.
+Document whether variants are crops of one source or materially different artwork.
 
-Compare semantic presence/readability, not just pixel similarity across inherently different compositions.
+## 11. Motion responsiveness
+
+Motion may vary by viewport and input mode.
+
+Desktop can use hover, larger parallax, pointer depth or long sticky sequences when justified.
+
+Mobile should prefer:
+
+- touch-safe interactions;
+- shorter visual travel;
+- fewer simultaneously moving layers;
+- lower GPU/media cost;
+- no required hover semantics;
+- no scroll trap.
+
+Reduced-motion is independent from screen size and must be respected everywhere.
+
+## 12. Capability/performance adaptation
+
+A high-end desktop effect must not force the same runtime burden onto every phone.
+
+Where useful, adapt based on:
+
+- viewport;
+- reduced-motion;
+- coarse pointer/touch;
+- page visibility/intersection;
+- reasonable runtime capability signals.
+
+Avoid brittle device-model detection.
+
+## 13. Typography and localization
+
+- Japanese copy may have art-directed line breaks at a specific accepted reference viewport;
+- those breaks must be re-evaluated at other widths;
+- no global `<br>` should create obviously bad English/localized layouts later;
+- longer strings expand/reflow instead of shrinking below readable size;
+- display typography can change scale dramatically between mobile/desktop;
+- body/Product UI readability remains stable.
+
+## 14. Visual regression philosophy
+
+Do not expect pixel identity between viewport classes.
+
+For each accepted viewport, create its own visual oracle/reference and evaluate:
+
+- composition;
+- hierarchy;
+- brand continuity;
+- Product semantics;
+- text fit;
+- asset crop;
+- motion state/poster;
+- no overlap/clipping/overflow;
+- interaction reachability.
+
+Pixel/perceptual comparison is valid against the **same viewport's accepted reference**, not against a scaled desktop screenshot.
+
+## 15. Freeze rule
+
+Responsive geometry/tokens freeze only after the owner has accepted at least representative wide desktop and mobile browser compositions of the winning art direction.
+
+A strong desktop Hero with a generic/broken mobile stack cannot close M10.

@@ -1,5 +1,7 @@
 # Lunowa Reuse Component Shortlist — 2026-08-29
 
+> **Historical input (2026-09-09):** component examples remain discovery references only. Their old Quiet Product Proof / centered-shell fit is not current design authority.
+
 Status: curated implementation/design shortlist. References are candidates, not automatically approved code. Re-check source/version/license immediately before copying code.
 
 Read `docs/REUSE-STACK-AUDIT-2026-08-29.md` and `docs/APPROVED-PRIMITIVES-2026-08-29.md` first.

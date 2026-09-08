@@ -1,153 +1,170 @@
 # Lunowa Marketing Visitor Journey
 
-Status: canonical user-centered marketing contract, 2026-08-30.
+Status: **canonical visitor-comprehension contract, rebaselined 2026-09-09**.
 
-This document constrains how the homepage should be understandable to a first-time visitor. It does not define Product semantics; Product truth remains in `miki-thecat/lunowa`.
+This document constrains what a first-time visitor should understand. It does **not** prescribe one visual template and does not define Product semantics. Product truth remains in `miki-labs/lunowa`.
 
-Current limitation: there is no independent first-time visitor evidence yet. The current P direction is internally audited/owner-selected, not user validated.
+Current limitation: there is still no independent first-time visitor evidence. The 2026-09-09 design direction is owner-directed/internal authority, not `user validated`.
 
-## 1. Primary design objective
+## 1. Primary visitor outcome
 
-The homepage exists to help a first-time visitor build the correct mental model of Lunowa with minimal cognitive effort.
+A new visitor should form approximately this mental model:
+
+> **Lunowa watches unfinished email-related matters for me and brings them back when I actually need to act, so I do not have to keep checking myself.**
 
 The visitor should not need internal terms such as `Managed`, `Needs You`, `Moment`, `Responsibility`, or `Attention Delegation` before understanding the value.
 
 Target sequence:
 
-`correct Product comprehension -> relevance -> trust -> qualified early access`.
+`correct Product comprehension + memorable brand impression -> relevance -> trust -> qualified action`.
 
-## 2. First-visit question sequence
+Visual memorability and comprehension are complementary goals, not a forced tradeoff.
 
-The page should answer, in order:
+## 2. First-visit questions
 
-1. **What is this?**
-2. **What does it do for me?**
-3. **Is this a problem I actually have?**
-4. **How is it different from reminders, reply tracking, inbox organization, or generic AI email?**
-5. **Can I really stop checking without missing something important?**
-6. **When Lunowa brings something back, will I understand why and what to do?**
-7. **Can I trust it with email-related work?**
-8. **What can I do next right now?**
+Across the first viewport and immediate page journey, answer:
 
-The homepage order should follow this visitor sequence rather than the internal ontology.
+1. **What territory is this?** — email / communication work.
+2. **What does Lunowa remove from my burden?** — repeated monitoring of unresolved outcomes.
+3. **What is different?** — reply arrival is not automatically outcome completion or user attention.
+4. **Can I actually leave it alone?** — Lunowa stays quiet while the user is not needed.
+5. **When does it return?** — when material evidence/time makes attention genuinely necessary.
+6. **Will I know why?** — enough context, attachment/evidence and Source return with it.
+7. **Can I trust/control it?** — Source and uncertainty boundaries remain visible.
+8. **What can I truthfully do next?** — current approved CTA/availability only.
 
-## 3. Target first-impression mental model
+The exact visual order may be art-directed. These questions must still be answered without requiring the visitor to decode internal ontology.
 
-The intended first-time interpretation is approximately:
+## 3. Material wrong mental models
 
-> Lunowa watches unfinished email-related matters for me and brings them back when I actually need to act, so I do not have to keep checking myself.
+Reject a candidate that strongly suggests Lunowa is primarily:
 
-Material wrong models include:
-
-- generic AI email writer;
-- inbox cleaner / inbox-zero tool;
+- a generic AI email writer;
+- inbox cleaner / Inbox Zero tool;
 - notification muter;
-- simple reminder/no-reply tracker;
+- simple reminder / no-reply tracker;
 - automatic follow-up sender;
 - generic task manager/productivity tool;
-- autonomous agent that takes over email decisions.
+- autonomous agent that takes over email decisions;
+- a decorative AI brand with no concrete Product behavior.
 
-This is currently a **design oracle**, not measured user evidence.
+This remains a design oracle until independent visitor evidence exists.
 
-## 4. Selected Hero direction
+## 4. First-screen contract
 
-Current selected direction after internal M05 audit: **P — Product Proof Baseline**.
+There is **no selected Hero template** in this document.
 
-### 4.1 Category recognition
+The first viewport or first short interaction must establish:
 
-The first viewport must visibly establish email/communication territory.
+- Lunowa brand/product signal;
+- email/communication territory;
+- the monitoring-offload promise;
+- one clear primary action;
+- enough credible Product evidence or immediate continuation that the promise does not read as abstract lifestyle branding.
 
-Use believable email/Product evidence rather than abstract symbols as primary proof.
+Allowed forms include art-directed full-bleed illustration/video, asymmetric editorial composition, layered Product UI, Product-native interactive demo, or a hybrid.
 
-### 4.2 Promise
+A generated/illustrated world may be visually dominant if the Product category and value stay clear.
 
-Current H1:
+## 5. Current public-language direction
+
+Strong current H1 candidate:
 
 > **メールを、確認し続けなくていい。**
 
-Because this line is too broad alone, keep a nearby category/mechanism cue such as:
+Useful mechanism cue:
 
 > **返信待ち・資料待ちを、Lunowaが代わりに見守る。**
 
-Exact copy remains revisable; it is not externally validated.
+Support direction:
 
-### 4.3 Product proof
+> **必要な結果が届くまで見守り、あなたの対応が必要になった時だけ戻します。**
 
-Hero should show one concrete unresolved email scenario:
+These are owner-controlled copy candidates, not externally validated constants. A future candidate may improve the wording if it preserves or strengthens truth/category clarity.
 
-1. user asks for a quotation;
-2. Lunowa shows that the quotation is being watched;
-3. counterparty replies `社内確認中です。明日送ります。`;
-4. quotation is still missing;
-5. Lunowa explicitly shows `あなたの対応はまだ必要ありません` and continues monitoring;
-6. later the quotation arrives;
-7. only then does the matter return as needing user attention with context/Source.
+## 6. Canonical concrete proof
 
-The static frame must make sense before motion.
+Use one unresolved communication matter as the visitor's anchor:
 
-## 5. Concrete example before abstraction
+```text
+User: 「金曜までに見積書をお願いします。」
+-> Lunowa monitors the quotation outcome.
 
-Do not lead with an internal state diagram such as:
+Counterparty: 「社内確認中です。明日送ります。」
+-> evidence changed;
+-> quotation still missing;
+-> user action still unnecessary;
+-> Lunowa continues monitoring quietly.
 
-`request -> Managed -> reply -> still Managed -> Needs You -> Moment`.
+Later: usable quotation arrives.
+-> user review becomes necessary;
+-> attention returns;
+-> what changed / what to check / attachment / Source are restored.
+```
 
-Show actual email/request/Product response first. Internal labels may appear only after user meaning is clear.
+The most important insight is the **non-escalation after the intermediate reply**.
 
-## 6. Motion role
+A reply happened, but the user still does not need to care yet.
 
-Motion is **not required** for baseline Product comprehension.
+## 7. Concrete before internal abstraction
 
-The internal M05 audit determined that static evidence already represents:
+Do not require a visitor to interpret an internal state-machine diagram such as:
 
-`intermediate reply -> still no user action required -> material outcome -> attention required`.
+`Managed -> Needs You -> Moment`.
 
-Later motion may reinforce object continuity or temporal change, but:
+Actual communication/evidence and user consequence should make the meaning clear first. Internal labels may appear as authentic Product UI after their meaning is obvious.
 
-- first still frame must be meaningful;
-- information must remain complete with motion suppressed;
-- reduced-motion path must be equivalent;
-- no permanent loop may be required for comprehension;
-- motion may not imply unsupported Product semantics.
+## 8. Motion and temporal comprehension
 
-## 7. Homepage narrative by visitor question
+Motion may be a major part of the brand/Product story.
 
-### H01 — What is this / what does it do?
+It is especially useful for:
 
-Hero promise + category cue + dominant real-looking Product proof.
+- object continuity of the same unresolved matter;
+- time passing safely while monitoring is delegated;
+- intermediate evidence arriving without escalating user attention;
+- the later moment attention genuinely returns;
+- context/Source resolving into view.
 
-### H02 — Is this my problem?
+However, `prefers-reduced-motion` / static presentation must expose equivalent information through explicit stable states.
 
-> **メールの負担は、読むことだけではありません。**
+The rule is **meaning survives without motion**, not **motion must remain optional decoration**.
 
-Explain the mental burden of repeatedly wondering whether a quotation, contract, approval, payment confirmation, or answer actually arrived.
+## 9. Page journey by visitor need
 
-This preserves the useful insight from the retired E Hero without maintaining a second acquisition architecture.
+These are story jobs rather than mandatory rectangular sections.
 
-### H03 — How is this different?
+### J01 — Recognize the burden
+
+> **メールを、確認し続けなくていい。**
+
+Make repeated mental checking/self-monitoring recognizable.
+
+### J02 — Understand the distinction
 
 > **返信が来ても、終わっていないことがある。**
 
-Show an intermediate reply while the requested outcome remains unresolved.
+Show the intermediate reply while the requested outcome remains unresolved.
 
-### H04 — Can I leave it alone?
+### J03 — Feel safe leaving it alone
 
 > **必要でない間は、Lunowaが見ています。**
 
-Show what the user can stop checking, not just an internal `Managed` label.
+This is the emotional center of the Product. The visual world may express calm passage of time here.
 
-### H05 — Will I miss something important?
+### J04 — See attention return
 
 > **必要になった時だけ、あなたに戻します。**
 
-Show the same matter becoming attention-worthy when material evidence changes the situation.
+Show the same matter becoming attention-worthy when material evidence changes.
 
-### H06 — Will I know what changed and what to do?
+### J05 — Recover context
 
 > **戻ってきた時には、何が変わったかも分かる。**
 
-Show the material change, remaining action, attachment/source and original communication path.
+Show why-now, remaining action, attachment/evidence and Source.
 
-### H07 — Can I trust it?
+### J06 — Establish trust/control
 
 > **任せる。でも、決定権は渡さない。**
 
@@ -155,78 +172,86 @@ Translate architecture into user consequences:
 
 - original Source remains reachable;
 - uncertainty does not become fake certainty;
-- reply/attachment/send/read/silence do not automatically prove outcome closure;
-- no external effect is implied when it did not occur;
-- monitoring degradation is communicated truthfully.
+- reply/attachment/send/read/silence do not automatically prove closure;
+- external effects are not implied when they did not occur;
+- degraded monitoring is communicated truthfully.
 
-### H08 — Can I use it now?
-
-State only current availability/provider/language truth.
-
-### H09 — What else do I need to know?
-
-Use FAQ only for material objections.
-
-### H10 — What should I do now?
+### J07 — Truthful next action
 
 > **必要になるまで、忘れていていい。**
 
-Keep final CTA behavior consistent with Hero.
+State only current availability/provider/language/CTA truth.
 
-## 8. Scanning contract
+FAQ is optional if the narrative already resolves the material objections.
 
-Major headings should carry the story even when body copy is skipped.
+## 10. Scanning contract
 
-One section = one visitor question/job.
+If motion is paused and body copy is mostly skipped, major text and Product evidence should still recover the story.
 
-Avoid repetitive slogans, card walls and decorative visuals that require more interpretation than the Product itself.
+Representative progression:
 
-## 9. Visual comprehension rules
+```text
+メールを、確認し続けなくていい。
+返信が来ても、終わっていないことがある。
+必要でない間は、Lunowaが見ています。
+必要になった時だけ、あなたに戻します。
+戻ってきた時には、何が変わったかも分かる。
+任せる。でも、決定権は渡さない。
+必要になるまで、忘れていていい。
+```
 
-- one dominant idea per viewport/section;
-- Product UI is primary proof where behavior is explained;
-- familiar software-site grammar is useful when it reduces orientation cost;
-- avoid generic AI visual vocabulary: orb, neon network, purple-blue glow, floating dashboard, icon conveyor, meaningless 3D;
-- brand distinctiveness should come first from typography, spacing, Product behavior, restrained color, copy and interaction timing.
+Do not preserve this as a rigid heading count if a clearer/art-directed version communicates the same mental model.
 
-## 10. Current pre-freeze evidence boundary
+## 11. Brand-world role
 
-Current blocking evidence before M10 is the completed internal audit:
+A distinctive visual world is allowed and encouraged when it improves recognition/memory without obscuring the Product.
 
-- `docs/M05-INTERNAL-COMPREHENSION-AUDIT.md`
-- `docs/M05-INTERNAL-AUDIT-RESULT-2026-08-30.md`
+Current exploration seed includes moon/rabbit/night-to-dawn atmosphere. Possible meaning:
 
-It selected P and recorded known wrong-model risks.
+- night / moon = unresolved time safely outside active attention;
+- rabbit/guide = quiet stewardship;
+- dawn/light = deliberate return of attention;
+- horizon/mist/water = temporal continuity.
 
-Because the active team has no independent first-time participants:
+These are hypotheses for design exploration, not Product facts or mandatory metaphors.
 
-- owner self-test is not treated as first-time evidence;
-- ChatGPT/persona simulation is not user evidence;
-- M10 may proceed from internal audit + owner decision;
-- external independent validation is deferred until real visitors/beta users/traffic exist.
+The visitor should remember the **idea of quiet stewardship**, not merely `there was a moon on the site`.
 
-Future external protocol lives in `docs/FIRST-IMPRESSION-VALIDATION.md`.
+## 12. Pre-freeze evidence boundary
 
-## 11. Evidence hierarchy
+Historical M05 P/E internal audit remains useful evidence about wrong-model risks, but its selection of P as a visual architecture was explicitly superseded by the Product owner's 2026-09-09 rebaseline decision.
+
+Current authority may proceed from:
+
+- Product truth;
+- dated external design/method research;
+- owner design judgment;
+- real-browser evidence;
+- accessibility/performance/responsive checks.
+
+Still do not claim `users understood`, `tested with users`, or `user validated` without independent evidence.
+
+Future external protocol remains `docs/FIRST-IMPRESSION-VALIDATION.md` unless superseded.
+
+## 13. Evidence hierarchy
 
 When evidence conflicts, distinguish:
 
-1. Product truth / safety / current capability constraints;
-2. direct independent user evidence, **when it actually exists**;
-3. current internal structured audit + owner decision;
-4. controlled/peer-reviewed HCI evidence;
-5. established UX/accessibility standards;
-6. current high-quality industry examples;
-7. designer/model preference.
+1. Product truth / safety / actual current capability;
+2. direct independent visitor evidence when it exists;
+3. owner design authority + current browser evidence;
+4. controlled/peer-reviewed HCI/accessibility evidence;
+5. current high-quality industry/reference evidence;
+6. model/designer preference.
 
-Do not manufacture level 2 from level 3 or 7.
+Visual fashion never overrides Product truth. Historical internal P preference never automatically overrides a later explicit owner design rebaseline.
 
-## 12. Success condition
+## 14. Success condition
 
-The homepage succeeds when a real visitor's eventual mental model becomes simple and accurate, not when the page has the most features, animation or novelty.
+The desired eventual visitor reaction remains approximately:
 
-Desired eventual visitor reaction:
+> **「自分が何度もメールを確認しなくても、Lunowaが見ていて、本当に自分が必要な時だけ戻してくれるんだ。」**
 
-> `あ、自分が何度もメールを確認しなくても、Lunowaが見ていて、本当に自分が必要な時だけ戻してくれるんだ。`
+A second desired outcome is that the visual world itself is recognizably Lunowa rather than interchangeable with another AI/SaaS site.
 
-Until independent evidence exists, this remains the target comprehension oracle rather than a measured result.
+Until independent evidence exists, both remain target design/comprehension outcomes rather than measured facts.

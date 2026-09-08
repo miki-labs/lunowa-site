@@ -1,5 +1,7 @@
 # Lunowa Reuse Stack Audit — 2026-08-29
 
+> **Historical research input (2026-09-09):** re-check versions and current accepted art-direction needs before reuse. Static-first conclusions here are not current visual authority.
+
 Status: dated evidence/audit supplement for reuse-first design and implementation. This file is not Product authority. Re-check vendor versions/licensing immediately before M20 implementation.
 
 ## Executive conclusion

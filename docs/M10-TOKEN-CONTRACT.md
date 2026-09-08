@@ -1,257 +1,194 @@
-# Lunowa M10 Semantic Token Contract
+# Lunowa M10 Token Contract — 2026-09-09 Rebaseline
 
-Status: **M10 EXACT TOKEN VALUES FROZEN — implementation projection pending M20**.
+Status: **exact aesthetic values UNFROZEN pending owner-selected art direction**.
 
-Machine-readable source:
+The previous 2026-08-30 exact aesthetic token freeze is historical evidence, not current visual authority.
 
-- `docs/tokens/lunowa-m10.tokens.json`
+Product truth remains in `miki-labs/lunowa`.
 
-Product truth remains in `miki-thecat/lunowa`. These tokens are visual authority only.
+## 1. Purpose
 
-The source follows the DTCG 2025.10 model for color/dimension/font/duration tokens where practical and must be deterministically projectable into Tailwind CSS 4/CSS custom properties without requiring Figma, Framer, Webflow, Relume or another hosted tool.
+Tokens should encode an accepted design system after the visual direction is good enough. They must not make a weak direction difficult to escape.
 
-## 1. Design character
+New sequence:
 
-Current visual character is **Quiet Product Proof**:
+```text
+Product-semantic boundaries
+-> visual exploration
+-> owner browser/Figma selection
+-> derive tokens from winner
+-> DTCG-compatible token freeze
+-> code projection
+```
 
-- warm near-white page;
-- deep-neutral typography;
-- restrained cobalt link/category accent;
-- calm green monitoring semantics;
-- restrained amber attention-required semantics;
-- red reserved for genuine integrity/error states;
-- borders before shadows;
-- restrained radius;
-- Japanese-first readable typography;
-- Product UI as the primary visual proof.
+The existing `docs/tokens/lunowa-m10.tokens.json` remains the old P candidate token source until replaced. New design work must not treat its aesthetic values as mandatory.
 
-No generic dark/purple/glow/orb/3D AI-SaaS palette is part of the token authority.
+## 2. What remains invariant during exploration
 
-## 2. Color authority
+### Semantic state separation
 
-### Surfaces
+The page must keep these meanings visually and textually distinguishable:
 
-- `color.surface.page` = `#F8F8F5`
-- `color.surface.subtle` = `#F1F2EE`
-- `color.surface.product` = `#FFFFFF`
+- **monitoring / no current user action**;
+- **attention required**;
+- **integrity/error/degraded monitoring**.
 
-### Text
+Color never carries state alone.
 
-- `color.text.primary` = `#181817`
-- `color.text.secondary` = `#686864`
-- `color.text.tertiary` = `#777772`
+Exact hues are not frozen. Brand atmosphere and Product state colors may be harmonized after the winning direction is selected, provided contrast/meaning remain clear and Product semantics are not changed.
 
-### Borders
+### Accessibility
 
-- `color.border.subtle` = `#D8D8D2`
-- `color.border.strong` = `#B8B8B0`
+Final text/control/state combinations target WCAG 2.2 AA in rendered browser evidence.
 
-### Actions
+### Focus
 
-- primary action = `#181817`
-- primary hover = `#2A2A28`
-- link/category accent = `#355F91`
-- link hover = `#2B4F7C`
-- focus ring = `#355F91`
+Visible keyboard focus is mandatory. Exact focus color/shape may follow the final visual system as long as it remains clearly perceivable.
 
-### Monitoring state
+## 3. DTCG format
 
-Meaning: Lunowa is still watching; user attention is not currently required.
+Use DTCG stable 2025.10 as the preferred final interchange model where practical.
 
-- background `#EDF6F1`
-- foreground `#3D6D58`
-- border `#C8DED3`
+The final token source should remain deliberately small for a single marketing site. Do not build an enterprise design-token platform.
 
-### Attention-required state
+Likely final groups:
 
-Meaning: material evidence now requires user attention/action.
+```text
+color.brand.*
+color.surface.*
+color.text.*
+color.state.monitoring.*
+color.state.attention.*
+color.state.integrity.*
+type.display.*
+type.body.*
+space.*
+size.content.*
+radius.*
+shadow.*
+motion.duration.*
+motion.ease.*
+focus.*
+```
 
-- background `#FFF5E8`
-- foreground `#8A571C`
-- border `#E8D1B1`
+Only create tokens for real repeated decisions.
 
-### Integrity/error state
+## 4. Brand palette exploration
 
-Meaning: monitoring/runtime/evidence integrity cannot safely support the normal promise or a genuine error exists.
+Current direction seed, not frozen values:
 
-- background `#FFF0F0`
-- foreground `#9B3F3F`
-- border `#E7C4C4`
+- `midnight/navy` — quiet depth, trust, night;
+- `lunar gold` — warmth, signature accent, attention/light;
+- `dawn ivory` — calm light foundation;
+- `mist cyan/teal` — optional environmental/monitoring accent;
+- neutral ink/surface scale.
 
-Color never carries state alone. Text/icon/placement redundancy is required.
+A dark Hero, light Hero, or mixed page is allowed. Do not force the old near-white page foundation.
 
-## 3. Typography authority
+Reject generic purple-blue AI color treatment only when it is generic/unowned, not because purple/blue/gradient techniques are categorically forbidden.
 
-Primary stack:
+## 5. Typography exploration
 
-`Inter Variable, Noto Sans JP, Hiragino Sans, Yu Gothic UI, Yu Gothic, system-ui, sans-serif`
+The old fixed Inter/Noto Sans JP expression is unfrozen.
 
-Implementation intent:
+Final system may combine:
 
-- self-host/subset the selected webfont assets when practical rather than require third-party font requests;
-- `Noto Sans JP` owns Japanese glyph quality;
-- `Inter Variable` supplies Latin/UI rhythm where available;
-- exact font delivery/performance evidence belongs to implementation.
+- Japanese-readable sans for body/Product UI;
+- distinctive display sans;
+- editorial serif accent;
+- variable font where it improves expression/weight efficiency.
 
-### Display sizes
+Final font selection must document:
 
-Wide desktop:
-- Hero `60px / 68px`, weight 700
-- section heading `44px / 54px`, weight 700
-- subsection `28px / 36px`, weight 700/600
+- license;
+- Japanese glyph strategy/fallback;
+- actual weights used;
+- subset/self-host/CDN decision;
+- preload strategy where justified;
+- measured payload and CLS/LCP implications.
 
-Compact desktop:
-- Hero `52px / 60px`
+Do not freeze exact sizes before the composition is selected.
 
-Mobile:
-- Hero `40px / 48px`
-- section heading `32px / 40px`
+## 6. Spacing/layout
 
-Narrow 320px:
-- Hero `36px / 44px`
+The previous 4px-derived scale may be reused, modified, or replaced after visual selection.
 
-### Body/UI
+During exploration:
 
-- lead `20px / 32px`
-- body `16px / 28px`
-- UI `14px / 21px`
-- meta `12px / 18px`
+- use coherent local spacing rules;
+- allow large editorial whitespace and deliberate overlap;
+- allow viewport-relative/full-bleed geometry;
+- do not preserve a fixed `1120/1248px` max simply because the old design used it;
+- maintain readable line lengths for text-heavy content.
 
-Weights:
-- 400 regular
-- 500 medium
-- 600 semibold
-- 700 bold
+Final tokens should capture the chosen recurring rhythm, not every one-off art-directed coordinate.
 
-Japanese rules:
+## 7. Radius, border, shadow and depth
 
-- no default negative tracking;
-- do not shrink Japanese copy merely to preserve a desktop layout;
-- English translation expansion must be solved through layout/reflow rather than tiny type.
+No universal style is frozen.
 
-## 4. Spacing authority
+Allowed candidates may use:
 
-4px-derived scale:
+- sharp editorial frames;
+- soft Product windows;
+- pills for true controls/tags;
+- strong or subtle depth;
+- layered shadows;
+- blend/filter treatments;
+- borders/glows where conceptually useful.
 
-`4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128px`.
-
-Section rhythm:
-
-- wide section gap: `128px`
-- mobile section gap: `88px`
-
-Use one-off spacing only for a documented visual/semantic reason.
-
-## 5. Layout authority
-
-- wide page gutter: `48px`
-- tablet gutter: `32px`
-- mobile gutter: `20px`
-- normal content max: `1120px`
-- readable/editorial max: `720px`
-- Product-stage max: `1248px`
-- hard reflow boundary: `320px`
-
-Behavioral breakpoints:
-
-- mobile composition below `768px`;
-- desktop composition from `1024px`;
-- wide composition from `1280px`.
-
-These values are layout triggers, not Product semantics.
-
-Mobile must use a semantic Product projection rather than scaling the desktop stage until unreadable.
-
-## 6. Radius / border / depth
-
-- control radius `10px`
-- ordinary surface radius `16px`
-- Product stage radius `20px`
-- subtle border `1px`
-- stronger visual boundary `1.5px`
-
-Borders are preferred over shadows.
-
-When spatial lift is needed:
-
-- ordinary surface shadow should remain around `0 8px 28px rgba(24,24,23,.06)` or weaker;
-- Product stage may use up to approximately `0 24px 80px rgba(24,24,23,.08)` when the browser comparison shows it improves separation without creating a floating-card aesthetic.
-
-Shadow strings are human contract values; implementation may encode them as CSS custom properties rather than expanding the DTCG source unnecessarily.
-
-## 7. Focus / interaction
-
-- focus ring width `2px`
-- focus ring offset `3px`
-- focus ring color `#355F91`
-- fast hover/press transition `120ms`
-- ordinary state feedback `180ms`
-
-Hover may not be the only clickability cue.
+The final system should still be coherent. Avoid every component inventing its own radius/depth language.
 
 ## 8. Motion tokens
 
-No branded Hero-motion token system is currently required.
+Motion tokens should be derived only after an accepted motion grammar exists.
 
-M05 selected a static-first direction and found no baseline need for motion.
+Possible roles:
 
-The only current timing tokens are ordinary interaction-feedback durations. If later Product-state motion survives implementation review, add only the minimum semantic state duration/easing tokens under a new reviewed revision.
+- direct UI feedback;
+- Product evidence arrival;
+- editorial reveal;
+- attention-return focus;
+- ambient world movement;
+- section transition.
 
-## 9. Tailwind CSS 4 projection contract
+Do not use one timing/easing for every role.
 
-M20 should project semantic values into local CSS/Tailwind variables, for example:
+Reduced-motion behavior is not represented merely by a slower duration; non-essential large motion may be removed entirely.
 
-```css
-@theme {
-  --color-lunowa-page: #F8F8F5;
-  --color-lunowa-product: #FFFFFF;
-  --color-lunowa-ink: #181817;
-  --color-lunowa-muted: #686864;
-  --color-lunowa-accent: #355F91;
-  --color-lunowa-monitor-bg: #EDF6F1;
-  --color-lunowa-monitor-fg: #3D6D58;
-  --color-lunowa-attention-bg: #FFF5E8;
-  --color-lunowa-attention-fg: #8A571C;
-}
-```
+## 9. Tailwind/CSS projection
 
-The machine-readable JSON remains the canonical value source; CSS names are implementation projection and may be adjusted for clean Tailwind ergonomics without changing resolved values.
+The final token source should be deterministically projectable to CSS custom properties/Tailwind CSS 4 where useful.
 
-## 10. Third-party adaptation rule
+Third-party or generated code must map into final Lunowa values rather than silently importing a foreign system **after** the design has been accepted.
 
-When reusing a block:
+During early prototypes, local exploratory variables are allowed and should not be prematurely promoted into canonical tokens.
 
-1. strip source palette/typography/radius/motion assumptions;
-2. map it into these Lunowa tokens;
-3. preserve/improve accessible semantics;
-4. remove unnecessary dependencies/animation;
-5. document provenance/license;
-6. reject the block if it only looks correct while retaining its foreign design system.
+## 10. Old token file migration
 
-## 11. Contrast / accessibility
+`docs/tokens/lunowa-m10.tokens.json` is currently a historical P candidate artifact.
 
-Current S05 spot checks already place material normal-text pairs around or above WCAG AA thresholds. M10 token freeze does not waive rendered implementation verification.
+Before M10 closes:
 
-M20/M70 must verify actual font rendering, focus, zoom/reflow, states and contrast in browser.
+1. select the new visual direction;
+2. decide which old semantic values survive;
+3. replace/update the JSON with the accepted final values;
+4. update token verification/projection code;
+5. prove browser output against the new accepted design;
+6. record migration from old P values.
 
-## 12. Freeze status
+Do not modify the old JSON merely to make an exploratory prototype compile.
 
-Frozen in M10:
+## 11. Freeze boundary
 
-- exact semantic colors;
-- font stack and role sizes;
-- spacing family;
-- major content/Product widths;
-- behavioral breakpoints;
-- radius/border rules;
-- focus/interaction values;
-- static-first motion posture.
+M10 may call tokens frozen only after:
 
-Still implementation-dependent:
+- owner accepts the actual browser visual direction;
+- desktop/mobile composition is sufficiently known;
+- typography/brand palette are selected;
+- motion language is selected or explicitly omitted;
+- Product state colors are accessible and semantically clear;
+- final asset/font/runtime costs are plausible;
+- the DTCG source is deterministic and small.
 
-- exact webfont subset/package/delivery strategy;
-- whether the Product-stage shadow is needed after real browser comparison;
-- any optional semantic motion;
-- implementation CSS variable naming details.
-
-A change to a frozen value after M10 should be explicit and reviewed rather than silently inherited from a component/template.
+Until then, **semantic meaning is constrained; aesthetics are intentionally open.**

@@ -1,18 +1,19 @@
 # Lunowa Marketing Site Architecture
 
-Status: canonical initial architecture direction, 2026-08-29.
+Status: **2026-09-09 architecture rebaseline candidate**. Hosting/data/security sections retain useful prior decisions, while frontend/rendering choices now follow the current M10 art direction rather than the withdrawn static-first visual thesis.
 
 ## 1. Goals
 
 Optimize for:
 
-1. correctness/trust;
-2. low fixed operating cost;
-3. fast static delivery;
-4. small attack surface;
-5. excellent accessibility/responsiveness;
-6. easy AI-assisted implementation and verification;
-7. future localization/SEO expansion without unnecessary backend complexity.
+1. Product correctness and trust;
+2. owner-accepted visual fidelity / brand quality;
+3. excellent accessibility and responsive behavior;
+4. Core Web Vitals and bounded runtime/media cost;
+5. small security/privacy attack surface;
+6. low fixed operating cost where it does not damage the accepted experience;
+7. AI-assisted implementation, browser verification and visual convergence;
+8. future localization/SEO expansion without unnecessary backend complexity.
 
 ## 2. Repository boundary
 
@@ -25,53 +26,47 @@ Reasons:
 - keep marketing analytics/waitlist dependencies out of Product runtime;
 - allow marketing research/design iteration while Product implementation gates remain active.
 
-Product semantics remain owned by `miki-thecat/lunowa`.
+Product semantics remain owned by `miki-labs/lunowa`.
 
 ## 3. Execution / control-plane boundary
 
-Marketing research, visitor contracts, visual exploration, copy, and design oracles may progress before code implementation.
+Marketing research, art-direction exploration, Figma/prototype work and isolated browser evidence may progress independently of Product implementation lanes.
 
-**Production code implementation in this repository is intentionally held until `miki-labs/agent-control-plane` has passed its G7 single-task same-production-path acceptance gate.**
+Before production implementation, retry, review or merge, live-read the current site Issue/PR/CI and the current ACP authority/state when execution, concurrency, recovery or model routing is relevant. Do not preserve a historical `G7` gate in architecture prose as permanent authority when the live execution contract has moved.
 
-Rationale:
+ACP remains execution/recovery infrastructure only. It does not own Lunowa Product truth or site design decisions.
 
-- use `lunowa-site` as an early real-world dogfooding target for the control plane;
-- avoid building one manual Codex workflow and later migrating to a different execution path;
-- prove the single-task GitHub -> Controller -> credential-less Codex -> candidate -> trusted verification -> independent review -> human integration path before relying on it here;
-- keep implementation/review evidence structurally compatible with the longer-term autonomous workflow.
+Design prototypes must remain isolated from production until the current M10 visual authority, task contract and exact-head review path permit promotion.
 
-G8 concurrency/scheduler work is **not** required to begin `lunowa-site` implementation. G7 is the implementation-entry gate.
+## 4. Frontend / rendering architecture
 
-Until G7 PASS:
+The production site should remain server/static-rendered for meaningful content and SEO, but **static-first is no longer a visual constraint**. Re-check stable versions and the accepted visual requirement immediately before implementation.
 
-- no Astro/React/Tailwind production scaffold is required;
-- no dependency lockfile should be created merely to get ahead of the gate;
-- design/research work should leave implementation-ready contracts and visual oracles so the first control-plane task can start immediately after G7.
+Current baseline candidates:
 
-## 4. Frontend stack
-
-Initial preferred stack, to be re-checked against current stable releases immediately before M20 implementation:
-
-- Astro — static-first page shell, routing, metadata, content composition;
-- React — interactive islands only;
-- Motion — semantic Product-demo transitions;
-- Tailwind CSS 4 + CSS — visual implementation;
+- Astro — page routing, metadata, server/static content composition and islands;
 - TypeScript — strict implementation language;
-- Playwright — browser/e2e/visual/accessibility-tree verification.
+- CSS / Tailwind CSS 4 where they improve implementation ergonomics;
+- React islands only where real stateful interaction or a selected animation system benefits from them;
+- Playwright — browser/e2e/visual/accessibility evidence;
+- selected media/motion/runtime tools only when the accepted design requires them.
 
-### 4.1 Static-first rule
+### 4.1 Progressive runtime rule
 
-Default to static HTML/CSS.
+Ordinary text, navigation, metadata and SEO content should render without requiring a full client SPA.
 
-Use client-side JavaScript only where interactivity materially requires it.
+The accepted art direction may justify client runtime for a signature experience, including Motion, GSAP, Rive/Lottie, video, canvas/OGL/Three/WebGL/shaders, or other scoped techniques. `docs/DESIGN.md` and `docs/MOTION.md` own that permission boundary.
 
-Examples:
+For every runtime-heavy surface:
 
-- Hero Product Story: React island, early hydration as needed;
-- lower Product demo: `client:visible`/equivalent deferred hydration where appropriate;
-- ordinary copy/SEO/FAQ content: static unless interaction truly needs JS.
+- preserve semantic HTML for essential Product/copy content;
+- code-split/lazy-load non-critical runtime where useful;
+- provide reduced-motion/static fallback;
+- stop offscreen/hidden render loops where applicable;
+- measure JS/WASM/media/font cost and mobile behavior;
+- do not convert the whole site into a client SPA merely to support one visual effect.
 
-Do not convert the marketing site into a full client SPA by default.
+The implementation architecture follows the owner-accepted visual target subject to hard gates; it does not force the target back into the old P/static template.
 
 ## 5. Hosting
 
