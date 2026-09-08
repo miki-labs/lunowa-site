@@ -1,238 +1,201 @@
 # Current execution router
 
-Status date: 2026-08-30
+Status date: 2026-09-09
 
 ## Canonical authority
 
-- Product truth: `miki-thecat/lunowa`.
-- Marketing-site contracts/design/audit state: this repository.
+- Product truth: `miki-labs/lunowa`.
+- Marketing-site design/contracts/research: `miki-labs/lunowa-site`.
 - Live task/candidate/review state: GitHub Issues / PRs / CI.
-- Production implementation gate: `miki-labs/agent-control-plane` G7 single-task same-production-path acceptance.
+- ACP is execution/recovery infrastructure only; it is not Lunowa Product or site-design authority.
 
 ## Current phase
 
-**M10 DESIGN CONVERGENCE READY — P PRODUCT PROOF SELECTED**
+**M10 FRONTIER DESIGN REBASELINE — OLD P VISUAL FREEZE WITHDRAWN**
 
-Production implementation has not started and remains blocked until both:
+The Product owner rejected the current browser visual result as materially below the desired quality bar on 2026-09-09 and explicitly authorized a complete rewrite of the site design constraints.
 
-1. M10 #3 freezes implementation-grade structured visual authority; and
-2. ACP G7 passes.
+Production promotion remains blocked until the new M10 direction is accepted and the relevant production execution gate/task contract is current and unblocked.
 
-External independent visitor validation is **deferred evidence debt**, not a current blocking gate.
+External independent visitor validation remains deferred evidence debt, not owner visual acceptance.
 
-## Completed gates
+## What changed
 
-### R05 — reuse/tokens/common shell
+The 2026-08-30 `Quiet Product Proof` / P direction remains useful historical comprehension and technical evidence, but it is no longer binding as visual composition/style authority.
 
-Substantially complete.
+No longer frozen by default:
 
-Current direction:
+- centered/near-centered Hero;
+- Product UI as always-dominant visual;
+- static-first aesthetic posture;
+- exact old near-white/cobalt palette;
+- exact Inter/Noto-only expression;
+- universal restrained borders/radii/shadows;
+- generated imagery as secondary-only;
+- motion/delight as late optional polish;
+- old exact aesthetic token values.
 
-- `Quiet Product Proof`;
-- familiar high-trust software-site grammar;
-- believable Product UI as primary proof;
-- no generic AI-orb/glow/beam/3D/bento/card-wall default aesthetic;
-- ordinary shell mechanics reused rather than reinvented;
-- Product-specific design effort concentrated on monitoring, `Reply != Done`, attention return, Moment/source/trust semantics.
+Still protected:
 
-Current production/reuse preference after G7:
+- Product truth from `miki-labs/lunowa`;
+- canonical quotation story;
+- `Reply != Done` meaning;
+- quiet monitoring/no-current-action;
+- material outcome -> attention return;
+- context/Source/trust boundaries;
+- no unsupported claims;
+- accessibility/performance/responsive/provenance gates.
 
-```text
-Astro + Tailwind CSS 4
-  -> native semantic HTML/CSS first
-  -> shadcn/ui + Base UI for real interactive/app primitives
-  -> individually audited open shadcn blocks (7Ovr, then Tailark candidates)
-  -> Tailwind Plus only if licensed + materially superior
-  -> Relume for broad structural/reference discovery
-  -> optional scoped Webflow DevLink proof for a specific difficult need
-  -> custom Lunowa code where Product semantics require it
-```
+## Current design thesis
 
-Figma is preferred when writable but not required. Framer portability is not an architecture assumption. Image generation is exploratory, not precise webpage authority.
+> **Calm cinematic brand world around truthful Product behavior.**
 
-### S05 #14 — stimulus construction
+Working shorthand: **Lunar Product Cinema**.
 
-**COMPLETED / CLOSED.**
+Current owner-approved exploration seed:
 
-Exact accepted historical audit artifacts remain bound in `docs/stimuli/MANIFEST.md`:
+- moon + rabbit + `lunowa` identity direction;
+- midnight/navy;
+- lunar gold;
+- dawn ivory;
+- optional mist/cyan/teal atmosphere.
 
-- P-v1: `0dd12d831cd1fc8020bde478c9fca6463af5427e`
-- E-v1: `58b55b02abe867b0191e93f3125a4e4d8db63ca1`
-- shared lower: `0e7026b2dfc7230af6c1448e831aa85cc5284d82`
+This is a seed, not final frozen identity.
 
-S05 PASS evidence: Issue #14 comment `5463581123`.
+## Current M10 exploration set
 
-### M05 #10 — internal comprehension-risk audit
+Compare at least three materially different browser-able directions unless the owner explicitly selects an exceptional candidate earlier:
 
-**COMPLETED / CLOSED.**
+1. **Lunar Editorial Product Cinema** — brand world + editorial typography + layered Product proof + calm cinematic motion.
+2. **Surreal Illustration System** — bold ownable illustration with truthful Product evidence entering the world.
+3. **Product-Native Kinetic Interface** — real Product UI becomes the main cinematic medium.
 
-Current team constraint:
+The goal is not to imitate references. Learn transferable decisions from current leading sites such as And Idea, Clay, Linear, Attio, Cursor, Framer, and Clueso.
 
-- Product owner already knows Lunowa too deeply to be a clean first-impression participant;
-- ChatGPT is not a real user and has extensive project context;
-- synthetic/model responses are not user evidence.
+## Current design/research authorities
 
-Therefore external participant testing is not required before M10.
+Read in this order for M10 visual work:
 
-Current authorities:
+1. `AGENTS.md`;
+2. this file;
+3. `docs/RESEARCH-FRONTIER-WEB-DESIGN-2026-09-09.md`;
+4. `docs/DESIGN.md`;
+5. `docs/HOMEPAGE.md`;
+6. `docs/MOTION.md`;
+7. `docs/M10-VISUAL-AUTHORITY.md`;
+8. `docs/M10-TOKEN-CONTRACT.md`;
+9. `docs/M10-RESPONSIVE-SPEC.md`;
+10. `docs/VERIFICATION.md`;
+11. live Product authority in `miki-labs/lunowa`;
+12. live Issue / PR / CI / ACP state as relevant.
 
-- `docs/M05-INTERNAL-COMPREHENSION-AUDIT.md`
-- `docs/M05-INTERNAL-AUDIT-RESULT-2026-08-30.md`
-- deferred future protocol: `docs/FIRST-IMPRESSION-VALIDATION.md`
+Historical M05/P/S05 docs remain rationale/evidence and do not override the 2026-09-09 rebaseline.
 
-M05 audit result:
+## AI-native design workflow
 
-> **P — Product Proof Baseline selected for M10 convergence.**
-
-Why P:
-
-- strongest explicit email/category recognition;
-- Product UI does most explanatory work;
-- lower generic-productivity/memory-tool confusion risk than E;
-- lower copy dependence;
-- simpler mobile/responsive projection;
-- lower implementation complexity;
-- E's useful repeated-checking insight is already preserved in the shared lower-page narrative.
-
-M05 PASS evidence: Issue #10 comment `5463637074`.
-
-This is **internal audit evidence, not user validation**.
-
-## Selected M10 direction
-
-Use P as the acquisition/Hero direction:
+Current preferred loop:
 
 ```text
-minimal header
-↓
-category/mechanism cue
-↓
-メールを、確認し続けなくていい。
-↓
-concise support + primary CTA
-↓
-large believable Lunowa Product proof
-↓
-repeated-checking problem narrative
-↓
-返信 ≠ 完了
-↓
-quiet monitoring
-↓
-material outcome -> attention required
-↓
-return context / Source / trust-control
-↓
-truthful availability
-↓
-minimal FAQ
-↓
-plain final CTA/footer
+live Product truth
+-> current frontier/reference research
+-> several cheap art-direction explorations
+-> strongest candidate(s)
+-> ImageGen / Framer / Magic Patterns / strongest available design agent as useful
+-> Figma structured convergence when direction has substance
+-> isolated browser prototype
+-> strongest actually available computer-use agent + coding agent
+-> Playwright 1440 / 768 / 390 evidence
+-> visual + geometry + Product-truth review
+-> iterative correction
+-> owner browser acceptance
+-> derive/freeze DTCG-compatible tokens
+-> production implementation path
+-> exact-head cumulative review
 ```
 
-Canonical Product proof remains:
+Do not assume GPT-6 Astra access. When it is actually available, it is a preferred candidate for long computer-use/frontend-QA loops; otherwise use the strongest available path and record the model/tool used.
 
-```text
-社内確認中です。明日送ります。
--> 見積書はまだ未到着
--> あなたの対応はまだ必要ありません
--> Lunowaが引き続き見守る
-```
+## Tool posture
 
-Later:
+Allowed by scoped need:
 
-```text
-見積書が届く
--> user review becomes necessary
--> what changed / what to do / Source are restored
-```
+- Figma MCP / write-to-canvas / Code Connect;
+- Framer Agents/prototypes;
+- Magic Patterns;
+- ImageGen;
+- Codex;
+- Remote Desktop Commander;
+- Playwright;
+- Motion;
+- GSAP/ScrollTrigger;
+- View Transitions;
+- Rive/Lottie;
+- video;
+- canvas/OGL/Three/WebGL/shaders.
 
-## Motion decision
+No tool is mandatory. Heavy dependencies/assets must earn their runtime cost through the accepted design concept.
 
-Baseline comprehension does **not** require motion.
+## Current token state
 
-M10 should freeze static-first visual authority. Later implementation may add restrained semantic motion only as optional reinforcement/craft. Equivalent static and reduced-motion meaning is mandatory.
+The old `docs/tokens/lunowa-m10.tokens.json` is a historical P candidate. Exact aesthetic values are intentionally unfrozen during exploration.
 
-## External-validation debt
+Preserve semantic state meaning and accessibility, then derive final tokens from the accepted design and encode them in a small DTCG 2025.10-compatible source.
 
-Still unknown until independent visitors/beta users/traffic exist:
+## Current browser candidate / PR #21
 
-- actual first-time comprehension;
-- reminder/reply-tracker confusion rate;
-- real trust objections;
-- exact copy optimum;
-- conversion impact.
+PR #21 remains Draft/open with exact pushed head:
 
-Do not use `user validated`, `users understood`, `tested with users`, or similar claims.
+`13e92c4caa67256cbf1f4215d60264ef972b5835`
 
-Future independent validation may test the implemented preview directly rather than recreating pre-build P/E research.
+Its exact-head browser-evidence workflow is green. That proves the candidate can be deterministically built/verified; it does **not** mean its aesthetics are owner-accepted.
+
+Treat it as a historical technical/browser baseline unless the new design deliberately reuses parts of its implementation/evidence harness.
+
+The local `/home/kanat/dev/lunowa-site` worktree contains uncommitted visual experiments and must not be overwritten blindly.
+
+## Current Product/ACP execution state boundary
+
+Site design work must not interfere with Product execution/review in `miki-labs/lunowa` or ACP recovery/control state.
+
+At the 2026-09-09 rebaseline check, ACP had an existing Product Issue #72 candidate under review and recommended no new automatic Product lane. The site rebaseline is therefore being maintained as an isolated design-authority branch rather than replaying/duplicating Product execution.
+
+Always live-read state again before further implementation/review decisions.
 
 ## Current task graph
 
 ```text
-M00  #1  canonical control-plane acceptance
+historical R05/S05/M05 evidence
           |
           v
-R05       reuse + semantic tokens + common shell        DONE enough
+M10 #3  FRONTIER VISUAL REBASELINE / multi-direction exploration   CURRENT
           |
           v
-S05  #14 exact P/E/static artifacts                     DONE
+owner real-browser selection
           |
           v
-M05  #10 internal owner+AI comprehension-risk audit     DONE -> P selected
+structured design + final token/responsive/motion freeze
           |
           v
-M10  #3  freeze P-based desktop/mobile visual authority + exact token values   CURRENT
+production implementation task(s) on current accepted path
           |
-          +-----------------------------+
-                                        |
-ACP external gate: agent-control-plane G7 PASS
-                                        |
-                                        v
-M20  #4  Astro/static foundation via accepted ACP path
-        /   \
-       v     v
-M30 #5      #6 M40
-Hero/UI      remaining narrative
-       \     /
-        v   v
-M50  #7  responsive + i18n reconciliation
-        |
-        +------> M60 #8 waitlist boundary
-        |
-        v
-M70  #9  full verification + preview deployment
-        |
-        v
-M80  future independent visitor/traffic validation when available
-        |
-        v
-M90  future explicit production-domain cutover
+          v
+browser / accessibility / performance / truth verification
+          |
+          v
+later independent visitor/traffic validation
 ```
 
-## Current Issues
-
-- #1 — Bootstrap marketing-site control plane
-- #14 — S05 stimulus construction — **closed completed**
-- #10 — M05 internal comprehension-risk audit — **closed completed**
-- #3 — M10 structured visual-authority freeze — **current**
-- #4 — M20 Astro/static foundation — blocked on #3 + ACP G7
-- #5 — M30 Hero/Product Story
-- #6 — M40 remaining homepage narrative
-- #7 — M50 responsive + i18n
-- #8 — M60 secure waitlist
-- #9 — M70 verification hardening + preview deploy
+Do not let historical issue numbering/old implementation DAG silently authorize production before the current M10 and execution contracts are reconciled.
 
 ## Next actions
 
-1. Execute M10 #3 using **P** as the selected direction.
-2. Freeze exact typography, colors, spacing, widths, radius, shadow and focus values using the small semantic token model in `docs/M10-TOKEN-CONTRACT.md`.
-3. Produce implementation-grade readable references for desktop Hero, intermediate/no-action, outcome/attention-required, return-context/Source, lower-page rhythm, trust/control and mobile Hero/Product story.
-4. Keep the repeated-checking insight from E only in the lower-page problem narrative; do not maintain E as a second Hero architecture.
-5. Define a mobile semantic projection rather than shrinking the desktop Product surface.
-6. Treat motion as optional enhancement, not an explanatory dependency.
-7. Record external validation as deferred Product-learning debt.
-8. Continue `miki-labs/agent-control-plane` toward G7 independently.
-9. Only after M10 freeze + G7 PASS, start #4 through the accepted control-plane path.
-
-Codex prompts remain short: point to the owning Issue and repository contracts rather than restating them.
+1. Persist/merge the 2026-09-09 design-rebaseline contract after independent review.
+2. Update Issue #3 so its live task contract matches the rebaseline.
+3. Keep PR #21 marked as historical/not current visual acceptance.
+4. Build a current reference board/decision inventory from live leading sites; copy principles, not pixels.
+5. Produce the three materially distinct Hero directions cheaply.
+6. Select the strongest candidate(s) before spending time on full-page implementation.
+7. For the selected direction, use Figma/browser structure and real assets/motion rather than reducing the target to generic CSS geometry.
+8. Review 1440 and 390 early; do not postpone mobile until the end.
+9. Only after owner browser acceptance derive exact visual tokens and production architecture.
+10. Preserve external-user validation as explicit future evidence debt.
