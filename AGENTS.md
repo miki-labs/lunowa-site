@@ -2,155 +2,242 @@
 
 ## Repository purpose
 
-`miki-labs/lunowa-site` owns the public Lunowa marketing website.
+`miki-labs/lunowa-site` owns Lunowa's public/preview marketing website and its design authority.
 
-It is a **projection of Product truth**, not Product authority. Canonical Product truth remains in `miki-thecat/lunowa`, especially Product, Product Content, Responsibility semantics and canonical design contracts.
+It is a **projection of Product truth**, not Product authority. Canonical Product/application truth is `miki-labs/lunowa`.
 
-This repository must not invent Product semantics, providers, availability, pricing, customer counts, testimonials, security certifications, performance claims or validated ICP conclusions.
+This repository may radically change visual language, composition, motion, media, tools and implementation technique. It must not invent Product semantics, providers, availability, pricing, customers, testimonials, certifications, performance claims, validated ICP conclusions or external effects.
 
 ## Read first
 
-Before design, implementation or review, read:
+Before non-trivial site design, implementation or review, live-read:
 
-1. `docs/CURRENT.md` — current execution router/status.
-2. `docs/VISITOR-JOURNEY.md` — visitor mental-model sequence.
-3. `docs/M05-INTERNAL-COMPREHENSION-AUDIT.md` — current owner+AI evidence boundary/audit method.
-4. `docs/M05-INTERNAL-AUDIT-RESULT-2026-08-30.md` — current P-selection rationale and external-validation debt.
-5. `docs/M10-TOKEN-CONTRACT.md` — provisional semantic token roles.
-6. `docs/R05-COMMON-SHELL-SELECTION-2026-08-30.md` — selected generic homepage shell.
-7. `docs/stimuli/MANIFEST.md` — historical exact S05 artifact binding used by the audit.
-8. `docs/HOMEPAGE.md` — homepage projection/copy/truth boundaries.
-9. `docs/DESIGN.md` — visual direction/anti-patterns.
-10. `docs/MOTION.md` — semantic motion contract.
-11. `docs/REUSE-STACK-AUDIT-2026-08-29.md`.
-12. `docs/APPROVED-PRIMITIVES-2026-08-29.md`.
-13. `docs/REUSE-COMPONENT-SHORTLIST-2026-08-29.md`.
-14. `docs/REUSE-FIRST-WEB-STRATEGY-2026-08-29.md`.
-15. `docs/ARCHITECTURE.md`.
-16. `docs/VERIFICATION.md`.
-17. `docs/FIRST-IMPRESSION-VALIDATION.md` — **future/deferred external-human protocol**, not current blocking evidence.
-18. dated research supplements as rationale, not authority over current contracts.
+1. `docs/CURRENT.md` — current phase/router and supersession state;
+2. `docs/RESEARCH-FRONTIER-WEB-DESIGN-2026-09-09.md` — current external design/tool evidence;
+3. `docs/DESIGN.md` — current visual contract;
+4. `docs/HOMEPAGE.md` — narrative/copy/truth contract;
+5. `docs/MOTION.md` — current motion/media contract;
+6. `docs/M10-VISUAL-AUTHORITY.md` — current visual-freeze status;
+7. `docs/M10-TOKEN-CONTRACT.md` — current token/freeze boundary;
+8. `docs/M10-RESPONSIVE-SPEC.md` — responsive art-direction contract;
+9. `docs/VERIFICATION.md` — acceptance oracle;
+10. current Product authority in `miki-labs/lunowa`, especially `AGENTS.md` and task-relevant Product/design sources;
+11. live GitHub Issue / PR / CI / dependencies;
+12. live ACP state/authority when execution, concurrency, recovery or model routing is relevant.
+
+Historical M05/S05/P/old-M10 documents are rationale/evidence. They do not override an explicitly superseding 2026-09-09 current contract.
 
 ## Current execution boundary
 
-S05 #14 and M05 #10 are completed.
+Current phase: **M10 frontier design rebaseline**.
 
-Current selected direction: **P — Product Proof Baseline**.
+The Product owner rejected the prior P / `Quiet Product Proof` browser aesthetics and explicitly authorized rebuilding the site design constraints. The previous centered/static/restrained visual freeze candidate is not current owner-accepted visual authority.
 
-M10 #3 is current and must converge P into implementation-grade desktop/mobile structured visual authority.
+PR #21 remains useful technical/browser evidence only unless explicitly promoted by a later accepted design decision.
 
-The active team consists only of the Product owner and ChatGPT. Therefore:
+Do not infer mutable implementation/review state from this file. Live GitHub and ACP evidence wins for current task/candidate/concurrency status.
 
-- owner self-evaluation is not a clean first-impression user test;
-- ChatGPT/persona/synthetic responses are not user evidence;
-- current design is **internally audited / owner-selected**, not `user validated`;
-- external independent visitor validation is deferred until real visitors/beta users/traffic exist;
-- lack of current participants is not a reason to halt implementation indefinitely.
+## Product-truth boundary
+
+Preserve the Product's central user promise from `miki-labs/lunowa`:
+
+> **必要になるまで安心して忘れられ、必要になった瞬間には、最小の理解と操作で終わる。**
+
+Preserve the canonical communication proof unless Product authority changes it:
+
+```text
+金曜までに見積書をお願いします。
+-> Lunowa monitors
+-> 「社内確認中です。明日送ります。」
+-> quotation still missing
+-> user action still unnecessary
+-> Lunowa continues monitoring quietly
+-> usable quotation arrives
+-> attention becomes necessary
+-> concise context + Source return
+```
+
+A beautiful site with a materially wrong Product model is a failure.
 
 ## Visitor-first rule
 
-Do not design from Lunowa's internal ontology outward.
+Do not require first-time visitors to understand internal ontology such as `Responsibility`, `Managed`, `Needs You`, `Moment`, or `Attention Delegation` before understanding the value.
 
-A first-time visitor should not need `Managed`, `Needs You`, `Moment`, `Responsibility`, or `Attention Delegation` vocabulary to understand the Product.
+The first viewport or first short interaction must establish:
 
-Current selected acquisition sequence:
+- email/communication territory;
+- the monitoring-offload promise;
+- a clear primary action;
+- enough credible Product evidence that the experience is not abstract lifestyle/AI branding only.
 
-`email/category cue -> value promise -> concise mechanism -> dominant believable Product proof`.
+## Design-quality rule
 
-Preserve the concrete intermediate-reply state:
+Hard gates and visual ambition are separate.
 
-`社内確認中です。明日送ります。 -> result still missing -> あなたの対応はまだ必要ありません -> Lunowa continues monitoring`.
+### Hard gates
 
-A polished candidate with a materially wrong Product model is a failure.
+Never trade away:
 
-## Reuse-first rule
+- Product truth and claim accuracy;
+- core comprehension;
+- source-grounded Product proof;
+- accessibility / reduced-motion equivalent;
+- responsive integrity;
+- performance discipline;
+- provenance/license/security boundaries.
 
-Do not reinvent ordinary web mechanics when a mature adaptable primitive exists.
+### After the gates
 
-Current selection order:
+Optimize simultaneously for:
 
-1. accepted local Lunowa primitive;
-2. native semantic HTML/CSS;
-3. shadcn/ui + intended MIT `@base-ui/react` / `mui/base-ui` primitive;
-4. audited open shadcn registry block — current candidates 7Ovr then Tailark;
-5. Tailwind Plus if licensed and materially superior;
-6. Relume/reference adaptation;
-7. optional Webflow DevLink proof for a specific visual-to-React need;
-8. custom Lunowa implementation;
-9. decorative/effect libraries only by explicit exception.
+- memorability/ownability;
+- art direction/craft;
+- emotional fit;
+- Product credibility;
+- conversion clarity;
+- trust;
+- mobile quality;
+- motion/interaction quality;
+- implementation/runtime cost.
 
-Community registries are discovery/distribution surfaces, not trust authorities. Inspect exact code, dependencies, license, accessibility, responsive behavior and network effects before adoption.
+A safe, technically green, generic SaaS page may fail design review.
 
-Do not use a complete third-party SaaS template merely because it exists. Prefer the smallest adequate block and map it into Lunowa tokens.
+## Visual freedom
 
-### Selected generic shell
+Do not default to a generic selected shell.
 
-Do not restart broad Navbar/Hero/FAQ/Footer exploration without a concrete unmet requirement.
+Allowed when they strengthen the accepted concept and pass hard gates:
 
-Current shell:
+- asymmetric/full-bleed/layered composition;
+- strong editorial typography;
+- owner-approved generated illustration/media;
+- Product UI + illustration co-starring;
+- video;
+- sticky/scrollytelling sequences without scroll hijacking;
+- ambient/signature motion;
+- Motion / GSAP;
+- Rive/Lottie;
+- canvas / OGL / Three / WebGL / shaders;
+- 3D transforms;
+- dark/light/mixed tonal systems;
+- independently art-directed mobile layouts.
 
-`minimal header -> category/value -> centered/near-centered Hero -> large Product proof -> editorial one-job sections -> Product/trust proof -> availability -> minimal FAQ -> plain CTA/footer`.
+Do not confuse `allowed` with `required`. Every heavy asset/dependency must earn its complexity and bytes.
 
-P is now selected; E is no longer maintained as a parallel Hero architecture. E's useful repeated-checking/self-recognition insight remains in the lower-page problem narrative.
+Still reject generic AI-orb/glow/template language, incoherent effect accumulation, copied competitor identity/pixels, fake Product screenshots, unsupported claims and essential meaning available only through animation.
 
-### Tool boundaries
+## Reuse rule
 
-- Figma is preferred when writable but not required.
-- Framer portability is not an architecture assumption.
-- Webflow DevLink is optional/scoped, not default.
-- Image generation is exploratory, not precise webpage authority.
-- Motion is optional semantic reinforcement/craft; baseline comprehension must remain static-first and Reduced Motion equivalent.
+> **Reuse mechanics; do not outsource Lunowa's visual identity.**
 
-## Design-token rule
+Prefer mature primitives for ordinary accessibility/interaction mechanics when they help, but do not force an accepted art direction into shadcn/Tailwind/Relume/common-SaaS defaults.
 
-`docs/M10-TOKEN-CONTRACT.md` defines semantic token roles. Before M10 freeze, roles are authority while exact aesthetic values remain provisional.
+Inspect exact code, dependencies, license, accessibility, responsive behavior and network/runtime effects before adopting third-party material.
 
-M10 must freeze a small vendor-neutral token source, DTCG-compatible where practical, deterministically projectable into Tailwind CSS 4/CSS variables.
+A complete third-party template is inappropriate when it makes Lunowa look like the template. Small adapted mechanics are preferable.
 
-Do not create an enterprise token platform for a small marketing surface.
+## Tool policy
 
-Third-party blocks must inherit Lunowa tokens rather than silently importing foreign color/type/radius/shadow systems.
+Creation tools are interchangeable surfaces, not authorities.
 
-## Evidence rule
+Use as appropriate:
 
-Evidence classes must remain explicit:
+- ImageGen for art-direction/asset exploration;
+- Figma MCP for structured editable convergence, variables/components and design-code context;
+- Framer/Magic Patterns for rapid visual/prototype exploration;
+- strongest **actually available** computer-use/design agent for long browser loops, including GPT-6 Astra when access genuinely exists;
+- Codex for implementation;
+- Remote Desktop Commander for authorized machine/browser/terminal work;
+- Playwright for deterministic browser evidence.
 
-- Product truth = canonical authority;
-- external research = general method/current-market evidence;
-- internal rubric audit = known-risk reduction;
-- owner decision = Product/design authority;
-- external independent visitor evidence = currently deferred.
-
-Never promote ChatGPT simulation or owner familiarity into `users understood` evidence.
-
-`docs/FIRST-IMPRESSION-VALIDATION.md` and `docs/M05-SESSION-PACKET.md` are future external-validation support only.
-
-## AI-native delivery workflow
-
-Current loop:
-
-`Product truth -> visitor contract -> reuse/tokens/common shell -> exact P/E artifacts -> internal owner+AI audit -> P selected -> M10 structured visual freeze -> ACP/Codex implementation after G7 -> real-browser verification -> later external validation when independent evidence becomes available -> correction`.
-
-- ChatGPT: research, Product/marketing synthesis, contracts, design direction, internal audit, independent acceptance review where appropriate.
-- Product owner: final Product/design authority and decisions.
-- Codex: implementation, tests, browser verification, build/deploy evidence, PR candidate construction.
-- Figma when writable: optional editable convergence/reference surface.
-- GitHub: durable canonical contracts, tokens, provenance and evidence.
-
-Do not duplicate full contracts into long Codex prompts; point Codex to the owning Issue and canonical docs.
+Do not claim an unavailable model/tool was used. Record the actual execution model/tool when it materially affects evidence.
 
 ## Generated-visual boundary
 
-Raster image generation is exploratory, not the default precise homepage-design workflow.
+Owner-approved generated imagery may become visual/composition/illustration authority.
 
-Use editable/code-owned structure for typography, layout, responsive behavior and Product UI. Generated images may support mood, illustration or genuinely novel exploration, but never become Product truth by themselves.
+It never becomes Product-truth authority by itself.
 
-For long pages, freeze coordinated readable section/state references plus an overview rather than one unreadable compressed board.
+For Product UI, visible claims, state labels, provider behavior and Source evidence, reconcile generated concepts back to `miki-labs/lunowa` and code/structured design references.
 
-## Review discipline
+Do not reduce a rich accepted target to generic CSS geometry merely because it is easier to implement. Preserve the concept using real assets/media/motion where justified.
 
-Independent review is against **current task contract × entire final cumulative candidate**, not only the latest patch.
+## Design-token rule
 
-On FAIL, complete the audit and record all known material blockers/corrections in one durable batch. Avoid one-defect-at-a-time micro-correction loops. After repeated failures, analyze specification, oracle, architecture, decomposition or verification gaps before another patch loop.
+During exploration, semantic state meaning/accessibility are constrained; exact aesthetics are intentionally open.
 
-Immediate stop is reserved for security, destructive or data-loss risk.
+Do not force new candidates through the historical P token file.
+
+After owner accepts the real browser/Figma direction:
+
+1. derive a small repeated token system from the winner;
+2. encode it DTCG 2025.10-compatible where practical;
+3. project deterministically to CSS/Tailwind/other implementation surfaces;
+4. verify actual browser output;
+5. document migration from historical values.
+
+Do not build an enterprise token platform for this site.
+
+## Exploration / freeze rule
+
+Before final M10 freeze, compare materially different directions rather than polishing one weak first attempt indefinitely.
+
+Default set:
+
+1. Lunar Editorial Product Cinema;
+2. Surreal Illustration System;
+3. Product-Native Kinetic Interface.
+
+Eliminate weak directions cheaply. The Product owner may stop exploration early for an exceptional candidate or reject/hybridize all directions.
+
+Final visual authority requires **actual browser evidence**, representative mobile evidence, Product proof, motion/reduced-motion decision, plausible runtime cost, provenance and owner visual acceptance.
+
+## AI-native design/delivery workflow
+
+Preferred current loop:
+
+```text
+live Product truth
+-> frontier/reference research
+-> multiple art-direction explorations
+-> owner narrows candidates
+-> structured Figma/design system when useful
+-> isolated browser prototype
+-> strongest available computer-use + coding agent loop
+-> Playwright 1440 / 768 / 390 evidence
+-> visual + geometry + Product-truth audit
+-> scoped correction with regression checks
+-> owner browser acceptance
+-> final token freeze
+-> production-path implementation
+-> exact-head cumulative review
+```
+
+Pixel similarity is an implementation oracle **after** the target is worth reproducing. It is not the design objective.
+
+## Evidence rule
+
+Keep evidence classes explicit:
+
+- Product truth = `miki-labs/lunowa`;
+- external research = transferable evidence/principles;
+- owner decision = Lunowa design authority;
+- browser/CI = implementation evidence;
+- independent visitors/traffic = future comprehension/market evidence.
+
+Never promote owner familiarity, ChatGPT simulation or model judgment into `users understood` / `user validated` evidence.
+
+## Execution and review discipline
+
+Before implementation/review/retry/merge, live-read the current Issue/PR/CI and relevant ACP authority.
+
+- one Issue/execution identity must not run in duplicate lanes;
+- ambiguous execution outcome fails closed; do not blind-replay;
+- independent review is **current task contract × entire final cumulative exact-head candidate**;
+- green CI is evidence, not automatic PASS;
+- on FAIL, complete the audit and batch all known material blockers/corrections;
+- repeated correction failure requires reassessing target/oracle/architecture/decomposition before another micro-patch loop;
+- parallel implementation does not imply parallel merge;
+- merge only after exact-head PASS and current authority confirmation.
+
+Immediate stop is reserved for security, destructive/data-loss or execution-safety risk.
