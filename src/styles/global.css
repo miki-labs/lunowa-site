@@ -1,3 +1,5 @@
+@import "@fontsource-variable/inter/wght.css";
+@import "@fontsource-variable/noto-sans-jp/wght.css";
 @import "tailwindcss";
 @import "./tokens.css";
 
@@ -14,7 +16,7 @@
 }
 
 :root {
-  font-family: "Inter Variable", "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", system-ui, sans-serif;
+  font-family: "Inter Variable", "Noto Sans JP Variable", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", system-ui, sans-serif;
   color: var(--ink);
   background: var(--page);
   font-synthesis: none;
@@ -173,8 +175,9 @@ blockquote {
 h1 {
   margin-bottom: 20px;
   font-size: var(--hero-wide-size);
+  font-weight: 700;
   line-height: var(--hero-wide-line);
-  letter-spacing: -0.045em;
+  letter-spacing: 0;
   text-wrap: balance;
 }
 
@@ -281,6 +284,7 @@ h1 {
 .matter-title h2 {
   margin: 0;
   font-size: 22px;
+  font-weight: 700;
   line-height: 1.4;
 }
 
@@ -400,8 +404,9 @@ h1 {
   max-width: 780px;
   margin-bottom: 22px;
   font-size: var(--section-size);
+  font-weight: 700;
   line-height: var(--section-line);
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   text-wrap: balance;
 }
 
@@ -445,6 +450,7 @@ h1 {
 .state-card h3 {
   margin-bottom: 16px;
   font-size: 22px;
+  font-weight: 700;
   line-height: 1.4;
 }
 
@@ -492,6 +498,7 @@ blockquote {
 .monitoring-proof h3 {
   margin-bottom: 8px;
   font-size: 20px;
+  font-weight: 700;
   line-height: 1.5;
 }
 
@@ -517,6 +524,7 @@ blockquote {
 .return-alert h3 {
   margin: 24px 0 6px;
   font-size: 26px;
+  font-weight: 700;
   line-height: 1.4;
 }
 
@@ -602,6 +610,7 @@ dd {
 .trust-rows h3 {
   margin: 0 0 4px;
   font-size: 18px;
+  font-weight: 700;
   line-height: 1.5;
 }
 

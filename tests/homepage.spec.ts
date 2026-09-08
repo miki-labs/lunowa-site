@@ -36,6 +36,51 @@ async function assertSemanticCore(page: Page) {
   }
 }
 
+async function assertDeterministicFonts(page: Page) {
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+  });
+
+  const fonts = await page.evaluate(() => ({
+    japanese: document.fonts.check('700 40px "Noto Sans JP Variable"', 'メールを確認し続けなくていい。'),
+    latin: document.fonts.check('600 14px "Inter Variable"', 'Lunowa Source FAQ'),
+    status: document.fonts.status,
+  }));
+
+  expect(fonts.status).toBe('loaded');
+  expect(fonts.japanese, 'self-hosted Noto Sans JP must load before visual evidence').toBe(true);
+  expect(fonts.latin, 'self-hosted Inter must load before visual evidence').toBe(true);
+}
+
+async function assertTypographyAuthority(page: Page) {
+  const typography = await page.evaluate(() => {
+    const selectors = [
+      'h1',
+      '.editorial h2',
+      '.section-heading h2',
+      '.early-access h2',
+      '.final-cta h2',
+      '.matter-title h2',
+      '.state-card h3',
+      '.monitoring-proof h3',
+      '.return-alert h3',
+      '.trust-rows h3',
+    ];
+
+    return selectors.flatMap((selector) =>
+      Array.from(document.querySelectorAll(selector)).map((element) => {
+        const style = getComputedStyle(element);
+        return { selector, weight: style.fontWeight, tracking: style.letterSpacing };
+      }),
+    );
+  });
+
+  for (const item of typography) {
+    expect(item.weight, `${item.selector} must use the frozen bold role`).toBe('700');
+    expect(['normal', '0px'], `${item.selector} must not use negative Japanese tracking`).toContain(item.tracking);
+  }
+}
+
 async function measureOverflow(page: Page) {
   return page.evaluate(() => {
     const root = document.documentElement;
@@ -69,6 +114,8 @@ test('native viewport matrix preserves semantics and has no horizontal overflow'
     await page.setViewportSize({ width: viewport.width, height: viewport.height });
     await page.goto('/', { waitUntil: 'networkidle' });
     await assertSemanticCore(page);
+    await assertDeterministicFonts(page);
+    await assertTypographyAuthority(page);
 
     const metrics = await measureOverflow(page);
     expect(metrics.horizontalOverflow, `${viewport.name} must not horizontally overflow`).toBe(false);
@@ -88,6 +135,7 @@ test('desktop full-page evidence captures the complete narrative', async ({ page
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/', { waitUntil: 'networkidle' });
   await assertSemanticCore(page);
+  await assertDeterministicFonts(page);
   await page.screenshot({ path: `${evidenceDirectory}/desktop-full-page.png`, fullPage: true });
 });
 
@@ -99,6 +147,7 @@ test('200 percent reflow equivalent preserves required content at 640 CSS pixels
   await page.setViewportSize({ width: effectiveCssViewportWidth, height: 800 });
   await page.goto('/', { waitUntil: 'networkidle' });
   await assertSemanticCore(page);
+  await assertDeterministicFonts(page);
 
   const metrics = await measureOverflow(page);
   expect(metrics.horizontalOverflow).toBe(false);
@@ -129,6 +178,7 @@ test('navigation, FAQ, focus, and reduced-motion baseline remain operable withou
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/', { waitUntil: 'networkidle' });
+  await assertDeterministicFonts(page);
 
   const skipLink = page.getByRole('link', { name: '本文へ移動' });
   await page.keyboard.press('Tab');

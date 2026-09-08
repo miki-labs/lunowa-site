@@ -47,6 +47,8 @@ Bounded M15 visual findings under review:
 - wide desktop tests a split copy/Product-proof composition after direct real-browser comparison against the prior centered baseline; this is **not M10 authority until owner acceptance + M10 #3 reconciliation**;
 - wide narrative rhythm tests `96px` instead of the currently frozen `128px` macro gap because the full-page baseline read materially too sparse; mobile keeps the frozen `88px` rhythm;
 - H1/lead/category type roles continue to use the exact M10 size tokens and Japanese H1 tracking is `0`;
+- rendered Hero/section/Product proof headings use the frozen bold role (`700`) and the browser oracle rejects negative Japanese heading tracking;
+- owner-review screenshots use pinned self-hosted Inter Variable + Noto Sans JP Variable assets and wait for deterministic font readiness instead of accepting OS fallback rendering;
 - the Hero Product proof keeps a visible Source path at every required viewport, and the viewport oracle asserts visibility rather than mere DOM presence;
 - monitoring and attention emphasis derive only from the frozen Lunowa semantic colors; no new palette or Product state was introduced.
 
@@ -61,6 +63,9 @@ The pre-push local candidate has additionally been checked for:
 - rendered normal/large-text contrast across 1440, 1280, 768, 390, and 320 CSS px with no detected WCAG AA text-pair failures after correction;
 - zero client `<script>` elements and zero Astro islands in the built page;
 - meaningful H1/Product proof/CTA/FAQ behavior with JavaScript disabled;
+- deterministic owner-review typography: `document.fonts.ready` plus explicit Noto Sans JP/Inter load assertions before visual evidence;
+- local Chromium platform-font inspection confirmed Japanese glyphs are custom Noto Sans JP and Latin glyphs are custom Inter rather than Ubuntu fallback;
+- cold local browser transfer measured roughly 650 KB of font data; a bounded throttled run measured about 0.79 s LCP / 0.006 CLS under a bounded 150 ms / 200 KB/s local throttle, retained as diagnostic evidence rather than a production guarantee;
 - Chromium and Firefox desktop/mobile critical smoke with no horizontal overflow, console/page errors, missing Product proof, missing Source path, broken primary anchor, or broken native FAQ behavior.
 
 Local WebKit launch is **not claimed as PASS**: the authorized Ubuntu host lacks the WebKit system libraries required by Playwright 1.62.1. No sudo/OS-package mutation was performed solely to make this M15 preview green. Cross-browser release coverage remains M70 work.

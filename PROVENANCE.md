@@ -30,8 +30,16 @@ The M15 preview uses pinned development dependencies only:
 - Playwright Test — Apache-2.0
 - `@astrojs/check` — MIT
 - `@types/node` — MIT
+- `@fontsource-variable/inter` 5.3.0 — SIL Open Font License 1.1
+- `@fontsource-variable/noto-sans-jp` 5.3.0 — SIL Open Font License 1.1
 
 Versions are exact in `package.json` and resolved exactly by `pnpm-lock.yaml`.
+
+### Font delivery decision
+
+M10 assigns Japanese glyph quality to Noto Sans JP and Latin/UI rhythm to Inter, while leaving exact delivery strategy implementation-dependent. M15 therefore self-hosts pinned Fontsource variable packages instead of depending on host-installed fonts or a runtime Google Fonts request. Browser evidence waits for `document.fonts.ready` and asserts both font families are loaded before screenshots are accepted.
+
+The current Japanese page causes the browser to fetch about 650 KB of font data across Fontsource unicode-range shards in a cold local measurement. A throttled local Chromium check remained well inside the repository's later Core Web Vitals target envelope (approximately 0.79 s LCP and 0.006 CLS under a bounded 150 ms / 200 KB/s local throttle in that bounded run). This is M15 visual-fidelity evidence, not a production performance guarantee or a freeze of the final M70 font-subsetting strategy.
 
 ## TypeScript compatibility decision
 
