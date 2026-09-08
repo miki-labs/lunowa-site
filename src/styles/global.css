@@ -339,7 +339,7 @@ h1 {
 }
 
 .message-head time {
-  color: var(--tertiary);
+  color: var(--muted);
   font-weight: 400;
 }
 
@@ -359,7 +359,7 @@ h1 {
 
 .still-watching p {
   margin: 3px 0 0;
-  color: #537968;
+  color: var(--monitor-fg);
 }
 
 .source-rail {
@@ -437,7 +437,7 @@ h1 {
 .card-number,
 .row-number {
   margin-bottom: 22px;
-  color: var(--tertiary);
+  color: var(--muted);
   font-size: var(--meta-size);
   font-weight: 600;
 }
@@ -637,7 +637,7 @@ dd {
 
 .fine-print {
   margin: 16px 0 0;
-  color: var(--tertiary);
+  color: var(--muted);
   font-size: var(--meta-size);
   line-height: 1.6;
 }
@@ -689,7 +689,7 @@ footer {
 
 footer p {
   margin: 0;
-  color: var(--tertiary);
+  color: var(--muted);
   font-size: var(--meta-size);
   line-height: var(--meta-line);
   text-align: right;

@@ -29,7 +29,7 @@ async function assertSemanticCore(page: Page) {
   await expect(page.getByText('社内確認中です。明日送ります。').first()).toBeAttached();
   await expect(page.getByText('あなたの対応はまだ必要ありません').first()).toBeAttached();
   await expect(page.getByText('見積書が届きました').first()).toBeAttached();
-  await expect(page.getByRole('link', { name: /Source/ }).first()).toBeAttached();
+  await expect(page.locator('.product-stage').getByRole('link', { name: /Source/ })).toBeVisible();
 
   for (const heading of requiredSectionHeadings) {
     await expect(page.getByRole('heading', { level: 2, name: heading })).toHaveCount(1);
@@ -125,10 +125,21 @@ test('200 percent reflow equivalent preserves required content at 640 CSS pixels
   );
 });
 
-test('navigation, FAQ, and reduced-motion baseline remain operable without hydration', async ({ page }) => {
+test('navigation, FAQ, focus, and reduced-motion baseline remain operable without hydration', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/', { waitUntil: 'networkidle' });
+
+  const skipLink = page.getByRole('link', { name: '本文へ移動' });
+  await page.keyboard.press('Tab');
+  await expect(skipLink).toBeFocused();
+  const focusStyle = await skipLink.evaluate((element) => {
+    const style = getComputedStyle(element);
+    return { width: style.outlineWidth, offset: style.outlineOffset, style: style.outlineStyle };
+  });
+  expect(focusStyle.style).toBe('solid');
+  expect(Number.parseFloat(focusStyle.width)).toBeGreaterThanOrEqual(2);
+  expect(Number.parseFloat(focusStyle.offset)).toBeGreaterThanOrEqual(3);
 
   const faq = page.locator('#faq');
   await page.evaluate(() => {
@@ -143,5 +154,23 @@ test('navigation, FAQ, and reduced-motion baseline remain operable without hydra
   const scrollBehavior = await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior);
   expect(scrollBehavior).toBe('auto');
 
-  await expect(page.locator('script[type="module"][src*="astro"]')).toHaveCount(0);
+  await expect(page.locator('script')).toHaveCount(0);
+});
+
+test('static Product proof and native FAQ survive with JavaScript disabled', async ({ browser }) => {
+  const context = await browser.newContext({
+    baseURL: 'http://127.0.0.1:4321',
+    javaScriptEnabled: false,
+    viewport: { width: 390, height: 844 },
+  });
+  const page = await context.newPage();
+  await page.goto('/');
+  await assertSemanticCore(page);
+  await expect(page.locator('script')).toHaveCount(0);
+
+  const firstQuestion = page.locator('details').first();
+  await firstQuestion.locator('summary').click();
+  await expect(firstQuestion).toHaveAttribute('open', '');
+
+  await context.close();
 });

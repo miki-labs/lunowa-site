@@ -8,6 +8,15 @@ This candidate is a **first-party Lunowa implementation** of the current M10 str
 - Ordinary mechanics use native semantic HTML/Astro and CSS.
 - Lunowa-specific Product proof is custom markup derived from the canonical M10 Product story and token authority in this repository.
 
+## Visual research / tool provenance
+
+- Figma was used as a noncanonical comparison canvas for the current browser baseline and bounded A/B/C/D visual exploration. No Figma-generated Product claim, asset, or code is shipped.
+- MiroMiro/reference inspection was used only to study public-site structure, typography, density, and token patterns. No extracted third-party CSS, component code, image, SVG, font file, or proprietary asset is included.
+- Public references including Linear, Granola, Wispr Flow, Attio, and Raycast informed general craft comparison only. The implementation remains first-party Lunowa markup/CSS.
+- Magic Patterns was evaluated as an optional exploration tool but no generated output is included in this candidate.
+
+Figma and these research tools are not production authorities. GitHub remains the durable site authority and the canonical Lunowa Product repository remains the Product-truth authority.
+
 ## Runtime/build dependencies
 
 The M15 preview uses pinned development dependencies only:

@@ -38,6 +38,33 @@ Native viewport evidence records `scrollWidth` and fails on horizontal overflow.
 - 390–767: focused Product card and vertical story.
 - 320–389: brand + primary action only in the header, vertical comparison/controls, no essential tiny text, no horizontal scroll.
 
+## Visual convergence candidate
+
+The current owner-review candidate remains inside **P — Product Proof Baseline** and preserves the canonical cue, H1, support copy, CTA intent, quotation scenario, intermediate reply, no-action consequence, continued monitoring, attention return, and Source path.
+
+Bounded M15 visual findings under review:
+
+- wide desktop tests a split copy/Product-proof composition after direct real-browser comparison against the prior centered baseline; this is **not M10 authority until owner acceptance + M10 #3 reconciliation**;
+- wide narrative rhythm tests `96px` instead of the currently frozen `128px` macro gap because the full-page baseline read materially too sparse; mobile keeps the frozen `88px` rhythm;
+- H1/lead/category type roles continue to use the exact M10 size tokens and Japanese H1 tracking is `0`;
+- the Hero Product proof keeps a visible Source path at every required viewport, and the viewport oracle asserts visibility rather than mere DOM presence;
+- monitoring and attention emphasis derive only from the frozen Lunowa semantic colors; no new palette or Product state was introduced.
+
+If the owner accepts these findings, M10 #3 must reconcile the visual authority/token contract before any production-path promotion. If rejected, the convergence layer is intentionally isolated for cheap rollback.
+
+## Additional local audit before exact-head handoff
+
+The pre-push local candidate has additionally been checked for:
+
+- one H1 plus header/nav/main/footer landmarks;
+- visible `2px` focus outline with `3px` offset and logical first-tab skip-link behavior;
+- rendered normal/large-text contrast across 1440, 1280, 768, 390, and 320 CSS px with no detected WCAG AA text-pair failures after correction;
+- zero client `<script>` elements and zero Astro islands in the built page;
+- meaningful H1/Product proof/CTA/FAQ behavior with JavaScript disabled;
+- Chromium and Firefox desktop/mobile critical smoke with no horizontal overflow, console/page errors, missing Product proof, missing Source path, broken primary anchor, or broken native FAQ behavior.
+
+Local WebKit launch is **not claimed as PASS**: the authorized Ubuntu host lacks the WebKit system libraries required by Playwright 1.62.1. No sudo/OS-package mutation was performed solely to make this M15 preview green. Cross-browser release coverage remains M70 work.
+
 ## Truth / runtime boundary
 
 This is an M15 static owner-review preview. It does not connect a mailbox, submit early-access data, deploy production infrastructure, prove provider parity, establish pricing, or establish Product/user validation.
