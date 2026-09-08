@@ -26,6 +26,12 @@ export default defineConfig(
   },
   {
     files: ['**/*.{js,mjs}'],
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+      },
+    },
     rules: {
       'no-undef': 'error',
       'no-unused-vars': 'error',

@@ -14,17 +14,16 @@ Requirements:
 - pnpm 11.24.0
 
 ```bash
-corepack enable
-pnpm install --frozen-lockfile
-pnpm run dev
+npx --yes pnpm@11.24.0 install --frozen-lockfile
+npx --yes pnpm@11.24.0 run dev
 ```
 
 Verification:
 
 ```bash
-pnpm run check
-pnpm exec playwright install chromium
-pnpm run evidence
+npx --yes pnpm@11.24.0 run check
+npx --yes pnpm@11.24.0 exec playwright install chromium
+npx --yes pnpm@11.24.0 run evidence
 ```
 
 GitHub Actions is the authoritative host-bound browser-evidence path for PR acceptance. See `docs/M15-VERIFICATION.md` and `docs/VERIFICATION.md`.

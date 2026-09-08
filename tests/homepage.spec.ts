@@ -126,6 +126,7 @@ test('200 percent reflow equivalent preserves required content at 640 CSS pixels
 });
 
 test('navigation, FAQ, and reduced-motion baseline remain operable without hydration', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/', { waitUntil: 'networkidle' });
 

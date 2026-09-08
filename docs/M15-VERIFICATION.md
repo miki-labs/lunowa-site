@@ -5,11 +5,10 @@ Status: candidate verification contract for Issue #15. Exact PASS facts belong t
 ## Local commands
 
 ```bash
-corepack enable
-pnpm install --frozen-lockfile
-pnpm run check
-pnpm exec playwright install chromium
-pnpm run evidence
+npx --yes pnpm@11.24.0 install --frozen-lockfile
+npx --yes pnpm@11.24.0 run check
+npx --yes pnpm@11.24.0 exec playwright install chromium
+npx --yes pnpm@11.24.0 run evidence
 ```
 
 The accepted CI workflow installs Chromium with hosted-runner dependencies using the current supported Playwright command.
