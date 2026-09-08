@@ -13,19 +13,20 @@ This repository may radically change visual language, composition, motion, media
 Before non-trivial site design, implementation or review, live-read:
 
 1. `docs/CURRENT.md` — current phase/router and supersession state;
-2. `docs/RESEARCH-FRONTIER-WEB-DESIGN-2026-09-09.md` — current external design/tool evidence;
-3. `docs/DESIGN.md` — current visual contract;
-4. `docs/HOMEPAGE.md` — narrative/copy/truth contract;
-5. `docs/MOTION.md` — current motion/media contract;
-6. `docs/M10-VISUAL-AUTHORITY.md` — current visual-freeze status;
-7. `docs/M10-TOKEN-CONTRACT.md` — current token/freeze boundary;
-8. `docs/M10-RESPONSIVE-SPEC.md` — responsive art-direction contract;
-9. `docs/VERIFICATION.md` — acceptance oracle;
-10. current Product authority in `miki-labs/lunowa`, especially `AGENTS.md` and task-relevant Product/design sources;
-11. live GitHub Issue / PR / CI / dependencies;
-12. live ACP state/authority when execution, concurrency, recovery or model routing is relevant.
+2. `docs/VISITOR-JOURNEY.md` — current first-visitor comprehension contract;
+3. `docs/RESEARCH-FRONTIER-WEB-DESIGN-2026-09-09.md` — current external design/tool evidence;
+4. `docs/DESIGN.md` — current visual contract;
+5. `docs/HOMEPAGE.md` — narrative/copy/truth contract;
+6. `docs/MOTION.md` — current motion/media contract;
+7. `docs/M10-VISUAL-AUTHORITY.md` — current visual-freeze status;
+8. `docs/M10-TOKEN-CONTRACT.md` — current token/freeze boundary;
+9. `docs/M10-RESPONSIVE-SPEC.md` — responsive art-direction contract;
+10. `docs/VERIFICATION.md` — acceptance oracle;
+11. current Product authority in `miki-labs/lunowa`, especially `AGENTS.md` and task-relevant Product/design sources;
+12. live GitHub Issue / PR / CI / dependencies;
+13. live ACP state/authority when execution, concurrency, recovery or model routing is relevant.
 
-Historical M05/S05/P/old-M10 documents are rationale/evidence. They do not override an explicitly superseding 2026-09-09 current contract.
+Historical R05/M05/S05/P/old-M10 documents are rationale/evidence. They do not override an explicitly superseding 2026-09-09 current contract.
 
 ## Current execution boundary
 

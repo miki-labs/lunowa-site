@@ -1,10 +1,12 @@
 # Lunowa R05 Common Homepage Shell Selection — 2026-08-30
 
+> **Historical / superseded for current visual decisions (2026-09-09):** retain as prior market/reuse evidence only. Its selected centered shell and Quiet Product Proof assumptions do not override the current M10 rebaseline contracts.
+
 Status: **R05 DESIGN DECISION — GENERIC SHELL SELECTED, PRODUCT VISUAL VALUES NOT YET FROZEN**.
 
 This document selects the generic homepage shell that P/E M05 stimuli should share. It does not freeze Product semantics, final brand values, or M10 visual authority.
 
-Product truth remains in `miki-thecat/lunowa`.
+Product truth remains in `miki-labs/lunowa`.
 
 ## 1. Decision
 

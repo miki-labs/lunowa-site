@@ -1,8 +1,10 @@
 # Lunowa M10 Visual Authority Manifest — 2026-08-30
 
+> **Historical visual oracle (superseded 2026-09-09):** this binds the old P candidate for reproducibility only. It is not the current M10 visual acceptance baseline unless a later decision explicitly reuses an artifact.
+
 Status: **M10 IMPLEMENTATION-GRADE VISUAL AUTHORITY CANDIDATE — exact artifact binding**.
 
-Product truth remains in `miki-thecat/lunowa`.
+Product truth remains in `miki-labs/lunowa`.
 
 This manifest binds the selected **P — Product Proof** direction to exact code-owned design artifacts and the frozen semantic-token source. It is not evidence of independent-user validation.
 

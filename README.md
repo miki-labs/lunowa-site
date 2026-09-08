@@ -27,6 +27,6 @@ Future/deferred independent-human validation support:
 - `docs/FIRST-IMPRESSION-VALIDATION.md`
 - `docs/M05-SESSION-PACKET.md`
 
-Product本体のcanonical truthは `miki-thecat/lunowa` が所有します。
+Product本体のcanonical truthは `miki-labs/lunowa` が所有します。
 
 Current marketing direction is **P — Product Proof Baseline**, selected by internal owner+AI comprehension-risk audit. This is not external user validation. Current execution status, M10 freeze requirements, reuse-first policy, semantic-token authority and ACP G7 implementation gate are routed through `docs/CURRENT.md`.
