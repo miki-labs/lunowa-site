@@ -1,0 +1,56 @@
+:root {
+  --page: #F8F8F5;
+  --surface: #FFFFFF;
+  --subtle: #F1F2EE;
+  --ink: #181817;
+  --ink-hover: #2A2A28;
+  --muted: #686864;
+  --tertiary: #777772;
+  --border: #D8D8D2;
+  --border-strong: #B8B8B0;
+  --blue: #355F91;
+  --blue-dark: #2B4F7C;
+  --monitor-bg: #EDF6F1;
+  --monitor-fg: #3D6D58;
+  --monitor-border: #C8DED3;
+  --attention-bg: #FFF5E8;
+  --attention-fg: #8A571C;
+  --attention-border: #E8D1B1;
+  --integrity-bg: #FFF0F0;
+  --integrity-fg: #9B3F3F;
+  --integrity-border: #E7C4C4;
+
+  --radius-control: 10px;
+  --radius-surface: 16px;
+  --radius-product: 20px;
+
+  --gutter-wide: 48px;
+  --gutter-tablet: 32px;
+  --gutter-mobile: 20px;
+  --content-max: 1120px;
+  --readable-max: 720px;
+  --product-max: 1248px;
+  --section-gap-wide: 128px;
+  --section-gap-mobile: 88px;
+
+  --hero-wide-size: 60px;
+  --hero-wide-line: 68px;
+  --hero-compact-size: 52px;
+  --hero-compact-line: 60px;
+  --hero-mobile-size: 40px;
+  --hero-mobile-line: 48px;
+  --hero-narrow-size: 36px;
+  --hero-narrow-line: 44px;
+  --section-size: 44px;
+  --section-line: 54px;
+  --section-mobile-size: 32px;
+  --section-mobile-line: 40px;
+  --lead-size: 20px;
+  --lead-line: 32px;
+  --body-size: 16px;
+  --body-line: 28px;
+  --ui-size: 14px;
+  --ui-line: 21px;
+  --meta-size: 12px;
+  --meta-line: 18px;
+}
