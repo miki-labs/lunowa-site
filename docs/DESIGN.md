@@ -1,275 +1,323 @@
 # Lunowa Marketing Visual Contract
 
-Status: canonical visual direction for the initial marketing site, 2026-08-30.
+Status: **2026-09-09 frontier visual rebaseline candidate**. This supersedes the 2026-08-30 `Quiet Product Proof` style constraints for current M10 exploration. Product truth remains in `miki-labs/lunowa`.
 
-Read `docs/VISITOR-JOURNEY.md` before visual work.
+Read first:
+
+- `docs/RESEARCH-FRONTIER-WEB-DESIGN-2026-09-09.md`
+- `docs/HOMEPAGE.md`
+- `docs/MOTION.md`
+- `docs/VERIFICATION.md`
+- current Product authority in `miki-labs/lunowa`.
 
 ## 1. Design thesis
 
-The site should feel like **Quiet Product Proof**:
+> **Build a calm cinematic brand world around truthful Product behavior.**
 
-- familiar enough to orient instantly;
-- quiet enough to preserve attention;
-- concrete enough that a first-time visitor can recognize what the Product does without decoding internal terminology;
-- distinctive through Product behavior, typography, spacing, copy, and timing rather than decorative novelty;
-- premium through precision, restraint, hierarchy, and believable Product proof.
+Working shorthand: **Lunar Product Cinema**.
 
-The page is not a generic AI landing page, not an infographic about Lunowa's internal state machine, and not an art experiment.
+Lunowa should be recognizable both as a real email-centered Product and as an ownable visual world. The page may be artistic, cinematic, editorial, interactive, or technically ambitious when those choices strengthen the concept.
 
-`Calm Product Cinema` may describe the restrained temporal storytelling used inside specific Product demonstrations; it is no longer the overall visual style thesis.
+The design target is no longer `a safe familiar SaaS page with one good Product screenshot`. A technically correct but generic page is a design failure.
 
-## 2. Visual priorities
+## 2. What must be felt
 
-In descending order:
+The visitor should feel:
 
-1. first-glance category and Product comprehension;
-2. Product proof;
-3. relevance / self-recognition;
-4. trust;
-5. action clarity;
-6. brand distinctiveness;
-7. delight.
+> **Lunowa is quietly carrying an unresolved thing so I do not have to keep it in my head.**
 
-Decoration must never outrank comprehension or proof.
+The visual experience should communicate calm, stewardship, time passing safely, and deliberate return of attention.
 
-### 2.1 Subtractive quality principle
+Do not make `AI` the visual idea. AI is backstage Product machinery, not the brand story.
 
-For the initial homepage, optimize **downside prevention before delight maximization**.
+## 3. Hard gates
 
-The page is normally scanned quickly rather than studied as an art object. A single material failure — unclear category, suspicious claim, slow/unstable loading, cramped mobile layout, unreadable text, misleading CTA, visual noise, or generic template/AI decoration obscuring Product proof — can outweigh several decorative positives.
+Every candidate must pass all of these before aesthetics can compensate for anything:
 
-Use this quality stack:
+1. **Product truth** — no invented capability, provider parity, customer, metric, pricing, security, timing, or validation claim.
+2. **Core comprehension** — first viewport or first short interaction establishes email/communication territory and the monitoring-offload value.
+3. **Canonical Product proof** — the unresolved quotation story remains source-grounded and semantically correct.
+4. **Accessibility** — target WCAG 2.2 AA; semantic DOM, keyboard/focus, contrast, reflow, readable text, reduced-motion equivalent.
+5. **Performance** — target field Core Web Vitals Good: LCP <= 2.5 s, INP <= 200 ms, CLS <= 0.1; media/font/script costs are measured.
+6. **Responsive integrity** — no broken composition or unreadable essential proof from 320 px through wide desktop.
+7. **Provenance** — copied/adapted assets, code, fonts, libraries and references have usable license/source evidence.
 
-#### Tier 0 — veto failures
+Passing these gates does **not** make a candidate good; it only makes it eligible for visual judgment.
 
-Must not ship:
+## 4. Quality objectives after the gates
 
-- wrong or unclear Product mental model;
-- unsupported capability/security/performance/social-proof claim;
-- broken or misleading CTA;
-- unreadable/low-contrast essential text;
-- horizontal overflow or materially broken mobile/reflow behavior;
-- Product proof that looks fake, contradictory, or detached from Product truth;
-- essential meaning dependent on animation;
-- obvious loading/layout instability introduced for decoration;
-- generic AI visual treatment that dominates the Product.
+Judge surviving candidates as a multi-objective design problem across:
 
-#### Tier 1 — hygiene quality
+- Product comprehension;
+- Product-proof credibility;
+- brand memorability and ownability;
+- art direction and craft;
+- emotional resonance;
+- conversion/action clarity;
+- trust;
+- responsive/mobile quality;
+- motion/interaction quality where relevant;
+- implementation/performance cost.
 
-Must feel ordinary in the best sense:
+Do not rank `delight`, `brand distinctiveness`, or `visual craft` below generic SaaS familiarity by default.
 
-- recognizable software-site structure;
-- clear hierarchy and descriptive headings;
-- fast scanning;
-- restrained spacing/color/depth;
-- accessible controls and visible focus;
-- stable, fast, responsive rendering;
-- familiar interaction patterns;
-- truthful availability and trust language.
+A safe, polished, generic page should lose to a distinctive page that passes the same hard gates.
 
-#### Tier 2 — necessary differentiation
+## 5. Brand-world seed
 
-Spend custom design effort here:
+Current owner-approved exploration seed, not final frozen identity:
 
-- believable Lunowa Product UI;
-- `reply != outcome complete`;
-- quiet monitoring while the user is not needed;
-- material outcome -> attention return;
-- concise return context and Source access;
-- wording/timing that makes attention delegation concrete.
+- crescent moon + rabbit + `lunowa`;
+- deep midnight/navy foundation;
+- warm lunar gold;
+- dawn ivory/near-white;
+- mist cyan/teal as optional atmospheric and monitoring accent.
 
-#### Tier 3 — optional delight
+The moon/rabbit may become a signature system rather than a one-off logo decoration.
 
-Only after Tiers 0–2 are strong:
+Avoid literal repetition. `Lunar` is an atmosphere and narrative grammar, not an instruction to place a large moon in every section.
 
-- subtle motion;
-- small microinteractions;
-- refined depth/typographic craft;
-- non-essential visual flourish.
+## 6. Hero freedom
 
-Tier 3 must be removable without damaging comprehension, trust, performance, accessibility, or brand coherence.
+No single Hero template is authoritative before comparison.
 
-The target is **not the most impressive homepage**. The target is a homepage with no obvious reason to distrust, misunderstand, struggle with, or leave — plus one memorable Product proof that explains why Lunowa is different.
+Allowed:
 
-## 3. Composition
+- asymmetric composition;
+- full-bleed visual world;
+- large editorial typography;
+- illustration and Product UI co-starring;
+- Product-native interactive demo;
+- deliberate overlap/layering;
+- video/canvas/WebGL/Rive atmosphere;
+- dark, light, or mixed tonal composition;
+- sticky or chaptered introduction;
+- different desktop/mobile compositions.
 
-Use a familiar high-trust marketing structure guided by visitor questions:
+Do not force `centered copy -> screenshot below` or `left copy -> right dashboard` because it is familiar.
 
-`Header -> Hero + real Product proof -> familiar problem -> distinction -> safe delegation -> return/context -> Trust -> availability/FAQ -> CTA/Footer`.
+The selected Hero must still expose enough category/mechanism evidence that a new visitor does not mistake Lunowa for a generic productivity, inbox-cleanup, reminder, or autonomous sending tool.
 
-Prefer full-width narrative bands with constrained inner content.
+## 7. Product proof
 
-Cards are for genuine repeated items, interactive Product surfaces, modals, or compact comparisons — not as default section containers.
+Product UI is essential evidence, but it is **not required to be the largest visual object at every moment**.
 
-Avoid card-inside-card composition and dashboard-card mosaics.
+Use real-looking, code-owned Product UI where exact Product state matters. Generated art/illustration/video may frame or carry the brand narrative around it.
 
-Each section gets one primary question, one dominant visual idea, and one takeaway/action.
+The canonical proof remains:
 
-## 4. Hero
+```text
+request quotation
+-> Lunowa monitors
+-> intermediate reply: "社内確認中です。明日送ります。"
+-> quotation still missing
+-> user action still unnecessary
+-> Lunowa stays quiet and watches
+-> usable quotation arrives
+-> user attention becomes necessary
+-> concise context + Source return
+```
 
-The Hero must make Lunowa recognizable before it becomes impressive.
+The visitor should perceive the same unresolved matter continuing through time, not a gallery of unrelated feature cards.
 
-Required:
+## 8. Editorial composition
 
-- strong product/brand signal;
-- one clear H1;
-- a short category/mechanism cue that reduces broad interpretations of the promise;
-- one dominant CTA group;
-- one large, believable Lunowa Product stage;
-- the Product stage is understandable while static;
-- hint of the next narrative beat where practical without overcrowding the first viewport.
+Prefer a page with a point of view over a collection of standard SaaS sections.
 
-Do not use an unexplained abstract state timeline as the primary Hero visual.
+Potential grammar:
 
-Do not use a generic split hero with marketing copy on one side and decorative media on the other unless direct comparison shows clearer comprehension.
+- chapter numbers / editorial labels;
+- oversized statement typography;
+- visual continuity across sections;
+- recurring horizon/light/rabbit/matter motif;
+- Product states staged as evidence windows;
+- intentional whitespace punctuated by dense Product moments;
+- contrast between quiet waiting and focused return.
 
-Do not use a detached rounded `hero card` merely to frame media. Let the Product visual participate in one coherent first-screen composition.
-
-## 5. Product visuals
-
-The primary visual asset is believable Lunowa UI, not stock photography, abstract AI art, or marketing infographics.
-
-Start from a recognizable concrete email situation:
-
-- a real-looking request or thread;
-- Lunowa visibly watching the unresolved outcome;
-- an intermediate reply that changes evidence but not the user's need to act;
-- continued quiet monitoring;
-- material evidence arriving;
-- the same item becoming attention-worthy;
-- concise Moment / Source access.
-
-Internal state labels such as Managed, Needs You, Moment may appear as authentic Product UI but must not be the only explanation.
-
-The visitor should perceive one coherent object and one coherent story rather than a feature gallery.
-
-## 6. Static-first comprehension
-
-Every major Product visual must have a useful still state.
-
-A visitor who does not see animation — because of fast scrolling, reduced motion, device constraints, disabled JavaScript, or preference — must still understand the section's point.
-
-Animation may clarify causality and continuity; it may not rescue an otherwise ambiguous visual.
-
-## 7. Color direction
-
-Target character:
-
-- warm or neutral near-white background as the primary candidate;
-- near-black/deep-neutral primary text;
-- restrained indigo/cobalt accent;
-- calm blue for monitoring semantics;
-- restrained amber for attention-required semantics;
-- red reserved for genuine integrity/error states.
-
-Avoid one-note purple-blue AI palettes, dominant neon glow, generic `AI dark mode`, decorative color blobs, or using the Lunowa name as an excuse for a literal giant moon/planet motif.
-
-Dark sections are not forbidden in principle; they require a concrete narrative/contrast reason and must not recreate generic AI-SaaS visual priors.
-
-All semantic states require text/icon redundancy; color alone is not meaning.
-
-## 8. Shape / depth
-
-- restrained radius;
-- avoid universal pillification;
-- subtle borders;
-- light shadows only where spatial hierarchy needs them;
-- avoid glassmorphism as a system-level style;
-- avoid floating sections that look like disconnected dashboard cards;
-- if removing a border/shadow/radius does not hurt interaction or understanding, prefer plain layout.
+One cohesive concept across the page is preferable to many unrelated effects.
 
 ## 9. Typography
 
-- prioritize Japanese readability and scanning;
-- brand/product name must remain a meaningful first-screen signal;
-- large type only for true Hero/section statements;
-- compact Product UI uses correspondingly tighter utility typography;
-- no negative letter-spacing tricks that harm Japanese or localization;
-- layout must survive longer English/Spanish strings and browser zoom/text scaling;
-- headings should communicate section meaning even when body copy is skipped.
+Japanese readability is a hard constraint; the previous fixed Inter/Noto-only expression is not.
 
-## 10. Imagery / illustration
+Allowed after license/performance review:
 
-- Product UI is primary proof;
-- generated imagery may support mood boards, OGP, campaigns, or secondary atmosphere;
-- generated visual candidates are not trusted Product screenshots or claim authority;
-- do not use generic stock-person photography merely to make the site look populated;
-- no AI orb, bokeh blob, abstract brain, circuit-network cliché, decorative 3D planet, or meaningless futuristic object as the main visual anchor;
-- illustration must do narrative work that the real Product UI cannot do more clearly.
+- distinctive display sans;
+- editorial serif accent;
+- variable fonts;
+- large mixed-language type;
+- expressive scale contrast;
+- custom wordmark treatment.
 
-## 11. Information density
+Rules:
 
-The page should not feel sparse for its own sake. It should feel selective.
+- essential Japanese body/Product copy remains comfortably readable;
+- no tiny text used to preserve desktop geometry;
+- no arbitrary negative Japanese tracking;
+- font loading must avoid material CLS and unnecessary payload;
+- use as few families/weights as needed for the concept;
+- typography should remain purposeful if motion and imagery are removed.
 
-Each viewport should have a clear focal object. Supporting content recedes.
+## 10. Color, light and depth
 
-Do not give every text block, icon, border, and motion equal visual weight.
+Exact aesthetic values are not frozen before owner acceptance.
 
-The first viewport must not become a feature inventory, stat strip, icon row, or miniature dashboard.
+Semantic meaning remains protected:
 
-## 12. Responsive visual behavior
+- monitoring/no current action must remain distinguishable;
+- attention-required must remain distinguishable;
+- integrity/error red is reserved for genuine degraded/error meaning;
+- color never carries semantic state alone.
 
-Mobile is not a scaled-down desktop.
+Outside those boundaries, gradients, glow, bloom, blend modes, shadows, texture, dark sections, cyan/gold atmosphere, and strong contrast are allowed when conceptually coherent.
 
-- preserve visitor-question order;
-- simplify the Product stage rather than shrinking it illegibly;
-- reduce simultaneous content;
-- keep category cue, CTA, and Product proof visible early;
-- preserve semantic state distinctions;
-- no horizontal overflow at 320 CSS px;
-- target controls should be comfortably touchable;
-- Product-motion narrative may become a small number of explicit steps rather than a cramped desktop simulation.
+Reject only **generic** AI visual language, not the underlying techniques.
 
-## 13. Anti-patterns
+## 11. Illustration, imagery and generated media
 
-Reject by default:
+Generated imagery is now a first-class exploration and production asset category when:
 
+- it is owner-approved;
+- it does not impersonate unsupported Product UI/evidence;
+- provenance/rights are acceptable;
+- quality survives real-browser use;
+- responsive crops/art direction are intentional.
+
+Illustration may be the dominant Hero visual if category/Product comprehension remains intact.
+
+Still reject generic stock people, generic purple AI orbs, meaningless neural/circuit motifs, and visual filler that could belong to any AI startup.
+
+## 12. Motion and interaction
+
+Motion is no longer Tier-3-only. It may be a signature part of the brand experience.
+
+Motion may:
+
+- establish atmosphere;
+- carry one visual object through the journey;
+- express safe waiting/time passing;
+- demonstrate `reply != completion`;
+- reveal the moment attention becomes necessary;
+- create tactile depth and hierarchy;
+- make the Product demo interactive.
+
+It must not:
+
+- make essential meaning unavailable without animation;
+- hijack native scrolling;
+- move focus unexpectedly;
+- block reading/interaction;
+- imply Product effects that did not happen;
+- ignore `prefers-reduced-motion`;
+- consume performance budget without clear visual return.
+
+Detailed motion authority lives in `docs/MOTION.md`.
+
+## 13. Technology freedom
+
+Use the simplest tool that can faithfully execute the accepted visual concept, not the simplest tool before the concept exists.
+
+Allowed by scoped justification:
+
+- native HTML/CSS/SVG;
+- Astro components;
+- React islands;
+- Motion;
+- GSAP/ScrollTrigger;
+- View Transitions;
+- Rive/Lottie;
+- video;
+- OGL/Three/WebGL/shaders;
+- canvas;
+- Framer prototype/custom code;
+- Figma MCP;
+- Magic Patterns;
+- strongest available computer-use agent.
+
+No library is mandatory. A dependency must earn its complexity/bytes through a material design requirement.
+
+## 14. Design-system timing
+
+Do **not** freeze exact aesthetic tokens before selecting the art direction.
+
+Order:
+
+```text
+Product truth
+-> visual exploration
+-> owner selects direction
+-> structured Figma/browser authority
+-> derive small token system
+-> DTCG-compatible freeze
+-> production implementation
+```
+
+During exploration, preserve semantic state meaning, accessibility and basic implementation feasibility; do not force every candidate through the old palette/type/radius values.
+
+## 15. Responsive design
+
+Mobile is independently art-directed, not merely a semantic collapse of desktop and not a tiny desktop screenshot.
+
+A desktop cinematic composition may become:
+
+- a different crop;
+- a vertical chapter sequence;
+- a simplified Product interaction;
+- a different animation timeline;
+- a reduced-motion-first composition;
+- a different placement/scale of brand art.
+
+The meaning and brand identity should remain continuous even when geometry changes substantially.
+
+See `docs/M10-RESPONSIVE-SPEC.md`.
+
+## 16. What still fails immediately
+
+Reject a candidate when any of these is true:
+
+- wrong Product mental model;
+- unsupported claim or fake social proof;
+- generic AI/template appearance with no Lunowa-owned idea;
+- copied competitor identity/pixels rather than adapted principles;
+- fake Product semantics;
+- art overwhelms category comprehension;
+- illegible text or inaccessible interaction;
+- horizontal overflow/broken mobile;
+- essential story only exists in motion;
 - scroll-jacking;
-- giant decorative 3D hero;
-- autoplay cinematic video as the primary proof;
-- endlessly moving logo marquees;
-- typewriter effects for ordinary copy;
-- decorative cursor followers;
-- excessive parallax;
-- permanent background particles;
-- sections presented as dozens of rounded feature cards;
-- abstract icon conveyor belts used to explain the core Product;
-- visuals that imply functionality the Product does not have;
-- invented screenshots detached from canonical Product semantics;
-- visual-generated claims that have not been checked against Product/runtime authority;
-- generic `premium AI SaaS` treatment based mainly on dark navy, purple glow, glass, planets/orbs, pills, and floating cards.
+- obvious jank/CLS;
+- media/3D/shader cost is disproportionate to its value;
+- one-shot AI result is accepted without real-browser owner review.
 
-## 14. Rejected first visual direction
+## 17. Candidate directions for M10
 
-The first generated dark/cinematic candidate is **not** a canonical visual oracle.
+Explore at least three materially different directions against the same Product truth before freezing:
 
-Material reasons:
+### A. Lunar Editorial Product Cinema
 
-- generic AI-SaaS visual priors dominated the Product;
-- the main story became an abstract icon/timeline infographic rather than recognizable Product use;
-- first-glance category comprehension was weak;
-- several visual choices directly contradicted this contract;
-- generated marketing/security claims were not Product-authority-backed.
+Moon/rabbit/dawn world, sophisticated editorial typography, layered Product proof, cinematic but calm motion.
 
-Preserve only its useful semantic storyboard:
+### B. Surreal Illustration System
 
-`request -> monitoring -> intermediate reply -> still no user action -> material outcome -> attention required -> context/source`.
+A bold ownable illustration world with Product evidence entering as windows/objects; optimized for memorability without sacrificing comprehension.
 
-Do not cosmetically patch that image into the final direction; generate new candidates from the visitor-comprehension contract.
+### C. Product-Native Kinetic Interface
 
-## 15. Quality bar
+Minimal decorative illustration; real Product UI becomes the cinematic object through state continuity and editorial staging.
 
-The desired impression is not `AI-generated website` and not `AI email app aesthetic`.
+The owner may select one, hybridize strong ideas, or reject all three. No direction becomes authority because an agent generated it.
 
-It should read as intentionally designed software marketing: immediately understandable, calm, exact, credible, and visually coherent with the Product's promise that attention is requested only when necessary.
+## 18. Quality bar
 
-Litmus checks:
+Ask:
 
-1. Can a first-time visitor tell what category of work Lunowa handles without reading a long explanation?
-2. Does the dominant visual show Product use rather than a metaphor for Product use?
-3. Does the page still work if decorative glow/shadows are removed?
-4. Can headings alone explain the story?
-5. Does each section have one job?
-6. Does motion clarify one material change instead of adding ambient activity?
-7. Would the visual still feel distinct if the Lunowa logo were temporarily hidden because the Product behavior itself is distinctive?
-8. Is there any obvious reason to distrust, misunderstand, wait for, struggle with, or abandon the page that can simply be removed?
+1. Would this still feel unmistakably Lunowa if the logo were hidden?
+2. Would a design-conscious person plausibly save/share the Hero screenshot?
+3. Does it look authored rather than generated from a SaaS template prior?
+4. Does the Product proof make the value more believable, not less?
+5. Does the page have one coherent visual thesis from top to bottom?
+6. Is the motion/art worth its runtime cost?
+7. Is the mobile version separately excellent?
+8. Would we accept this quality if it had taken a skilled team a week rather than an AI a few minutes?
+
+If the answer to the last question is no, continue iterating.
